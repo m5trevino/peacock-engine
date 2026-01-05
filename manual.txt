@@ -1,0 +1,69 @@
+✦ 🧠 PEACOCK ENGINE (AI-HANDLER) // OPERATIONAL MANUAL
+
+  The Peacock Engine is a headless, high-performance gateway designed to orchestrate strikes across multiple LLM providers while
+  serving as a secure bridge to your local filesystem. It is the "Nervous System" that powers the Peacock V21 HUD.
+
+  ---
+
+  1. CORE ARCHITECTURE
+   * Host: http://localhost:8888
+   * Version: v1
+   * Tech Stack: Node.js, Express, TypeScript, Axios.
+   * Security: Handles key rotation and proxying internally so the frontend stays clean and air-gapped from direct API keys.
+
+  ---
+
+  2. API ENDPOINTS
+
+  A. Intelligence Strikes
+  POST /v1/strike
+  Executes a prompt against a specific model node.
+   * Payload:
+
+   1     {
+   2       "modelId": "gemini-2.0-flash",
+   3       "prompt": "Your strategic payload here...",
+   4       "temp": 0.7
+   5     }
+   * Response:
+   1     { "content": "The generated output..." }
+
+  B. Node Registry
+  GET /v1/models
+  Retrieves the full tactical arsenal of available models, their tiers, and operational notes.
+
+  C. Filesystem Bridge (Ammo & Prompts)
+  The engine has direct access to your local directories to bypass browser security.
+
+   * List Ammo: GET /v1/fs/ammo -> Returns filenames from /home/flintx/ammo.
+   * Read Ammo: GET /v1/fs/ammo/:filename -> Returns the text content of a specific file.
+   * List Prompts: GET /v1/fs/prompts -> Returns all .md protocols from /home/flintx/prompts.
+   * Sync Prompt: POST /v1/fs/prompts -> Saves a modified protocol directly to disk.
+
+  ---
+
+  3. KEY ROTATION & PROXIES
+  The engine automatically manages:
+   * Ammo Shuffling: It pulls from a deck of keys (e.g., GOOGLE_KEYS, GROQ_KEYS) defined in your environment.
+   * Proxy Tunneling: If PROXY_ENABLED=true, all strikes are routed through your defined PROXY_URL to ensure anonymity and
+     bypass regional rate limits.
+
+  ---
+
+  4. OPERATIONAL WORKFLOW (The "Ritual")
+   1. Boot: Ensure your environment is loaded and run npm run dev in the /ai-handler directory.
+   2. Strike: The Peacock HUD sends a POST request to /strike.
+   3. Sync: The Engine contacts the provider (Groq/Google/etc.), rotates the key if necessary, and streams the result back to
+      the HUD.
+   4. Vault: The result is simultaneously synced to your local filesystem via the /fs routes.
+
+  ---
+
+  5. ENVIRONMENT SETUP
+  Ensure your ~/.env.global or local .env contains:
+   * GOOGLE_KEYS: Comma-separated list of Gemini keys.
+   * GROQ_KEYS: Comma-separated list of Groq keys.
+   * DEEPSEEK_KEYS / MISTRAL_KEYS: Respective provider keys.
+   * PROXY_URL: (Optional) Your proxy endpoint.
+
+  STATUS: ⚡ ENGINE ACTIVE ON PORT 8888. Ready for Strike.

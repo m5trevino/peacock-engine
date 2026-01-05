@@ -1,0 +1,15 @@
+.DS_Store
+.env
+.env.local
+.env.*
+*.log
+*.sqlite3
+*.db
+secrets.json
+keys.json
+credentials.json
+node_modules/
+dist/
+build/
+.vscode/
+npm-debug.log
