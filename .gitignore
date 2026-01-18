@@ -13,3 +13,5 @@ dist/
 build/
 .vscode/
 npm-debug.log
+merged_payload_*.txt
+manual.txt
