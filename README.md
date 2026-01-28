@@ -1,20 +1,18 @@
-# 🧠 PEACOCK ENGINE (AI-HANDLER)
-**Headless AI Orchestrator & Key Rotator**
+# 🧠 PEACOCK ENGINE V2
+**Headless AI Orchestrator (Python Refactor)**
 
-## 💀 THE MISSION
-The central nervous system. It decouples the UI from the API keys. It handles the "dirty work" of contacting Google Gemini, Groq, Mistral, and Deepseek, managing rate limits, and normalizing responses.
+## MISSION
+To serve as the central nervous system for all FlintX AI operations. This version is built with **Python (FastAPI)** and **Pydantic AI** for high-stakes agentic strikes and type-safe LLM integration.
 
-## 🏗️ ARCHITECTURE
-*   **Runtime:** Node.js (TypeScript) + Express.
-*   **Security:** `KeyManager.ts` implements Round-Robin key rotation.
-*   **Storage:** Local Filesystem access for "Ammo" (Context files) and "Prompts".
+## SETUP
+1.  Ensure `~/.env.global` is loaded in your shell or `.env` exists in the root.
+2.  Create virtual environment: `python3 -m venv venv`
+3.  Activate: `source venv/bin/activate`
+4.  Install dependencies: `pip install -r requirements.txt`
+5.  Run server: `python3 -m app.main`
 
-## 🚀 PROTOCOLS
-### 1. Ignite Engine
-`npm run dev`
-*Port:* `8888`
+## ENDPOINTS
+*   `POST /v1/strike`: Execute a prompt via Pydantic AI agents.
+*   `GET /v1/models`: Get available models from the registry.
+*   `GET/POST/DELETE /v1/fs`: Filesystem bridge for Ammo and Prompts.
 
-## 🛠️ FEATURES
-*   **Universal Striker:** Single endpoint (`/v1/strike`) for all models.
-*   **Key Pools:** Automatic failover if a key is rate-limited.
-*   **Model Registry:** Centralized configuration for model Tiers (Cheap vs Expensive).

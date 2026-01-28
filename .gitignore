@@ -14,4 +14,8 @@ build/
 .vscode/
 npm-debug.log
 merged_payload_*.txt
+merged.*.files.txt
 manual.txt
+.venv/
+venv/
+__pycache__/

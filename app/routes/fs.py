@@ -1,0 +1,100 @@
+import os
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
+from typing import List
+from pathlib import Path
+
+router = APIRouter()
+
+AMMO_DIR = "/home/flintx/ammo"
+START_DIR = "/home/flintx/peacock/start"
+PROMPTS_BASE = "/home/flintx/peacock/prompts"
+
+class PromptAsset(BaseModel):
+    id: str
+    name: str
+    phase: str
+    content: str
+
+class PromptSaveRequest(BaseModel):
+    name: str
+    content: str
+
+@router.get("/start")
+async def get_start_files():
+    try:
+        path = Path(START_DIR)
+        if not path.exists():
+            return []
+        files = [f.name for f in path.iterdir() if not f.name.startswith('.')]
+        return files
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to read start dir")
+
+@router.get("/start/{file_name}")
+async def get_start_file(file_name: str):
+    try:
+        file_path = Path(START_DIR) / file_name
+        return {"content": file_path.read_text(encoding="utf-8")}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to read start file")
+
+@router.get("/ammo")
+async def get_ammo():
+    try:
+        path = Path(AMMO_DIR)
+        if not path.exists():
+            return []
+        files = [f.name for f in path.iterdir() if f.suffix in ['.md', '.txt', '.json']]
+        return files
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to read ammo dir")
+
+@router.get("/ammo/{file_name}")
+async def get_ammo_file(file_name: str):
+    try:
+        file_path = Path(AMMO_DIR) / file_name
+        return {"content": file_path.read_text(encoding="utf-8")}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to read file")
+
+@router.get("/prompts/{phase}", response_model=List[PromptAsset])
+async def get_prompts(phase: str):
+    dir_path = Path(PROMPTS_BASE) / phase
+    try:
+        if not dir_path.exists():
+            return []
+        prompts = []
+        extensions = ["*.md", "*.txt"]
+        for ext in extensions:
+            for f in dir_path.glob(ext):
+                prompts.append(PromptAsset(
+                    id=f.name,
+                    name=f.stem,
+                    phase=phase,
+                    content=f.read_text(encoding="utf-8")
+                ))
+        return prompts
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to read prompts for {phase}")
+
+@router.post("/prompts/{phase}")
+async def save_prompt(phase: str, request: PromptSaveRequest):
+    dir_path = Path(PROMPTS_BASE) / phase
+    try:
+        dir_path.mkdir(parents=True, exist_ok=True)
+        file_path = dir_path / f"{request.name}.md"
+        file_path.write_text(request.content, encoding="utf-8")
+        return {"status": "SECURED"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to secure prompt")
+
+@router.delete("/prompts/{phase}/{name}")
+async def delete_prompt(phase: str, name: str):
+    file_path = Path(PROMPTS_BASE) / phase / f"{name}.md"
+    try:
+        if file_path.exists():
+            file_path.unlink()
+        return {"status": "PURGED"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to purge asset")
