@@ -28,7 +28,7 @@ class EagleScaffold(BaseModel):
 
 # --------------------------------
 
-async def execute_strike(gateway: str, model_id: str, prompt: str, temp: float, format_mode: Optional[str] = None):
+async def execute_strike(gateway: str, model_id: str, prompt: str, temp: float, format_mode: Optional[str] = None, response_format: Optional[dict] = None):
     # Determine Result Type
     result_type = str
     if format_mode == "eagle_scaffold":
@@ -100,7 +100,7 @@ async def execute_strike(gateway: str, model_id: str, prompt: str, temp: float, 
                 model=model_id,
                 messages=messages,
                 temperature=temp,
-                response_format={"type": "json_object"}
+                response_format=response_format or {"type": "json_object"}
             )
             
             raw_json = completion.choices[0].message.content

@@ -1,0 +1,2212 @@
+
+community.groq.com
+Kimi k2 structured output example broken - Forum - Groq Community
+3–4 minutes
+post by ssesfahani on Aug 5, 2025
+
+If you run the example written here exactly as it: https://console.groq.com/docs/structured-outputs
+
+You will get the error:
+
+```
+
+2 | import { castToError } from "./core.mjs";
+3 | export class GroqError extends Error {
+4 | }
+5 | export class APIError extends GroqError {
+6 | constructor(status, error, message, headers) {
+7 | super(`${APIError.makeMessage(status, error, message)}`);
+^
+error: 400 {"error":{"message":"'response_format' : one of the following must be satisfied[('response_format.type' : value is not one of the allowed values ['text']) OR ('response_format.name' : property 'name' is missing) OR ('response_format.type' : value is not one of the allowed values ['json_object'])]","type":"invalid_request_error"}}
+status: 400,
+headers: {
+"alt-svc": "h3=\":443\"; ma=86400",
+"cache-control": "private, max-age=0, no-store, no-cache, must-revalidate",
+"cf-cache-status": "DYNAMIC",
+"cf-ray": "96a8f2f58b7b16de-IAD",
+connection: "keep-alive",
+"content-length": "332",
+"content-type": "application/json",
+date: "Tue, 05 Aug 2025 20:12:23 GMT",
+server: "cloudflare",
+vary: "Origin",
+"x-groq-region": "msp",
+"x-request-id": "req_01k1xxt5crem6v0hnepa7d7f6m",
+"set-cookie": "__cf_bm=wX32tP0nyiX.5yEeQ_rKuK6ScRwxGPwTFYTPnj6vekA-1754424743-1.0.1.1-NOR9JS2MpSrKj1PtRtXiuZmycbDRjyyFN1KWPxu7aprN2yoI6gXPW0YjgQqUIVdlGugPttyxXo1iMH0y1507J6nuGPgzW77HlKngNErgtjY; path=/; expires=Tue, 05-Aug-25 20:42:23 GMT; domain=.groq.com; HttpOnly; Secure; SameSite=None",
+},
+error: {
+error: [Object ...],
+},
+
+at new GroqError (1:23)
+at new APIError (/Users/samesfahani/f/embet/node_modules/groq-sdk/error.mjs:7:9)
+at new BadRequestError (1:23)
+at generate (/Users/samesfahani/f/embet/node_modules/groq-sdk/error.mjs:36:20)
+at makeRequest (/Users/samesfahani/f/embet/node_modules/groq-sdk/core.mjs:332:30)
+
+```
+
+post by mattseeger3k on Aug 5, 2025
+
+This does not seem limited to kimiK2. Observed with maverick-instruct as well.
+
+post by benank on Aug 5, 2025
+
+post by benank on Aug 5, 2025
+
+
+
+
+
+community.groq.com
+Structured Outputs not working with the moonshotai/kimi-k2-instruct-0905 - Forum - Groq Community
+4–6 minutes
+post by Kshitiz on Sep 9, 2025
+
+Hello!
+I was following the strcutured outputs documentation and ran into an issue reproducing the ProductReview structured output using the upgraded moonshotai/kimi-k2-instruct-0905 model.
+
+I’m consistently getting the following error, even though the docs indicate it should support structured outputs:
+
+groq.BadRequestError: Error code: 400 - {'error': {'message': 'This model does not support response format `json_schema`. See supported models at Structured Outputs - GroqDocs ', 'type': 'invalid_request_error'}}
+
+The documentation specifically mentions moonshotai/kimi-k2-instruct-0905 in the list of supported models. The same code works with the older version of kimi-k2
+
+Has anyone else run into this issue, or found a workaround?
+
+post by benank on Sep 9, 2025
+
+Hi there! Thanks for letting us know - this is a bug on our end and we’re working on fixing it now.
+
+In the meantime, you can still use the original moonshotai/kimi-k2-instruct as your model id to use json schema mode with the new kimi model. The old model id is an alias of the new one, so no matter which model id you use, you’ll get the new one.
+post by benank on Sep 9, 2025
+
+We’ve deployed a fix for this! It should be working now. :smiley:
+Hello! Looks like you’re enjoying the discussion, but you haven’t signed up for an account yet.
+
+Tired of scrolling through the same posts? When you create an account you’ll always come back to where you left off. With an account you can also be notified of new replies, save bookmarks, and use likes to thank others. We can all work together to make this community great. heart
+
+Related topics
+Topic list, column headers with buttons are sortable. Topic 	Replies 	Views 	Activity
+Kimi k2 structured output example broken
+
+speech_balloonForum
+	3 	148 	Aug 2025
+Structured Outputs ignored by openai/gpt-oss-120b
+
+speech_balloonForum
+	3 	555 	Oct 2025
+Groq Structured Output Fails to Return JSON When Result Is Empty
+
+speech_balloonForum
+	1 	107 	Dec 2025
+OpenAI GPT-OSS Models doesn’t support structure output
+
+light_bulbFeature Requests
+	7 	709 	Nov 2025
+Model Tool Use
+
+light_bulbFeature Requests
+	5 	105 	Jul 2025
+
+
+
+
+	Moonshot Ai
+	Kimi K2: Open Agentic Intelligence
+	Update(0905)：We have an updated weight that enhances agentic coding and supports 256K context，see here
+	Kimi K2 is our latest Mixture-of-Experts model with 32 billion activated parameters and 1 trillion total parameters. It achieves state-of-the-art performance in frontier knowledge, math, and coding among non-thinking models. But it goes further — meticulously optimized for agentic tasks, Kimi K2 does not just answer; it acts.
+	And now, it is within your reach. Today, we are open-sourcing:
+
+	    Kimi-K2-Base: The foundation model, a strong start for researchers and builders who want full control for fine-tuning and custom solutions.
+	    Kimi-K2-Instruct: The post-trained model best for drop-in, general-purpose chat and agentic experiences. It is a reflex-grade model without long thinking.
+
+	With Kimi K2, advanced agentic intelligence is more open and accessible than ever. We can't wait to see what you build.
+	Agentic and Competitive Coding
+	SWE-bench Verified
+	SWE-bench Multilingual
+	LiveCodeBench v6
+	OJBench
+	Tool Use
+	Tau2-bench weighted average*
+	AceBench(en)
+	Math & STEM
+	AIME 2025
+	GPQA-Diamond
+	- All models evaluated above are non-thinking models.
+	- For Tau2-Bench, average is weighted by tasks.
+	- For Swe-Bench Multilingual, we evaluated only Claude 4 Sonnet because the cost of Claude 4 Opus was prohibitive.
+	Use cases
+	Give Kimi K2 your tools and describe your task.
+	It automatically understands how to use the tools and gets the job done. You don't have to write any complex workflow for agentic applications.
+	Salary Data Analysis
+	Example 1
+	Example 2
+	Example 3
+	Chat
+	Result
+	Using 2020–2025 salary data, test the effect of remote-work ratio on salary and determine whether this effect differs significantly across experience levels (EN / MI / SE / EX)—that is, whether an interaction effect exists. Support your analysis with statistical evidence and rich visualizations. Use a consistent, harmonious color palette (e.g., pastel, muted) across all plots.
+	To begin, I'll load the dataset you've provided to understand its structure and contents. This initial step is crucial for planning the subsequent analysis of how the remote-work ratio affects salary across different experience levels.
+	Use ipython
+	Task completed
+	I will now filter the dataset to include only the years 2020 through 2025. Following that, I'll create violin plots to visualize the distribution of salaries for each experience level, segmented by their remote-work ratio. This initial visualization will provide a clear, intuitive understanding of the data before I proceed with a more rigorous statistical analysis.
+	Use ipython
+	Task completed
+	To prepare for a more rigorous statistical analysis, I will now categorize the remote_ratio into distinct groups: 'On-site', 'Hybrid', and 'Remote'. This transformation will make it easier to interpret the results. I will then generate a box plot using these new categories to visually compare the salary distributions across the different experience levels. This will help in clearly illustrating any potential interaction effects.
+	Use ipython
+	Task completed
+	Now that I've categorized the data, I'll proceed with the statistical analysis. I'm going to run a two-way ANOVA to test for both the main effects of the remote-work category and experience level, as well as their interaction. This will provide us with concrete statistical evidence to determine if the relationship between remote work and salary changes significantly across different experience levels.
+	Use ipython
+	Task completed
+	It appears the statsmodels library isn't available in this environment. As an alternative, I will use the scipy.stats library to perform a two-way ANOVA. This will allow me to test for both the main effects and the interaction between the remote-work category and experience level, providing the statistical evidence needed to answer your question.
+	Use ipython
+	Task completed
+	Since the initial ANOVA attempt was inconclusive due to insufficient data in some groups, I'll take a different approach. I will now perform pairwise comparisons, conducting t-tests between the salary distributions for on-site and remote work within each experience level. This method will allow me to statistically assess if the effect of remote work on salary is significant for each category of experience, providing a clearer picture of any interaction effects.
+	Use ipython
+	Task completed
+	To better understand the salary trends, I will now calculate the average salary for each combination of experience level and remote-work category. This will provide a clear summary of the central tendency within each group. I will then visualize this summary using a bar plot, which will make it easier to compare the salary differences and identify any potential interaction effects between experience and remote work.
+	Use ipython
+	Task completed
+	I will now visualize the interaction between remote-work categories and experience levels. To do this, I'll create a bar plot showing the average salary for each group. This will allow for a direct comparison, making it easy to see if the salary differences between remote, hybrid, and on-site work vary significantly across entry-level, mid-level, senior, and expert employees.
+	Use ipython
+	Task completed
+	Now that I've visualized the interaction, I'll quantify it by calculating the percentage salary difference between remote and on-site work for each experience level. This will provide a clear, numerical measure of how the effect of remote work varies across the different job categories, directly addressing the core of your question about interaction effects.
+	Use ipython
+	Task completed
+	I'll now create a more detailed visualization to better understand the interaction. My plan is to generate a scatter plot of individual salaries, distinguishing between remote and on-site employees with different colors. To make the comparison clearer, I'll add horizontal lines representing the average salary for each group. This will provide a direct visual comparison of the salary distributions and help illustrate the interaction effect between experience level and remote work.
+	Use ipython
+	Task completed
+	I'll now create a more polished visualization to clearly illustrate the interaction effect. My plan is to generate a scatter plot showing the average salary for each combination of experience level and remote-work category. I'll use distinct colors and markers for each remote-work group and connect the data points with lines. This will create a clear and effective interaction plot, making it easy to see if the salary lines for remote, hybrid, and on-site work diverge across different experience levels.
+	Use ipython
+	Task completed
+	I'll now create a final summary visualization to clearly present the interaction effect. I'm going to generate a bar plot showing the percentage salary difference between remote and on-site work for each experience level. This will provide a direct and easy-to-understand measure of how the salary benefit of remote work changes across entry, mid, senior, and expert employees, effectively illustrating the key finding of our analysis.
+	Use ipython
+	Task completed
+	I'll now create a final summary visualization to clearly present the interaction effect. I'm going to generate a bar plot showing the percentage salary difference between remote and on-site work for each experience level. This will provide a direct and easy-to-understand measure of how the salary benefit of remote work changes across entry, mid, senior, and expert employees, effectively illustrating the key finding of our analysis.
+	Use ipython
+	Task completed
+	Summary of Findings
+	Using 2020–2025 salary data, I tested the effect of remote-work ratio on salary and whether this effect differs significantly across experience levels (EN / MI / SE / EX). The analysis reveals a significant interaction effect between remote-work ratio and experience level on salary.
+	Key Statistical Evidence
+
+	    Interaction Effect: The impact of remote work on salary is not uniform across experience levels. Specifically:
+	        Entry-Level Employees: Remote workers earn 8.0% more on average than on-site workers (p ≈ 0.20, not significant).
+	        Mid-Level Employees: Remote workers earn 8.5% less on average than on-site workers (p = 0.003, highly significant).
+	        Senior-Level Employees: Remote workers earn 3.5% less on average than on-site workers (p ≈ 0.05, marginally significant).
+	        Expert-Level Employees: Remote workers earn 4.6% more on average than on-site workers (p ≈ 0.61, not significant).
+
+	Visual Analysis
+	The interaction plot and bar charts illustrate that the salary premium or penalty associated with remote work varies by experience level. Notably, mid-level employees show a significant salary disadvantage when working remotely, while entry-level and expert-level employees tend to have a salary advantage (though not statistically significant in this dataset).
+	Conclusion
+	The analysis confirms a significant interaction effect between remote-work ratio and experience level on salary. The effect of remote work on salary differs across experience levels, with mid-level employees experiencing a notable salary penalty when working remotely, while entry-level and expert-level employees may benefit from remote work arrangements.
+	Please create a webpage using HTML, to show the statistical process and conclusions, using an attractive color scheme (e.g., pastel, muted, top magazine style). Embed all the previously generated images. Additionally, include a simulator where I can enter my personal details to get a recommendation on whether I should choose remote work.
+	I'll create a comprehensive webpage that presents the statistical analysis and includes a personal simulator. Let me build this with an attractive, professional design using a harmonious color palette.
+	Use ipython
+	Task completed
+	Let me fix the HTML content and create a proper webpage:
+	Use ipython
+	Task completed
+	Now let me display the HTML content directly so you can see the webpage:
+	Use ipython
+	Task completed
+	Perfect! I've created a comprehensive HTML webpage that presents the remote work salary analysis with the following features:
+	🎨 Design Features:
+
+	    Attractive pastel/muted color palette with harmonious gradients
+	    Professional, magazine-style layout with clean typography
+	    Responsive design that works on all devices
+	    Consistent visual hierarchy with proper spacing and sections
+
+	📊 Analysis Content:
+
+	    Executive Summary with key statistics in beautiful stat cards
+	    Statistical Process explaining the methodology
+	    Visual Analysis sections with placeholders for the generated plots
+	    Key Findings with detailed breakdowns
+
+	🧮 Interactive Simulator:
+
+	    Personalized input fields for experience level, current salary, work preference, and industry
+	    Real-time calculation based on the statistical analysis results
+	    Color-coded recommendations (green=positive, yellow=caution, red=negative)
+	    Detailed projections showing salary impact and recommendations
+
+	📈 Key Statistical Insights Highlighted:
+
+	    Entry-Level: +8.0% remote work premium
+	    Mid-Level: -8.5% remote work penalty
+	    Senior-Level: -3.5% remote work penalty
+	    Expert-Level: +4.6% remote work premium
+
+	The webpage successfully demonstrates the significant interaction effect between remote work ratio and experience level on salary, with clear visual presentation and an interactive tool for personalized recommendations. The design uses a sophisticated color scheme that enhances readability while maintaining visual appeal.
+	Imagine using Kimi K2 to explore remote-work salaries with the Salary Data Analysis example, where 16 IPython calls generate stats, visualizations, and an interactive webpage of insights. Dive into the Stanford NLP Genealogy, and get Kimi K2 to generate an interactive site built through 5 web searches, 4 browsings, 3 clicks, 5 scrolls, 6 edits, and 2 deployments. Or plan your dream Coldplay Tour 2025 in London with Kimi K2, it crafted the plan for you through 17 seamless tool calls spanning search, calendar, Gmail, flights, Airbnb, and restaurant bookings.
+	 
+	Bring Kimi K2 to your command line. It edits files. It runs commands.
+	Kimi K2 understands your environment, decides what actions to take, and executes them seamlessly.
+	JavaScript Minecraft
+	Example 1
+	Example 2
+	Example 3
+	Terminal
+	Result
+	> Write a web version of 3D minecraft.
+	- Trees
+	- Make the textures clearer, use functions to hand-draw the textures yourself, in the Kandinsky style. Don't just write a link, it won't load.
+	- Make the ground smoother
+	Calculating...
+
+	Step 1: Planning Core Features
+
+	- Defining procedural tree generation approach
+	- Designing Kandinsky-style hand-drawn texture system
+	- Planning smooth terrain generation algorithms
+	- Outlining basic gameplay mechanics (movement, interaction, terrain manipulation)
+
+	Step 2: Setting Up Project Structure
+
+	- Writing index.html with full-page canvas layout
+	- Implementing basic UI controls
+	- Creating styles for full-screen 3D experience
+
+	Step 3: Building Three.js Foundation
+
+	- Setting up Three.js scene initialization
+	- Configuring camera and renderer settings
+	- Adding lighting system
+	- Implementing render loop
+	- Writing window resize handlers
+
+	Step 4: Creating Kandinsky Textures
+
+	- Building texture generation functions with Canvas API
+	- Drawing geometric patterns (lines, circles, angles)
+	- Implementing unique block textures:
+	  - Grass texture generation
+	  - Dirt texture generation
+	  - Stone texture generation
+	  - Wood texture generation
+	  - Leaf texture generation
+
+	Step 5: Implementing Terrain Generation
+
+	- Writing multi-octave Simplex noise generator
+	- Creating elevation algorithms for:
+	  - Rolling hills
+	  - Plateaus 
+	  - Valleys
+	- Implementing block placement logic for:
+	  - Grass layers
+	  - Dirt layers
+	  - Stone layers
+
+	Step 6: Adding Procedural Trees
+
+	- Building tree generation system
+	- Implementing trunk block placement
+	- Creating canopy leaf distribution
+	- Applying custom wood/leaf textures
+
+	Step 7: Implementing Player Controls
+
+	- Setting up WASD movement system
+	- Adding mouse look with pointer lock
+	- Implementing jump mechanics
+	- Adding crouch functionality
+	- Writing gravity simulation
+	- Building collision detection system
+
+	Step 8: Adding Block Interactions
+
+	- Implementing left-click block breaking
+	- Adding right-click block placement
+	- Creating terrain modification system
+
+	Step 9: Building Atmosphere
+
+	- Creating gradient skybox system
+	- Implementing daylight cycle
+	- Adding atmospheric depth effects
+
+	Step 10: Finalizing Controls
+
+	Current control scheme:
+	- WASD: Movement
+	- Mouse: Look around
+	- Space: Jump
+	- Shift: Crouch
+	- Left Click: Break blocks
+	- Right Click: Place blocks
+
+	Step 11: Implementing Core Systems
+	For clarity, the terminal displays only a summary of each trajectory. In every example, Kimi K2 orchestrates multiple tools and commands behind the scenes to accomplish complex objectives. For instance, Kimi K2 can automate Minecraft development in JavaScript: it manages rendering, runs and debugs test cases, captures logs on failure, and iteratively improves the code until all tests succeed. For pre/post norm analysis, Kimi K2 uses the Weights & Biases (wandb) data reader to extract insights from language model experiments and generates a polished analysis report. When converting a Flask project to Rust, Kimi K2 systematically refactors the codebase and runs performance benchmarks to ensure robust results.
+	Benchmarking Kimi K2
+	Evaluation Results
+	Kimi-K2-Instruct
+	Kimi-K2-Base
+	The table below details the performance of Kimi-K2-Instruct, showing that it matches—or outperforms—the latest open-source and proprietary models across a diverse set of tasks. The model shines on knowledge-intensive and reasoning benchmarks, delivering outstanding results in natural-language understanding, mathematics and sciences, code generation, and agentic tool uses.
+			Open Source	Proprietary
+	Benchmark	Metric	Kimi-K2-Instruct	DeepSeek-V3-0324	Qwen3-235B-A22B (Non-thinking)	Claude Sonnet 4 (w/o extended thinking)	Claude Opus 4 (w/o extended thinking)	GPT-4.1	Gemini 2.5 Flash Preview (05-20)
+	Coding Tasks
+	LiveCodeBench v6(Aug 24-May 25)
+		Pass@1	53.7	46.9	37.0	48.5	47.4	44.7	44.7
+	OJBench
+		Pass@1	27.1	24.0	11.3	15.3	19.6	19.5	19.5
+	MultiPL-E
+		Pass@1	85.7	83.1	78.2	88.6	89.6	86.7	85.6
+	SWE-bench Verified (Agentless Coding)
+		Single Patch without Test (Acc)	51.8	36.6	39.4	50.2	53.0	40.8	32.6
+	SWE-bench Verified (Agentic Coding)
+		Single Attempt (Acc)	65.8	38.8	34.4	72.7*	72.5*	54.6	—
+	Multiple Attempts (Acc)	71.6	—	—	80.2*	79.4*	—	—
+	SWE-bench Multilingual(Agentic Coding)
+		Single Attempt (Acc)	47.3	25.8	20.9	51.0	—	31.5	—
+	TerminalBench
+		Inhouse Framework (Acc)	30.0	—	—	35.5	43.2	8.3	—
+	Terminus (Acc)	25.0	16.3	6.6	—	—	30.3	16.8
+	Aider-Polyglot
+		Acc	60.0	55.1	61.8	56.4	70.7	52.4	44.0
+	Tool Use Tasks
+	Tau2 retail
+		Avg@4	70.6	69.1	57.0	75.0	81.8	74.8	64.3
+	Tau2 airline
+		Avg@4	56.5	39.0	26.5	55.5	60.0	54.5	42.5
+	Tau2 telecom
+		Avg@4	65.8	32.5	22.1	45.2	57.0	38.6	16.9
+	AceBench
+		Acc	76.5	72.7	70.5	76.2	75.6	80.1	74.5
+	Math & STEM Tasks
+	AIME 2024
+		Avg@64	69.6	59.4*	40.1*	43.4	48.2	46.5	61.3
+	AIME 2025
+		Avg@64	49.5	46.7	24.7*	33.1*	33.9*	37.0	46.6
+	MATH-500
+		Acc	97.4	94.0*	91.2*	94.0	94.4	92.4	95.4
+	HMMT 2025
+		Avg@32	38.8	27.5	11.9	15.9	15.9	19.4	34.7
+	CNMO 2024
+		Avg@16	74.3	74.7	48.6	60.4	57.6	56.6	75.0
+	PolyMath-en
+		Avg@4	65.1	59.5	51.9	52.8	49.8	54.0	49.9
+	ZebraLogic
+		Acc	89.0	84.0	37.7*	79.7	59.3	58.5	57.9
+	AutoLogi
+		Acc	89.5	88.9	83.3*	89.8	86.1	88.2	84.1
+	GPQA-Diamond
+		Avg@8	75.1	68.4*	62.9*	70.0*	74.9*	66.3	68.2
+	SuperGPQA
+		Acc	57.2	53.7	50.2	55.7	56.5	50.8	49.6
+	Humanity's Last Exam (Text Only)
+		Acc	4.7	5.2	5.7	5.8	7.1	3.7	5.6
+	General Tasks
+	MMLU
+		EM	89.5	89.4	87.0	91.5	92.9	90.4	90.1
+	MMLU-Redux
+		EM	92.7	90.5	89.2*	93.6	94.2	92.4	90.6
+	MMLU-Pro
+		EM	81.1	81.2*	77.3	83.7	86.6	81.8	79.4
+	IFEval
+		Prompt Strict	89.8	81.1	83.2*	87.6	87.4	88.0	84.3
+	Multi-Challenge
+		Acc	54.1	31.4	34.0	46.8	49.0	36.4	39.5
+	SimpleQA
+		Correct	31.0	27.7	13.2	15.9	22.8	42.3	23.3
+	Livebench(2024/11/25)
+		Pass@1	76.4	72.4	67.6	74.8	74.6	69.8	67.8
+	- All models evaluated above are non-thinking models.
+	- Bold denotes global SOTA, and underlined denotes open-source SOTA.
+	- Data points marked with * are taken directly from the model's tech report or blog.
+	- All metrics, except for SWE-bench Verified (Agentless), are evaluated with an 8k output token length. SWE-bench Verified (Agentless) is limited to a 16k output token length.
+	- Kimi K2 achieves 65.8% pass@1 on the SWE-bench Verified tests with bash/editor tools (single-attempt patches, no test-time compute). It also achieves a 47.3% pass@1 on the SWE-bench Multilingual tests under the same conditions. Additionally, we report results on SWE-bench Verified tests (71.6%) that leverage parallel test-time compute by sampling multiple sequences and selecting the single best via an internal scoring model.
+	- To ensure the stability of the evaluation, we employed avg@k on the AIME, HMMT, CNMO, PolyMath-en, GPQA-Diamond, EvalPlus, Tau2.
+	- Some data points have been omitted due to prohibitively expensive evaluation costs.
+	Open Agentic Intelligence
+	Pre-training is the crucial foundation for Agentic Intelligence, establishing the priors that makes reinforcement learning (RL) exploration tractable, efficient, and generalizable. However, as Ilya Sutskever also observes, human data is a finite "fossil fuel", and its growth is lagging far behind the pace of compute. This makes token efficiency during pre-training a new critical coefficient in the AI scaling laws.
+	Post-training is pivotal in the "Era of Experience" (David Silver, Richard Sutton, 2025). In this era, LLMs increasingly learn from their own self-generated interactions, receiving rewards that free them from the limits of human data and enable them to surpass human capabilities.
+	Kimi K2 is forged from these very insights.
+	MuonClip Optimizer
+	Without rigor, given an approximately finite pretraining dataset and a fixed model configuration, a more token-efficient optimizer generates more intelligence. Our previous work Moonlight has demonstrated that the Muon optimizer substantially outperforms the widely-used AdamW optimizer for LLM training.
+	Kimi K2 was designed to further scale up Moonlight, which employs an architecture similar to DeepSeek-V3. Based on scaling-law analysis, we reduce the number of heads for long-context efficiency, and increase MoE sparsity for greater token efficiency. While scaling up, we encountered a persistent challenge: training instability caused by exploding attention logits, an issue that occurs more frequently with Muon but less with AdamW in our experiments. Existing solutions such as logit soft-capping and query-key normalization were found inadequate.
+	To address this, we introduce the MuonClip optimizer that improves Muon with our proposed qk-clip technique. Specifically, qk-clip stabilizes training by directly rescaling the weight matrices of the query and key projections after Muon updates, thus controlling the scale of attention logits at the source. Concretely, the query and key projections are scaled as follows:
+	qi​=ηαWq​xi​ki​=η1−αWk​xi​
+	where α is a balancing hyperparameter, so the attention logit becomes:
+	(ηαqi​)⊤(η1−αkj​)=ηqi⊤​kj​
+	The adaptive factor η (with threshold t) is set after every step based on the max attention logit in this step:
+	η=min(i,jmax​(qi⊤​kj​)t​,1)
+	where t is a pre-set threshold. This is a general technique that can be possibly applied to other stabilization use cases.
+	Our experiments show that MuonClip effectively prevents logit explosions while maintaining downstream task performance. In practice, Kimi K2 was pre-trained on 15.5T tokens using MuonClip with zero training spike, demonstrating MuonClip as a robust solution for stable, large-scale LLM training.
+	Agentic Capabilities
+	The enhanced agentic capabilities of Kimi K2 originate from two important aspects — large-scale agentic data synthesis and general reinforcement learning.
+	Large-Scale Agentic Data Synthesis for Tool Use Learning: To teach the model sophisticated tool-use capabilities, we developed a comprehensive pipeline inspired by ACEBench that simulates real-world tool-using scenarios at scale. Our approach systematically evolves hundreds of domains containing thousands of tools—including both real MCP (Model Context Protocol) tools and synthetic ones—then generates hundreds of agents with diverse tool sets.
+	All tasks are rubric-based, enabling consistent evaluation. Agents interact with simulated environments and user agents, creating realistic multi-turn tool-use scenarios. An LLM judge evaluates simulation results against task rubrics, filtering for high-quality training data. This scalable pipeline generates diverse, high-quality data, paving the way for large-scale rejection sampling and reinforcement learning.
+	General Reinforcement Learning: The key challenge is to apply RL to tasks with both verifiable and non-verifiable rewards; typical examples of verifiable tasks are math and competition coding, while writing a research report is usually viewed as non-verifiable.  Going beyond verifiable rewards, our general RL system uses a self-judging mechanism where the model acts as its own critic, providing scalable, rubric-based feedback for non-verifiable tasks.
+	Meanwhile, on-policy rollouts with verifiable rewards are used to continuously update the critic so that the critic keeps improving its evaluation accuracy on the latest policy. This can be viewed as a way of using verifiable rewards to improve the estimation of non-verifiable rewards.
+	Getting started with Kimi K2
+	Try Kimi K2 on kimi.com
+	Starting today, Kimi users on web and mobile can select and use the new Kimi K2 model for free. At this moment, our MCP features for web and app are still in development. We hope to begin rolling them out in the coming weeks. In the meantime, you’re welcome to try our Researcher for an early look at its agentic capabilities. Please note that vision features are not supported for Kimi K2 yet.
+	Use Kimi K2 with API
+	The Kimi Platform offers an OpenAI/Anthropic compatible interface, allowing for easy adaptation of your existing applications to Kimi K2. We encourage developers to explore our tool calling API for building agent applications. For detailed information, visit platform.moonshot.ai.
+	Serve Kimi K2 on your own
+	We recommend running Kimi K2 on one of the following inference engines: vLLM, SGLang, KTransformers, or TensorRT-LLM. For detailed deployment instructions, please see our GitHub repository.
+	What's next
+	While Kimi K2 serves as a strong foundation for open agentic intelligence, a general agent uses more advanced capabilities such as thinking and visual understanding. We plan to add these to Kimi K2 in the future.
+	Limitations
+	In our internal tests, we've identified some limitations in current Kimi K2 models. When dealing with hard reasoning tasks or unclear tool definition, the model may generate excessive tokens, sometimes leading to truncated outputs or incomplete tool calls. Additionally, performance may decline on certain tasks if tool use is enabled. When building complete software projects, one-shot prompting yields performance degradation compared to using K2 under an agentic framework. We are working to address these issues in future releases and looking forward to more feedbacks.
+
+
+
+
+	console.groq.com
+	Structured Outputs - GroqDocs
+	23–29 minutes
+
+	Guarantee model responses strictly conform to your JSON schema for reliable, type-safe data structures.
+
+	Structured Outputs is a feature that ensures your model responses conform to your provided JSON Schema. The feature offers two modes with different guarantees and requirements:
+
+	With strict: false (the default behavior), the model attempts to match your schema but without hard constraints:
+
+	    Valid JSON, but schema adherence not guaranteed - May produce valid JSON that does not match your schema (for example, wrong field types or missing/extra fields)
+	    Possible errors and malformed output - Can sometimes produce malformed JSON syntax or trigger 400 errors due to schema validation failures
+	    Fewer requirements - More flexible schema constraints, such as optional fields
+	    Broader model support - Available on all models that support Structured Outputs
+
+	This mode is suitable when you need structured outputs but can handle occasional validation errors with retry logic.
+
+	Example usage:
+
+	JSON
+
+	{
+	  "response_format": {
+	    "type": "json_schema",
+	    "json_schema": {
+	      "name": "schema_name",
+	      "strict": false,  // or omit this field (defaults to false)
+	      "schema": { ... }
+	    }
+	  }
+	}
+
+	Key benefits of Structured Outputs:
+
+	    Type-safe responses: Reduce validation and retry logic for malformed outputs
+	    Programmatic refusal detection: Detect safety-based model refusals programmatically
+	    Simplified prompting: Less complex prompts needed for consistent formatting
+
+	In addition to supporting Structured Outputs in our API, our SDKs also enable you to easily define your schemas with Pydantic and Zod to ensure further type safety. The examples below show how to extract structured information from unstructured text.
+
+	Structured Outputs is available in two modes: strict: true (with constrained decoding) and strict: false (default, best-effort validation).
+
+	The following models support Structured Outputs with strict: false (default), which attempts schema compliance but may occasionally error:
+	Model ID	Model
+
+	openai/gpt-oss-20b
+		GPT-OSS 20B
+
+	openai/gpt-oss-120b
+		GPT-OSS 120B
+
+	openai/gpt-oss-safeguard-20b
+		Safety GPT OSS 20B
+
+	moonshotai/kimi-k2-instruct-0905
+		Kimi K2 Instruct
+
+	meta-llama/llama-4-maverick-17b-128e-instruct
+		Llama 4 Maverick
+
+	meta-llama/llama-4-scout-17b-16e-instruct
+		Llama 4 Scout
+
+	For all other models, you can use JSON Object Mode to get a valid JSON object, though it may not match your schema.
+
+	1from groq import Groq
+	2import json
+	3
+	4groq = Groq()
+	5
+	6response = groq.chat.completions.create(
+	7    model="openai/gpt-oss-20b",
+	8    messages=[
+	9        {"role": "system", "content": "Extract product review information from the text."},
+	10        {
+	11            "role": "user",
+	12            "content": "I bought the UltraSound Headphones last week and I'm really impressed! The noise cancellation is amazing and the battery lasts all day. Sound quality is crisp and clear. I'd give it 4.5 out of 5 stars.",
+	13        },
+	14    ],
+	15    response_format={
+	16        "type": "json_schema",
+	17        "json_schema": {
+	18            "name": "product_review",
+	19            "strict": True,
+	20            "schema": {
+	21                "type": "object",
+	22                "properties": {
+	23                    "product_name": {"type": "string"},
+	24                    "rating": {"type": "number"},
+	25                    "sentiment": {
+	26                        "type": "string",
+	27                        "enum": ["positive", "negative", "neutral"]
+	28                    },
+	29                    "key_features": {
+	30                        "type": "array",
+	31                        "items": {"type": "string"}
+	32                    }
+	33                },
+	34                "required": ["product_name", "rating", "sentiment", "key_features"],
+	35                "additionalProperties": False
+	36            }
+	37        }
+	38    }
+	39)
+	40
+	41result = json.loads(response.choices[0].message.content or "{}")
+	42print(json.dumps(result, indent=2))
+
+	Example Output
+
+	Choosing Between Strict and Best-effort Mode
+		Strict Mode (strict: true)	Best-effort Mode (strict: false)
+	Schema adherence	Guaranteed - uses constrained decoding	Best-effort - generally compliant
+	Error handling	Never produces invalid JSON	May occasionally 400 errors or produce syntactically valid but schema-invalid JSON
+	Requirements	All fields must be required
+	additionalProperties: false required	More flexible constraints allowed
+	Model support	Limited (GPT-OSS 20B, 120B)	All Structured Outputs models
+	When to use	Production apps requiring 100% reliability	Development, prototyping, or when using unsupported models
+
+	Recommendation: Use Strict Mode (strict: true) when available for production applications. Fall back to Best-effort Mode (strict: false) for broader model support or during development.
+
+	You can generate structured SQL queries from natural language descriptions, helping ensure proper syntax and including metadata about the query structure.
+
+	1from groq import Groq
+	2from pydantic import BaseModel
+	3import json
+	4
+	5client = Groq()
+	6
+	7class ValidationStatus(BaseModel):
+	8    is_valid: bool
+	9    syntax_errors: list[str]
+	10
+	11class SQLQueryGeneration(BaseModel):
+	12    query: str
+	13    query_type: str
+	14    tables_used: list[str]
+	15    estimated_complexity: str
+	16    execution_notes: list[str]
+	17    validation_status: ValidationStatus
+	18
+	19response = client.chat.completions.create(
+	20    model="moonshotai/kimi-k2-instruct-0905",
+	21    messages=[
+	22        {
+	23            "role": "system",
+	24            "content": "You are a SQL expert. Generate structured SQL queries from natural language descriptions with proper syntax validation and metadata.",
+	25        },
+	26        {"role": "user", "content": "Find all customers who made orders over $500 in the last 30 days, show their name, email, and total order amount"},
+	27    ],
+	28    response_format={
+	29        "type": "json_schema",
+	30        "json_schema": {
+	31            "name": "sql_query_generation",
+	32            "schema": SQLQueryGeneration.model_json_schema()
+	33        }
+	34    }
+	35)
+	36
+	37sql_query_generation = SQLQueryGeneration.model_validate(json.loads(response.choices[0].message.content))
+	38print(json.dumps(sql_query_generation.model_dump(), indent=2))
+
+	Example Output
+
+	When working with Structured Outputs, you can use popular schema validation libraries like Zod for TypeScript and Pydantic for Python. These libraries provide type safety, runtime validation, and seamless integration with JSON Schema generation.
+
+	This example demonstrates how to classify customer support tickets using structured schemas with both Zod and Pydantic, ensuring consistent categorization and routing.
+
+	TypeScript
+
+	1import Groq from "groq-sdk";
+	2import { z } from "zod";
+	3
+	4const groq = new Groq();
+	5
+	6const supportTicketSchema = z.object({
+	7  category: z.enum(["api", "billing", "account", "bug", "feature_request", "integration", "security", "performance"]),
+	8  priority: z.enum(["low", "medium", "high", "critical"]),
+	9  urgency_score: z.number(),
+	10  customer_info: z.object({
+	11    name: z.string(),
+	12    company: z.string().optional(),
+	13    tier: z.enum(["free", "paid", "enterprise", "trial"])
+	14  }),
+	15  technical_details: z.array(z.object({
+	16    component: z.string(),
+	17    error_code: z.string().optional(),
+	18    description: z.string()
+	19  })),
+	20  keywords: z.array(z.string()),
+	21  requires_escalation: z.boolean(),
+	22  estimated_resolution_hours: z.number(),
+	23  follow_up_date: z.string().datetime().optional(),
+	24  summary: z.string()
+	25});
+	26
+	27type SupportTicket = z.infer<typeof supportTicketSchema>;
+	28
+	29const response = await groq.chat.completions.create({
+	30  model: "moonshotai/kimi-k2-instruct-0905",
+	31  messages: [
+	32    {
+	33      role: "system",
+	34      content: `You are a customer support ticket classifier for SaaS companies. 
+	35                Analyze support tickets and categorize them for efficient routing and resolution.
+	36                Output JSON only using the schema provided.`,
+	37    },
+	38    { 
+	39      role: "user", 
+	40      content: `Hello! I love your product and have been using it for 6 months. 
+	41                I was wondering if you could add a dark mode feature to the dashboard? 
+	42                Many of our team members work late hours and would really appreciate this. 
+	43                Also, it would be great to have keyboard shortcuts for common actions. 
+	44                Not urgent, but would be a nice enhancement! 
+	45                Best, Mike from StartupXYZ`
+	46    },
+	47  ],
+	48  response_format: {
+	49    type: "json_schema",
+	50    json_schema: {
+	51      name: "support_ticket_classification",
+	52      schema: z.toJSONSchema(supportTicketSchema)
+	53    }
+	54  }
+	55});
+	56
+	57const rawResult = JSON.parse(response.choices[0].message.content || "{}");
+	58const result = supportTicketSchema.parse(rawResult);
+	59console.log(result);
+
+	Example Output
+
+	Design your JSON Schema to constrain model responses. Reference the examples above and see supported schema features for technical limitations.
+
+	Include the schema in your API request using the response_format parameter. Choose between strict: true for guaranteed schema compliance or strict: false for best-effort validation:
+
+	Using Strict Mode (strict: true)
+
+	Set strict: true for guaranteed schema compliance on supported models:
+
+	JSON
+
+	response_format: { type: "json_schema", json_schema: { name: "schema_name", strict: true, schema: … } }
+
+	Complete implementation example:
+
+	1from groq import Groq
+	2import json
+	3
+	4client = Groq()
+	5
+	6response = client.chat.completions.create(
+	7    model="openai/gpt-oss-20b",
+	8    messages=[
+	9        {"role": "system", "content": "You are a helpful math tutor. Guide the user through the solution step by step."},
+	10        {"role": "user", "content": "how can I solve 8x + 7 = -23"}
+	11    ],
+	12    response_format={
+	13        "type": "json_schema",
+	14        "json_schema": {
+	15            "name": "math_response",
+	16            "strict": True,
+	17            "schema": {
+	18                "type": "object",
+	19                "properties": {
+	20                    "steps": {
+	21                        "type": "array",
+	22                        "items": {
+	23                            "type": "object",
+	24                            "properties": {
+	25                                "explanation": {"type": "string"},
+	26                                "output": {"type": "string"}
+	27                            },
+	28                            "required": ["explanation", "output"],
+	29                            "additionalProperties": False
+	30                        }
+	31                    },
+	32                    "final_answer": {"type": "string"}
+	33                },
+	34                "required": ["steps", "final_answer"],
+	35                "additionalProperties": False
+	36            }
+	37        }
+	38    }
+	39)
+	40
+	41result = json.loads(response.choices[0].message.content)
+	42print(json.dumps(result, indent=2))
+
+	Error Handling
+
+	Error handling differs based on which mode you're using:
+
+	With Strict Mode (strict: true)
+
+	Constrained decoding guarantees schema-compliant output, so you won't encounter schema validation errors. The model's output will always match your JSON Schema perfectly.
+
+	No error handling needed:
+
+	Python
+
+	1# Simple and reliable - no try/catch needed for validation
+	2response = client.chat.completions.create(
+	3    model="openai/gpt-oss-20b",
+	4    messages=[...],
+	5    response_format={
+	6        "type": "json_schema",
+	7        "json_schema": {
+	8            "name": "schema_name",
+	9            "strict": True,
+	10            "schema": {...}
+	11        }
+	12    }
+	13)
+	14
+	15# Output is guaranteed to match schema
+	16data = json.loads(response.choices[0].message.content)
+
+	    User input handling: Include explicit instructions for invalid or incompatible inputs. Models attempt schema adherence even with unrelated data, potentially causing hallucinations. Specify fallback responses (empty fields, error messages) for incompatible inputs.
+
+	    Output quality: Structured outputs are designed to output schema compliance but not semantic accuracy. For persistent errors, refine instructions, add system message examples, or decompose complex tasks. See the prompt engineering guide for optimization techniques.
+
+	If you're currently using Structured Outputs with strict: false (or without specifying the strict parameter), you can upgrade to strict: true for guaranteed schema compliance. Follow these steps:
+
+	Ensure you're using a model that supports strict: true. See the Supported Models section for more information.
+
+	Make your schema compliant with strict: true requirements:
+
+	Mark all fields as required:
+
+	JSON
+
+	{
+	  "type": "object",
+	  "properties": {
+	    "name": { "type": "string" },
+	    "age": { "type": "number" }
+	  },
+	  "required": ["name", "age"]  // ← Ensure all properties are in required array
+	}
+
+	Add additionalProperties: false to all objects:
+
+	JSON
+
+	{
+	  "type": "object",
+	  "properties": {
+	    "name": { "type": "string" },
+	    "email": { "type": "string" }
+	  },
+	  "required": ["name", "email"],
+	  "additionalProperties": false  // ← Add this to all objects
+	}
+
+	Handle optional fields with union types:
+
+	If you need optional fields, use union types with null:
+
+	JSON
+
+	{
+	  "type": "object",
+	  "properties": {
+	    "name": { "type": "string" },
+	    "nickname": { 
+	      "type": ["string", "null"]  // ← Use union type for optional fields
+	    }
+	  },
+	  "required": ["name", "nickname"],  // ← Field must still be in required array
+	  "additionalProperties": false
+	}
+
+	Add strict: true to your response_format:
+
+	JSON
+
+	{
+	  "model": "openai/gpt-oss-20b",
+	  "messages": [...],
+	  "response_format": {
+	    "type": "json_schema",
+	    "json_schema": {
+	      "name": "schema_name",
+	      "strict": true,  // ← Add this line
+	      "schema": {...}
+	    }
+	  }
+	}
+
+	Structured Outputs supports a JSON Schema subset with specific constraints for performance and reliability.
+
+	    Primitives: String, Number, Boolean, Integer
+	    Complex: Object, Array, Enum
+	    Composition: anyOf (union types)
+
+	When using strict: false (default), your schema has more flexibility:
+
+	    Optional fields allowed: Not all properties need to be in required
+	    additionalProperties: Can be true or omitted (though false is recommended)
+	    More forgiving validation: Best-effort schema matching, but may occasionally produce errors or invalid JSON
+
+	Example with optional fields:
+
+	JSON
+
+	{
+	  "type": "object",
+	  "properties": {
+	    "name": { "type": "string" },
+	    "nickname": { "type": "string" }
+	  },
+	  "required": ["name"]
+	}
+
+	Note: While strict: false is more flexible, following the strict: true requirements will improve output quality and reduce validation errors.
+
+	Union types: Each schema within anyOf must comply with all subset restrictions:
+
+	JSON
+
+	{
+	  "type": "object",
+	  "properties": {
+	    "payment_method": {
+	      "anyOf": [
+	        {
+	          "type": "object",
+	          "description": "Credit card payment information",
+	          "properties": {
+	            "card_number": {
+	              "type": "string",
+	              "description": "The credit card number"
+	            },
+	            "expiry_date": {
+	              "type": "string",
+	              "description": "Card expiration date in MM/YY format"
+	            },
+	            "cvv": {
+	              "type": "string",
+	              "description": "Card security code"
+	            }
+	          },
+	          "additionalProperties": false,
+	          "required": ["card_number", "expiry_date", "cvv"]
+	        },
+	        {
+	          "type": "object",
+	          "description": "Bank transfer payment information",
+	          "properties": {
+	            "account_number": {
+	              "type": "string",
+	              "description": "Bank account number"
+	            },
+	            "routing_number": {
+	              "type": "string",
+	              "description": "Bank routing number"
+	            },
+	            "bank_name": {
+	              "type": "string",
+	              "description": "Name of the bank"
+	            }
+	          },
+	          "additionalProperties": false,
+	          "required": ["account_number", "routing_number", "bank_name"]
+	        }
+	      ]
+	    }
+	  },
+	  "additionalProperties": false,
+	  "required": ["payment_method"]
+	}
+
+	Reusable subschemas: Define reusable components with $defs and reference them using $ref:
+
+	JSON
+
+	{
+	  "type": "object",
+	  "properties": {
+	    "milestones": {
+	      "type": "array",
+	      "items": {
+	        "$ref": "#/$defs/milestone"
+	      }
+	    },
+	    "project_status": {
+	      "type": "string",
+	      "enum": ["planning", "in_progress", "completed", "on_hold"]
+	    }
+	  },
+	  "$defs": {
+	    "milestone": {
+	      "type": "object",
+	      "properties": {
+	        "title": {
+	          "type": "string",
+	          "description": "Milestone name"
+	        },
+	        "deadline": {
+	          "type": "string",
+	          "description": "Due date in ISO format"
+	        },
+	        "completed": {
+	          "type": "boolean"
+	        }
+	      },
+	      "required": ["title", "deadline", "completed"],
+	      "additionalProperties": false
+	    }
+	  },
+	  "required": ["milestones", "project_status"],
+	  "additionalProperties": false
+	}
+
+	Root recursion: Use # to reference the root schema:
+
+	JSON
+
+	{
+	  "name": "organization_chart",
+	  "description": "Company organizational structure",
+	  "strict": true,
+	  "schema": {
+	    "type": "object",
+	    "properties": {
+	      "employee_id": {
+	        "type": "string",
+	        "description": "Unique employee identifier"
+	      },
+	      "name": {
+	        "type": "string",
+	        "description": "Employee full name"
+	      },
+	      "position": {
+	        "type": "string",
+	        "description": "Job title or position",
+	        "enum": ["CEO", "Manager", "Developer", "Designer", "Analyst", "Intern"]
+	      },
+	      "direct_reports": {
+	        "type": "array",
+	        "description": "Employees reporting to this person",
+	        "items": {
+	          "$ref": "#"
+	        }
+	      },
+	      "contact_info": {
+	        "type": "array",
+	        "description": "Contact information for the employee",
+	        "items": {
+	          "type": "object",
+	          "properties": {
+	            "type": {
+	              "type": "string",
+	              "description": "Type of contact info",
+	              "enum": ["email", "phone", "slack"]
+	            },
+	            "value": {
+	              "type": "string",
+	              "description": "The contact value"
+	            }
+	          },
+	          "additionalProperties": false,
+	          "required": ["type", "value"]
+	        }
+	      }
+	    },
+	    "required": [
+	      "employee_id",
+	      "name",
+	      "position",
+	      "direct_reports",
+	      "contact_info"
+	    ],
+	    "additionalProperties": false
+	  }
+	}
+
+	Explicit recursion through definition references:
+
+	JSON
+
+	{
+	  "type": "object",
+	  "properties": {
+	    "file_system": {
+	      "$ref": "#/$defs/file_node"
+	    }
+	  },
+	  "$defs": {
+	    "file_node": {
+	      "type": "object",
+	      "properties": {
+	        "name": {
+	          "type": "string",
+	          "description": "File or directory name"
+	        },
+	        "type": {
+	          "type": "string",
+	          "enum": ["file", "directory"]
+	        },
+	        "size": {
+	          "type": "number",
+	          "description": "Size in bytes (0 for directories)"
+	        },
+	        "children": {
+	          "anyOf": [
+	            {
+	              "type": "array",
+	              "items": {
+	                "$ref": "#/$defs/file_node"
+	              }
+	            },
+	            {
+	              "type": "null"
+	            }
+	          ]
+	        }
+	      },
+	      "additionalProperties": false,
+	      "required": ["name", "type", "size", "children"]
+	    }
+	  },
+	  "additionalProperties": false,
+	  "required": ["file_system"]
+	}
+
+	JSON Object Mode provides basic JSON output validation without schema enforcement. Unlike Structured Outputs with json_schema mode, it is designed to output valid JSON syntax but not schema compliance. The endpoint will either return valid JSON or throw an error if the model cannot produce valid JSON syntax. Use Structured Outputs when available for your use case.
+		Strict Mode	Best-effort Mode	JSON Object Mode
+	Valid JSON	Always ✓	Usually ✓	Usually ✓
+	Schema adherence	Guaranteed ✓	Best-effort	No
+	Can error	No	Occasionally	Occasionally
+	Requires schema	Yes	Yes	No
+	Model support	Multiple models	Multiple models	All models
+	Use case	Production apps	Development, broader compatibility	Simple JSON without schema
+
+	Enable JSON Object Mode by setting response_format to { "type": "json_object" }.
+
+	Requirements and limitations:
+
+	    Include explicit JSON instructions in your prompt (system message or user input)
+	    Outputs are syntactically valid JSON but may not match your intended schema
+	    Combine with validation libraries and retry logic for schema compliance
+
+	This example shows prompt-guided JSON generation for sentiment analysis, adaptable to classification, extraction, or summarization tasks:
+
+	1from groq import Groq
+	2import json
+	3
+	4client = Groq()
+	5
+	6def main():
+	7    response = client.chat.completions.create(
+	8        model="llama-3.3-70b-versatile",
+	9        messages=[
+	10            {
+	11                "role": "system",
+	12                "content": """You are a data analysis API that performs sentiment analysis on text.
+	13                Respond only with JSON using this format:
+	14                {
+	15                    "sentiment_analysis": {
+	16                    "sentiment": "positive|negative|neutral",
+	17                    "confidence_score": 0.95,
+	18                    "key_phrases": [
+	19                        {
+	20                        "phrase": "detected key phrase",
+	21                        "sentiment": "positive|negative|neutral"
+	22                        }
+	23                    ],
+	24                    "summary": "One sentence summary of the overall sentiment"
+	25                    }
+	26                }"""
+	27            },
+	28            {
+	29                "role": "user", 
+	30                "content": "Analyze the sentiment of this customer review: 'I absolutely love this product! The quality exceeded my expectations, though shipping took longer than expected.'"
+	31            }
+	32        ],
+	33        response_format={"type": "json_object"}
+	34    )
+	35
+	36    result = json.loads(response.choices[0].message.content)
+	37    print(json.dumps(result, indent=2))
+	38
+	39if __name__ == "__main__":
+	40    main()
+
+	System prompts structure the output format while maintaining JSON validity. However, keep in mind that the JSON object output may not match your schema.
+
+	Example Output
+
+	Response structure:
+
+	    sentiment: Classification (positive/negative/neutral)
+	    confidence_score: Confidence level (0-1 scale)
+	    key_phrases: Extracted phrases with individual sentiment scores
+	    summary: Analysis overview and main findings
+
+
+
+
+
+	    groq.com
+	    Introducing Kimi K2‑0905 on GroqCloud
+	    ~2 minutes
+
+	    Groq
+
+	    Sep 04, 2025
+
+	    Moonshot AI’s cutting‑edge model, moonshotai/Kimi-K2-Instruct-0905, is now live on GroqCloud. This integration brings day zero support for the latest frontier open model alongside production‑grade speed, low latency, and predictable cost empowering developers to take agentic coding to the next level.
+	    Key Features of Kimi K2‑0905 on GroqCloud
+
+	        Full 256k Context Window: The largest context window of any model on GroqCloud to date.
+	        Prompt Caching: Up to 50% cost savings on cached tokens and dramatically faster response times. When paired with the 256k context window, this is a massive unlock for agentic coding applications, where a large amount of context is shared between queries.
+	        Leading Price‑to‑Performance: 200+ T/s at a blended price of $1.50 / M tokens ($1.00 / M input tokens; $3.00 / M output tokens), helping to provide top‑tier performance without surprise bills.
+	        Note: With this release, requests to the original Kimi K2 model will be routed to this new version.
+
+	    Enhanced Capabilities
+
+	    Kimi K2‑0905 delivers a suite of upgrades for developers over the previous Kimi K2 release including:
+
+	        Improved Agentic Coding: More reliable code generation, rivaling that of frontier closed models, especially for front-end development and tool calling.
+	        256k Context Window: Support larger complex, multi‑turn interactions without chopping prompts.
+
+	    Get Started with Kimi K2-0905 on GroqCloud
+
+	    Try moonshotai/Kimi-K2-Instruct-0905 via the GroqCloud Developer Console, available in the Playground and the API.
+
+	    Get immediate access to Moonshot.AI’s new open model or scale without rate limits by upgrading to a GroqCloud paid tier.
+
+
+
+
+	    console.groq.com
+	    Kimi K2 0905 - GroqDocs
+	    ~4 minutes
+
+	    TOKEN SPEED
+
+	    ~200 tps
+
+	    Powered bygroq
+
+	    INPUT
+
+	    Text
+
+	    OUTPUT
+
+	    Text
+
+	    CAPABILITIES
+
+	    Kimi K2 0905 is Moonshot AI's improved version of the Kimi K2 model, featuring enhanced coding capabilities with superior frontend development and tool calling performance. This Mixture-of-Experts (MoE) model with 1 trillion total parameters and 32 billion activated parameters offers improved integration with various agent scaffolds, making it ideal for building sophisticated AI agents and autonomous systems.
+	    PRICING
+
+	    Input
+
+	    $1.00
+
+	    1.0M / $1
+
+	    Cached Input
+
+	    $0.50
+
+	    2.0M / $1
+
+	    Output
+
+	    $3.00
+
+	    333,333 / $1
+	    LIMITS
+
+	    CONTEXT WINDOW
+
+	    262,144
+
+	    MAX OUTPUT TOKENS
+
+	    16,384
+	    QUANTIZATION
+
+	    This uses Groq's TruePoint Numerics, which reduces precision only in areas that don't affect accuracy, preserving quality while delivering significant speedup over traditional approaches.
+	    Learn more here
+
+	    .
+	    Key Technical Specifications
+	    Model Architecture
+
+	    Built on a Mixture-of-Experts (MoE) architecture with 1 trillion total parameters and 32 billion activated parameters. Features 384 experts with 8 experts selected per token, optimized for efficient inference while maintaining high performance. Trained with the innovative Muon optimizer to achieve zero training instability.
+	    Performance Metrics
+
+	    The Kimi-K2-Instruct-0905 model demonstrates exceptional performance across coding, math, and reasoning benchmarks:
+
+	        LiveCodeBench: 53.7% Pass@1 (top-tier coding performance)
+	        SWE-bench Verified: 65.8% single-attempt accuracy
+	        MMLU (Massive Multitask Language Understanding): 89.5% exact match
+	        Tau2 retail tasks: 70.6% Avg@4
+
+	    Use Cases
+
+	    Enhanced Frontend Development
+
+	    Leverage superior frontend coding capabilities for modern web development, including React, Vue, Angular, and responsive UI/UX design with best practices.
+
+	    Advanced Agent Scaffolds
+
+	    Build sophisticated AI agents with improved integration capabilities across popular agent frameworks and scaffolds, enabling seamless tool calling and autonomous workflows.
+
+	    Tool Calling Excellence
+
+	    Experience enhanced tool calling performance with better accuracy, reliability, and support for complex multi-step tool interactions and API integrations.
+
+	    Full-Stack Development
+
+	    Handle end-to-end software development from frontend interfaces to backend logic, database design, and API development with improved coding proficiency.
+	    Best Practices
+
+	        For frontend development, specify the framework (React, Vue, Angular) and provide context about existing codebase structure for consistent code generation.
+	        When building agents, leverage the improved scaffold integration by clearly defining agent roles, tools, and interaction patterns upfront.
+	        Utilize enhanced tool calling capabilities by providing comprehensive tool schemas with examples and error handling patterns.
+	        Structure complex coding tasks into modular components to take advantage of the model's improved full-stack development proficiency.
+	        Use the full 256K context window for maintaining codebase context across multiple files and maintaining development workflow continuity.
+
+	    Get Started with Kimi K2 0905
+
+	    Experience moonshotai/kimi-k2-instruct-0905 on Groq:
+
+	    shell
+
+	    pip install groq
+
+	    Python
+
+	    1from groq import Groq
+	    2client = Groq()
+	    3completion = client.chat.completions.create(
+	    4    model="moonshotai/kimi-k2-instruct-0905",
+	    5    messages=[
+	    6        {
+	    7            "role": "user",
+	    8            "content": "Explain why fast inference is critical for reasoning models"
+	    9        }
+	    10    ]
+	    11)
+	    12print(completion.choices[0].message.content)
+
+
+
+
+
+	    console.groq.com
+	    Structured Outputs - GroqDocs
+	    23–29 minutes
+
+	    Guarantee model responses strictly conform to your JSON schema for reliable, type-safe data structures.
+
+	    Structured Outputs is a feature that ensures your model responses conform to your provided JSON Schema. The feature offers two modes with different guarantees and requirements:
+
+	    With strict: false (the default behavior), the model attempts to match your schema but without hard constraints:
+
+	        Valid JSON, but schema adherence not guaranteed - May produce valid JSON that does not match your schema (for example, wrong field types or missing/extra fields)
+	        Possible errors and malformed output - Can sometimes produce malformed JSON syntax or trigger 400 errors due to schema validation failures
+	        Fewer requirements - More flexible schema constraints, such as optional fields
+	        Broader model support - Available on all models that support Structured Outputs
+
+	    This mode is suitable when you need structured outputs but can handle occasional validation errors with retry logic.
+
+	    Example usage:
+
+	    JSON
+
+	    {
+	      "response_format": {
+	        "type": "json_schema",
+	        "json_schema": {
+	          "name": "schema_name",
+	          "strict": false,  // or omit this field (defaults to false)
+	          "schema": { ... }
+	        }
+	      }
+	    }
+
+	    Key benefits of Structured Outputs:
+
+	        Type-safe responses: Reduce validation and retry logic for malformed outputs
+	        Programmatic refusal detection: Detect safety-based model refusals programmatically
+	        Simplified prompting: Less complex prompts needed for consistent formatting
+
+	    In addition to supporting Structured Outputs in our API, our SDKs also enable you to easily define your schemas with Pydantic and Zod to ensure further type safety. The examples below show how to extract structured information from unstructured text.
+
+	    Structured Outputs is available in two modes: strict: true (with constrained decoding) and strict: false (default, best-effort validation).
+
+	    The following models support Structured Outputs with strict: false (default), which attempts schema compliance but may occasionally error:
+	    Model ID	Model
+
+	    openai/gpt-oss-20b
+	    	GPT-OSS 20B
+
+	    openai/gpt-oss-120b
+	    	GPT-OSS 120B
+
+	    openai/gpt-oss-safeguard-20b
+	    	Safety GPT OSS 20B
+
+	    moonshotai/kimi-k2-instruct-0905
+	    	Kimi K2 Instruct
+
+	    meta-llama/llama-4-maverick-17b-128e-instruct
+	    	Llama 4 Maverick
+
+	    meta-llama/llama-4-scout-17b-16e-instruct
+	    	Llama 4 Scout
+
+	    For all other models, you can use JSON Object Mode to get a valid JSON object, though it may not match your schema.
+
+	    1from groq import Groq
+	    2import json
+	    3
+	    4groq = Groq()
+	    5
+	    6response = groq.chat.completions.create(
+	    7    model="openai/gpt-oss-20b",
+	    8    messages=[
+	    9        {"role": "system", "content": "Extract product review information from the text."},
+	    10        {
+	    11            "role": "user",
+	    12            "content": "I bought the UltraSound Headphones last week and I'm really impressed! The noise cancellation is amazing and the battery lasts all day. Sound quality is crisp and clear. I'd give it 4.5 out of 5 stars.",
+	    13        },
+	    14    ],
+	    15    response_format={
+	    16        "type": "json_schema",
+	    17        "json_schema": {
+	    18            "name": "product_review",
+	    19            "strict": True,
+	    20            "schema": {
+	    21                "type": "object",
+	    22                "properties": {
+	    23                    "product_name": {"type": "string"},
+	    24                    "rating": {"type": "number"},
+	    25                    "sentiment": {
+	    26                        "type": "string",
+	    27                        "enum": ["positive", "negative", "neutral"]
+	    28                    },
+	    29                    "key_features": {
+	    30                        "type": "array",
+	    31                        "items": {"type": "string"}
+	    32                    }
+	    33                },
+	    34                "required": ["product_name", "rating", "sentiment", "key_features"],
+	    35                "additionalProperties": False
+	    36            }
+	    37        }
+	    38    }
+	    39)
+	    40
+	    41result = json.loads(response.choices[0].message.content or "{}")
+	    42print(json.dumps(result, indent=2))
+
+	    Example Output
+
+	    Choosing Between Strict and Best-effort Mode
+	    	Strict Mode (strict: true)	Best-effort Mode (strict: false)
+	    Schema adherence	Guaranteed - uses constrained decoding	Best-effort - generally compliant
+	    Error handling	Never produces invalid JSON	May occasionally 400 errors or produce syntactically valid but schema-invalid JSON
+	    Requirements	All fields must be required
+	    additionalProperties: false required	More flexible constraints allowed
+	    Model support	Limited (GPT-OSS 20B, 120B)	All Structured Outputs models
+	    When to use	Production apps requiring 100% reliability	Development, prototyping, or when using unsupported models
+
+	    Recommendation: Use Strict Mode (strict: true) when available for production applications. Fall back to Best-effort Mode (strict: false) for broader model support or during development.
+
+	    You can generate structured SQL queries from natural language descriptions, helping ensure proper syntax and including metadata about the query structure.
+
+	    1from groq import Groq
+	    2from pydantic import BaseModel
+	    3import json
+	    4
+	    5client = Groq()
+	    6
+	    7class ValidationStatus(BaseModel):
+	    8    is_valid: bool
+	    9    syntax_errors: list[str]
+	    10
+	    11class SQLQueryGeneration(BaseModel):
+	    12    query: str
+	    13    query_type: str
+	    14    tables_used: list[str]
+	    15    estimated_complexity: str
+	    16    execution_notes: list[str]
+	    17    validation_status: ValidationStatus
+	    18
+	    19response = client.chat.completions.create(
+	    20    model="moonshotai/kimi-k2-instruct-0905",
+	    21    messages=[
+	    22        {
+	    23            "role": "system",
+	    24            "content": "You are a SQL expert. Generate structured SQL queries from natural language descriptions with proper syntax validation and metadata.",
+	    25        },
+	    26        {"role": "user", "content": "Find all customers who made orders over $500 in the last 30 days, show their name, email, and total order amount"},
+	    27    ],
+	    28    response_format={
+	    29        "type": "json_schema",
+	    30        "json_schema": {
+	    31            "name": "sql_query_generation",
+	    32            "schema": SQLQueryGeneration.model_json_schema()
+	    33        }
+	    34    }
+	    35)
+	    36
+	    37sql_query_generation = SQLQueryGeneration.model_validate(json.loads(response.choices[0].message.content))
+	    38print(json.dumps(sql_query_generation.model_dump(), indent=2))
+
+	    Example Output
+
+	    When working with Structured Outputs, you can use popular schema validation libraries like Zod for TypeScript and Pydantic for Python. These libraries provide type safety, runtime validation, and seamless integration with JSON Schema generation.
+
+	    This example demonstrates how to classify customer support tickets using structured schemas with both Zod and Pydantic, ensuring consistent categorization and routing.
+
+	    TypeScript
+
+	    1import Groq from "groq-sdk";
+	    2import { z } from "zod";
+	    3
+	    4const groq = new Groq();
+	    5
+	    6const supportTicketSchema = z.object({
+	    7  category: z.enum(["api", "billing", "account", "bug", "feature_request", "integration", "security", "performance"]),
+	    8  priority: z.enum(["low", "medium", "high", "critical"]),
+	    9  urgency_score: z.number(),
+	    10  customer_info: z.object({
+	    11    name: z.string(),
+	    12    company: z.string().optional(),
+	    13    tier: z.enum(["free", "paid", "enterprise", "trial"])
+	    14  }),
+	    15  technical_details: z.array(z.object({
+	    16    component: z.string(),
+	    17    error_code: z.string().optional(),
+	    18    description: z.string()
+	    19  })),
+	    20  keywords: z.array(z.string()),
+	    21  requires_escalation: z.boolean(),
+	    22  estimated_resolution_hours: z.number(),
+	    23  follow_up_date: z.string().datetime().optional(),
+	    24  summary: z.string()
+	    25});
+	    26
+	    27type SupportTicket = z.infer<typeof supportTicketSchema>;
+	    28
+	    29const response = await groq.chat.completions.create({
+	    30  model: "moonshotai/kimi-k2-instruct-0905",
+	    31  messages: [
+	    32    {
+	    33      role: "system",
+	    34      content: `You are a customer support ticket classifier for SaaS companies. 
+	    35                Analyze support tickets and categorize them for efficient routing and resolution.
+	    36                Output JSON only using the schema provided.`,
+	    37    },
+	    38    { 
+	    39      role: "user", 
+	    40      content: `Hello! I love your product and have been using it for 6 months. 
+	    41                I was wondering if you could add a dark mode feature to the dashboard? 
+	    42                Many of our team members work late hours and would really appreciate this. 
+	    43                Also, it would be great to have keyboard shortcuts for common actions. 
+	    44                Not urgent, but would be a nice enhancement! 
+	    45                Best, Mike from StartupXYZ`
+	    46    },
+	    47  ],
+	    48  response_format: {
+	    49    type: "json_schema",
+	    50    json_schema: {
+	    51      name: "support_ticket_classification",
+	    52      schema: z.toJSONSchema(supportTicketSchema)
+	    53    }
+	    54  }
+	    55});
+	    56
+	    57const rawResult = JSON.parse(response.choices[0].message.content || "{}");
+	    58const result = supportTicketSchema.parse(rawResult);
+	    59console.log(result);
+
+	    Example Output
+
+	    Design your JSON Schema to constrain model responses. Reference the examples above and see supported schema features for technical limitations.
+
+	    Include the schema in your API request using the response_format parameter. Choose between strict: true for guaranteed schema compliance or strict: false for best-effort validation:
+
+	    Using Strict Mode (strict: true)
+
+	    Set strict: true for guaranteed schema compliance on supported models:
+
+	    JSON
+
+	    response_format: { type: "json_schema", json_schema: { name: "schema_name", strict: true, schema: … } }
+
+	    Complete implementation example:
+
+	    1from groq import Groq
+	    2import json
+	    3
+	    4client = Groq()
+	    5
+	    6response = client.chat.completions.create(
+	    7    model="openai/gpt-oss-20b",
+	    8    messages=[
+	    9        {"role": "system", "content": "You are a helpful math tutor. Guide the user through the solution step by step."},
+	    10        {"role": "user", "content": "how can I solve 8x + 7 = -23"}
+	    11    ],
+	    12    response_format={
+	    13        "type": "json_schema",
+	    14        "json_schema": {
+	    15            "name": "math_response",
+	    16            "strict": True,
+	    17            "schema": {
+	    18                "type": "object",
+	    19                "properties": {
+	    20                    "steps": {
+	    21                        "type": "array",
+	    22                        "items": {
+	    23                            "type": "object",
+	    24                            "properties": {
+	    25                                "explanation": {"type": "string"},
+	    26                                "output": {"type": "string"}
+	    27                            },
+	    28                            "required": ["explanation", "output"],
+	    29                            "additionalProperties": False
+	    30                        }
+	    31                    },
+	    32                    "final_answer": {"type": "string"}
+	    33                },
+	    34                "required": ["steps", "final_answer"],
+	    35                "additionalProperties": False
+	    36            }
+	    37        }
+	    38    }
+	    39)
+	    40
+	    41result = json.loads(response.choices[0].message.content)
+	    42print(json.dumps(result, indent=2))
+
+	    Error Handling
+
+	    Error handling differs based on which mode you're using:
+
+	    With Strict Mode (strict: true)
+
+	    Constrained decoding guarantees schema-compliant output, so you won't encounter schema validation errors. The model's output will always match your JSON Schema perfectly.
+
+	    No error handling needed:
+
+	    Python
+
+	    1# Simple and reliable - no try/catch needed for validation
+	    2response = client.chat.completions.create(
+	    3    model="openai/gpt-oss-20b",
+	    4    messages=[...],
+	    5    response_format={
+	    6        "type": "json_schema",
+	    7        "json_schema": {
+	    8            "name": "schema_name",
+	    9            "strict": True,
+	    10            "schema": {...}
+	    11        }
+	    12    }
+	    13)
+	    14
+	    15# Output is guaranteed to match schema
+	    16data = json.loads(response.choices[0].message.content)
+
+	        User input handling: Include explicit instructions for invalid or incompatible inputs. Models attempt schema adherence even with unrelated data, potentially causing hallucinations. Specify fallback responses (empty fields, error messages) for incompatible inputs.
+
+	        Output quality: Structured outputs are designed to output schema compliance but not semantic accuracy. For persistent errors, refine instructions, add system message examples, or decompose complex tasks. See the prompt engineering guide for optimization techniques.
+
+	    If you're currently using Structured Outputs with strict: false (or without specifying the strict parameter), you can upgrade to strict: true for guaranteed schema compliance. Follow these steps:
+
+	    Ensure you're using a model that supports strict: true. See the Supported Models section for more information.
+
+	    Make your schema compliant with strict: true requirements:
+
+	    Mark all fields as required:
+
+	    JSON
+
+	    {
+	      "type": "object",
+	      "properties": {
+	        "name": { "type": "string" },
+	        "age": { "type": "number" }
+	      },
+	      "required": ["name", "age"]  // ← Ensure all properties are in required array
+	    }
+
+	    Add additionalProperties: false to all objects:
+
+	    JSON
+
+	    {
+	      "type": "object",
+	      "properties": {
+	        "name": { "type": "string" },
+	        "email": { "type": "string" }
+	      },
+	      "required": ["name", "email"],
+	      "additionalProperties": false  // ← Add this to all objects
+	    }
+
+	    Handle optional fields with union types:
+
+	    If you need optional fields, use union types with null:
+
+	    JSON
+
+	    {
+	      "type": "object",
+	      "properties": {
+	        "name": { "type": "string" },
+	        "nickname": { 
+	          "type": ["string", "null"]  // ← Use union type for optional fields
+	        }
+	      },
+	      "required": ["name", "nickname"],  // ← Field must still be in required array
+	      "additionalProperties": false
+	    }
+
+	    Add strict: true to your response_format:
+
+	    JSON
+
+	    {
+	      "model": "openai/gpt-oss-20b",
+	      "messages": [...],
+	      "response_format": {
+	        "type": "json_schema",
+	        "json_schema": {
+	          "name": "schema_name",
+	          "strict": true,  // ← Add this line
+	          "schema": {...}
+	        }
+	      }
+	    }
+
+	    Structured Outputs supports a JSON Schema subset with specific constraints for performance and reliability.
+
+	        Primitives: String, Number, Boolean, Integer
+	        Complex: Object, Array, Enum
+	        Composition: anyOf (union types)
+
+	    When using strict: false (default), your schema has more flexibility:
+
+	        Optional fields allowed: Not all properties need to be in required
+	        additionalProperties: Can be true or omitted (though false is recommended)
+	        More forgiving validation: Best-effort schema matching, but may occasionally produce errors or invalid JSON
+
+	    Example with optional fields:
+
+	    JSON
+
+	    {
+	      "type": "object",
+	      "properties": {
+	        "name": { "type": "string" },
+	        "nickname": { "type": "string" }
+	      },
+	      "required": ["name"]
+	    }
+
+	    Note: While strict: false is more flexible, following the strict: true requirements will improve output quality and reduce validation errors.
+
+	    Union types: Each schema within anyOf must comply with all subset restrictions:
+
+	    JSON
+
+	    {
+	      "type": "object",
+	      "properties": {
+	        "payment_method": {
+	          "anyOf": [
+	            {
+	              "type": "object",
+	              "description": "Credit card payment information",
+	              "properties": {
+	                "card_number": {
+	                  "type": "string",
+	                  "description": "The credit card number"
+	                },
+	                "expiry_date": {
+	                  "type": "string",
+	                  "description": "Card expiration date in MM/YY format"
+	                },
+	                "cvv": {
+	                  "type": "string",
+	                  "description": "Card security code"
+	                }
+	              },
+	              "additionalProperties": false,
+	              "required": ["card_number", "expiry_date", "cvv"]
+	            },
+	            {
+	              "type": "object",
+	              "description": "Bank transfer payment information",
+	              "properties": {
+	                "account_number": {
+	                  "type": "string",
+	                  "description": "Bank account number"
+	                },
+	                "routing_number": {
+	                  "type": "string",
+	                  "description": "Bank routing number"
+	                },
+	                "bank_name": {
+	                  "type": "string",
+	                  "description": "Name of the bank"
+	                }
+	              },
+	              "additionalProperties": false,
+	              "required": ["account_number", "routing_number", "bank_name"]
+	            }
+	          ]
+	        }
+	      },
+	      "additionalProperties": false,
+	      "required": ["payment_method"]
+	    }
+
+	    Reusable subschemas: Define reusable components with $defs and reference them using $ref:
+
+	    JSON
+
+	    {
+	      "type": "object",
+	      "properties": {
+	        "milestones": {
+	          "type": "array",
+	          "items": {
+	            "$ref": "#/$defs/milestone"
+	          }
+	        },
+	        "project_status": {
+	          "type": "string",
+	          "enum": ["planning", "in_progress", "completed", "on_hold"]
+	        }
+	      },
+	      "$defs": {
+	        "milestone": {
+	          "type": "object",
+	          "properties": {
+	            "title": {
+	              "type": "string",
+	              "description": "Milestone name"
+	            },
+	            "deadline": {
+	              "type": "string",
+	              "description": "Due date in ISO format"
+	            },
+	            "completed": {
+	              "type": "boolean"
+	            }
+	          },
+	          "required": ["title", "deadline", "completed"],
+	          "additionalProperties": false
+	        }
+	      },
+	      "required": ["milestones", "project_status"],
+	      "additionalProperties": false
+	    }
+
+	    Root recursion: Use # to reference the root schema:
+
+	    JSON
+
+	    {
+	      "name": "organization_chart",
+	      "description": "Company organizational structure",
+	      "strict": true,
+	      "schema": {
+	        "type": "object",
+	        "properties": {
+	          "employee_id": {
+	            "type": "string",
+	            "description": "Unique employee identifier"
+	          },
+	          "name": {
+	            "type": "string",
+	            "description": "Employee full name"
+	          },
+	          "position": {
+	            "type": "string",
+	            "description": "Job title or position",
+	            "enum": ["CEO", "Manager", "Developer", "Designer", "Analyst", "Intern"]
+	          },
+	          "direct_reports": {
+	            "type": "array",
+	            "description": "Employees reporting to this person",
+	            "items": {
+	              "$ref": "#"
+	            }
+	          },
+	          "contact_info": {
+	            "type": "array",
+	            "description": "Contact information for the employee",
+	            "items": {
+	              "type": "object",
+	              "properties": {
+	                "type": {
+	                  "type": "string",
+	                  "description": "Type of contact info",
+	                  "enum": ["email", "phone", "slack"]
+	                },
+	                "value": {
+	                  "type": "string",
+	                  "description": "The contact value"
+	                }
+	              },
+	              "additionalProperties": false,
+	              "required": ["type", "value"]
+	            }
+	          }
+	        },
+	        "required": [
+	          "employee_id",
+	          "name",
+	          "position",
+	          "direct_reports",
+	          "contact_info"
+	        ],
+	        "additionalProperties": false
+	      }
+	    }
+
+	    Explicit recursion through definition references:
+
+	    JSON
+
+	    {
+	      "type": "object",
+	      "properties": {
+	        "file_system": {
+	          "$ref": "#/$defs/file_node"
+	        }
+	      },
+	      "$defs": {
+	        "file_node": {
+	          "type": "object",
+	          "properties": {
+	            "name": {
+	              "type": "string",
+	              "description": "File or directory name"
+	            },
+	            "type": {
+	              "type": "string",
+	              "enum": ["file", "directory"]
+	            },
+	            "size": {
+	              "type": "number",
+	              "description": "Size in bytes (0 for directories)"
+	            },
+	            "children": {
+	              "anyOf": [
+	                {
+	                  "type": "array",
+	                  "items": {
+	                    "$ref": "#/$defs/file_node"
+	                  }
+	                },
+	                {
+	                  "type": "null"
+	                }
+	              ]
+	            }
+	          },
+	          "additionalProperties": false,
+	          "required": ["name", "type", "size", "children"]
+	        }
+	      },
+	      "additionalProperties": false,
+	      "required": ["file_system"]
+	    }
+
+	    JSON Object Mode provides basic JSON output validation without schema enforcement. Unlike Structured Outputs with json_schema mode, it is designed to output valid JSON syntax but not schema compliance. The endpoint will either return valid JSON or throw an error if the model cannot produce valid JSON syntax. Use Structured Outputs when available for your use case.
+	    	Strict Mode	Best-effort Mode	JSON Object Mode
+	    Valid JSON	Always ✓	Usually ✓	Usually ✓
+	    Schema adherence	Guaranteed ✓	Best-effort	No
+	    Can error	No	Occasionally	Occasionally
+	    Requires schema	Yes	Yes	No
+	    Model support	Multiple models	Multiple models	All models
+	    Use case	Production apps	Development, broader compatibility	Simple JSON without schema
+
+	    Enable JSON Object Mode by setting response_format to { "type": "json_object" }.
+
+	    Requirements and limitations:
+
+	        Include explicit JSON instructions in your prompt (system message or user input)
+	        Outputs are syntactically valid JSON but may not match your intended schema
+	        Combine with validation libraries and retry logic for schema compliance
+
+	    This example shows prompt-guided JSON generation for sentiment analysis, adaptable to classification, extraction, or summarization tasks:
+
+	    1from groq import Groq
+	    2import json
+	    3
+	    4client = Groq()
+	    5
+	    6def main():
+	    7    response = client.chat.completions.create(
+	    8        model="llama-3.3-70b-versatile",
+	    9        messages=[
+	    10            {
+	    11                "role": "system",
+	    12                "content": """You are a data analysis API that performs sentiment analysis on text.
+	    13                Respond only with JSON using this format:
+	    14                {
+	    15                    "sentiment_analysis": {
+	    16                    "sentiment": "positive|negative|neutral",
+	    17                    "confidence_score": 0.95,
+	    18                    "key_phrases": [
+	    19                        {
+	    20                        "phrase": "detected key phrase",
+	    21                        "sentiment": "positive|negative|neutral"
+	    22                        }
+	    23                    ],
+	    24                    "summary": "One sentence summary of the overall sentiment"
+	    25                    }
+	    26                }"""
+	    27            },
+	    28            {
+	    29                "role": "user", 
+	    30                "content": "Analyze the sentiment of this customer review: 'I absolutely love this product! The quality exceeded my expectations, though shipping took longer than expected.'"
+	    31            }
+	    32        ],
+	    33        response_format={"type": "json_object"}
+	    34    )
+	    35
+	    36    result = json.loads(response.choices[0].message.content)
+	    37    print(json.dumps(result, indent=2))
+	    38
+	    39if __name__ == "__main__":
+	    40    main()
+
+	    System prompts structure the output format while maintaining JSON validity. However, keep in mind that the JSON object output may not match your schema.
+
+	    Example Output
+
+	    Response structure:
+
+	        sentiment: Classification (positive/negative/neutral)
+	        confidence_score: Confidence level (0-1 scale)
+	        key_phrases: Extracted phrases with individual sentiment scores
+	        summary: Analysis overview and main findings
+
+
+
+
+
+	        groq.com
+	        Introducing Kimi K2‑0905 on GroqCloud
+	        ~2 minutes
+
+	        Groq
+
+	        Sep 04, 2025
+
+	        Moonshot AI’s cutting‑edge model, moonshotai/Kimi-K2-Instruct-0905, is now live on GroqCloud. This integration brings day zero support for the latest frontier open model alongside production‑grade speed, low latency, and predictable cost empowering developers to take agentic coding to the next level.
+	        Key Features of Kimi K2‑0905 on GroqCloud
+
+	            Full 256k Context Window: The largest context window of any model on GroqCloud to date.
+	            Prompt Caching: Up to 50% cost savings on cached tokens and dramatically faster response times. When paired with the 256k context window, this is a massive unlock for agentic coding applications, where a large amount of context is shared between queries.
+	            Leading Price‑to‑Performance: 200+ T/s at a blended price of $1.50 / M tokens ($1.00 / M input tokens; $3.00 / M output tokens), helping to provide top‑tier performance without surprise bills.
+	            Note: With this release, requests to the original Kimi K2 model will be routed to this new version.
+
+	        Enhanced Capabilities
+
+	        Kimi K2‑0905 delivers a suite of upgrades for developers over the previous Kimi K2 release including:
+
+	            Improved Agentic Coding: More reliable code generation, rivaling that of frontier closed models, especially for front-end development and tool calling.
+	            256k Context Window: Support larger complex, multi‑turn interactions without chopping prompts.
+
+	        Get Started with Kimi K2-0905 on GroqCloud
+
+	        Try moonshotai/Kimi-K2-Instruct-0905 via the GroqCloud Developer Console, available in the Playground and the API.
+
+	        Get immediate access to Moonshot.AI’s new open model or scale without rate limits by upgrading to a GroqCloud paid tier.
+
+
+
+
+	        community.groq.com
+	        Moonshotai/kimi-k2-instruct-0905 errors with json_schema - Forum - Groq Community
+	        6–8 minutes
+	        post by GusPuffy on Oct 16, 2025
+
+	        I am using json_schema to FORCE a selection from a set of enum choices. It is failing to respond with the set of choices. This makes the model unable to be used for programmatic purposes. I am receiving this error:
+
+	        {
+	        	"error": {
+	        		"message": "Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/choice' does not validate with /properties/choice/enum: value must be \"angry\"",
+	        		"type": "invalid_request_error",
+	        		"code": "json_validate_failed",
+	        		"failed_generation": "{\"choice\":\"happy\"}"
+	        	}
+	        }
+
+	        Here is a reproducible request which commonly make the error pop up.
+
+	        {
+	        	"model": "moonshotai/kimi-k2-instruct-0905",
+	        	"messages": [
+	        		{
+	        			"role": "system",
+	        			"content": "Based on the user input, classify the converation with one of the following moods. Return only a single word of the mood that you think classifies the conversation:\n\nangry, bored, confident, dazed, embarrassed, energized, fine, flirty, focused, happy, inspired, playful, sad, scared, tense, uncomfortable"
+	        		},
+	        		{
+	        			"role": "user",
+	        			"content": "Rico: Hey hows it going?\nPaka: It's going great! The evening is just starting to pick up, and the energy in here is amazing. What can I get for you tonight?\nRico: Could I get a blue moon?\nPaka: Of course! Coming right up. *He grabs a glass and begins to mix the ingredients together expertly, his hands moving swiftly yet gracefully.* So, Rico, what brings you to The Blue Velvet tonight? Are you here for the live music or just enjoying the ambiance?\nRico: The live music is nice, just enjoying it.\nPaka: I'm glad you're enjoying it. *He slides the perfectly crafted Blue Moon over to Rico with a smile.* Here you go, one Blue Moon just for you. Let me know if you need anything else."
+	        		}
+	        	],
+	        	"max_tokens": 15,
+	        	"temperature": 0.6,
+	        	"top_p": 0.9,
+	        	"response_format": {
+	        		"type": "json_schema",
+	        		"json_schema": {
+	        			"name": "thechoice",
+	        			"schema": {
+	        				"type": "object",
+	        				"properties": {
+	        					"choice": {
+	        						"type": "string",
+	        						"description": "The choice",
+	        						"enum": [
+	        							"angry"
+	        						]
+	        					}
+	        				},
+	        				"required": [
+	        					"choice"
+	        				],
+	        				"additionalProperties": false
+	        			},
+	        			"strict": true
+	        		}
+	        	}
+	        }
+
+	        Other providers like openai and vllm when using ‘strict’: true will always select one of these options no matter what.
+	        post by yawnxyz on Oct 16, 2025
+
+	        Thanks for flagging this; this is happening because we don’t have constrained decoding released yet.
+
+	        For now, I got this to work, using json_object instead of json_schema:
+
+	        Since this isn’t constrained decoding, it might still slip up every now and then; I ran this ~30 times and always got angry as the response.
+
+	        We’re working hard on constrained decoding though!
+
+	        curl --request POST \
+	            --url https://api.groq.com/openai/v1/chat/completions \
+	            --header 'authorization: Bearer id' \
+	            --header 'content-type: application/json' \
+	            --data '{
+	            "model": "moonshotai/kimi-k2-instruct-0905",
+	            "messages": [
+	                {
+	                    "role": "system",
+	                    "content": "Based on the user input, classify the converation with one of the following moods. Return only a single word of the mood that you think classifies the conversation:\n\nangry, bored, confident, dazed, embarrassed, energized, fine, flirty, focused, happy, inspired, playful, sad, scared, tense, uncomfortable\n\n---\nAPPENDED CONSTRAINTS (JSON Object Mode):\nYou must output ONLY a JSON object on a single line with this schema and rules, even though the API will not enforce it:\nSCHEMA:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"choice\": {\n      \"type\": \"string\",\n      \"enum\": [\"angry\"]\n    }\n  },\n  \"required\": [\"choice\"],\n  \"additionalProperties\": false\n}\nRULES:\n1) If your best label would not be in the enum, you MUST map it to the nearest allowed value.\n2) For this call, the ONLY allowed value is \"angry\"; therefore always return {\"choice\":\"angry\"}.\n3) No other keys, no comments, no prose.\n4) Output exactly one line of JSON."
+	                },
+	                {
+	                    "role": "user",
+	                    "content": "Rico: Hey hows it going? Paka: Its going great! The evening is just starting to pick up, and the energy in here is amazing. What can I get for you tonight? Rico: Could I get a blue moon? Paka: Of course! Coming right up. *He grabs a glass and begins to mix the ingredients together expertly, his hands moving swiftly yet gracefully.* So, Rico, what brings you to The Blue Velvet tonight? Are you here for the live music or just enjoying the ambiance? Rico: The live music is nice, just enjoying it. Paka: I'\''m glad you'\''re enjoying it. *He slides the perfectly crafted Blue Moon over to Rico with a smile.* Here you go, one Blue Moon just for you. Let me know if you need anything else."
+	                }
+	            ],
+	            "max_tokens": 8,
+	            "temperature": 0,
+	            "top_p": 0,
+	            "response_format": {
+	                "type": "json_object"
+	            }
+	        }'
+
+	        output
+
+	        {
+	            "id": "chatcmpl-e2707d05-1f98-48e7-821e-77ca3bd1ae7d",
+	            "object": "chat.completion",
+	            "created": 1760634873,
+	            "model": "moonshotai/kimi-k2-instruct-0905",
+	            "choices": [
+	                {
+	                    "index": 0,
+	                    "message": {
+	                        "role": "assistant",
+	                        "content": "{\"choice\":\"angry\"}"
+	                    },
+	                    "logprobs": null,
+	                    "finish_reason": "stop"
+	                }
+	            ],
+	            "usage": {
+	                "queue_time": 0.093391089,
+	                "prompt_tokens": 409,
+	                "prompt_time": 0.05638403,
+	                "completion_tokens": 7,
+	                "completion_time": 0.000195036,
+	                "total_tokens": 416,
+	                "total_time": 0.056579066
+	            },
+
+
+
+
+
+platform.moonshot.ai
+Moonshot AI Open Platform - Kimi Large Language Model API Service
+4–5 minutes
+Use Kimi API's JSON Mode
+
+In some scenarios, we want the model to output content in a fixed format JSON document. For example, when you want to summarize an article, you might expect a structured data format like this:
+
+If you directly tell the Kimi large language model in the prompt: "Please output content in JSON format," the model can understand your request and generate a JSON document as required. However, the generated content often has some flaws. For instance, in addition to the JSON document, Kimi might output extra text to explain the JSON document:
+
+Or the JSON document format might be incorrect and cannot be parsed properly, such as (note the comma at the end of the summary field):
+
+Such a JSON document cannot be parsed correctly. To generate a standard and valid JSON document as expected, we provide the response_format parameter. The default value of response_format is {"type": "text"}, which means ordinary text content with no formatting constraints. You can set response_format to {"type": "json_object"} to enable JSON Mode, and the Kimi large language model will output a valid, parsable JSON document as required.
+
+When using JSON Mode, please follow these guidelines:
+
+    Inform the Kimi large language model in the system prompt or user prompt about the JSON document to be generated, including specific field names and types. It's best to provide an example for the model to refer to.
+    The Kimi large language model will only generate JSON Object type JSON documents. Do not prompt the model to generate JSON Array or other types of JSON documents.
+    If you do not correctly inform the Kimi large language model of the required JSON Object format, the model will generate unexpected results.
+
+Let's use a specific example to illustrate the application of JSON Mode:
+
+    Imagine we are building a WeChat intelligent robot customer service (referred to as intelligent customer service). The intelligent customer service uses the Kimi large language model to answer customer questions. We want the intelligent customer service to not only reply with text messages but also with images, link cards, voice messages, and other types of messages. Moreover, in a single response, we want to mix different types of messages. For example, for customer product inquiries, we provide a text reply, a product image, and finally, a purchase link (in the form of a link card).
+
+Let's demonstrate the content of this example with code:
+
+Let's go over the steps for using JSON Mode once again:
+
+    Define the output JSON format in the system or user prompt. Our recommended best practice is to provide a specific output example and explain the meaning of each field;
+    Use the response_format parameter and set it to {"type": "json_object"};
+    Parse the content in the message returned by the Kimi large language model. message.content will be a valid JSON Object serialized as a string;
+
+If you encounter this situation:
+
+    You have correctly set the response_format parameter and specified the format of the JSON document in the prompt, but the JSON document you receive is incomplete or truncated, making it impossible to correctly parse the JSON document.
+
+We suggest you check if the finish_reason field in the return value is length. Generally, a smaller max_tokens value will cause the model's output to be truncated, and this rule also applies when using JSON Mode. We recommend that you set a reasonable max_tokens value based on the estimated size of the output JSON document, so that you can correctly parse the JSON document returned by the Kimi large language model.
+
+For a more detailed explanation of the issue of incomplete or truncated output from the Kimi large language model, please refer to: Common Issues and Solutions
+
+Last updated on January 26, 2026
+
+Use the Web Search ToolUse Partial Mode with Kimi API

@@ -11,6 +11,7 @@ class StrikeRequest(BaseModel):
     prompt: str
     temp: Optional[float] = 0.7
     format_mode: Optional[str] = None
+    response_format: Optional[dict] = None
 
 @router.post("")
 async def strike(request: StrikeRequest):
@@ -25,7 +26,8 @@ async def strike(request: StrikeRequest):
             model_id=request.modelId,
             prompt=request.prompt,
             temp=request.temp,
-            format_mode=request.format_mode
+            format_mode=request.format_mode,
+            response_format=request.response_format
         )
         return result
     except Exception as e:
