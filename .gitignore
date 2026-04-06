@@ -44,3 +44,51 @@ deploy.zip
 *.3.py
 *.4.py
 old/
+
+# === CLEANUP: Design/Research folders ===
+nanobanana-output/
+og/
+og-patched/
+stitch/
+masterpiece/
+masterpiece-ai-engine-ui/
+api_key_management_stellar_style/
+model_registry/
+tool_configuration/
+finals/
+recon/
+openclaw/
+
+# === CLEANUP: Mission/notes docs ===
+AGENTS.md
+DEPLOY.md
+FIX-DEPLOY.md
+MISSION_*.md
+MISSION_*.html
+PEACOCK_*.md
+PRODUCTION_TASK_BREAKDOWN.md
+PROJECT_HANDOFF.md
+SYNDICATE_*.md
+TASK_DELEGATION.md
+WEBUI_FEATURE_SPEC.md
+app/AGENT_ONBOARDING.md
+app/TACTICAL_COMMAND.md
+
+# === CLEANUP: Data/logs ===
+vault/failed/
+vault/successful/
+*_probe_results.json
+striker_status.json
+all_skills_metadata.json
+manual_strikes.log
+success_strikes.log
+failed_strikes.log
+mission_miner.log
+ai_engine.log
+server.log
+
+# === CLEANUP: Artifacts ===
+screen*.png
+deploy.zip
+make_db.py
+update-repo.sh
