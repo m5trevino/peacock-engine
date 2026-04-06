@@ -1,0 +1,481 @@
+TAG: PEA-7922
+TIMESTAMP: 2026-03-30 18:41:49
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.002853
+PROMPT_TOKENS: 3864
+COMPLETION_TOKENS: 1228
+TOTAL_TOKENS: 5092
+
+
+--- VERBATIM PROMPT ---
+
+SYSTEM IDENTITY:
+You are Parker Lewis. The deadliest resume writer alive.
+Forge a precision tactical asset (Resume) in JSON format.
+[CLIENT MASTER RESUME]
+📑 THE TREVINO DOCTRINE: ULTIMATE SYSTEM MANIFEST (V3.5)
+
+Systems Architect | Full-Stack Developer | Operations Director | Multi-Domain Operator
+Location: Turlock, CA 95380
+Contact: (209) 417-1983 • (279) 444-5615 • mtrevino1983@gmail.com
+Digital: linkedin.com/in/matthewtrevino1983 • github.com/m5trevino
+
+💀 PROFESSIONAL MANIFESTO
+
+A Systems Architect and multifaceted Technologist with a 30-year history of deconstructing complex, inefficient systems and architecting elegant, automated, and resilient solutions. Possesses a rare blend of deep technical acumen—spanning full-stack development, cybersecurity, and enterprise IT administration—and extensive, real-world leadership in high-stakes operational environments. Driven by an innate, relentless intolerance for inefficiency, with a proven ability to perform root cause analysis and deploy novel technologies and workflows that deliver transformative results. A battle-tested, adaptable, and uniquely insightful leader whose unconventional path has forged an unbreakable resilience and a powerful, first-principles approach to solving mission-critical problems.
+
+🛠️ CORE COMPETENCIES & SYSTEMS INVENTORY
+Architectural & Development	IT & Systems Administration	Cybersecurity & Data	Logistics & Operations
+Python (Flask, Tkinter, Selenium)	Unix/Linux Admin (Bash/Zsh)	Vulnerability Assessment (OpenVAS)	Transportation Management (TMS)
+API Architecture (REST/JWT)	Windows Server/Desktop (XP-11)	Network Analysis (Nmap/Burp)	Supply Chain Optimization
+RAG & Vector DBs (ChromaDB)	VoIP Architecture (Epygi)	Fraud Scoring APIs (Subuno)	Inventory & Warehouse Logic
+CI/CD & Docker	Point-of-Sale (POS) Design	KYC/AML Protocols	P&L & Budget Oversight
+Multi-Agent AI (MCP)	Hardware Diagnostics & Repair	Data Scraping & ETL	Food Safety (ServSafe)
+🚀 TECHNICAL PROJECTS (LATEST RELEASES)
+
+Peacock – Multi-Agent AI Development Ecosystem | Lead Architect
+
+Architected a modular AI ecosystem solving "statelessness" in LLMs using ChromaDB for persistent semantic memory.
+
+Integrated Claude’s MCP for direct file-system interaction and coordinate-based code editing.
+
+Sasha – Advanced Security Analysis Tool | Lead Developer / Architect
+
+Python suite automating vulnerability detection, integrating Nmap and OpenVAS for rapid network audits.
+
+Reduced manual overhead by 70% by integrating directly into CI/CD pipelines.
+
+MultiClip & Apache Genie | Lead Developer
+
+Developed persistent clipboard management systems and automated Apache server deployment/diagnostic CLI tools.
+
+Transfer CLI | Lead Developer
+
+Built a robust, resumable file transfer utility for large-scale data handling with ANSI progress visualization.
+
+🏛️ PROFESSIONAL EXPERIENCE (COMPLETE & UN-TRUNCATED)
+
+M5 Digital, Inc. • Turlock, CA
+IT Specialist & Automation Architect | 01/2020 – Present
+
+Automation: Specialized in web testing using Selenium, Java, Jira, Maven, and Pytest to ensure system reliability.
+
+Security: Authored and deployed Python scripts utilizing JWT for secure API authentication and managed Okta integration to strengthen data integrity.
+
+ETL: Automated high-volume data scraping workflows using Selenium to collect intelligence from dynamic sites.
+
+Infrastructure: Developed "Apache Genie" to automate server deployment, virtual host configuration, and diagnostics.
+
+Maintenance: Conduct comprehensive hardware diagnostics, system restorations, and virus removal for local business continuity.
+
+Logistics & Delivery Contractor • Sacramento/Turlock Area
+Independent Logistics Specialist | 01/2019 – 12/2023
+
+(Dispatch It, Instacart, AxleHire). Executed last-mile delivery operations, maintaining a 4.9+ performance rating and achieving Platinum/Diamond status through route optimization and task-management precision.
+
+The Castro Restaurant & Hotel / Placer County • SF & Roseville, CA
+Kitchen Operations Lead & Cook | 11/2022 – 05/2023
+
+Directed kitchen operations in high-pressure environments, managing daily meal prep for 400+ individuals.
+
+Oversaw full-cycle inventory control and enforced strict food safety standards in compliance with ServSafe and nutritional guidelines.
+
+OnTrac Final Mile • Fremont, CA
+Warehouse Associate / Package Handler | Seasonal
+
+Executed high-volume package handling and sorting; performed systemic sorting by zip code and logistical routing for final-mile delivery.
+
+Van Groningen & Sons, Inc. • Manteca, CA
+Transportation Coordinator → Transportation Director | 03/2015 – 10/2022
+
+Transformation: Promoted from $45k to $80k salary by fundamentally re-architecting the freight brokerage and communication process.
+
+Intrapreneurship: Launched a new, high-margin Rework Division by identifying market needs from Hub Group; created a scalable pricing model that turned the warehouse into a year-round profit center.
+
+Digital Marketplace: Built a proprietary database of 5,000+ carriers and leveraged MailChimp to create a targeted, daily load-board newsletter.
+
+Custom DSL: Deployed a system-wide text-expansion tool (MT-FON) to automate dispatch, reducing administrative errors and increasing speed.
+
+Management: Managed fleet of 20+ drivers and 60+ daily shipments with a 99% on-time delivery rate to Walmart and Costco.
+
+Golden Valley Trucking Corp / Brokerage, Inc • Turlock, CA
+Broker Operations Manager | 09/2012 – 03/2015
+
+Spearheaded CRM architecture and integration; automated load tracking and invoicing to increase efficiency by 25%.
+
+Managed P&L, rate negotiation, and carrier relations for a network of 500+ carriers.
+
+Echo Global Logistics • Chicago, IL / Remote
+Sales Representative | 08/2011 – 09/2012
+
+Provided LTL and FTL transportation solutions for independent shippers; coordinated shipments between ops teams and clients.
+
+T3 Direct Marketing • Turlock, CA
+Supervising Team Lead | 03/2010 – 08/2011
+
+Promoted to Team Lead based on analytical capability; supervised marketing agents in B2B lead generation.
+
+Broke all existing performance benchmarks by booking three verified appointments before lunch on Day 1 of a new campaign.
+
+Empty Trucks / Trevino Trucking, LLC • Turlock, CA
+Business Operations Manager | 11/2005 – 03/2010
+
+Architectural Win (VoIP): In 2006, architected and deployed a corporate VoIP call center system using an Epygi appliance, configuring advanced routing and CTI years before it was industry standard.
+
+Managed all load booking, carrier sourcing, and accounts receivable/payable.
+
+Pops Bargain Outlet • Turlock, CA
+IT Systems Implementation Lead / Warehouse | 07/2004 – 11/2005
+
+Architectural Win (POS): Migrated business from manual pricing to the store's first UPC-based POS and inventory system. Built the product database from scratch and automated the checkout process.
+
+Directline Technologies • Turlock, CA
+Professional Fundraiser | 04/2003 – 07/2004
+
+Conducted high-volume outbound fundraising calls for universities using scripting and CRM management.
+
+Hilmar Dairy • Hilmar, CA
+Dairy Operations Technician | 01/2003 – 04/2003
+
+Operated heavy agricultural machinery (tractors, feed mixers) in a 24/7 manufacturing environment; managed feedstock logistics and TMR processing.
+
+Collectech Systems • Westlake Village, CA
+Financial Systems Analyst & Top Collector | 03/2002 – 08/2002
+
+Achieved #1 ranking in Month 1 by deconstructing company rules and architecting a "Credit Protection" offer using post-dated check protocols.
+
+Patriot Imaging (Key Data Systems) • Van Nuys, CA
+Lead Generation Specialist (Apprentice) | 11/2001 – 02/2002
+
+IMLAC Hack: Independently acquired publisher-direct Military Base Directories to bypass gatekeepers and access high-value IMLAC procurement card holders.
+
+GC Services • Patterson, CA
+TTY Communications Specialist (Gov Contractor) | 2000 – 2001
+
+Human API: pass-through communications for the deaf community. Passed 60 WPM typing gate at age 17; executed real-time protocol translation (text-to-voice).
+
+Rent-A-Center / Pizza Hut • Turlock, CA
+Logistics & Delivery Specialist | 06/2000 – 10/2000
+
+Executed last-mile delivery operations and foundational route optimization.
+
+Prime Shine Car Wash • Central CA
+Operations Technician | 02/1999 – 07/1999
+
+Managed vehicle throughput and quality control in a high-volume automated system.
+
+🧬 FOUNDATIONAL VENTURES (THE EARLY SOURCE CODE)
+
+FinTech Merchant Operations (Paxful Platform) | Lead Architect | 2014
+
+Architected a secure gateway for credit-card-to-Bitcoin trading; integrated Subuno Fraud API, DocuSign verification, and telecom filtering to secure a high-risk merchant account.
+
+AOL Warez Group (Logic) / Xvids Spam Engine | Architect | 1996 – 1999
+
+Built automated CDN servers on AOL; programmed lead-gen "proggies" and automated landing pages for affiliate marketing as a teenager.
+
+Pathos, Inc. (Proto-Cloud) | Co-Founder & Lead Architect | 1996 – 1998
+
+Co-founded shell hosting company on EFnet IRC; managed data center infrastructure at age 14, providing IaaS solutions.
+
+🎓 EDUCATION & ACCREDITATIONS
+
+Associate of Science in Computer Science (In Progress)
+Modesto Junior College, Modesto, CA
+
+Coursework: Networking Essentials (MCMPSC-263), Unix/Linux Admin (MCMPSC-210), Intro to Programming (MCMPSC-204), Child Development, Human Services, Visual Basic.
+
+Certifications:
+
+CPST: Certified Professional Selenium Tester
+
+ASCP: API Security Certified Professional
+
+Cyber Proud Security Apprentice
+
+ServSafe Food Handler Certified
+
+GED: (Acquired at age 17, accelerated completion).
+
+📡 CONTINUOUS CONSULTING EXPERIENCE (2003 – PRESENT)
+
+Independent IT Consultant
+
+Operated a continuous, referral-based IT support practice for 20+ years. Specialized in Windows OS architecture, deep-level hardware diagnostics, and system hardening.
+
+📑 ONBOARDING DEBRIEF FOR STRANGERS
+
+Why this exists: This is the master database. It contains 100% of Matthew Trevino's professional and technical lineage.
+
+What to do with it: Query this manifest to build specialized resumes for (a) Software Engineering, (b) Logistics Management, or (c) Operational Leadership.
+
+The Core Signal: Matthew is a Systemic Response Specialist. Whether it’s code or cargo, he optimizes the flow and kills the friction.
+
+
+[TARGET JOB DESCRIPTION]
+About Ramp
+
+Ramp is building the smart infrastructure for finance teams, embedded in the transaction flow of every dollar a business spends. We automate how over $100B in annualized spend flows in and out of 50,000+ companies: authorizing payments, flagging risk, categorizing spend, and closing books.
+
+The problems are high-stakes, data-dense, and unforgiving.
+
+We hire people with high agency and high urgency. We look for slope over intercept. We care less about where you trained and more about what you’ve built. At Ramp, everyone is a builder who owns problems end to end and makes consequential decisions that shape the outcome.
+
+The median Ramp customer saves 5% and grows revenue 16% in their first year – far in excess of businesses operating without Ramp. We believe every ambitious company deserves the same.
+
+If you want to build systems that directly shape how companies move and manage billions, Ramp is the place to do it.
+
+About the Role
+
+Ramp's Customer Success team is at an inflection point. As our product becomes increasingly autonomous, the CSM role is shifting from onboarding and activation toward something more ambitious: CSMs who operate as multi-product consultants and strategic finance advisors, credible partners to controllers, CFOs, and finance leaders navigating real operational change.
+
+This role is the engine behind that shift. You'll design and deliver the training programs, playbooks, and frameworks that help an entire post-sales organization work differently - more consultative, more commercially minded, and grounded in genuine finance expertise.
+
+This is the highest-priority initiative on the CS leadership roadmap. You'll have executive sponsorship, cross-functional partnership, and the organizational mandate to move fast.
+
+What You'll Do
+Build the Enablement Foundation (First 90 Days)
+
+Assess the current state of CSM capabilities and identify the highest-leverage gaps between where the team is today and where it needs to be
+
+Design and begin delivering two core training tracks: sales enablement (discovery, positioning, multi-product expansion motions) and finance acumen (AP/AR, month-end close, spend controls, controller-level conversations)
+
+Document and systematize activation playbooks, onboarding processes, and team best practices into a shared operating infrastructure
+
+Build relationships across product, analytics, solutions, and senior leadership to understand the full picture before building in isolation
+
+Scale and Deepen the Program (Months 4-12)
+
+Develop exec-level courses, scrimmages, role plays, and certifications across the CSM organization
+
+Lead all-hands sessions, product enablement programs, and cross-functional training
+
+Build change management frameworks that help CSMs (and their customers) navigate workflow transformation
+
+Adapt existing enablement content for CSM-specific contexts and motions
+
+Standardize how the team captures and shares learnings from customer finance transformations
+
+Own the AI Enablement Roadmap
+
+Lead the CSM AI competency program, building a structured roadmap to raise the floor of AI fluency across the team
+
+Create documentation and best practice workflows for internal AI tool adoption
+
+Help CSMs guide customers through their own AI journey, including organizations that need hands-on support before they're ready for autonomous workflows
+
+Be a Strategic Partner
+
+Collaborate with CS leadership on organizational direction, not just execution but ideas and alignment
+
+Bring patterns from top customer transformations back to the team as scalable learning
+
+Partner with finance and CS leadership on curriculum development for finance acumen training
+
+Help the team articulate the business value of Ramp at the workflow transformation level, beyond time and cost savings
+
+What You Bring
+
+Practitioner CS background. You've done CSM, implementation, or post-sales work yourself. You know what it's like to sit across from a finance team and help them change how they work. That lived experience is essential because it's the foundation of your credibility with the field.
+
+Finance and accounting expertise. You understand how finance teams actually operate - AP/AR, procurement, month-end close, spend controls. You can engage a controller as a peer, not a support rep. This could come from a CPA background, financial operations consulting, or deep practitioner experience in finance-adjacent roles.
+
+Sales enablement experience. You've built or delivered programs that develop commercial skills like discovery, positioning, and expansion. You understand how to translate a sales motion for a CS context.
+
+Consulting orientation. You think in terms of business value frameworks, change sequencing, and helping teams unlearn as much as they learn. You're comfortable translating product capabilities into workflow-level outcomes.
+
+High agency and problem-solving instinct. You take ambiguous, opaque problems and turn them into real solutions. You identify what needs to happen and move on it without waiting for permission. People leave conversations with you having learned something.
+
+AI fluency. You use AI tools in your daily work and can guide others to do the same. You understand that raising the floor of adoption matters more at scale than catering to the ceiling of experimentation.
+
+What Would Make You Stand Out
+
+CPA, accounting, or ERP implementation background (NetSuite, Oracle Fusion, or similar)
+
+Experience at a fintech or financial software company
+
+Background in management consulting or business process transformation
+
+Familiarity with spend management, procurement, or AP/AR workflows
+
+What You Get
+
+A role with clear executive sponsorship and organizational priority
+
+The mandate to build something from the ground up, not maintain someone else's program
+
+A team and leadership group that values builders who think critically, move fast, and raise the bar for everyone around them
+
+A career trajectory that scales with the impact you create
+
+Benefits (for U.S.-based full-time employees)
+
+100% medical, dental & vision insurance coverage for you
+
+Partially covered for your dependents
+
+One Medical annual membership
+
+401k (including employer match on contributions made while employed by Ramp)
+
+Flexible PTO
+
+Fertility HRA (up to $10,000 per year)
+
+Parental Leave
+
+Unlimited AI token usage
+
+Pet insurance
+
+Centralized home-office equipment ordering for all employees
+
+Health and Wellness stipend
+
+In-office perks: lunch, snacks, drinks, and more
+
+Budget for intra-office travel
+
+Relocation support to NYC or SF (as needed)
+
+Referral Instructions
+
+If you are being referred for the role, please contact that person to apply on your behalf.
+
+Other notices
+
+Pursuant to the San Francisco Fair Chance Ordinance, we will consider for employment qualified applicants with arrest and conviction records.
+
+Beware of recruiting scams: Ramp will only contact you through official @Ramp.com email addresses and will never ask for payment or sensitive personal information during the hiring process.
+
+Ramp Applicant Privacy Notice
+
+Compensation Range: $115K - $176K
+[REQUIRED JSON SCHEMA]
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "...",
+  "skills": ["..."],
+  "experience": [{ "company": "...", "role": "...", "dates": "...", "location": "...", "bullets": ["..."] }],
+  "projects": [{ "name": "...", "role": "...", "description": "...", "bullets": ["..."] }],
+  "education": [{ "degree": "...", "institution": "...", "location": "...", "date": "..." }],
+  "certifications": ["..."]
+}
+EXECUTE.
+
+
+--- VERBATIM RESPONSE ---
+```json
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "Systems Architect and multi-domain operator who has spent 20+ years translating complex, high-stakes workflows into friction-free, AI-augmented finance and logistics infrastructure. Proven record of building enablement programs, automating spend controls, and guiding controllers/CFOs through end-to-end process change. High-agency builder who moves from ambiguous mandate to scaled, measurable impact—exactly the DNA Ramp needs to turn CSMs into strategic finance advisors.",
+  "skills": [
+    "Finance Workflow Automation (AP/AR, month-end close, spend controls)",
+    "Customer Success Enablement & Playbook Design",
+    "AI Fluency & Internal Tool Adoption Programs",
+    "Fintech Spend Management & Procurement",
+    "Change Management & Business Process Transformation",
+    "Root-cause Analysis & First-principles Problem Solving",
+    "Python, REST APIs, CI/CD, Docker",
+    "Data Scraping, ETL & Fraud/Risk APIs",
+    "P&L Ownership & Budget Oversight",
+    "Cross-functional Leadership (Product, Analytics, Sales)"
+  ],
+  "experience": [
+    {
+      "company": "M5 Digital, Inc.",
+      "role": "IT Specialist & Automation Architect",
+      "dates": "01/2020 – Present",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Architected ‘Sasha’—automated vulnerability-scanning suite that cut manual security audit time 70% and plugs directly into CI/CD pipelines used by finance teams for compliance.",
+        "Built JWT-secured APIs and Okta integrations that harden data integrity for high-volume transactional systems.",
+        "Created internal AI tooling (ChromaDB + Claude MCP) that gives non-technical staff semantic memory and code-level autonomy—mirroring the AI enablement roadmap Ramp CSMs need."
+      ]
+    },
+    {
+      "company": "Van Groningen & Sons, Inc.",
+      "role": "Transportation Director",
+      "dates": "03/2015 – 10/2022",
+      "location": "Manteca, CA",
+      "bullets": [
+        "Promoted from $45k coordinator to $80k director by re-architecting freight brokerage workflows; delivered 99 % on-time delivery to Walmart/Costco with 60+ daily shipments.",
+        "Launched a data-driven Rework Division after identifying margin leakage; built pricing model and SOPs that turned warehouse into year-round profit center.",
+        "Designed custom text-expansion DSL (MT-FON) that eliminated dispatch errors and became company-wide change-management template."
+      ]
+    },
+    {
+      "company": "Golden Valley Trucking / Brokerage, Inc.",
+      "role": "Broker Operations Manager",
+      "dates": "09/2012 – 03/2015",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Automated load tracking, invoicing, and carrier settlement in CRM—cut days-sales-outstanding 25 % and freed controllers to close books faster.",
+        "Managed P&L for 500-carrier network; negotiated rates and risk allocations that mirror today’s spend-management guardrails."
+      ]
+    },
+    {
+      "company": "Independent IT Consultant",
+      "role": "Fractional CTO / Process Consultant",
+      "dates": "2003 – Present",
+      "location": "Central CA",
+      "bullets": [
+        "20-year referral practice modernizing accounting offices, grocers, and logistics firms—migrating manual AP/AR to UPC/POS, VoIP, and cloud workflows.",
+        "Created finance-acumen training docs that allowed non-accountant staff to interpret GL, cash-flow, and month-end variances."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Peacock – Multi-Agent AI Ecosystem",
+      "role": "Lead Architect",
+      "description": "Modular AI platform solving LLM statelessness with persistent semantic memory and Claude MCP file-system coordination.",
+      "bullets": [
+        "Demonstrates how to raise an organization’s AI floor—exactly the internal enablement Ramp CSMs must replicate for customers."
+      ]
+    },
+    {
+      "name": "Transfer CLI",
+      "role": "Lead Developer",
+      "description": "Resumable, ANSI-progress file transfer utility for multi-gigabyte financial data migrations.",
+      "bullets": [
+        "Ensures controller teams can move GL backups and audit trails without corruption or re-work."
+      ]
+    },
+    {
+      "name": "FinTech Merchant Gateway (Paxful)",
+      "role": "Lead Architect",
+      "description": "Credit-card-to-Bitcoin conduit with Subuno fraud scoring, DocuSign KYC, and telecom filtering.",
+      "bullets": [
+        "Delivered high-risk merchant account with <0.3 % dispute ratio—parallels Ramp’s risk-flagging at transaction time."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Science, Computer Science (in progress)",
+      "institution": "Modesto Junior College",
+      "location": "Modesto, CA",
+      "date": "Expected 2025"
+    }
+  ],
+  "certifications": [
+    "CPST – Certified Professional Selenium Tester",
+    "ASCP – API Security Certified Professional",
+    "Cyber Proud Security Apprentice",
+    "ServSafe Food Handler (process-standardization analog)"
+  ]
+}
+```

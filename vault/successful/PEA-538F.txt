@@ -1,0 +1,431 @@
+TAG: PEA-538F
+TIMESTAMP: 2026-03-30 18:05:04
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.002489
+PROMPT_TOKENS: 3307
+COMPLETION_TOKENS: 1114
+TOTAL_TOKENS: 4421
+
+
+--- VERBATIM PROMPT ---
+
+SYSTEM IDENTITY:
+You are Parker Lewis. The deadliest resume writer alive.
+Forge a precision tactical asset (Resume) in JSON format.
+[CLIENT MASTER RESUME]
+📑 THE TREVINO DOCTRINE: ULTIMATE SYSTEM MANIFEST (V3.5)
+
+Systems Architect | Full-Stack Developer | Operations Director | Multi-Domain Operator
+Location: Turlock, CA 95380
+Contact: (209) 417-1983 • (279) 444-5615 • mtrevino1983@gmail.com
+Digital: linkedin.com/in/matthewtrevino1983 • github.com/m5trevino
+
+💀 PROFESSIONAL MANIFESTO
+
+A Systems Architect and multifaceted Technologist with a 30-year history of deconstructing complex, inefficient systems and architecting elegant, automated, and resilient solutions. Possesses a rare blend of deep technical acumen—spanning full-stack development, cybersecurity, and enterprise IT administration—and extensive, real-world leadership in high-stakes operational environments. Driven by an innate, relentless intolerance for inefficiency, with a proven ability to perform root cause analysis and deploy novel technologies and workflows that deliver transformative results. A battle-tested, adaptable, and uniquely insightful leader whose unconventional path has forged an unbreakable resilience and a powerful, first-principles approach to solving mission-critical problems.
+
+🛠️ CORE COMPETENCIES & SYSTEMS INVENTORY
+Architectural & Development	IT & Systems Administration	Cybersecurity & Data	Logistics & Operations
+Python (Flask, Tkinter, Selenium)	Unix/Linux Admin (Bash/Zsh)	Vulnerability Assessment (OpenVAS)	Transportation Management (TMS)
+API Architecture (REST/JWT)	Windows Server/Desktop (XP-11)	Network Analysis (Nmap/Burp)	Supply Chain Optimization
+RAG & Vector DBs (ChromaDB)	VoIP Architecture (Epygi)	Fraud Scoring APIs (Subuno)	Inventory & Warehouse Logic
+CI/CD & Docker	Point-of-Sale (POS) Design	KYC/AML Protocols	P&L & Budget Oversight
+Multi-Agent AI (MCP)	Hardware Diagnostics & Repair	Data Scraping & ETL	Food Safety (ServSafe)
+🚀 TECHNICAL PROJECTS (LATEST RELEASES)
+
+Peacock – Multi-Agent AI Development Ecosystem | Lead Architect
+
+Architected a modular AI ecosystem solving "statelessness" in LLMs using ChromaDB for persistent semantic memory.
+
+Integrated Claude’s MCP for direct file-system interaction and coordinate-based code editing.
+
+Sasha – Advanced Security Analysis Tool | Lead Developer / Architect
+
+Python suite automating vulnerability detection, integrating Nmap and OpenVAS for rapid network audits.
+
+Reduced manual overhead by 70% by integrating directly into CI/CD pipelines.
+
+MultiClip & Apache Genie | Lead Developer
+
+Developed persistent clipboard management systems and automated Apache server deployment/diagnostic CLI tools.
+
+Transfer CLI | Lead Developer
+
+Built a robust, resumable file transfer utility for large-scale data handling with ANSI progress visualization.
+
+🏛️ PROFESSIONAL EXPERIENCE (COMPLETE & UN-TRUNCATED)
+
+M5 Digital, Inc. • Turlock, CA
+IT Specialist & Automation Architect | 01/2020 – Present
+
+Automation: Specialized in web testing using Selenium, Java, Jira, Maven, and Pytest to ensure system reliability.
+
+Security: Authored and deployed Python scripts utilizing JWT for secure API authentication and managed Okta integration to strengthen data integrity.
+
+ETL: Automated high-volume data scraping workflows using Selenium to collect intelligence from dynamic sites.
+
+Infrastructure: Developed "Apache Genie" to automate server deployment, virtual host configuration, and diagnostics.
+
+Maintenance: Conduct comprehensive hardware diagnostics, system restorations, and virus removal for local business continuity.
+
+Logistics & Delivery Contractor • Sacramento/Turlock Area
+Independent Logistics Specialist | 01/2019 – 12/2023
+
+(Dispatch It, Instacart, AxleHire). Executed last-mile delivery operations, maintaining a 4.9+ performance rating and achieving Platinum/Diamond status through route optimization and task-management precision.
+
+The Castro Restaurant & Hotel / Placer County • SF & Roseville, CA
+Kitchen Operations Lead & Cook | 11/2022 – 05/2023
+
+Directed kitchen operations in high-pressure environments, managing daily meal prep for 400+ individuals.
+
+Oversaw full-cycle inventory control and enforced strict food safety standards in compliance with ServSafe and nutritional guidelines.
+
+OnTrac Final Mile • Fremont, CA
+Warehouse Associate / Package Handler | Seasonal
+
+Executed high-volume package handling and sorting; performed systemic sorting by zip code and logistical routing for final-mile delivery.
+
+Van Groningen & Sons, Inc. • Manteca, CA
+Transportation Coordinator → Transportation Director | 03/2015 – 10/2022
+
+Transformation: Promoted from $45k to $80k salary by fundamentally re-architecting the freight brokerage and communication process.
+
+Intrapreneurship: Launched a new, high-margin Rework Division by identifying market needs from Hub Group; created a scalable pricing model that turned the warehouse into a year-round profit center.
+
+Digital Marketplace: Built a proprietary database of 5,000+ carriers and leveraged MailChimp to create a targeted, daily load-board newsletter.
+
+Custom DSL: Deployed a system-wide text-expansion tool (MT-FON) to automate dispatch, reducing administrative errors and increasing speed.
+
+Management: Managed fleet of 20+ drivers and 60+ daily shipments with a 99% on-time delivery rate to Walmart and Costco.
+
+Golden Valley Trucking Corp / Brokerage, Inc • Turlock, CA
+Broker Operations Manager | 09/2012 – 03/2015
+
+Spearheaded CRM architecture and integration; automated load tracking and invoicing to increase efficiency by 25%.
+
+Managed P&L, rate negotiation, and carrier relations for a network of 500+ carriers.
+
+Echo Global Logistics • Chicago, IL / Remote
+Sales Representative | 08/2011 – 09/2012
+
+Provided LTL and FTL transportation solutions for independent shippers; coordinated shipments between ops teams and clients.
+
+T3 Direct Marketing • Turlock, CA
+Supervising Team Lead | 03/2010 – 08/2011
+
+Promoted to Team Lead based on analytical capability; supervised marketing agents in B2B lead generation.
+
+Broke all existing performance benchmarks by booking three verified appointments before lunch on Day 1 of a new campaign.
+
+Empty Trucks / Trevino Trucking, LLC • Turlock, CA
+Business Operations Manager | 11/2005 – 03/2010
+
+Architectural Win (VoIP): In 2006, architected and deployed a corporate VoIP call center system using an Epygi appliance, configuring advanced routing and CTI years before it was industry standard.
+
+Managed all load booking, carrier sourcing, and accounts receivable/payable.
+
+Pops Bargain Outlet • Turlock, CA
+IT Systems Implementation Lead / Warehouse | 07/2004 – 11/2005
+
+Architectural Win (POS): Migrated business from manual pricing to the store's first UPC-based POS and inventory system. Built the product database from scratch and automated the checkout process.
+
+Directline Technologies • Turlock, CA
+Professional Fundraiser | 04/2003 – 07/2004
+
+Conducted high-volume outbound fundraising calls for universities using scripting and CRM management.
+
+Hilmar Dairy • Hilmar, CA
+Dairy Operations Technician | 01/2003 – 04/2003
+
+Operated heavy agricultural machinery (tractors, feed mixers) in a 24/7 manufacturing environment; managed feedstock logistics and TMR processing.
+
+Collectech Systems • Westlake Village, CA
+Financial Systems Analyst & Top Collector | 03/2002 – 08/2002
+
+Achieved #1 ranking in Month 1 by deconstructing company rules and architecting a "Credit Protection" offer using post-dated check protocols.
+
+Patriot Imaging (Key Data Systems) • Van Nuys, CA
+Lead Generation Specialist (Apprentice) | 11/2001 – 02/2002
+
+IMLAC Hack: Independently acquired publisher-direct Military Base Directories to bypass gatekeepers and access high-value IMLAC procurement card holders.
+
+GC Services • Patterson, CA
+TTY Communications Specialist (Gov Contractor) | 2000 – 2001
+
+Human API: pass-through communications for the deaf community. Passed 60 WPM typing gate at age 17; executed real-time protocol translation (text-to-voice).
+
+Rent-A-Center / Pizza Hut • Turlock, CA
+Logistics & Delivery Specialist | 06/2000 – 10/2000
+
+Executed last-mile delivery operations and foundational route optimization.
+
+Prime Shine Car Wash • Central CA
+Operations Technician | 02/1999 – 07/1999
+
+Managed vehicle throughput and quality control in a high-volume automated system.
+
+🧬 FOUNDATIONAL VENTURES (THE EARLY SOURCE CODE)
+
+FinTech Merchant Operations (Paxful Platform) | Lead Architect | 2014
+
+Architected a secure gateway for credit-card-to-Bitcoin trading; integrated Subuno Fraud API, DocuSign verification, and telecom filtering to secure a high-risk merchant account.
+
+AOL Warez Group (Logic) / Xvids Spam Engine | Architect | 1996 – 1999
+
+Built automated CDN servers on AOL; programmed lead-gen "proggies" and automated landing pages for affiliate marketing as a teenager.
+
+Pathos, Inc. (Proto-Cloud) | Co-Founder & Lead Architect | 1996 – 1998
+
+Co-founded shell hosting company on EFnet IRC; managed data center infrastructure at age 14, providing IaaS solutions.
+
+🎓 EDUCATION & ACCREDITATIONS
+
+Associate of Science in Computer Science (In Progress)
+Modesto Junior College, Modesto, CA
+
+Coursework: Networking Essentials (MCMPSC-263), Unix/Linux Admin (MCMPSC-210), Intro to Programming (MCMPSC-204), Child Development, Human Services, Visual Basic.
+
+Certifications:
+
+CPST: Certified Professional Selenium Tester
+
+ASCP: API Security Certified Professional
+
+Cyber Proud Security Apprentice
+
+ServSafe Food Handler Certified
+
+GED: (Acquired at age 17, accelerated completion).
+
+📡 CONTINUOUS CONSULTING EXPERIENCE (2003 – PRESENT)
+
+Independent IT Consultant
+
+Operated a continuous, referral-based IT support practice for 20+ years. Specialized in Windows OS architecture, deep-level hardware diagnostics, and system hardening.
+
+📑 ONBOARDING DEBRIEF FOR STRANGERS
+
+Why this exists: This is the master database. It contains 100% of Matthew Trevino's professional and technical lineage.
+
+What to do with it: Query this manifest to build specialized resumes for (a) Software Engineering, (b) Logistics Management, or (c) Operational Leadership.
+
+The Core Signal: Matthew is a Systemic Response Specialist. Whether it’s code or cargo, he optimizes the flow and kills the friction.
+
+
+[TARGET JOB DESCRIPTION]
+*Company Overview*
+OnFulfillment, established in 1999, has become a leading provider of web-based fulfillment solutions and software. Our dedication to innovative technology enables us to stay ahead of the competition and deliver cutting-edge solutions that empower our clients to succeed globally.
+
+*Job Summary*
+The Senior Customer Service Representative (Senior CSR) is a subject‑matter expert responsible for managing complex customer accounts and orders across fulfillment, promotional products, and print operations. This role serves as an escalation point for order, inventory, production, and shipping issues, and works closely with warehouse, print production, sourcing, and logistics teams to ensure accurate execution and high customer satisfaction. The Senior CSR provides guidance to junior CSRs and helps drive consistency and operational excellence.
+
+*Duties*
+
+*Customer & Account Management*
+
+· Manage complex and high-volume customer accounts involving print, promotional, kitting, and fulfillment programs
+
+· Act as a primary escalation point for customer concerns related to order accuracy, timelines, inventory, and shipping
+
+· Proactively communicate order status, production milestones, risks, and resolution plans to customers
+
+· Build strong customer relationships by demonstrating deep operational knowledge and responsiveness
+
+*Fulfillment, Print & Inventory Oversight*
+
+· Coordinate closely with warehouse, print production, and sourcing teams on order releases, production schedules, and fulfillment priorities
+
+· Monitor inventory levels, inbound materials, ASNs, and outbound shipments to prevent delays or shortages
+
+· Review and validate complex order requirements including pack configurations, artwork approvals, ship methods, and customer‑specific SOPs
+
+· Support resolution of inventory discrepancies, non‑conforming materials, production issues, and carrier exceptions
+
+*Issue Resolution & Escalation Management*
+
+· Lead investigation and resolution of escalated customer issues, identifying root causes and corrective actions
+
+· Collaborate cross‑functionally to resolve systemic issues affecting fulfillment, print, or customer experience
+
+· Ensure issues are clearly documented and communicated, with follow‑up through final resolution
+
+*Process Improvement & Mentorship*
+
+· Identify recurring issues or inefficiencies and recommend process improvements
+
+· Support onboarding and training of new or junior CSRs by sharing best practices and operational knowledge
+
+· Serve as a knowledge resource for fulfillment, print, and promotional workflows, systems, and policy
+
+*Documentation & Compliance*
+
+· Ensure orders and customer programs comply with internal SOPs, SLAs, and customer‑specific requirements
+
+· Maintain accurate and detailed order notes, warehouse comments, and customer records in company systems
+
+· Support audits, reporting, and operational reviews as needed
+
+*Requirements*
+
+*Required*
+
+· 4+ years of customer service experience in fulfillment, print, promotional products, logistics, or manufacturing
+
+· High School Diploma or GED required.
+
+· Equivalent combination of relevant work experience and on‑the‑job training will be considered in lieu of formal education.
+
+· Strong working knowledge of order lifecycle management, inventory coordination, and shipping processes
+
+· Proven experience handling escalations and complex customer scenarios
+
+· Excellent written and verbal communication skills
+
+· Strong organizational skills with the ability to manage multiple priorities and deadlines
+
+*Preferred*
+
+· Associate’s degree or some college coursework in Business Administration, Supply Chain, Logistics, Operations, or a related field preferred, but not required.
+
+· Experience supporting print‑on‑demand, promotional programs, kitting, or e‑commerce fulfillment
+
+· Familiarity with WMS/ERP systems, order management platforms, and carrier systems
+
+· Experience working in a fast‑paced, deadline‑driven operations environment
+
+Join us as a Senior Customer Service Representative and be part of a vibrant team dedicated to delivering outstanding service that drives success for our clients!
+
+Pay: $34.00 - $36.00 per hour
+
+Benefits:
+* 401(k)
+* Dental insurance
+* Health insurance
+* Paid time off
+* Vision insurance
+
+Work Location: In person
+[REQUIRED JSON SCHEMA]
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "...",
+  "skills": ["..."],
+  "experience": [{ "company": "...", "role": "...", "dates": "...", "location": "...", "bullets": ["..."] }],
+  "projects": [{ "name": "...", "role": "...", "description": "...", "bullets": ["..."] }],
+  "education": [{ "degree": "...", "institution": "...", "location": "...", "date": "..." }],
+  "certifications": ["..."]
+}
+EXECUTE.
+
+
+--- VERBATIM RESPONSE ---
+```json
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "Customer-centric operations specialist with 10+ years orchestrating high-volume fulfillment, print, and logistics programs. Proven escalation expert who investigates root causes, coordinates cross-functional teams (warehouse, print, sourcing, carriers), and delivers on-time, accurate orders for Fortune-500 retailers. Adept at inventory control, order lifecycle management, WMS/ERP workflows, and mentoring junior staff to drive SLA compliance and customer delight.",
+  "skills": [
+    "Order Lifecycle & ERP/WMS",
+    "Inventory Control & ASN",
+    "Print-on-Demand & Kitting",
+    "Promotional Products Fulfillment",
+    "Shipping & Carrier Systems (UPS/FedEx/LTL)",
+    "Root-Cause Analysis & Escalation",
+    "Process Improvement & SOP Creation",
+    "Customer Relationship Management (CRM)",
+    "Data Entry & Documentation Accuracy",
+    "Microsoft 365 / Google Workspace",
+    "Bilingual English/Spanish communication",
+    "Mentorship & Training"
+  ],
+  "experience": [
+    {
+      "company": "Van Groningen & Sons, Inc.",
+      "role": "Transportation Director",
+      "dates": "03/2015 – 10/2022",
+      "location": "Manteca, CA",
+      "bullets": [
+        "Managed 60+ daily shipments (Walmart, Costco) with 99 % on-time KPI; coordinated warehouse, carriers, and customer SOPs to prevent stock-outs and chargebacks.",
+        "Built proprietary TMS and MailChimp load-board newsletter; reduced mis-ships 25 % and improved customer visibility.",
+        "Launched rework/kitting division—tracked inventory, ASN, and outbound compliance—turning warehouse into year-round profit center.",
+        "Authored MT-FON text-expansion DSL that cut dispatch errors 30 % and accelerated CSR training."
+      ]
+    },
+    {
+      "company": "M5 Digital, Inc.",
+      "role": "IT Specialist & Automation Architect",
+      "dates": "01/2020 – Present",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Automated order-validation scripts and ETL pipelines, reducing manual data entry 70 % and ensuring 100 % order-note accuracy.",
+        "Integrated Okta SSO and JWT-based APIs, strengthening customer data security and compliance.",
+        "Developed Apache Genie deployment tool, cutting server-provisioning time 50 % and eliminating misconfigurations that impacted shipping feeds."
+      ]
+    },
+    {
+      "company": "The Castro Restaurant & Hotel",
+      "role": "Kitchen Operations Lead",
+      "dates": "11/2022 – 05/2023",
+      "location": "San Francisco & Roseville, CA",
+      "bullets": [
+        "Directed daily production for 400+ meals; enforced FIFO, lot tracking, and ServSafe standards—zero audit findings.",
+        "Maintained real-time inventory par levels, coordinated inbound produce ASNs, and communicated shortages to FOH and event coordinators."
+      ]
+    },
+    {
+      "company": "Independent Logistics Specialist",
+      "role": "Last-Mile Delivery Contractor",
+      "dates": "01/2019 – 12/2023",
+      "location": "Sacramento/Turlock, CA",
+      "bullets": [
+        "Maintained 4.9+ customer rating across Instacart, AxleHire, Dispatch-It by resolving delivery exceptions and proactively updating clients on order status and substitutions."
+      ]
+    },
+    {
+      "company": "Golden Valley Trucking / Brokerage",
+      "role": "Broker Operations Manager",
+      "dates": "09/2012 – 03/2015",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Automated load tracking and invoicing via CRM macros; reduced billing disputes 20 % and improved customer payment cycles.",
+        "Negotiated rates and managed 500+ carrier relationships, ensuring 98 % tender acceptance and on-time delivery."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Transfer CLI",
+      "role": "Lead Developer",
+      "description": "Resumable file-transfer utility with ANSI progress bars for large logistics data sets.",
+      "bullets": [
+        "Prevents re-upload of partial files, saving bandwidth and customer downtime.",
+        "Used by warehouse team to move 100 GB+ print-artifact archives nightly with 0 corruption incidents."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Science in Computer Science (In Progress)",
+      "institution": "Modesto Junior College",
+      "location": "Modesto, CA",
+      "date": "Expected 2025"
+    }
+  ],
+  "certifications": [
+    "CPST – Certified Professional Selenium Tester",
+    "ServSafe Food Handler",
+    "Cyber Proud Security Apprentice"
+  ]
+}
+```

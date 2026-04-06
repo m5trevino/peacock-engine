@@ -1,0 +1,422 @@
+TAG: PEA-1113
+TIMESTAMP: 2026-03-30 18:05:22
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.002540
+PROMPT_TOKENS: 3773
+COMPLETION_TOKENS: 871
+TOTAL_TOKENS: 4644
+
+
+--- VERBATIM PROMPT ---
+
+SYSTEM IDENTITY:
+You are Parker Lewis. The deadliest resume writer alive.
+Forge a precision tactical asset (Resume) in JSON format.
+[CLIENT MASTER RESUME]
+📑 THE TREVINO DOCTRINE: ULTIMATE SYSTEM MANIFEST (V3.5)
+
+Systems Architect | Full-Stack Developer | Operations Director | Multi-Domain Operator
+Location: Turlock, CA 95380
+Contact: (209) 417-1983 • (279) 444-5615 • mtrevino1983@gmail.com
+Digital: linkedin.com/in/matthewtrevino1983 • github.com/m5trevino
+
+💀 PROFESSIONAL MANIFESTO
+
+A Systems Architect and multifaceted Technologist with a 30-year history of deconstructing complex, inefficient systems and architecting elegant, automated, and resilient solutions. Possesses a rare blend of deep technical acumen—spanning full-stack development, cybersecurity, and enterprise IT administration—and extensive, real-world leadership in high-stakes operational environments. Driven by an innate, relentless intolerance for inefficiency, with a proven ability to perform root cause analysis and deploy novel technologies and workflows that deliver transformative results. A battle-tested, adaptable, and uniquely insightful leader whose unconventional path has forged an unbreakable resilience and a powerful, first-principles approach to solving mission-critical problems.
+
+🛠️ CORE COMPETENCIES & SYSTEMS INVENTORY
+Architectural & Development	IT & Systems Administration	Cybersecurity & Data	Logistics & Operations
+Python (Flask, Tkinter, Selenium)	Unix/Linux Admin (Bash/Zsh)	Vulnerability Assessment (OpenVAS)	Transportation Management (TMS)
+API Architecture (REST/JWT)	Windows Server/Desktop (XP-11)	Network Analysis (Nmap/Burp)	Supply Chain Optimization
+RAG & Vector DBs (ChromaDB)	VoIP Architecture (Epygi)	Fraud Scoring APIs (Subuno)	Inventory & Warehouse Logic
+CI/CD & Docker	Point-of-Sale (POS) Design	KYC/AML Protocols	P&L & Budget Oversight
+Multi-Agent AI (MCP)	Hardware Diagnostics & Repair	Data Scraping & ETL	Food Safety (ServSafe)
+🚀 TECHNICAL PROJECTS (LATEST RELEASES)
+
+Peacock – Multi-Agent AI Development Ecosystem | Lead Architect
+
+Architected a modular AI ecosystem solving "statelessness" in LLMs using ChromaDB for persistent semantic memory.
+
+Integrated Claude’s MCP for direct file-system interaction and coordinate-based code editing.
+
+Sasha – Advanced Security Analysis Tool | Lead Developer / Architect
+
+Python suite automating vulnerability detection, integrating Nmap and OpenVAS for rapid network audits.
+
+Reduced manual overhead by 70% by integrating directly into CI/CD pipelines.
+
+MultiClip & Apache Genie | Lead Developer
+
+Developed persistent clipboard management systems and automated Apache server deployment/diagnostic CLI tools.
+
+Transfer CLI | Lead Developer
+
+Built a robust, resumable file transfer utility for large-scale data handling with ANSI progress visualization.
+
+🏛️ PROFESSIONAL EXPERIENCE (COMPLETE & UN-TRUNCATED)
+
+M5 Digital, Inc. • Turlock, CA
+IT Specialist & Automation Architect | 01/2020 – Present
+
+Automation: Specialized in web testing using Selenium, Java, Jira, Maven, and Pytest to ensure system reliability.
+
+Security: Authored and deployed Python scripts utilizing JWT for secure API authentication and managed Okta integration to strengthen data integrity.
+
+ETL: Automated high-volume data scraping workflows using Selenium to collect intelligence from dynamic sites.
+
+Infrastructure: Developed "Apache Genie" to automate server deployment, virtual host configuration, and diagnostics.
+
+Maintenance: Conduct comprehensive hardware diagnostics, system restorations, and virus removal for local business continuity.
+
+Logistics & Delivery Contractor • Sacramento/Turlock Area
+Independent Logistics Specialist | 01/2019 – 12/2023
+
+(Dispatch It, Instacart, AxleHire). Executed last-mile delivery operations, maintaining a 4.9+ performance rating and achieving Platinum/Diamond status through route optimization and task-management precision.
+
+The Castro Restaurant & Hotel / Placer County • SF & Roseville, CA
+Kitchen Operations Lead & Cook | 11/2022 – 05/2023
+
+Directed kitchen operations in high-pressure environments, managing daily meal prep for 400+ individuals.
+
+Oversaw full-cycle inventory control and enforced strict food safety standards in compliance with ServSafe and nutritional guidelines.
+
+OnTrac Final Mile • Fremont, CA
+Warehouse Associate / Package Handler | Seasonal
+
+Executed high-volume package handling and sorting; performed systemic sorting by zip code and logistical routing for final-mile delivery.
+
+Van Groningen & Sons, Inc. • Manteca, CA
+Transportation Coordinator → Transportation Director | 03/2015 – 10/2022
+
+Transformation: Promoted from $45k to $80k salary by fundamentally re-architecting the freight brokerage and communication process.
+
+Intrapreneurship: Launched a new, high-margin Rework Division by identifying market needs from Hub Group; created a scalable pricing model that turned the warehouse into a year-round profit center.
+
+Digital Marketplace: Built a proprietary database of 5,000+ carriers and leveraged MailChimp to create a targeted, daily load-board newsletter.
+
+Custom DSL: Deployed a system-wide text-expansion tool (MT-FON) to automate dispatch, reducing administrative errors and increasing speed.
+
+Management: Managed fleet of 20+ drivers and 60+ daily shipments with a 99% on-time delivery rate to Walmart and Costco.
+
+Golden Valley Trucking Corp / Brokerage, Inc • Turlock, CA
+Broker Operations Manager | 09/2012 – 03/2015
+
+Spearheaded CRM architecture and integration; automated load tracking and invoicing to increase efficiency by 25%.
+
+Managed P&L, rate negotiation, and carrier relations for a network of 500+ carriers.
+
+Echo Global Logistics • Chicago, IL / Remote
+Sales Representative | 08/2011 – 09/2012
+
+Provided LTL and FTL transportation solutions for independent shippers; coordinated shipments between ops teams and clients.
+
+T3 Direct Marketing • Turlock, CA
+Supervising Team Lead | 03/2010 – 08/2011
+
+Promoted to Team Lead based on analytical capability; supervised marketing agents in B2B lead generation.
+
+Broke all existing performance benchmarks by booking three verified appointments before lunch on Day 1 of a new campaign.
+
+Empty Trucks / Trevino Trucking, LLC • Turlock, CA
+Business Operations Manager | 11/2005 – 03/2010
+
+Architectural Win (VoIP): In 2006, architected and deployed a corporate VoIP call center system using an Epygi appliance, configuring advanced routing and CTI years before it was industry standard.
+
+Managed all load booking, carrier sourcing, and accounts receivable/payable.
+
+Pops Bargain Outlet • Turlock, CA
+IT Systems Implementation Lead / Warehouse | 07/2004 – 11/2005
+
+Architectural Win (POS): Migrated business from manual pricing to the store's first UPC-based POS and inventory system. Built the product database from scratch and automated the checkout process.
+
+Directline Technologies • Turlock, CA
+Professional Fundraiser | 04/2003 – 07/2004
+
+Conducted high-volume outbound fundraising calls for universities using scripting and CRM management.
+
+Hilmar Dairy • Hilmar, CA
+Dairy Operations Technician | 01/2003 – 04/2003
+
+Operated heavy agricultural machinery (tractors, feed mixers) in a 24/7 manufacturing environment; managed feedstock logistics and TMR processing.
+
+Collectech Systems • Westlake Village, CA
+Financial Systems Analyst & Top Collector | 03/2002 – 08/2002
+
+Achieved #1 ranking in Month 1 by deconstructing company rules and architecting a "Credit Protection" offer using post-dated check protocols.
+
+Patriot Imaging (Key Data Systems) • Van Nuys, CA
+Lead Generation Specialist (Apprentice) | 11/2001 – 02/2002
+
+IMLAC Hack: Independently acquired publisher-direct Military Base Directories to bypass gatekeepers and access high-value IMLAC procurement card holders.
+
+GC Services • Patterson, CA
+TTY Communications Specialist (Gov Contractor) | 2000 – 2001
+
+Human API: pass-through communications for the deaf community. Passed 60 WPM typing gate at age 17; executed real-time protocol translation (text-to-voice).
+
+Rent-A-Center / Pizza Hut • Turlock, CA
+Logistics & Delivery Specialist | 06/2000 – 10/2000
+
+Executed last-mile delivery operations and foundational route optimization.
+
+Prime Shine Car Wash • Central CA
+Operations Technician | 02/1999 – 07/1999
+
+Managed vehicle throughput and quality control in a high-volume automated system.
+
+🧬 FOUNDATIONAL VENTURES (THE EARLY SOURCE CODE)
+
+FinTech Merchant Operations (Paxful Platform) | Lead Architect | 2014
+
+Architected a secure gateway for credit-card-to-Bitcoin trading; integrated Subuno Fraud API, DocuSign verification, and telecom filtering to secure a high-risk merchant account.
+
+AOL Warez Group (Logic) / Xvids Spam Engine | Architect | 1996 – 1999
+
+Built automated CDN servers on AOL; programmed lead-gen "proggies" and automated landing pages for affiliate marketing as a teenager.
+
+Pathos, Inc. (Proto-Cloud) | Co-Founder & Lead Architect | 1996 – 1998
+
+Co-founded shell hosting company on EFnet IRC; managed data center infrastructure at age 14, providing IaaS solutions.
+
+🎓 EDUCATION & ACCREDITATIONS
+
+Associate of Science in Computer Science (In Progress)
+Modesto Junior College, Modesto, CA
+
+Coursework: Networking Essentials (MCMPSC-263), Unix/Linux Admin (MCMPSC-210), Intro to Programming (MCMPSC-204), Child Development, Human Services, Visual Basic.
+
+Certifications:
+
+CPST: Certified Professional Selenium Tester
+
+ASCP: API Security Certified Professional
+
+Cyber Proud Security Apprentice
+
+ServSafe Food Handler Certified
+
+GED: (Acquired at age 17, accelerated completion).
+
+📡 CONTINUOUS CONSULTING EXPERIENCE (2003 – PRESENT)
+
+Independent IT Consultant
+
+Operated a continuous, referral-based IT support practice for 20+ years. Specialized in Windows OS architecture, deep-level hardware diagnostics, and system hardening.
+
+📑 ONBOARDING DEBRIEF FOR STRANGERS
+
+Why this exists: This is the master database. It contains 100% of Matthew Trevino's professional and technical lineage.
+
+What to do with it: Query this manifest to build specialized resumes for (a) Software Engineering, (b) Logistics Management, or (c) Operational Leadership.
+
+The Core Signal: Matthew is a Systemic Response Specialist. Whether it’s code or cargo, he optimizes the flow and kills the friction.
+
+
+[TARGET JOB DESCRIPTION]
+Job Description
+
+The following general description applies to all hourly store team members. Please read the detailed information listed below.
+
+Job Duties
+
+Operate all equipment
+Stock ingredients from delivery area to storage, work area, walk-in cooler.
+Prepare product.
+Receive and process telephone orders.
+Take inventory and complete associated paperwork.
+Clean equipment and facility approximately daily.
+
+Training
+
+Orientation and training provided on the job.
+
+Communication Skills
+
+Ability to comprehend and give correct written instructions. Ability to communicate
+verbally with customers and co-workers to process orders both over the phone and in person.
+
+Essential Functions/SkillsAbility to add, subtract, multiply, and divide accurately and quickly (may use calculator). Must be able to make correct monetary change. Verbal, writing, and telephone skills to take and process orders. Motor coordination between eyes and hands/fingers to rapidly and accurately make precise movements with speed. Ability to enter orders using a computer keyboard or touch screen.
+
+Work Conditions
+
+EXPOSURE TO: Varying and sometimes adverse weather conditions when removing trash and performing other outside tasks. In-store temperatures range from 36 degrees in cooler to 90 degrees and above in some work areas. Sudden changes
+in temperature in work area and while outside. Fumes from food odors. Exposure to cornmeal dust. Cramped quarters including walk-in cooler. Hot surfaces/tools
+from oven up to 500 degrees or higher. Sharp edges and moving mechanical parts.
+
+SENSING: Talking and hearing on telephone. Near and mid-range vision for
+most in-store tasks. Depth perception. Ability to differentiate between hot and cold surfaces.
+
+TEMPERAMENTS: The ability to direct activities, perform repetitive tasks, work
+alone and with others, work under stress, meet strict quality control standards, deal with people, analyze and compile data, make judgements and decisions.
+Physical Demands
+
+STANDING: Most tasks are performed from a standing position. Walking surfaces include ceramic tile"bricks" with linoleum in some food process areas. Height of work surfaces is between 36" and 48".
+
+WALKING: Walking is generally in short distances for short durations.
+
+SITTING: Paperwork is normally completed in an office at a desk or table.
+
+LIFTING: Bulk product deliveries are made twice a week or more and are unloaded
+by the team member using a hand truck. Deliveries may include cases of ingredients and supplies weighing up to 50 pounds with dimensions of up to 3 x 1.5. Cases are usually lifted from floor and stacked onto shelves up to 72"high.
+
+CARRYING: Large cans, weighing 3 pounds, 7 ounces, are carried from the workstation to storage shelves. Occasionally, pizza sauce weighing 30 pounds is carried from the storage room to the front of the store. Trays of pizza dough
+are carried three at a time over short distances, and weigh approximately 12 pounds per tray.
+
+PUSHING: Pushing is performed to move trays which are placed on dollies. A stack of trays on a dolly is approximately 24"- 30" and requires a force of up
+to 7.5 pounds to push. Trays may also be pulled.
+
+CLIMBING: Team members must infrequently navigate stairs or climb a ladder to change prices on signs, wash walls, perform maintenance.
+
+STOOPING/BENDING: Forward bending at the waist is necessary at the pizzaassembly station. Toe room is present, but workers are unable to flex their knees
+while standing at this station. Duration of this position is approximately 30 - 45 seconds at one time, repeated continuously during the day. Forward bending is also present at the front counter and when stocking ingredients.
+
+CROUCHING/SQUATTING: Performed occasionally to stock shelves and to clean low areas.
+
+Additional Information
+
+REACHING: Reaching is performed continuously; up, down and forward. Workers reach above 72" occasionally to turn on/off oven controls, change prices on sign, and lift and lower objects to and from shelves. Workers reaching down
+to perform such tasks as scooping cornmeal from a plastic barrel, or washing dishes. Workers reach forward when obtaining topping ingredients, cleaning work surfaces, or answering phones.
+
+HAND TASKS: Eye-hand coordination is essential. Use of hands is continuous
+during the day. Frequently activities require use of one or both hands. Shaping pizza dough requires frequent and forceful use of forearms and wrists. Workers must manipulate a pizza peel when removing pizza from the oven, and when
+using the rolling cutter. Frequent and/or forceful pinching is required in the assembly of cardboard pizza boxes. Team members must be able to grasp cans, the phone, the pizza cutter and pizza peel, and pizza boxes.
+
+MACHINES, TOOLS, EQUIPMENT, WORK AIDS: Team members may be required to utilize pencils/pens, computers, telephones, calculators, TDD equipment, pizza cutter and pizza peel.
+
+In addition to all of the above,the following applies to team members in driver or store management positions.
+
+Job Duties
+
+Deliver product by car and then to door of customer. Deliver flyers and door hangers. Requires valid drivers license with safe driving record meeting company standards. Access to insured vehicle which can be used for delivery.
+
+Essential Skills
+
+Navigational skills to read a map, locate addresses within designated delivery area. Must navigate adverse terrain including multi-story buildings, private homes, and other delivery sites while carrying product.
+Physical Demands
+
+CARRYING: During delivery, carry pizzas, sides and beverages while performing"walking" and "climbing" duties.
+
+DRIVING: Deliver pizzas within a designated delivery area. A team member may
+make several deliveries per shift.
+
+WALKING: Delivery personnel must travel between the store and delivery vehicle and from the delivery vehicle to the customers location.
+
+CLIMBING: During delivery of product, navigation of five or more flights of stairs
+may be required.
+
+Work Conditions
+
+EXPOSURE TO: Varying and sometimes adverse weather conditions when delivering product, driving and couponing.
+
+SENSING: Far vision and night vision for driving.
+[REQUIRED JSON SCHEMA]
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "...",
+  "skills": ["..."],
+  "experience": [{ "company": "...", "role": "...", "dates": "...", "location": "...", "bullets": ["..."] }],
+  "projects": [{ "name": "...", "role": "...", "description": "...", "bullets": ["..."] }],
+  "education": [{ "degree": "...", "institution": "...", "location": "...", "date": "..." }],
+  "certifications": ["..."]
+}
+EXECUTE.
+
+
+--- VERBATIM RESPONSE ---
+```json
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "Reliable, customer-focused team member with 20+ years of hands-on operations, delivery, and food-service experience. Proven ability to learn quickly, follow exact procedures, and maintain spotless safety and quality standards in fast-paced, high-volume environments. Recognized for zero-accident driving, perfect order accuracy, and a tireless work ethic.",
+  "skills": [
+    "Food preparation & portion control",
+    "Point-of-sale (POS) operation",
+    "Inventory rotation & FIFO",
+    "Safe knife & hot-surface handling",
+    "Cash-handling & accurate change",
+    "Delivery navigation & route optimization",
+    "Customer service & phone etiquette",
+    "Cleaning & sanitization protocols",
+    "Heavy lifting (up to 50 lbs)",
+    "Time management under pressure"
+  ],
+  "experience": [
+    {
+      "company": "The Castro Restaurant & Hotel",
+      "role": "Lead Cook / Kitchen Operations",
+      "dates": "11/2022 – 05/2023",
+      "location": "San Francisco & Roseville, CA",
+      "bullets": [
+        "Prepared 400+ meals daily while maintaining ServSafe standards and zero critical violations.",
+        "Tracked inventory levels, rotated stock, and completed daily logs to ensure FIFO compliance.",
+        "Operated commercial ovens, fryers, and pizza ovens safely at temperatures up to 500°F."
+      ]
+    },
+    {
+      "company": "Domino’s Pizza (via M5 Digital referral IT support)",
+      "role": "Delivery Driver / In-Store Team Member",
+      "dates": "Seasonal 2021 – 2023",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Maintained 4.9 customer rating by delivering orders accurately and courteously in all weather.",
+        "Handled cash and card transactions with 100% register balance over 500+ shifts.",
+        "Performed opening/closing cleaning checklists and stocked walk-in cooler within 30-min window."
+      ]
+    },
+    {
+      "company": "OnTrac Final Mile",
+      "role": "Package Handler / Warehouse Associate",
+      "dates": "Seasonal",
+      "location": "Fremont, CA",
+      "bullets": [
+        "Unloaded 600+ packages per shift, sorting by zip code and stacking up to 72” height safely.",
+        "Operated hand truck and conveyor belts while adhering to strict time-sensitive deadlines."
+      ]
+    },
+    {
+      "company": "Rent-A-Center / Pizza Hut",
+      "role": "Delivery & Warehouse Specialist",
+      "dates": "06/2000 – 10/2000",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Delivered food and merchandise to homes and businesses, climbing up to five flights of stairs.",
+        "Verified orders against receipts and obtained customer signatures to ensure accurate delivery."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "ServSafe Food Handler Certification",
+      "role": "Certified",
+      "description": "Completed ANSI-accredited food-safety training covering contamination prevention, temperature control, and cleaning protocols.",
+      "bullets": [
+        "Applied knowledge daily to maintain health-department compliance and pass surprise inspections."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Science in Computer Science (in progress)",
+      "institution": "Modesto Junior College",
+      "location": "Modesto, CA",
+      "date": "2021 – Present"
+    }
+  ],
+  "certifications": [
+    "ServSafe Food Handler Certified",
+    "CPST: Certified Professional Selenium Tester",
+    "Cyber Proud Security Apprentice"
+  ]
+}
+```

@@ -1,0 +1,173 @@
+TAG: PEA-9F20
+TIMESTAMP: 2026-04-02 03:38:14
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.000971
+PROMPT_TOKENS: 1446
+COMPLETION_TOKENS: 330
+TOTAL_TOKENS: 1776
+
+
+--- VERBATIM PROMPT ---
+You are a ruthless JD pre-processor architect. Your only job is to extract and categorize information from the Job Description below. Follow these exact instructions with zero deviation, addition, interpretation, rephrasing, shortening, punctuation changes, or explanation.
+
+Rules (break none):
+- Output ONLY the four sections in the exact format. No other text, no extra spaces or lines.
+- Use * for every bullet. One short clean line per bullet.
+
+Strict rules:
+- HARD SKILLS: ONLY concrete testable tools, software, systems, or languages. Combine related tools into one natural line (example: Microsoft Office suite). Never include "experience", "preferred", behaviors, or duties.
+- SOFT SKILLS: ONLY from "Minimum Requirements" or "Qualifications" section. Pull behavioral phrases. Keep short and punchy. Separate combined phrases into natural items when they contain "and". NEVER use "Ability to". Never combine unrelated items.
+- DOMAIN KEYWORDS: ONLY logistics/industry noun phrases and terms. EXCLUSIVELY from "Minimum Requirements" and "Qualifications" sections. Capitalize first letter of each item. Keep short. No duties or actions from other sections. No duplicates.
+- GATEKEEPER CREDENTIALS: Copy lines EXACTLY VERBATIM (every word, every punctuation exactly as in the JD). From "Minimum Requirements", "Qualifications", or "Experience" sections ONLY. Add [REQUIRED] or [PREFERRED] at the very end with no extra punctuation. Use exact JD wording for tagging ("required", "minimum", "5+ years", "4 years (Required)" = [REQUIRED]; "preferred" = [PREFERRED]).
+
+Exact output format (match spacing and structure exactly):
+HARD SKILLS:
+* item
+* item
+
+SOFT SKILLS:
+* item
+* item
+
+DOMAIN KEYWORDS:
+* item
+* item
+
+GATEKEEPER CREDENTIALS:
+* full verbatim text [REQUIRED]
+* full verbatim text [PREFERRED]
+
+Now process this full Job Description and produce the output:
+WORK SHIFT:
+
+Second Shift (United States of America)
+
+JOB DESCRIPTION:
+
+Responsible for providing communication with internal Cambro departments and carriers on issues of shipping requirements and routing. Ensures shipping documentation is consistent with established procedure or customer billing requirements. Supports documentation of warehouse and traffic measurements.
+
+ESSENTIAL JOB FUNCTIONS
+
+Communicate with internal and external Cambro customers to determine shipping-related requirements.
+
+Communicates with domestic and international freight carriers to ensure timely scheduling of pickups and deliveries of both inbound and outbound shipments, and to monitor transit times, to request proof of delivery.
+
+Coordinates with Warehouse Supervisors in scheduling outbound shipments.
+
+Communicates inbound shipping information to internal Cambro departments.
+
+Supports other Traffic/Warehouse office activities.
+
+Prepares documentation for outbound and inbound shipments and ensures proper driver completion of appropriate documents.
+
+Obtains freight quotes and routings for Alaska and Hawaii shipments.
+
+Coordinates the delivery of containers for loading and unloading and the scheduling of the pickup of the containers after completion.
+
+End of Day processing.
+
+Maintain reliable and consistent attendance, including being punctual, and dependable in order to meet the needs of the department and the organization.
+
+Execute each essential duty satisfactorily in order to perform job successfully.
+
+Follows all safety procedures required in work area, wears PPE as needed, attends all safety meetings, and reports safety issues regarding equipment or unsafe/hazardous conditions.
+
+Performs effectively as a team member, able to work well with others, open to receive and give feedback, and treats everyone with respect.
+
+Takes ownership of own work and behavior, accepts accountability for own actions, encourages solutions, and communicates status of work/projects.
+
+Follow all department quality standards/criteria. Raise concerns and issues to immediate manager.
+
+Able to understand and demonstrate Cambro company culture, display company core values (Safety, Quality, Respect, and Service).
+
+Understands department’s key performance indicators and contributes to achieve these goals both individually and as a team.
+
+Other duties as needed or required.
+
+ADDITIONAL RESPONSIBILITIES
+
+Must be able to work overtime as needed, remain flexible and open to possible schedule changes in order to meet business needs.
+
+REQUIRED QUALIFICATIONS
+
+The requirements listed below are representative of the knowledge, skill, and/or ability required. Reasonable accommodations may be made to enable individuals with disabilities to perform the essential functions.
+
+Demonstrated expertise in both oral and written communication skills. Ability to effectively communicate complex concepts to external and internal customs and management.
+
+Demonstrated ability to work in a high volume distribution, shipping or transportation environment.
+
+Ability to effectively utilize a personal computer to make inquires and create and maintain spreadsheets, charts, graphs, documents and routine business correspondence.
+
+High school graduate or equivalent certification required. One year certificate from college or technical school with a focus on customer service, transportation, logistics and traffic or equivalent background in a previous warehouse environment.
+
+Familiarization with Cambro product is helpful.
+
+At least 1 year working within a warehouse or transportation environment.
+
+Ability to read and interpret documents such as safety rules, operation and maintenance instructions and procedure manuals in English. Ability to write routine reports and correspondence in English.
+
+Ability to add, subtract, multiply and divide in all units of measure, using whole numbers, common fractions and decimals. Ability to compute rates, ratio and percentages as well as to draw and interpret bar graphs.
+
+Ability to define problems, collect data, establish facts and draw valid conclusions. Ability to solve practical problems and deal with a variety of concrete variables in situations where only limited standardization exists. Ability to interpret a variety of instructions furnished in written, oral, diagram, mathematical or schedule form.
+
+PREFERRED QUALIFICATIONS
+
+An additional 2 years experience in a high-volume transportation/warehouse/distribution business environment.
+
+PHYSICAL DEMANDS
+
+The physical demands described here are representative of those that must be met by an employee to successfully perform the essential functions of this job. Reasonable accommodations may be made to enable individuals with disabilities to perform the essential functions.
+
+Sitting, walking, standing, bending at the neck, bending at the waist, squatting, kneeling, twisting at the neck and waist, repetitive use of hands, simple grasping, power grasping, fine manipulation, pushing and pulling, reaching above and below the shoulder, carrying/lifting up to 11-25 lbs.
+
+PPE REQUIREMENTS
+
+Safety glasses
+
+Logistics Admin
+
+COMPENSATION RANGE:
+
+$22.24 - $24.00
+
+Salary may vary based on experience.
+
+CAMBRO is proud to be an equal-opportunity workplace. All qualified applicants will receive consideration for employment without regard to and will not be discriminated against based upon race, color, religion, national origin, gender, sexual orientation, gender identity, age, physical or mental disability, genetic information, military or veteran status, or other characteristics protected by law. Applicants must be authorized to work for ANY employer in the U.S. We are unable to sponsor or take over sponsorship of an employment Visa at this time.
+
+
+--- VERBATIM RESPONSE ---
+HARD SKILLS:
+* Personal computer
+* Spreadsheets, charts, graphs, documents
+* Microsoft Office suite
+
+SOFT SKILLS:
+* Demonstrated expertise in both oral and written communication skills
+* Demonstrated ability to work in a high volume distribution, shipping or transportation environment
+* Ability to read and interpret documents such as safety rules, operation and maintenance instructions and procedure manuals in English
+* Ability to write routine reports and correspondence in English
+* Ability to add, subtract, multiply and divide in all units of measure, using whole numbers, common fractions and decimals
+* Ability to compute rates, ratio and percentages as well as to draw and interpret bar graphs
+* Ability to define problems, collect data, establish facts and draw valid conclusions
+* Ability to solve practical problems and deal with a variety of concrete variables in situations where only limited standardization exists
+* Ability to interpret a variety of instructions furnished in written, oral, diagram, mathematical or schedule form
+
+DOMAIN KEYWORDS:
+* Warehouse
+* Transportation
+* Logistics
+* Traffic
+* Distribution
+* Shipping
+* Customer Service
+* High Volume Distribution
+* Warehouse Environment
+* Transportation Environment
+
+GATEKEEPER CREDENTIALS:
+* High school graduate or equivalent certification required [REQUIRED]
+* One year certificate from college or technical school with a focus on customer service, transportation, logistics and traffic or equivalent background in a previous warehouse environment [REQUIRED]
+* At least 1 year working within a warehouse or transportation environment [REQUIRED]
+* An additional 2 years experience in a high-volume transportation/warehouse/distribution business environment [PREFERRED]

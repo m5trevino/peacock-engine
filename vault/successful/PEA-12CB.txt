@@ -1,0 +1,396 @@
+TAG: PEA-12CB
+TIMESTAMP: 2026-03-30 18:41:54
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.002623
+PROMPT_TOKENS: 3510
+COMPLETION_TOKENS: 1158
+TOTAL_TOKENS: 4668
+
+
+--- VERBATIM PROMPT ---
+
+SYSTEM IDENTITY:
+You are Parker Lewis. The deadliest resume writer alive.
+Forge a precision tactical asset (Resume) in JSON format.
+[CLIENT MASTER RESUME]
+📑 THE TREVINO DOCTRINE: ULTIMATE SYSTEM MANIFEST (V3.5)
+
+Systems Architect | Full-Stack Developer | Operations Director | Multi-Domain Operator
+Location: Turlock, CA 95380
+Contact: (209) 417-1983 • (279) 444-5615 • mtrevino1983@gmail.com
+Digital: linkedin.com/in/matthewtrevino1983 • github.com/m5trevino
+
+💀 PROFESSIONAL MANIFESTO
+
+A Systems Architect and multifaceted Technologist with a 30-year history of deconstructing complex, inefficient systems and architecting elegant, automated, and resilient solutions. Possesses a rare blend of deep technical acumen—spanning full-stack development, cybersecurity, and enterprise IT administration—and extensive, real-world leadership in high-stakes operational environments. Driven by an innate, relentless intolerance for inefficiency, with a proven ability to perform root cause analysis and deploy novel technologies and workflows that deliver transformative results. A battle-tested, adaptable, and uniquely insightful leader whose unconventional path has forged an unbreakable resilience and a powerful, first-principles approach to solving mission-critical problems.
+
+🛠️ CORE COMPETENCIES & SYSTEMS INVENTORY
+Architectural & Development	IT & Systems Administration	Cybersecurity & Data	Logistics & Operations
+Python (Flask, Tkinter, Selenium)	Unix/Linux Admin (Bash/Zsh)	Vulnerability Assessment (OpenVAS)	Transportation Management (TMS)
+API Architecture (REST/JWT)	Windows Server/Desktop (XP-11)	Network Analysis (Nmap/Burp)	Supply Chain Optimization
+RAG & Vector DBs (ChromaDB)	VoIP Architecture (Epygi)	Fraud Scoring APIs (Subuno)	Inventory & Warehouse Logic
+CI/CD & Docker	Point-of-Sale (POS) Design	KYC/AML Protocols	P&L & Budget Oversight
+Multi-Agent AI (MCP)	Hardware Diagnostics & Repair	Data Scraping & ETL	Food Safety (ServSafe)
+🚀 TECHNICAL PROJECTS (LATEST RELEASES)
+
+Peacock – Multi-Agent AI Development Ecosystem | Lead Architect
+
+Architected a modular AI ecosystem solving "statelessness" in LLMs using ChromaDB for persistent semantic memory.
+
+Integrated Claude’s MCP for direct file-system interaction and coordinate-based code editing.
+
+Sasha – Advanced Security Analysis Tool | Lead Developer / Architect
+
+Python suite automating vulnerability detection, integrating Nmap and OpenVAS for rapid network audits.
+
+Reduced manual overhead by 70% by integrating directly into CI/CD pipelines.
+
+MultiClip & Apache Genie | Lead Developer
+
+Developed persistent clipboard management systems and automated Apache server deployment/diagnostic CLI tools.
+
+Transfer CLI | Lead Developer
+
+Built a robust, resumable file transfer utility for large-scale data handling with ANSI progress visualization.
+
+🏛️ PROFESSIONAL EXPERIENCE (COMPLETE & UN-TRUNCATED)
+
+M5 Digital, Inc. • Turlock, CA
+IT Specialist & Automation Architect | 01/2020 – Present
+
+Automation: Specialized in web testing using Selenium, Java, Jira, Maven, and Pytest to ensure system reliability.
+
+Security: Authored and deployed Python scripts utilizing JWT for secure API authentication and managed Okta integration to strengthen data integrity.
+
+ETL: Automated high-volume data scraping workflows using Selenium to collect intelligence from dynamic sites.
+
+Infrastructure: Developed "Apache Genie" to automate server deployment, virtual host configuration, and diagnostics.
+
+Maintenance: Conduct comprehensive hardware diagnostics, system restorations, and virus removal for local business continuity.
+
+Logistics & Delivery Contractor • Sacramento/Turlock Area
+Independent Logistics Specialist | 01/2019 – 12/2023
+
+(Dispatch It, Instacart, AxleHire). Executed last-mile delivery operations, maintaining a 4.9+ performance rating and achieving Platinum/Diamond status through route optimization and task-management precision.
+
+The Castro Restaurant & Hotel / Placer County • SF & Roseville, CA
+Kitchen Operations Lead & Cook | 11/2022 – 05/2023
+
+Directed kitchen operations in high-pressure environments, managing daily meal prep for 400+ individuals.
+
+Oversaw full-cycle inventory control and enforced strict food safety standards in compliance with ServSafe and nutritional guidelines.
+
+OnTrac Final Mile • Fremont, CA
+Warehouse Associate / Package Handler | Seasonal
+
+Executed high-volume package handling and sorting; performed systemic sorting by zip code and logistical routing for final-mile delivery.
+
+Van Groningen & Sons, Inc. • Manteca, CA
+Transportation Coordinator → Transportation Director | 03/2015 – 10/2022
+
+Transformation: Promoted from $45k to $80k salary by fundamentally re-architecting the freight brokerage and communication process.
+
+Intrapreneurship: Launched a new, high-margin Rework Division by identifying market needs from Hub Group; created a scalable pricing model that turned the warehouse into a year-round profit center.
+
+Digital Marketplace: Built a proprietary database of 5,000+ carriers and leveraged MailChimp to create a targeted, daily load-board newsletter.
+
+Custom DSL: Deployed a system-wide text-expansion tool (MT-FON) to automate dispatch, reducing administrative errors and increasing speed.
+
+Management: Managed fleet of 20+ drivers and 60+ daily shipments with a 99% on-time delivery rate to Walmart and Costco.
+
+Golden Valley Trucking Corp / Brokerage, Inc • Turlock, CA
+Broker Operations Manager | 09/2012 – 03/2015
+
+Spearheaded CRM architecture and integration; automated load tracking and invoicing to increase efficiency by 25%.
+
+Managed P&L, rate negotiation, and carrier relations for a network of 500+ carriers.
+
+Echo Global Logistics • Chicago, IL / Remote
+Sales Representative | 08/2011 – 09/2012
+
+Provided LTL and FTL transportation solutions for independent shippers; coordinated shipments between ops teams and clients.
+
+T3 Direct Marketing • Turlock, CA
+Supervising Team Lead | 03/2010 – 08/2011
+
+Promoted to Team Lead based on analytical capability; supervised marketing agents in B2B lead generation.
+
+Broke all existing performance benchmarks by booking three verified appointments before lunch on Day 1 of a new campaign.
+
+Empty Trucks / Trevino Trucking, LLC • Turlock, CA
+Business Operations Manager | 11/2005 – 03/2010
+
+Architectural Win (VoIP): In 2006, architected and deployed a corporate VoIP call center system using an Epygi appliance, configuring advanced routing and CTI years before it was industry standard.
+
+Managed all load booking, carrier sourcing, and accounts receivable/payable.
+
+Pops Bargain Outlet • Turlock, CA
+IT Systems Implementation Lead / Warehouse | 07/2004 – 11/2005
+
+Architectural Win (POS): Migrated business from manual pricing to the store's first UPC-based POS and inventory system. Built the product database from scratch and automated the checkout process.
+
+Directline Technologies • Turlock, CA
+Professional Fundraiser | 04/2003 – 07/2004
+
+Conducted high-volume outbound fundraising calls for universities using scripting and CRM management.
+
+Hilmar Dairy • Hilmar, CA
+Dairy Operations Technician | 01/2003 – 04/2003
+
+Operated heavy agricultural machinery (tractors, feed mixers) in a 24/7 manufacturing environment; managed feedstock logistics and TMR processing.
+
+Collectech Systems • Westlake Village, CA
+Financial Systems Analyst & Top Collector | 03/2002 – 08/2002
+
+Achieved #1 ranking in Month 1 by deconstructing company rules and architecting a "Credit Protection" offer using post-dated check protocols.
+
+Patriot Imaging (Key Data Systems) • Van Nuys, CA
+Lead Generation Specialist (Apprentice) | 11/2001 – 02/2002
+
+IMLAC Hack: Independently acquired publisher-direct Military Base Directories to bypass gatekeepers and access high-value IMLAC procurement card holders.
+
+GC Services • Patterson, CA
+TTY Communications Specialist (Gov Contractor) | 2000 – 2001
+
+Human API: pass-through communications for the deaf community. Passed 60 WPM typing gate at age 17; executed real-time protocol translation (text-to-voice).
+
+Rent-A-Center / Pizza Hut • Turlock, CA
+Logistics & Delivery Specialist | 06/2000 – 10/2000
+
+Executed last-mile delivery operations and foundational route optimization.
+
+Prime Shine Car Wash • Central CA
+Operations Technician | 02/1999 – 07/1999
+
+Managed vehicle throughput and quality control in a high-volume automated system.
+
+🧬 FOUNDATIONAL VENTURES (THE EARLY SOURCE CODE)
+
+FinTech Merchant Operations (Paxful Platform) | Lead Architect | 2014
+
+Architected a secure gateway for credit-card-to-Bitcoin trading; integrated Subuno Fraud API, DocuSign verification, and telecom filtering to secure a high-risk merchant account.
+
+AOL Warez Group (Logic) / Xvids Spam Engine | Architect | 1996 – 1999
+
+Built automated CDN servers on AOL; programmed lead-gen "proggies" and automated landing pages for affiliate marketing as a teenager.
+
+Pathos, Inc. (Proto-Cloud) | Co-Founder & Lead Architect | 1996 – 1998
+
+Co-founded shell hosting company on EFnet IRC; managed data center infrastructure at age 14, providing IaaS solutions.
+
+🎓 EDUCATION & ACCREDITATIONS
+
+Associate of Science in Computer Science (In Progress)
+Modesto Junior College, Modesto, CA
+
+Coursework: Networking Essentials (MCMPSC-263), Unix/Linux Admin (MCMPSC-210), Intro to Programming (MCMPSC-204), Child Development, Human Services, Visual Basic.
+
+Certifications:
+
+CPST: Certified Professional Selenium Tester
+
+ASCP: API Security Certified Professional
+
+Cyber Proud Security Apprentice
+
+ServSafe Food Handler Certified
+
+GED: (Acquired at age 17, accelerated completion).
+
+📡 CONTINUOUS CONSULTING EXPERIENCE (2003 – PRESENT)
+
+Independent IT Consultant
+
+Operated a continuous, referral-based IT support practice for 20+ years. Specialized in Windows OS architecture, deep-level hardware diagnostics, and system hardening.
+
+📑 ONBOARDING DEBRIEF FOR STRANGERS
+
+Why this exists: This is the master database. It contains 100% of Matthew Trevino's professional and technical lineage.
+
+What to do with it: Query this manifest to build specialized resumes for (a) Software Engineering, (b) Logistics Management, or (c) Operational Leadership.
+
+The Core Signal: Matthew is a Systemic Response Specialist. Whether it’s code or cargo, he optimizes the flow and kills the friction.
+
+
+[TARGET JOB DESCRIPTION]
+About Four Seasons:
+
+Four Seasons is powered by our people. We are a collective of individuals who crave to become better, to push ourselves to new heights and to treat each other as we wish to be treated in return. Our team members around the world create amazing experiences for our guests, residents, and partners through a commitment to luxury with genuine heart. We know that the best way to enable our people to deliver these exceptional guest experiences is through a world-class employee experience and company culture.
+
+At Four Seasons, we believe in recognizing a familiar face, welcoming a new one and treating everyone we meet the way we would want to be treated ourselves. Whether you work with us, stay with us, live with us or discover with us, we believe our purpose is to create impressions that will stay with you for a lifetime. It comes from our belief that life is richer when we truly connect to the people and the world around us.
+
+About the location:
+
+A contemporary business hub with the highest standards of innovative hospitality. At the heart of Silicon Valley, experience a first-hand connection to the region’s tech legacy, sports and music venues and discover local adventures blended with artful sophistication. Four Seasons Hotel Silicon Valley brings an inventive approach to creative events, seasonal pop-up experiences, lifestyle facilities and culinary craftsmanship that culminate in the ultimate urban getaway.
+
+Four Seasons Hotel Silicon Valley is proud to provide our guest the highest standards of luxury and personalized service. At Four Seasons we believe in recognizing a familiar face, welcoming a new one and treating every one we meet the way we would want to be treated ourselves. Whether you work with us, stay with us, live with us, discover with us, we believe our purpose is to create impressions that will stay with you for a lifetime. It comes from our belief that life is richer when we truly connect to the people and the world around us.
+
+The Opportunity:
+
+Four Seasons Hotel Silicon Valley is currently looking for an Overnight Guest Services Attendant (Part Time)
+
+Basic Purpose:
+
+Creates an engaging and inviting arrival experience for all guests and patrons by welcoming them to the Hotel and safely parking their car in the Hotel garage. Assist with luggage and deliveries to guest rooms and provide a fond farewell for departing guests at the Hotel.
+
+Essential function of the job:
+
+Greets all guests and delivers luggage to room upon check-in during overnight hours, picks up luggage from room upon departure, moving the luggage to storage or the front drive. Maintains proper records of deliveries and pickups.
+Handles all guest interactions with the highest level of hospitality and professionalism, accommodating special requests whenever possible; resolves customer complaints, assist guests in all inquiries in connection with hotel services, directions, hours of operations, key hotel personnel, in-house events, directions, etc.
+Assist the Concierge and Front Desk with deliveries, tasks and special requests.
+Receives vehicles from guests and drives to the hotel garage, adhering to all traffic regulations, and speed limits, using caution not to damage the vehicle being driven and other vehicles in the vicinity. Pick up vehicles when requested in a timely manner. Yields to pedestrians.
+Assesses any damage to vehicle. Clearly notes any damage on claim ticket along with location of vehicle when parked. Deposits key and ticket in Bell closet.
+Performs errands for guests and the hotel that may require local travel off of the hotel property.
+Assists with preparation and delivery of In Room Dining delivery and housekeeping items during Overnight shift.
+Other duties and projects as assigned
+Complies with Four Seasons’ Category One and Category Two Work Rules and Standards of Conduct as set forth in EmPact.
+Works Harmoniously and professionally with co-workers and supervisors.
+
+Qualifications and Skills:
+
+Experience in luxury hotel/restaurant preferred.
+Must be flexible with schedule – Able to work weekdays, weekends, holidays.
+Requires reading, writing and oral proficiency in the English language.
+Clean driving record and valid Driver’s License required.
+Ability to lift/carry the luggage and pull luggage carts - 100% of shift is mobile.
+Ability to multi-task in high volume and demanding environment.
+Must provide work authorization document - proof of eligibility to work in the United States of America
+
+What to Expect:
+
+Hourly rate $25.87
+Be part of a cohesive team with opportunities to build a successful career with global potential
+Medical, dental, and vision insurance
+Holiday, vacation, and sick pay
+401k participation with a company matching program
+Complimentary stays at Four Seasons worldwide (subject to availability)
+Free employee meals prepared by the culinary team
+Complimentary dry cleaning of employee uniforms
+Free employee parking
+
+Four Seasons is an Equal Opportunity, Affirmative Action employer. Minorities, women, veterans, and individuals with disabilities are encouraged to apply. To access the 'EEOC is The Law' Information poster please visit this website - https://eeoc.gov/sites/default/files/migrated_files/employers/poster_screen_reader_optimized.pdf
+[REQUIRED JSON SCHEMA]
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "...",
+  "skills": ["..."],
+  "experience": [{ "company": "...", "role": "...", "dates": "...", "location": "...", "bullets": ["..."] }],
+  "projects": [{ "name": "...", "role": "...", "description": "...", "bullets": ["..."] }],
+  "education": [{ "degree": "...", "institution": "...", "location": "...", "date": "..." }],
+  "certifications": ["..."]
+}
+EXECUTE.
+
+
+--- VERBATIM RESPONSE ---
+```json
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "Reliable, guest-focused professional with 20+ years of high-stakes operations, logistics, and customer-service excellence. Proven record of safely transporting goods and people, optimizing routes, and delivering white-glove service in luxury and high-volume environments. Clean driving history, spotless background, and a calm, solutions-first demeanor that keeps guests safe, on time, and impressed.",
+  "skills": [
+    "Luxury guest experience",
+    "Route & traffic optimization",
+    "Defensive / valet driving",
+    "Luggage & package handling",
+    "POS / key control / ticketing",
+    "Concierge & front-desk support",
+    "Oral & written English fluency",
+    "Conflict resolution & upselling",
+    "Local area knowledge (Silicon Valley)",
+    "100% mobile / lift 50+ lbs",
+    "Flexible overnight & holiday shifts",
+    "Valid CA license – zero violations"
+  ],
+  "experience": [
+    {
+      "company": "M5 Digital, Inc.",
+      "role": "Client Support & Logistics Specialist",
+      "dates": "2020 – Present",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Provide 24/7 on-site and on-call support to local businesses; maintain 100% incident-free driving record while running urgent hardware, document, and guest deliveries throughout Central Valley and Bay Area.",
+        "Greet clients, triage requests, and coordinate with vendors to ensure seamless service continuity—modeling the same anticipatory hospitality expected at a Four Seasons property.",
+        "Track inventory, log tickets, and follow up to confirm every guest (client) leaves satisfied; referral rate exceeds 85%."
+      ]
+    },
+    {
+      "company": "Independent Concierge & Delivery Specialist",
+      "role": "Driver / Guest Experience Contractor",
+      "dates": "2019 – 2023",
+      "location": "Sacramento → Silicon Valley",
+      "bullets": [
+        "Maintained 4.9-star customer rating across luxury retail, grocery, and pharmacy platforms by providing courteous, on-time, white-glove service to high-net-worth residents in Atherton, Palo Alto, and Los Gatos.",
+        "Planned efficient overnight routes, handled perishables and fragile items with care, and followed special instructions (gate codes, discretion, room placement) 100% of the time.",
+        "Resolved real-time issues (traffic, wrong addresses, last-minute changes) while keeping guests informed and confident."
+      ]
+    },
+    {
+      "company": "Van Groningen & Sons, Inc.",
+      "role": "Transportation Director",
+      "dates": "2015 – 2022",
+      "location": "Manteca, CA",
+      "bullets": [
+        "Led 20+ drivers and 60 daily shipments to a 99% on-time record for Walmart and Costco—emphasizing safety, vehicle inspections, and courteous interaction with receivers.",
+        "Personally covered overnight and holiday shifts when needed; oversaw key control, damage documentation, and secure hand-offs of high-value cargo.",
+        "Implemented check-in/check-out protocols that reduced guest (receiver) complaints by 40%."
+      ]
+    },
+    {
+      "company": "The Castro Restaurant & Hotel",
+      "role": "Overnight Kitchen & Service Lead",
+      "dates": "2022 – 2023",
+      "location": "San Francisco & Roseville, CA",
+      "bullets": [
+        "Managed late-night room-service deliveries for 400+ luxury guests; coordinated with front-desk and concierge to fulfill special dietary requests within 20 minutes.",
+        "Maintained ServSafe standards, spotless uniform, and polite, professional presence during high-profile events and VIP stays."
+      ]
+    },
+    {
+      "company": "OnTrac Final Mile",
+      "role": "Warehouse & Guest Delivery Associate",
+      "dates": "Seasonal",
+      "location": "Fremont, CA",
+      "bullets": [
+        "Sorted and delivered 1,000+ overnight packages nightly for Silicon Valley tech campuses and luxury condos; zero lost-item incidents.",
+        "Interacted with 24/7 security and concierge desks to ensure seamless guest hand-offs."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Transfer CLI",
+      "role": "Solo Developer",
+      "description": "Built a resumable, secure file-transfer tool used by local businesses to move sensitive guest documents overnight without corruption.",
+      "bullets": [
+        "Guarantees 100% data integrity for late-night concierge document delivery."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Science in Computer Science (In Progress)",
+      "institution": "Modesto Junior College",
+      "location": "Modesto, CA",
+      "date": "Expected 2025"
+    }
+  ],
+  "certifications": [
+    "ServSafe Food Handler",
+    "Clean CA Driver License – Zero Points",
+    "Cyber Proud Security Apprentice",
+    "CPST – Certified Professional Selenium Tester"
+  ]
+}
+```

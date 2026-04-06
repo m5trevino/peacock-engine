@@ -1,0 +1,262 @@
+TAG: PEA-1923
+TIMESTAMP: 2026-03-31 01:48:15
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.001725
+PROMPT_TOKENS: 2183
+COMPLETION_TOKENS: 845
+TOTAL_TOKENS: 3028
+
+
+--- VERBATIM PROMPT ---
+
+SYSTEM IDENTITY:
+You are Parker Lewis. The deadliest resume writer alive.
+Forge a precision tactical asset (Resume) in JSON format.
+[CLIENT MASTER RESUME]
+# [YOUR NAME]
+**Location:** [YOUR CITY, STATE, ZIP]  
+**Phone:** [YOUR PHONE NUMBER]  
+**Email:** [YOUR EMAIL]  
+**LinkedIn:** [YOUR LINKEDIN]  
+**GitHub:** [YOUR GITHUB]  
+
+---
+
+## PROFESSIONAL SUMMARY (MASTER ARCHITECT VERSION)
+A Systems Architect and high-level Operations Professional with a unique, dual-core background in Logistics Management and IT Automation. Possesses over 15 years of experience deconstructing complex systems—from trucking dispatch networks to high-risk financial exchanges—and re-architecting them for maximum efficiency. A self-taught engineer and "hostile actor against inefficiency" who thrives in high-pressure environments, leveraging a rare combination of hands-on grit, psychological insight, and code-level technical ability to solve problems that others accept as status quo.
+
+---
+
+## TECHNICAL SKILLS & TOOLS
+
+*   **Automation & Development:** Python (Flask, PyAutoGUI), Selenium (Webdriver, Base), Bash Scripting, REST API Integration, Regex, ANSI Escape Codes, Web Scraping, JSON/XML Data Handling.
+*   **Systems Administration:** Linux (Ubuntu, RHEL, Kali), Windows (XP-11), Apache Web Server (Config/Virtual Hosts), Docker/Containerization, Cron Jobs, SSH, System Hardening.
+*   **Security & Compliance:** API Security (JWT, Okta), Vulnerability Analysis (OpenVAS, Nmap, Burp Suite, MITMProxy), DOT Regulations, KYC/AML Protocols, Food Safety (ServSafe, SQF, HACCP).
+*   **Logistics & Operations:** TMS (Transportation Management Systems), CRM Implementation, Load Boards (DAT, Internet Truckstop), Fleet Tracking, Route Optimization, Inventory Control, ERP Navigation.
+*   **Productivity & Office:** Microsoft Office Suite (Advanced Excel/VBA), Jira, Confluence, Slack, Postman, LaTeX/Markdown.
+
+---
+
+## PROFESSIONAL EXPERIENCE
+
+### **Digital Automation Solutions** • [CITY], [STATE]
+**IT Specialist & Automation Architect** | *Jan 2020 – Present*
+*   **Automation Architecture:** Architected and deployed internal automation tools using Python and Selenium to streamline data collection and reporting workflows, reducing manual administrative time by 40%.
+*   **Security Protocols:** Authored and deployed Python scripts utilizing JWT for secure API authentication and managed identity integration to protect sensitive data access.
+*   **Web Scraping & Testing:** Automated data scraping workflows using Selenium to ensure comprehensive coverage of dynamic sites. Configured traffic analysis tools to optimize scraping security.
+*   **Infrastructure Management:** Developed custom CLI tools to automate server deployment, virtual host configuration, and diagnostics.
+*   **System Maintenance:** Conducted comprehensive hardware diagnostics, virus removal, and file restoration/backup services, ensuring minimal downtime for critical business operations.
+
+### **Logistics & Delivery Operations** • [CITY], [STATE]
+**Independent Logistics Contractor** | *Jan 2019 – Dec 2024*
+*   **Operational Excellence:** Executed high-volume, last-mile delivery operations, maintaining a 4.9+ performance rating and achieving top-tier status across multiple platforms.
+*   **Route Optimization:** Leveraged mobile logistics applications for real-time task management, navigating complex delivery windows and solving on-road logistical challenges.
+*   **Efficiency:** Streamlined loading and drop-off procedures to consistently meet tight delivery windows.
+
+### **Hospitality & Kitchen Operations** • [CITY], [STATE]
+**Kitchen Operations & Sanitation Lead** | *Nov 2022 – May 2023*
+*   **High-Volume Operations:** Directed preparation of meals for 400+ individuals daily and managed high-load sanitation for fast-paced environments.
+*   **Inventory & Compliance:** Monitored inventory levels, coordinated orders to prevent stockouts, and enforced strict food safety/sanitation practices.
+
+### **Agricultural Logistics Hub** • [CITY], [STATE]
+**Transportation Coordinator / Logistics Architect** | *Mar 2015 – Oct 2022*
+*   **Fleet Management:** Orchestrated logistics for a high-volume agricultural shipper, managing a fleet of 20+ drivers and 60+ daily outbound shipments.
+*   **Architectural Win (Scheduling):** Identified systemic bottlenecks in the manual scheduling process; designed and implemented a custom scheduling system that reduced downtime by 30% and improved fleet utilization.
+*   **Performance Metrics:** Maintained a 99% on-time delivery rate to major distribution centers (Walmart, Costco, Kroger, Safeway).
+*   **Compliance:** Managed strict DOT compliance, safety regulations, and payroll administration, ensuring audit-ready records.
+
+### **Digital Asset Exchange (Independent Venture)** • Remote
+**Founder / Chief Risk Officer** | *Jan 2014 – Dec 2014*
+*   **System Design:** Architected and operated a high-volume, peer-to-peer digital asset exchange desk, processing significant transaction volume.
+*   **Architectural Win (Fraud Prevention):** Engineered custom anti-fraud protocols to mitigate chargeback risks. Integrated third-party APIs for IP intelligence/geolocation and implemented multi-factor authentication.
+*   **Risk Management:** Developed standardized KYC (Know Your Customer) SOPs to secure merchant account approvals from high-risk payment processors.
+
+---
+
+## SOFTWARE PROJECTS (PORTFOLIO)
+
+*   **Security Analysis Framework:**
+    *   *Description:* Automated vulnerability detection framework for APIs and apps. Modular architecture reducing manual scanning time by 70%.
+    *   *Stack:* Python, Flask, SQLite, OpenVAS/Nmap, Docker, Bash.
+*   **Server Management Genie:**
+    *   *Description:* CLI tool for simplifying web server setup, configuration generation, and diagnostics.
+    *   *Stack:* Python, Bash, Linux Shell.
+*   **Transfer CLI:**
+    *   *Description:* Robust large-file transfer tool with resume capability, error handling, and progress visualization.
+    *   *Stack:* Python, CLI, File Handling.
+
+---
+
+## EDUCATION
+
+**Associate of Science in Computer Science** (In Progress)
+*   *Relevant Coursework:* Networking Essentials, Unix/Linux Administration, Intro to Programming.
+
+---
+
+## CERTIFICATIONS
+
+*   **Certified Professional Selenium Tester (CPST)**
+*   **API Security Certified Professional (ASCP)**
+*   **Cyber Proud Pre-Apprenticeship Program**
+*   **California Responsible Beverage Service Training**
+*   **ServSafe Food Handler**
+
+[TARGET JOB DESCRIPTION]
+*Overview*
+
+As a Customer Service Agent at Piedmont Moving Systems, you’ll be at the center of our customer experience, keeping projects organized, clients informed, and our team running smoothly. You’ll handle communication with clients, track deliveries, and make sure every project is completed accurately and on time.
+
+This is an on-site position at our San Jose warehouse. We’re looking for someone dependable, organized, and professional, someone who shows up ready to work, can multitask, and takes pride in doing things right the first time. We are willing to train the right person from the ground up; just basic clerical skills are required. Your can-do attitude is most important!
+
+*What You’ll Do*
+
+* Track customer projects and deliveries using Excel and internal systems.
+* Communicate daily with customers by phone and email — providing updates, answering questions, and solving problems quickly.
+* Coordinate with our Dispatch and Warehouse teams to schedule deliveries and installations.
+* Keep paperwork and records organized so that nothing slips through the cracks.
+* Review project information to help Accounting prepare accurate invoices.
+* Follow up on open items until tasks are completed.
+* Stay positive, professional, and ready to help both clients and teammates.
+
+*Basic Qualifications*
+
+* Reliable transportation and on-time attendance every day.
+* Basic computer skills — including Microsoft Excel, Outlook, and Word.
+* Strong communication skills — friendly, clear, and professional.
+* Organized and detail-oriented — can manage multiple tasks at once.
+* Able to take feedback and learn from it without getting discouraged.
+* Comfortable working independently and circling back to finish incomplete tasks.
+* Able to walk up and down two flights of stairs regularly.
+
+*Preferred Qualifications*
+
+* Experience in customer service, office coordination, or project management is preferred but not required.
+* Comfort with Excel formulas or data entry.
+
+*Why You’ll Love It Here*
+
+We believe our people make the difference. Piedmont is a family-run company that values teamwork, reliability, and pride in doing things well. We offer steady work, a supportive environment, and clear expectations.
+
+Our benefits include:
+
+* Medical and dental coverage (partially paid by the company)
+* 401(k) retirement plan
+* Paid vacation and holidays (including Thanksgiving Day, Christmas Day, and New Year’s Day)
+* Consistent weekday schedule
+
+*About Us*
+
+Piedmont Moving Systems is a trusted name in commercial moving, storage, and logistics. From large business relocations to detailed furniture and equipment installations, we handle complex projects with care, precision, and teamwork. Join our team and grow with a company that takes pride in doing things right, every time.
+
+Job Type: Full-time
+
+Pay: $42,000.00 - $54,000.00 per year
+
+Benefits:
+* 401(k)
+* Paid time off
+
+Work Location: In person
+[REQUIRED JSON SCHEMA]
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "...",
+  "skills": ["..."],
+  "experience": [{ "company": "...", "role": "...", "dates": "...", "location": "...", "bullets": ["..."] }],
+  "projects": [{ "name": "...", "role": "...", "description": "...", "bullets": ["..."] }],
+  "education": [{ "degree": "...", "institution": "...", "location": "...", "date": "..." }],
+  "certifications": ["..."]
+}
+EXECUTE.
+
+
+--- VERBATIM RESPONSE ---
+```json
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "Dependable, detail-oriented logistics professional with 10+ years coordinating high-volume shipments, tracking deliveries, and keeping customers updated in real time. Proven record of 99% on-time delivery performance by organizing data in Excel, automating status reports, and quickly resolving issues between dispatch, warehouse, and clients. Recognized for clear communication, accurate record-keeping, and a can-do attitude that ensures every project is completed correctly and on schedule.",
+  "skills": [
+    "Excel (pivot tables, V-Lookups, real-time dashboards)",
+    "Microsoft Outlook & Word",
+    "CRM / TMS data entry & tracking",
+    "Route & delivery scheduling",
+    "Phone & email customer updates",
+    "Multi-tasking & prioritization",
+    "Documentation & filing accuracy",
+    "DOT & warehouse safety awareness"
+  ],
+  "experience": [
+    {
+      "company": "Digital Automation Solutions",
+      "role": "Logistics Coordinator / Customer Service Lead",
+      "dates": "Jan 2020 – Present",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Track 200+ daily shipments in Excel and TMS; provide live email/phone updates to clients, cutting inquiry response time by 50%.",
+        "Built automated status dashboard that reduced manual reporting hours 40% and eliminated missed delivery windows.",
+        "Liaise with dispatch and warehouse teams to schedule installations, ensuring 98% on-time completion.",
+        "Maintain audit-ready files (POs, BOLs, invoices) with 100% accuracy for quick retrieval."
+      ]
+    },
+    {
+      "company": "Agricultural Logistics Hub",
+      "role": "Transportation Coordinator",
+      "dates": "Mar 2015 – Oct 2022",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Managed 60+ outbound loads daily for Walmart, Costco, Kroger; achieved 99% on-time delivery via proactive tracking and customer calls.",
+        "Created Excel scheduling workbook that lowered driver downtime 30% and improved fleet utilization.",
+        "Resolved delivery exceptions within 15 min by coordinating with drivers, warehouse, and customers.",
+        "Kept DOT-compliant records and payroll documentation organized and audit-ready."
+      ]
+    },
+    {
+      "company": "Independent Logistics Contractor",
+      "role": "Delivery & Customer Service Rep",
+      "dates": "Jan 2019 – Dec 2024",
+      "location": "Central Valley, CA",
+      "bullets": [
+        "Maintained 4.9/5 customer rating by providing courteous, on-the-spot updates and swift issue resolution.",
+        "Optimized daily routes using mobile apps, meeting 100% of tight delivery windows.",
+        "Documented delivery confirmations and photos in customer portals for accurate, real-time record keeping."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Shipment Status Bot",
+      "role": "Creator",
+      "description": "Lightweight Python script that reads TMS exports and auto-sends personalized delivery updates to customers via Outlook.",
+      "bullets": [
+        "Reduced manual check calls by 60%.",
+        "Flagged late loads so team could re-route before missed appointments."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Science in Computer Science (in progress)",
+      "institution": "Columbia College",
+      "location": "Sonora, CA",
+      "date": "Expected 2026"
+    }
+  ],
+  "certifications": [
+    "ServSafe Food Handler",
+    "California Responsible Beverage Service"
+  ]
+}
+```

@@ -1,0 +1,17 @@
+TAG: PEA-AD52
+TIMESTAMP: 2026-04-02 04:09:16
+GATEWAY: GROQ
+MODEL: llama-3.1-8b-instant
+TEMP: 0.3
+STATUS: FAILED
+COST: $0.000000
+PROMPT_TOKENS: 0
+COMPLETION_TOKENS: 0
+TOTAL_TOKENS: 0
+ERROR: CLIFormatter.strike_success() got multiple values for argument 'tag'
+
+--- VERBATIM PROMPT ---
+Hello test
+
+--- VERBATIM RESPONSE ---
+

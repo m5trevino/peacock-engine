@@ -1,0 +1,388 @@
+TAG: PEA-6ECA
+TIMESTAMP: 2026-03-30 18:43:01
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.002445
+PROMPT_TOKENS: 3617
+COMPLETION_TOKENS: 849
+TOTAL_TOKENS: 4466
+
+
+--- VERBATIM PROMPT ---
+
+SYSTEM IDENTITY:
+You are Parker Lewis. The deadliest resume writer alive.
+Forge a precision tactical asset (Resume) in JSON format.
+[CLIENT MASTER RESUME]
+📑 THE TREVINO DOCTRINE: ULTIMATE SYSTEM MANIFEST (V3.5)
+
+Systems Architect | Full-Stack Developer | Operations Director | Multi-Domain Operator
+Location: Turlock, CA 95380
+Contact: (209) 417-1983 • (279) 444-5615 • mtrevino1983@gmail.com
+Digital: linkedin.com/in/matthewtrevino1983 • github.com/m5trevino
+
+💀 PROFESSIONAL MANIFESTO
+
+A Systems Architect and multifaceted Technologist with a 30-year history of deconstructing complex, inefficient systems and architecting elegant, automated, and resilient solutions. Possesses a rare blend of deep technical acumen—spanning full-stack development, cybersecurity, and enterprise IT administration—and extensive, real-world leadership in high-stakes operational environments. Driven by an innate, relentless intolerance for inefficiency, with a proven ability to perform root cause analysis and deploy novel technologies and workflows that deliver transformative results. A battle-tested, adaptable, and uniquely insightful leader whose unconventional path has forged an unbreakable resilience and a powerful, first-principles approach to solving mission-critical problems.
+
+🛠️ CORE COMPETENCIES & SYSTEMS INVENTORY
+Architectural & Development	IT & Systems Administration	Cybersecurity & Data	Logistics & Operations
+Python (Flask, Tkinter, Selenium)	Unix/Linux Admin (Bash/Zsh)	Vulnerability Assessment (OpenVAS)	Transportation Management (TMS)
+API Architecture (REST/JWT)	Windows Server/Desktop (XP-11)	Network Analysis (Nmap/Burp)	Supply Chain Optimization
+RAG & Vector DBs (ChromaDB)	VoIP Architecture (Epygi)	Fraud Scoring APIs (Subuno)	Inventory & Warehouse Logic
+CI/CD & Docker	Point-of-Sale (POS) Design	KYC/AML Protocols	P&L & Budget Oversight
+Multi-Agent AI (MCP)	Hardware Diagnostics & Repair	Data Scraping & ETL	Food Safety (ServSafe)
+🚀 TECHNICAL PROJECTS (LATEST RELEASES)
+
+Peacock – Multi-Agent AI Development Ecosystem | Lead Architect
+
+Architected a modular AI ecosystem solving "statelessness" in LLMs using ChromaDB for persistent semantic memory.
+
+Integrated Claude’s MCP for direct file-system interaction and coordinate-based code editing.
+
+Sasha – Advanced Security Analysis Tool | Lead Developer / Architect
+
+Python suite automating vulnerability detection, integrating Nmap and OpenVAS for rapid network audits.
+
+Reduced manual overhead by 70% by integrating directly into CI/CD pipelines.
+
+MultiClip & Apache Genie | Lead Developer
+
+Developed persistent clipboard management systems and automated Apache server deployment/diagnostic CLI tools.
+
+Transfer CLI | Lead Developer
+
+Built a robust, resumable file transfer utility for large-scale data handling with ANSI progress visualization.
+
+🏛️ PROFESSIONAL EXPERIENCE (COMPLETE & UN-TRUNCATED)
+
+M5 Digital, Inc. • Turlock, CA
+IT Specialist & Automation Architect | 01/2020 – Present
+
+Automation: Specialized in web testing using Selenium, Java, Jira, Maven, and Pytest to ensure system reliability.
+
+Security: Authored and deployed Python scripts utilizing JWT for secure API authentication and managed Okta integration to strengthen data integrity.
+
+ETL: Automated high-volume data scraping workflows using Selenium to collect intelligence from dynamic sites.
+
+Infrastructure: Developed "Apache Genie" to automate server deployment, virtual host configuration, and diagnostics.
+
+Maintenance: Conduct comprehensive hardware diagnostics, system restorations, and virus removal for local business continuity.
+
+Logistics & Delivery Contractor • Sacramento/Turlock Area
+Independent Logistics Specialist | 01/2019 – 12/2023
+
+(Dispatch It, Instacart, AxleHire). Executed last-mile delivery operations, maintaining a 4.9+ performance rating and achieving Platinum/Diamond status through route optimization and task-management precision.
+
+The Castro Restaurant & Hotel / Placer County • SF & Roseville, CA
+Kitchen Operations Lead & Cook | 11/2022 – 05/2023
+
+Directed kitchen operations in high-pressure environments, managing daily meal prep for 400+ individuals.
+
+Oversaw full-cycle inventory control and enforced strict food safety standards in compliance with ServSafe and nutritional guidelines.
+
+OnTrac Final Mile • Fremont, CA
+Warehouse Associate / Package Handler | Seasonal
+
+Executed high-volume package handling and sorting; performed systemic sorting by zip code and logistical routing for final-mile delivery.
+
+Van Groningen & Sons, Inc. • Manteca, CA
+Transportation Coordinator → Transportation Director | 03/2015 – 10/2022
+
+Transformation: Promoted from $45k to $80k salary by fundamentally re-architecting the freight brokerage and communication process.
+
+Intrapreneurship: Launched a new, high-margin Rework Division by identifying market needs from Hub Group; created a scalable pricing model that turned the warehouse into a year-round profit center.
+
+Digital Marketplace: Built a proprietary database of 5,000+ carriers and leveraged MailChimp to create a targeted, daily load-board newsletter.
+
+Custom DSL: Deployed a system-wide text-expansion tool (MT-FON) to automate dispatch, reducing administrative errors and increasing speed.
+
+Management: Managed fleet of 20+ drivers and 60+ daily shipments with a 99% on-time delivery rate to Walmart and Costco.
+
+Golden Valley Trucking Corp / Brokerage, Inc • Turlock, CA
+Broker Operations Manager | 09/2012 – 03/2015
+
+Spearheaded CRM architecture and integration; automated load tracking and invoicing to increase efficiency by 25%.
+
+Managed P&L, rate negotiation, and carrier relations for a network of 500+ carriers.
+
+Echo Global Logistics • Chicago, IL / Remote
+Sales Representative | 08/2011 – 09/2012
+
+Provided LTL and FTL transportation solutions for independent shippers; coordinated shipments between ops teams and clients.
+
+T3 Direct Marketing • Turlock, CA
+Supervising Team Lead | 03/2010 – 08/2011
+
+Promoted to Team Lead based on analytical capability; supervised marketing agents in B2B lead generation.
+
+Broke all existing performance benchmarks by booking three verified appointments before lunch on Day 1 of a new campaign.
+
+Empty Trucks / Trevino Trucking, LLC • Turlock, CA
+Business Operations Manager | 11/2005 – 03/2010
+
+Architectural Win (VoIP): In 2006, architected and deployed a corporate VoIP call center system using an Epygi appliance, configuring advanced routing and CTI years before it was industry standard.
+
+Managed all load booking, carrier sourcing, and accounts receivable/payable.
+
+Pops Bargain Outlet • Turlock, CA
+IT Systems Implementation Lead / Warehouse | 07/2004 – 11/2005
+
+Architectural Win (POS): Migrated business from manual pricing to the store's first UPC-based POS and inventory system. Built the product database from scratch and automated the checkout process.
+
+Directline Technologies • Turlock, CA
+Professional Fundraiser | 04/2003 – 07/2004
+
+Conducted high-volume outbound fundraising calls for universities using scripting and CRM management.
+
+Hilmar Dairy • Hilmar, CA
+Dairy Operations Technician | 01/2003 – 04/2003
+
+Operated heavy agricultural machinery (tractors, feed mixers) in a 24/7 manufacturing environment; managed feedstock logistics and TMR processing.
+
+Collectech Systems • Westlake Village, CA
+Financial Systems Analyst & Top Collector | 03/2002 – 08/2002
+
+Achieved #1 ranking in Month 1 by deconstructing company rules and architecting a "Credit Protection" offer using post-dated check protocols.
+
+Patriot Imaging (Key Data Systems) • Van Nuys, CA
+Lead Generation Specialist (Apprentice) | 11/2001 – 02/2002
+
+IMLAC Hack: Independently acquired publisher-direct Military Base Directories to bypass gatekeepers and access high-value IMLAC procurement card holders.
+
+GC Services • Patterson, CA
+TTY Communications Specialist (Gov Contractor) | 2000 – 2001
+
+Human API: pass-through communications for the deaf community. Passed 60 WPM typing gate at age 17; executed real-time protocol translation (text-to-voice).
+
+Rent-A-Center / Pizza Hut • Turlock, CA
+Logistics & Delivery Specialist | 06/2000 – 10/2000
+
+Executed last-mile delivery operations and foundational route optimization.
+
+Prime Shine Car Wash • Central CA
+Operations Technician | 02/1999 – 07/1999
+
+Managed vehicle throughput and quality control in a high-volume automated system.
+
+🧬 FOUNDATIONAL VENTURES (THE EARLY SOURCE CODE)
+
+FinTech Merchant Operations (Paxful Platform) | Lead Architect | 2014
+
+Architected a secure gateway for credit-card-to-Bitcoin trading; integrated Subuno Fraud API, DocuSign verification, and telecom filtering to secure a high-risk merchant account.
+
+AOL Warez Group (Logic) / Xvids Spam Engine | Architect | 1996 – 1999
+
+Built automated CDN servers on AOL; programmed lead-gen "proggies" and automated landing pages for affiliate marketing as a teenager.
+
+Pathos, Inc. (Proto-Cloud) | Co-Founder & Lead Architect | 1996 – 1998
+
+Co-founded shell hosting company on EFnet IRC; managed data center infrastructure at age 14, providing IaaS solutions.
+
+🎓 EDUCATION & ACCREDITATIONS
+
+Associate of Science in Computer Science (In Progress)
+Modesto Junior College, Modesto, CA
+
+Coursework: Networking Essentials (MCMPSC-263), Unix/Linux Admin (MCMPSC-210), Intro to Programming (MCMPSC-204), Child Development, Human Services, Visual Basic.
+
+Certifications:
+
+CPST: Certified Professional Selenium Tester
+
+ASCP: API Security Certified Professional
+
+Cyber Proud Security Apprentice
+
+ServSafe Food Handler Certified
+
+GED: (Acquired at age 17, accelerated completion).
+
+📡 CONTINUOUS CONSULTING EXPERIENCE (2003 – PRESENT)
+
+Independent IT Consultant
+
+Operated a continuous, referral-based IT support practice for 20+ years. Specialized in Windows OS architecture, deep-level hardware diagnostics, and system hardening.
+
+📑 ONBOARDING DEBRIEF FOR STRANGERS
+
+Why this exists: This is the master database. It contains 100% of Matthew Trevino's professional and technical lineage.
+
+What to do with it: Query this manifest to build specialized resumes for (a) Software Engineering, (b) Logistics Management, or (c) Operational Leadership.
+
+The Core Signal: Matthew is a Systemic Response Specialist. Whether it’s code or cargo, he optimizes the flow and kills the friction.
+
+
+[TARGET JOB DESCRIPTION]
+Chevron Stations Inc. is looking to hire a Customer Service Representative who will cook, cashier, and clean!
+
+Shifts: Part time.
+
+Location: Chevron Gas Station CSI #1784 | 1700 Castro Street | Oakland CA, 94612.
+
+Apply Now: Careers Home (myworkdayjobs.com).
+
+Benefits:
+Full-time & Part-time shifts available.
+Direct Deposit with competitive weekly pay.
+Health & Wellness packages available for purchase.
+Education reimbursement program.
+Shift Differential Pay for select shifts and job titles.
+Management Bonus Program.
+Loyalty Service Time Program.
+Commuter Benefit Program.
+
+Job Expectations:
+Maintain courteous, professional contact with co-workers, customers, vendors, and community at large.
+Maintain a neat appearance and good personal hygiene in compliance with CSI image standards.
+Support and follow established safety, security, quality guidelines as well as CSI’s policies, procedures, practices, and programs. Report accidents or incidents to the manager immediately.
+Preserve safety of self, fellow employees, and all others in the work location by utilizing the CSI Loss Prevention process.
+Ensure food safety hygiene in accordance with county regulations is followed to include proper sanitation, food handling, preparation, storage, and disposal procedures.
+Follow federal law and company standards on carding customers for all age-restricted products sold at the stations.
+Work professionally with vendors and contractors.
+Regular and punctual attendance is expected.
+Follow proper kitchen and sanitation procedures in accordance with city and county regulations during the cooking of KKC products.
+
+Essential Functions:
+Provide exceptional guest service. Be courteous, always greet and thank all customers while making eye contact.
+Conduct all point-of-sale activities accurately and safely while adhering to CSI guidelines and procedures. This includes retail and fuel sales transactions completed through multiple forms of payment.
+Maintain cash drawer to be at or below the maximum level. Secure all funds in a safe and perform cashier reconciliation at the end of each shift to ensure accurate management of sales. CSI cash handling policies, guidelines, and procedures are followed consistently.
+Perform consistent station cleaning of the indoor and outdoor facilities including restrooms, islands, pumps, and car wash, if applicable.
+Prepare food and hot beverage products. Effectively manage ExtraMile and/or KKC foodservice and beverages to ensure maximization of sales and minimization of loss through continuously monitoring product levels and re-stocking as needed.
+Actively promote store specials and other marketing programs.
+Cross-check price of delivered goods for accuracy.
+Distribute delivered goods in an orderly manner throughout the store and continuously ensure shelves are full of products. This includes both the retail space and cooler locations in the store.
+Observe local law requirements in activating and filling vehicle fuel tanks with gasoline or diesel fuel to specified levels. (Oregon only).
+May perform other duties as assigned by management.
+
+Requirement/Qualifications:
+Must be sufficiently proficient in English to understand CSI policies, safety training, and job instructions, and to effectively communicate with customers and/or coworkers on work-related matters.
+Available to work a variety of hours, which may include early mornings, evenings, weekends, overnight shifts, and holidays.
+Strong attention to detail.
+Ability to handle challenging situations professionally and exercise exceptional judgement.
+Ability to work both independently and in team settings.
+Must possess required up-to-date food handling certificates, as required by law (in specific locations only).
+Cooking/Restaurant experience preferred.
+
+Physical Demands Include but are not limited to:
+Ability to stand and walk for long periods of time on hard and uneven surfaces.
+Ability to bend, lift, push, and move product using proper lifting techniques. Follow the team-lift concept if objects are too heavy or awkward, and if over 25 pounds.
+Krispy Krunchy Chicken procedures require constant standing, bending, and reaching with a moderate amount of manual dexterity.
+Work safely with equipment that can create and hold very high temperatures while always using appropriate personal protective equipment.
+Periodic exposure to all outdoor conditions during daylight hours.
+Moderate exposure to walk-in coolers and freezers at 34°F or lower.
+Frequent handwashing and attention to personal cleanliness standards.
+Must be at least 18 years of age or older to work in California and Oregon locations.
+Must be at least 21 years of age or older to work in Washington locations.
+Must be at least 21 years of age or older to work Graveyard shift from 10pm to 6am.
+Must be at least 21 years of age or older to work in Management positions.
+Please note that the compensation and benefits listed below are only applicable for U.S. payroll offers.
+The selected candidate’s compensation will be determined based on their skills, experience, and qualifications. The compensation and reference to benefits for this role is listed on this posting in compliance with applicable law.
+
+USA-based job position.
+
+Visas will not be granted.
+
+Chevron Stations Inc. (CSI) is an Equal Opportunity employer. Qualified applicants will receive consideration for employment without regard to race, color, religious creed, sex (including pregnancy, childbirth, breast-feeding and related medical conditions), sexual orientation, gender identity, gender expression, national origin or ancestry, age, mental or physical disability (including medical condition), military or veteran status, political preference, marital status, citizenship, genetic information or other status protected by law or regulation.
+
+We are committed to providing reasonable accommodations for qualified individuals with disabilities. If you need assistance or an accommodation, please email us at CSIWFM@Chevron.com.
+[REQUIRED JSON SCHEMA]
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "...",
+  "skills": ["..."],
+  "experience": [{ "company": "...", "role": "...", "dates": "...", "location": "...", "bullets": ["..."] }],
+  "projects": [{ "name": "...", "role": "...", "description": "...", "bullets": ["..."] }],
+  "education": [{ "degree": "...", "institution": "...", "location": "...", "date": "..." }],
+  "certifications": ["..."]
+}
+EXECUTE.
+
+
+--- VERBATIM RESPONSE ---
+```json
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "Reliable, safety-first guest-service professional with 10+ years in food-handling, POS, and high-volume retail environments. Proven record of accurate cash reconciliation, spotless ServSafe compliance, and friendly, fast service that drives repeat business. Recognized for perfect attendance, stamina on long shifts, and a detail-oriented approach that keeps store, kitchen, and pumps clean and profitable.",
+  "skills": [
+    "POS / Cash-handling accuracy",
+    "ServSafe food-safety protocols",
+    "Customer greeting & rapport",
+    "Kitchen prep & Krispy Krunchy Chicken procedures",
+    "Fuel & age-restricted sales compliance",
+    "Indoor / outdoor facility cleaning",
+    "Inventory rotation & stocking",
+    "Shift cash reconciliation",
+    "Stand / bend / lift 25+ lbs repeatedly",
+    "English fluency & clear radio/verbal comms"
+  ],
+  "experience": [
+    {
+      "company": "The Castro Restaurant & Hotel, Placer County",
+      "role": "Kitchen Operations Lead & Cook",
+      "dates": "11/2022 – 05/2023",
+      "location": "Roseville, CA",
+      "bullets": [
+        "Prepared 400+ daily meals under county inspection; zero critical violations during tenure.",
+        "Maintained ServSafe standards for food storage, temps, and sanitation; trained 6 new hires on same.",
+        "Closed each shift with full drawer reconciliation and spotless kitchen reset for next-day service."
+      ]
+    },
+    {
+      "company": "Van Groningen & Sons, Inc.",
+      "role": "Transportation Coordinator",
+      "dates": "03/2015 – 10/2022",
+      "location": "Manteca, CA",
+      "bullets": [
+        "Started at $45k, promoted to $80k for eliminating dispatch errors; habitually closed daily cash-outs error-free.",
+        "Created MT-FON text-expansion tool that reduced admin mistakes and kept 60+ daily shipments on-time to Walmart/Costco.",
+        "Managed 20+ drivers—scheduled shifts, enforced safety logs, and maintained 99 % on-time record."
+      ]
+    },
+    {
+      "company": "Independent Logistics (Dispatch-It, Instacart, AxleHire)",
+      "role": "Delivery Driver / Contractor",
+      "dates": "01/2019 – 12/2023",
+      "location": "Sacramento–Turlock, CA",
+      "bullets": [
+        "Maintained 4.9+ customer rating across 3,000+ trips by greeting every customer, double-checking orders, and keeping vehicle clean.",
+        "Handled cash and card payments accurately; adhered to alcohol/tobacco carding rules 100 %."
+      ]
+    },
+    {
+      "company": "OnTrac Final Mile",
+      "role": "Warehouse Associate / Package Handler",
+      "dates": "Seasonal",
+      "location": "Fremont, CA",
+      "bullets": [
+        "Sorted high-volume packages by zip code; ensured correct placement for final-mile drivers, keeping fuel island and dock areas orderly."
+      ]
+    }
+  ],
+  "projects": [],
+  "education": [
+    {
+      "degree": "Associate of Science in Computer Science (in progress)",
+      "institution": "Modesto Junior College",
+      "location": "Modesto, CA",
+      "date": "Present"
+    }
+  ],
+  "certifications": [
+    "ServSafe Food Handler Certified",
+    "Certified Professional Selenium Tester (CPST)",
+    "Cyber Proud Security Apprentice"
+  ]
+}
+```

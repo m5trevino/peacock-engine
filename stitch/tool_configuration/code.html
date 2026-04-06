@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEON_COCKPIT | Tool Configuration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#221b00",
+                        "on-secondary-fixed-variant": "#544600",
+                        "tertiary": "#7ad0ff",
+                        "on-primary": "#002f65",
+                        "on-tertiary-fixed": "#001e2c",
+                        "on-tertiary-container": "#d0ecff",
+                        "background": "#101418",
+                        "primary-fixed": "#d7e3ff",
+                        "on-error-container": "#ffdad6",
+                        "outline": "#8b919e",
+                        "secondary-fixed-dim": "#e9c400",
+                        "tertiary-container": "#007097",
+                        "surface-container-high": "#262a2f",
+                        "secondary-container": "#ffdb3c",
+                        "on-primary-fixed-variant": "#00458e",
+                        "tertiary-fixed-dim": "#7ad0ff",
+                        "primary-fixed-dim": "#aac7ff",
+                        "surface-tint": "#aac7ff",
+                        "surface-container-highest": "#31353a",
+                        "surface": "#101418",
+                        "inverse-surface": "#e0e3e8",
+                        "surface-container": "#1c2024",
+                        "secondary": "#fff9ef",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#004c69",
+                        "on-surface-variant": "#c1c6d5",
+                        "on-tertiary": "#003549",
+                        "on-secondary": "#3a3000",
+                        "surface-bright": "#353a3e",
+                        "on-primary-container": "#dfe8ff",
+                        "inverse-primary": "#005cba",
+                        "on-secondary-container": "#725f00",
+                        "surface-container-lowest": "#0a0f13",
+                        "secondary-fixed": "#ffe16d",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#c3e8ff",
+                        "on-primary-fixed": "#001b3e",
+                        "primary": "#aac7ff",
+                        "surface-variant": "#31353a",
+                        "primary-container": "#0066cc",
+                        "on-surface": "#e0e3e8",
+                        "on-error": "#690005",
+                        "outline-variant": "#414753",
+                        "on-background": "#e0e3e8",
+                        "surface-dim": "#101418",
+                        "surface-container-low": "#181c20",
+                        "inverse-on-surface": "#2d3135"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"],
+                        "mono": ["JetBrains Mono"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cyber-glow {
+            filter: drop-shadow(0 0 8px rgba(170, 199, 255, 0.2));
+        }
+        .gold-glow {
+            filter: drop-shadow(0 0 8px rgba(255, 219, 60, 0.27));
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101418;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #31353a;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 h-screen overflow-hidden flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-[#101418] flex justify-between items-center w-full px-6 h-16 fixed top-0 z-50">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black text-[#aac7ff] tracking-tighter font-['Space_Grotesk']">NEON_COCKPIT</span>
+<nav class="hidden md:flex items-center gap-6 font-['Space_Grotesk'] tracking-tight text-sm">
+<a class="text-slate-400 hover:text-[#aac7ff] transition-colors" href="#">Dashboard</a>
+<a class="text-[#aac7ff] border-b-2 border-[#0066cc] pb-1" href="#">Orchestration</a>
+<a class="text-slate-400 hover:text-[#aac7ff] transition-colors" href="#">Analytics</a>
+<a class="text-slate-400 hover:text-[#aac7ff] transition-colors" href="#">Logs</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-3 mr-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-[#aac7ff]">notifications</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-[#aac7ff]">settings</span>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-4 py-1.5 text-xs font-bold uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+                Deploy Engine
+            </button>
+</div>
+</header>
+<main class="flex flex-1 pt-16 overflow-hidden">
+<!-- SideNavBar -->
+<aside class="bg-[#181c20] flex flex-col h-full w-64 border-r border-outline-variant/10 shrink-0">
+<div class="p-6 flex flex-col gap-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 bg-surface-container-high flex items-center justify-center border border-primary/20">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</div>
+<div>
+<div class="text-xs font-mono text-primary font-bold tracking-widest">OPERATOR_01</div>
+<div class="text-[10px] text-slate-500 font-mono">Level 4 Access</div>
+</div>
+</div>
+<nav class="flex flex-col gap-1 font-['Inter'] font-medium text-sm">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-[#262a2f] hover:text-slate-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">psychology</span> Models
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#aac7ff] bg-[#262a2f] border-l-4 border-[#aac7ff] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">build</span> Tools
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-[#262a2f] hover:text-slate-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">database</span> Data
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-[#262a2f] hover:text-slate-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">shield</span> Security
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-[#262a2f] hover:text-slate-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">payments</span> Billing
+                    </a>
+</nav>
+</div>
+<div class="mt-auto p-4 border-t border-outline-variant/10">
+<button class="w-full py-2 bg-surface-container-highest text-primary text-xs font-bold border border-primary/20 hover:bg-primary/10 transition-colors mb-4">
+                    New Instance
+                </button>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-2 text-[11px] text-slate-500 hover:text-slate-300" href="#">
+<span class="material-symbols-outlined text-sm">help</span> Documentation
+                    </a>
+<a class="flex items-center gap-2 text-[11px] text-slate-500 hover:text-slate-300" href="#">
+<span class="material-symbols-outlined text-sm">contact_support</span> Support
+                    </a>
+</div>
+</div>
+</aside>
+<!-- Tool List (Center Panel) -->
+<section class="flex-1 overflow-y-auto bg-surface p-8 scroll-smooth">
+<header class="mb-10">
+<h1 class="font-headline text-3xl font-light tracking-tight text-on-surface mb-2">Available <span class="text-primary font-bold">Tools</span></h1>
+<p class="text-on-surface-variant text-sm max-w-xl">Configure tactical capabilities for the Peacock Engine. Enable specialized modules to expand LLM context and execution reach.</p>
+</header>
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+<!-- Tool Card: Google Search -->
+<div class="bg-surface-container-low border-l-2 border-primary p-6 group hover:bg-surface-container-high transition-colors relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2">
+<div class="w-10 h-10 border border-outline-variant/20 flex items-center justify-center bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary-fixed-dim">search</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline font-bold text-lg text-primary tracking-wide">Google Search</h3>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Real-time web indexing and knowledge retrieval via SERP APIs.</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-8">
+<div class="flex items-center gap-4">
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-primary after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary/20"></div>
+</div>
+<span class="text-[10px] font-mono font-bold text-primary tracking-widest uppercase">Active</span>
+</div>
+<button class="text-[10px] font-mono font-bold text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 border border-outline-variant/30 px-3 py-1">
+                            CONFIG <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<!-- Tool Card: Google Maps -->
+<div class="bg-surface-container-low border-l-2 border-secondary-container p-6 group hover:bg-surface-container-high transition-colors relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2">
+<div class="w-10 h-10 border border-outline-variant/20 flex items-center justify-center bg-surface-container-lowest">
+<span class="material-symbols-outlined text-secondary-container">map</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline font-bold text-lg text-secondary-container tracking-wide">Google Maps</h3>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Geospatial data, routing, and location-based awareness modules.</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-8">
+<div class="flex items-center gap-4">
+<div class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-secondary-container after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary-container/20"></div>
+</div>
+<span class="text-[10px] font-mono font-bold text-slate-500 tracking-widest uppercase">Standby</span>
+</div>
+<button class="text-[10px] font-mono font-bold text-on-surface-variant hover:text-secondary-container transition-colors flex items-center gap-1 border border-outline-variant/30 px-3 py-1">
+                            CONFIG <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<!-- Tool Card: Code Execution -->
+<div class="bg-surface-container-low border-l-2 border-primary p-6 group hover:bg-surface-container-high transition-colors relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2">
+<div class="w-10 h-10 border border-outline-variant/20 flex items-center justify-center bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary">terminal</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline font-bold text-lg text-primary tracking-wide">Code Execution</h3>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Secure sandboxed environment for Python and Node.js operations.</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-8">
+<div class="flex items-center gap-4">
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-primary after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary/20"></div>
+</div>
+<span class="text-[10px] font-mono font-bold text-primary tracking-widest uppercase">Active</span>
+</div>
+<button class="text-[10px] font-mono font-bold text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 border border-outline-variant/30 px-3 py-1">
+                            CONFIG <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<!-- Tool Card: URL Context -->
+<div class="bg-surface-container-low border-l-2 border-outline p-6 group hover:bg-surface-container-high transition-colors relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2">
+<div class="w-10 h-10 border border-outline-variant/20 flex items-center justify-center bg-surface-container-lowest">
+<span class="material-symbols-outlined text-outline">link</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline font-bold text-lg text-outline tracking-wide">URL Context</h3>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Direct content extraction and summarization from external URLs.</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-8">
+<div class="flex items-center gap-4">
+<div class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-outline after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-outline/20"></div>
+</div>
+<span class="text-[10px] font-mono font-bold text-slate-500 tracking-widest uppercase">Disabled</span>
+</div>
+<button class="text-[10px] font-mono font-bold text-on-surface-variant hover:text-outline transition-colors flex items-center gap-1 border border-outline-variant/30 px-3 py-1">
+                            CONFIG <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<!-- Tool Card: File Search -->
+<div class="bg-surface-container-low border-l-2 border-primary p-6 group hover:bg-surface-container-high transition-colors relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2">
+<div class="w-10 h-10 border border-outline-variant/20 flex items-center justify-center bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary">folder_open</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline font-bold text-lg text-primary tracking-wide">File Search</h3>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">RAG-powered vector search across local and cloud repositories.</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-8">
+<div class="flex items-center gap-4">
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-primary after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary/20"></div>
+</div>
+<span class="text-[10px] font-mono font-bold text-primary tracking-widest uppercase">Active</span>
+</div>
+<button class="text-[10px] font-mono font-bold text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 border border-outline-variant/30 px-3 py-1">
+                            CONFIG <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<!-- Tool Card: Computer Use -->
+<div class="bg-surface-container-low border-l-2 border-error p-6 group hover:bg-surface-container-high transition-colors relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2">
+<div class="w-10 h-10 border border-outline-variant/20 flex items-center justify-center bg-surface-container-lowest">
+<span class="material-symbols-outlined text-error">desktop_windows</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline font-bold text-lg text-error tracking-wide">Computer Use</h3>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Experimental GUI interaction and autonomous desktop navigation.</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-8">
+<div class="flex items-center gap-4">
+<div class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-error after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-error/20"></div>
+</div>
+<span class="text-[10px] font-mono font-bold text-slate-500 tracking-widest uppercase">Offline</span>
+</div>
+<button class="text-[10px] font-mono font-bold text-on-surface-variant hover:text-error transition-colors flex items-center gap-1 border border-outline-variant/30 px-3 py-1">
+                            CONFIG <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Configuration Panel (Right Panel) -->
+<aside class="w-96 bg-surface-container-low border-l border-outline-variant/10 flex flex-col shrink-0">
+<div class="p-6 border-b border-outline-variant/10 bg-surface-container">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline font-bold text-lg tracking-tight flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">tune</span> Parameters
+                    </h2>
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-0.5 font-mono font-bold border border-primary/20">SELECTED: GOOGLE_SEARCH</span>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto p-6 flex flex-col gap-8">
+<!-- Parameters Group -->
+<div class="flex flex-col gap-6">
+<div>
+<label class="text-[10px] font-mono font-black text-slate-500 uppercase tracking-widest block mb-2">API Authentication</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-lowest border-b border-outline-variant/30 px-0 py-2 focus:border-primary focus:ring-0 text-sm font-mono text-primary transition-all" type="password" value="••••••••••••••••"/>
+<span class="material-symbols-outlined absolute right-0 top-2 text-sm text-slate-500 cursor-pointer hover:text-primary transition-colors">visibility</span>
+</div>
+</div>
+<div>
+<label class="text-[10px] font-mono font-black text-slate-500 uppercase tracking-widest block mb-2">Search Depth</label>
+<div class="flex items-center justify-between gap-4">
+<input class="flex-1 accent-primary bg-surface-container-highest h-1 rounded-none appearance-none" type="range"/>
+<span class="text-sm font-mono text-on-surface bg-surface-container-highest px-2 py-1">08</span>
+</div>
+</div>
+<div>
+<label class="text-[10px] font-mono font-black text-slate-500 uppercase tracking-widest block mb-2">Timeout (MS)</label>
+<div class="flex items-center gap-2">
+<input class="w-24 bg-surface-container-lowest border-b border-outline-variant/30 px-0 py-2 focus:border-primary focus:ring-0 text-sm font-mono text-primary" type="number" value="15000"/>
+<span class="text-xs text-slate-500 font-mono">ms</span>
+</div>
+</div>
+</div>
+<!-- Execution Display -->
+<div class="flex flex-col h-full min-h-[200px]">
+<label class="text-[10px] font-mono font-black text-slate-500 uppercase tracking-widest block mb-2">Last Execution Logs</label>
+<div class="flex-1 bg-surface-container-lowest border border-outline-variant/10 p-4 font-mono text-[11px] leading-relaxed overflow-y-auto">
+<div class="text-primary mb-1">[SYSTEM] Initializing Search Module...</div>
+<div class="text-slate-400 mb-1">[FETCH] GET /v1/search?q=quantum_computing</div>
+<div class="text-secondary-container mb-1">[SUCCESS] Found 14,200 matches in 242ms</div>
+<div class="text-slate-500 mb-1">&gt; Top result: "Universal Quantum Processors..."</div>
+<div class="text-slate-500 mb-1">&gt; Rank 2: "Error Correction Protocols in NISQ..."</div>
+<div class="text-primary mb-1">[BUFFER] Vectorizing 4 selected snippets...</div>
+<div class="text-tertiary">[DONE] Engine context updated successfully.</div>
+</div>
+</div>
+</div>
+<div class="p-6 bg-surface-container border-t border-outline-variant/10">
+<button class="w-full py-3 bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-headline font-black uppercase tracking-[0.2em] text-xs transition-all gold-glow active:scale-95">
+                    Test Tool
+                </button>
+</div>
+</aside>
+</main>
+<!-- Footer Status Bar -->
+<footer class="h-8 bg-surface-container-lowest flex items-center justify-between px-6 border-t border-outline-variant/5">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#aac7ff]"></div>
+<span class="text-[10px] font-mono text-slate-400 tracking-wider">ENGINE STATUS: <span class="text-primary">OPTIMAL</span></span>
+</div>
+<div class="h-3 w-px bg-outline-variant/30"></div>
+<span class="text-[10px] font-mono text-slate-500">v2.4.0-stable</span>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-mono text-slate-500">TOKENS:</span>
+<span class="text-[10px] font-mono text-on-surface">1.2M / 5.0M</span>
+<div class="w-24 h-1.5 bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary" style="width: 24%"></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-mono text-slate-500">SESSION COST:</span>
+<span class="text-[10px] font-mono text-secondary-container">$0.42</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,107 @@
+TAG: PEA-F215
+TIMESTAMP: 2026-04-01 18:01:06
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.000455
+PROMPT_TOKENS: 744
+COMPLETION_TOKENS: 111
+TOTAL_TOKENS: 855
+
+
+--- VERBATIM PROMPT ---
+
+Analyze the following Job Description and extract the critical keywords for ATS optimization.
+You MUST output ONLY a valid JSON object matching this schema exactly:
+{
+  "hard_skills": ["Kw1", "Kw2", ...],
+  "soft_skills": ["Kw1", "Kw2", ...],
+  "domain_keywords": ["Kw1", "Kw2", ...]
+}
+
+Definitions:
+- hard_skills: specific tools (e.g., Python, Salesforce), methodologies (e.g., Agile), or technical skills.
+- soft_skills: interpersonal attributes, behavior styles (e.g., Ownership, Clarity, Customer Empathy).
+- domain_keywords: industry terms, vertical names, relevant jargon (e.g., Clean Energy, B2B SaaS).
+
+Target 5-10 keywords per category.
+
+Job Description:
+*About Us*
+
+A&G Transport Inc. is a leading drayage and logistics provider based in Oakland, California, operating in close proximity to the Port of Oakland. Alongside our affiliated warehousing operations, we provide integrated transportation, storage, and supply chain solutions to importers, exporters, and freight forwarders.
+
+*Position Overview*
+
+We are seeking a highly organized and professional Front Desk Coordinator / Logistics Administrative Assistant to serve as the first point of contact for our office while supporting daily logistics and administrative operations.
+
+This role combines receptionist duties with hands-on involvement in logistics coordination, customer communication, and dispatch support.
+
+*Key Responsibilities*
+
+*Front Desk & Office Duties*
+
+* Answer and direct incoming phone calls professionally
+* Greet and check in visitors, drivers, and clients upon arrival
+* Maintain visitor logs and ensure proper check-in procedures
+* Manage general office organization and reception area
+
+*Administrative Support*
+
+* Complete and organize paperwork related to shipments, drivers, and operations
+* Maintain office supplies and ensure all stationery and documents are up to date
+* Assist with document filing, scanning, and record keeping
+* Support internal teams with day-to-day administrative tasks
+
+*Logistics & Operations Support*
+
+* Track containers and update shipment statuses
+* Communicate updates to customers regarding deliveries and delays
+* Assist dispatch with scheduling, coordination, and load updates
+* Provide basic rate quotes to customers based on company guidelines
+* Support coordination between warehouse, drivers, and customers
+
+*Qualifications*
+
+* Minimum *2+ years of experience* in logistics, transportation, or a related field
+* Strong communication and customer service skills
+* Familiarity with *port operations, container tracking, or drayage* is highly preferred
+* Ability to multitask in a fast-paced environment
+* Strong organizational and administrative skills
+* Proficiency in Microsoft Office (Excel, Outlook, Word)
+* Experience with TMS systems is a plus
+
+*Preferred Traits*
+
+* Detail-oriented and proactive
+* Comfortable interacting with drivers, customers, and internal teams
+* Able to handle both front-facing and back-office responsibilities
+* Reliable and punctual
+
+*Work Environment*
+
+* In-person role at our Oakland facility near the Port of Oakland
+* Fast-paced logistics and warehouse environment
+* Regular interaction with drivers, dispatch, and customers
+
+*Why Join A&G Transport*
+
+* Work with a growing logistics company integrated with warehousing operations
+* Exposure to full-cycle supply chain operations
+* Opportunity to grow within operations, dispatch, or customer relations
+
+Pay: From $3,000.00 per month
+
+
+
+Experience:
+* Logistics/ Transportation: 2 years (Required)
+
+Ability to Commute:
+* Oakland, CA 94601 (Required)
+
+Work Location: In person
+
+
+--- VERBATIM RESPONSE ---
+{"hard_skills":["Microsoft Office","Excel","Outlook","Word","TMS systems","container tracking","document filing","record keeping","rate quoting","shipment status updates"],"soft_skills":["customer service","communication","multitasking","organization","detail-oriented","proactive","reliable","punctual","interpersonal interaction","front-facing support"],"domain_keywords":["drayage","port operations","logistics coordination","dispatch support","supply chain","Oakland Port","freight forwarding","warehouse coordination","import/export","transportation administration"]}

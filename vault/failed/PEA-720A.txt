@@ -1,0 +1,16 @@
+TAG: PEA-720A
+TIMESTAMP: 2026-03-30 16:59:27
+GATEWAY: GROQ
+MODEL: canopylabs/orpheus-v1-english
+STATUS: FAILED
+COST: $0.000000
+PROMPT_TOKENS: 0
+COMPLETION_TOKENS: 0
+TOTAL_TOKENS: 0
+ERROR: status_code: 400, model_name: canopylabs/orpheus-v1-english, body: {'error': {'message': 'The model `canopylabs/orpheus-v1-english` requires terms acceptance. Please have the org admin accept the terms at https://console.groq.com/playground?model=canopylabs%2Forpheus-v1-english', 'type': 'invalid_request_error', 'code': 'model_terms_required'}}
+
+--- VERBATIM PROMPT ---
+respond with 'OK'
+
+--- VERBATIM RESPONSE ---
+

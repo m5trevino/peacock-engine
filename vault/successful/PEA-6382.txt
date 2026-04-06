@@ -1,0 +1,93 @@
+TAG: PEA-6382
+TIMESTAMP: 2026-04-01 18:47:27
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.000568
+PROMPT_TOKENS: 925
+COMPLETION_TOKENS: 141
+TOTAL_TOKENS: 1066
+
+
+--- VERBATIM PROMPT ---
+
+Analyze the following Job Description and extract the critical keywords for ATS optimization.
+You MUST output ONLY a valid JSON object matching this schema exactly:
+{
+  "hard_skills": ["Kw1", "Kw2", ...],
+  "soft_skills": ["Kw1", "Kw2", ...],
+  "domain_keywords": ["Kw1", "Kw2", ...]
+}
+
+Definitions:
+- hard_skills: specific tools (e.g., Python, Salesforce), methodologies (e.g., Agile), or technical skills.
+- soft_skills: interpersonal attributes, behavior styles (e.g., Ownership, Clarity, Customer Empathy).
+- domain_keywords: industry terms, vertical names, relevant jargon (e.g., Clean Energy, B2B SaaS).
+
+Target 5-10 keywords per category.
+
+Job Description:
+Associate | Client Services
+
+Location: Walnut Creek, CA
+
+Job Type: Full Time
+
+Area of Interest: Private Client
+
+Company Description
+
+One Capital Management, LLC (“OCM”), is a leading global wealth management firm that offers diversified wealth management services to private clients, endowments and foundations, investment companies, and institutions in the U.S. and Canada. OCM is well-positioned to tailor wealth management solutions for its clients through its wealth forecasting group and integrated investment management service.
+
+Position Description
+
+The Associate | Client Services & Office Operations supports an advisor or team of advisors and ensures the smooth operation of the Walnut Creek office. The Client Services team focuses on delivering the full scope of the firm’s wealth and investment services to individuals, private clients, foundations, endowments, and investment advisors. This role will play a key part in creating simple and elegant service experience for our clients while maintaining an efficient and professional office environment.
+
+Specific responsibilities may include, but are not limited to:
+
+Maintain existing client relationships as a primary point of contact for inquiries related to account maintenance, cash management, distributions, and investment reporting.
+Assist the wealth advisor, financial planner, and internal departments (operations, investments, billing, etc.) to ensure client requests are executed within defined service level agreements.
+Research and resolve routine to moderately complex client issues leveraging internal support resources and/or escalate as appropriate to management.
+Participate in client scheduling and preparation.
+Attend client meetings, events, and seminars as needed.
+Prepare client account paperwork, including internal agreements, custodian forms, applications, and other client deliverables for processing.
+Coordinate new client onboarding activities including the collection of required documentation, partnering with internal operations teams on process execution, client household setup, welcome calls, and proactive communication with clients.
+Understand and adhere to outlined company policies and procedures to ensure client activities are handled with firm standards.
+Track and document client interactions, activities, and meetings in CRM, ensuring notes are input in a timely and compliant manner.
+Develop and maintain trusted relationships with custodian partners, vendors, client professional contacts, and service providers.
+Participate in team projects and business initiatives and engage in training and education opportunities as required.
+Serve as the primary point of contact for office-related matters, including building management, maintenance, and service vendors.
+Manage inventory and ordering all office and kitchen supplies.
+Ensure the office environment is maintained in a professional and organized manner.
+Handle incoming and outgoing mail and coordinate deliveries.
+Assist with the coordination of internal team meetings and office events.
+
+Job Requirements
+
+A bachelor’s degree is recommended, preferably with a concentration in Business, Finance, Economics, or a related field.
+Ideal candidates may have 1-3 years of experience working in investment advisory, asset management, or a financial services company.
+Excellent communication skills with the ability to develop and maintain strong relationships with clients, prospects, and team members across the organization.
+Strong organization and attention to detail are essential with the ability to prioritize and multi-task effectively in a fast-paced environment.
+Proficiency in using Microsoft Office (Outlook, Word, Excel). Experience Addepar, CRM (Salesforce), and custodian websites (Schwab, Fidelity, Pershing, NBIN) is valuable.
+
+Compensation & Benefits
+
+Salary range: $69,000 - $75,000
+Performance Based Bonus
+Flexible and responsible paid time off (PTO).
+Participation and coverage under the company health care plan.
+Participation in the company 401(k) Plan.
+Reimburse up to $75 monthly for a membership fee for the company Wellness Program.
+Company sponsorship in continuing education.
+
+Interested applicants should submit their resume to hiring@onecapital.com.
+
+
+--- VERBATIM RESPONSE ---
+```json
+{
+  "hard_skills": ["Microsoft Office", "Outlook", "Word", "Excel", "Addepar", "CRM", "Salesforce", "Schwab", "Fidelity", "Pershing", "NBIN"],
+  "soft_skills": ["Client Relationship Management", "Communication", "Organization", "Attention to Detail", "Prioritization", "Multi-tasking", "Professionalism", "Trust Building"],
+  "domain_keywords": ["Wealth Management", "Private Client", "Investment Advisory", "Asset Management", "Financial Services", "Custodian", "RIA", "Endowments", "Foundations", "Cash Management"]
+}
+```

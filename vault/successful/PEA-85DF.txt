@@ -1,0 +1,16 @@
+TAG: PEA-85DF
+TIMESTAMP: 2026-03-30 17:01:22
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct
+STATUS: SUCCESS
+COST: $0.000051
+PROMPT_TOKENS: 68
+COMPLETION_TOKENS: 23
+TOTAL_TOKENS: 91
+
+
+--- VERBATIM PROMPT ---
+Return a JSON object for a single experience entry: { 'company': 'Peacock Corp', 'role': 'Lead Hustler', 'bullets': ['Implemented V3'] }. Output JSON ONLY.
+
+--- VERBATIM RESPONSE ---
+{"company":"Peacock Corp","role":"Lead Hustler","bullets":["Implemented V3"]}

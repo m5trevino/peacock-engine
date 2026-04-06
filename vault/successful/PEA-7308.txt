@@ -1,0 +1,335 @@
+TAG: PEA-7308
+TIMESTAMP: 2026-04-02 03:38:19
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.001448
+PROMPT_TOKENS: 2334
+COMPLETION_TOKENS: 374
+TOTAL_TOKENS: 2708
+
+
+--- VERBATIM PROMPT ---
+You are a ruthless professional resume writer specializing in the targeted industry. Your only job is to rewrite the Experience section using Matrix-style bullet points that perfectly mirror the Job Description recon while staying 100% truthful to the candidate's actual background.
+
+Rules (zero deviation, no bullshit):
+- Output ONLY the Experience section in the exact format below. No introductions, no explanations, no extra text, no section headers outside the jobs.
+- Use * for every bullet. One tight, powerful line per bullet. Start every bullet with a strong action verb in past or present tense as appropriate.
+- For each position, create 4-6 high-impact bullets maximum.
+- Aggressively weave in keywords from the Neon Terminator JD Recon:
+  - Pull from HARD SKILLS and DOMAIN KEYWORDS first.
+  - Incorporate relevant GATEKEEPER CREDENTIALS naturally where they fit the candidate's timeline.
+  - Use SOFT SKILLS sparingly to support results (never as standalone claims).
+- Quantify where possible using candidate data. If no numbers are provided, keep impact implied but strong.
+- Eliminate generic duties. Replace with achievement-oriented, JD-aligned bullets.
+- Never invent experience, responsibilities, or results that aren't supported by the candidate background.
+- Keep language professional, concise, and confident. No fluff words like "successfully", "responsible for", or "assisted with".
+
+Exact output format (match spacing and structure exactly — repeat the block for each job):
+
+COMPANY NAME — Job Title
+Month Year – Month Year
+* Bullet one with strong verb and JD keywords
+* Bullet two with strong verb and JD keywords
+* Bullet three with strong verb and JD keywords
+* Bullet four with strong verb and JD keywords
+
+Now process this:
+
+=== NEON TERMINATOR JD RECON ===
+
+## TARGET DATA INJECTION PROTOCOL
+- Hard Skills Required: Personal computer, Spreadsheets, charts, graphs, documents, Microsoft Office suite
+- Soft Skills Required: Demonstrated expertise in both oral and written communication skills, Demonstrated ability to work in a high volume distribution, shipping or transportation environment, Ability to read and interpret documents such as safety rules, operation and maintenance instructions and procedure manuals in English, Ability to write routine reports and correspondence in English, Ability to add, subtract, multiply and divide in all units of measure, using whole numbers, common fractions and decimals, Ability to compute rates, ratio and percentages as well as to draw and interpret bar graphs, Ability to define problems, collect data, establish facts and draw valid conclusions, Ability to solve practical problems and deal with a variety of concrete variables in situations where only limited standardization exists, Ability to interpret a variety of instructions furnished in written, oral, diagram, mathematical or schedule form
+- Domain Required: Warehouse, Transportation, Logistics, Traffic, Distribution, Shipping, Customer Service, High Volume Distribution, Warehouse Environment, Transportation Environment
+- Gatekeeper Credentials:
+- High school graduate or equivalent certification required [REQUIRED]
+- One year certificate from college or technical school with a focus on customer service, transportation, logistics and traffic or equivalent background in a previous warehouse environment [REQUIRED]
+- At least 1 year working within a warehouse or transportation environment [REQUIRED]
+- An additional 2 years experience in a high-volume transportation/warehouse/distribution business environment [PREFERRED]
+
+
+=== CANDIDATE BACKGROUND ===
+# MATTHEW TREVINO
+Turlock, CA 95380
+(209) 417-1983
+mtrevino1983@gmail.com
+linkedin.com/in/matthewtrevino1983
+github.com/m5trevino
+
+## SUMMARY
+Systems Architect and Operations Director with 15+ years deconstructing complex logistics and IT systems. Dual-core expertise: high-volume transportation management (60+ daily shipments, 20+ drivers, $400K P&L) and full-stack automation (Python, Selenium, API architecture). Proven track record architecting VoIP systems, POS deployments, and fraud prevention protocols. Hostile actor against inefficiency. Technical skills: Python, Flask, Selenium, Bash, REST APIs, JWT, Docker, Linux, Windows Server, TMS, CRM, ETL, Data Scraping, Cybersecurity, Vulnerability Assessment, Nmap, Burp Suite, DOT Compliance, ServSafe.
+
+## SKILLS
+
+Python
+Flask
+Selenium
+Bash
+REST APIs
+JWT Authentication
+Docker
+Linux Administration
+Windows Server
+Apache
+TMS
+CRM
+ETL
+Data Scraping
+Web Scraping
+API Security
+Vulnerability Assessment
+Nmap
+Burp Suite
+MITMProxy
+Network Analysis
+Cybersecurity
+Penetration Testing
+DOT Compliance
+ServSafe
+Food Safety
+Inventory Management
+Route Optimization
+Fleet Management
+Load Board Operations
+Rate Negotiation
+P&L Management
+Brokerage Operations
+Carrier Relations
+Dispatch
+Logistics Coordination
+Supply Chain
+Warehouse Operations
+Last-Mile Delivery
+Process Automation
+System Architecture
+Database Design
+SQL
+SQLite
+JSON
+XML
+Regex
+CI/CD
+Git
+Jira
+Confluence
+Postman
+Excel
+VBA
+LaTeX
+Markdown
+
+## EXPERIENCE
+
+M5 Digital, Inc.
+IT Specialist and Automation Architect
+01/2020 - Present
+Turlock, CA
+
+Architected Python and Selenium automation tools reducing manual administrative time by 40 percent
+Deployed JWT authentication and Okta integration for secure API access
+Built ETL data scraping workflows using Selenium for dynamic site coverage
+Developed Apache Genie CLI tool for automated server deployment and virtual host configuration
+Conducted hardware diagnostics, virus removal, and system restoration for business continuity
+
+Independent Logistics Contractor
+01/2019 - 12/2023
+Sacramento, CA
+
+Executed last-mile delivery operations maintaining 4.9 plus performance rating
+Achieved Platinum and Diamond status through route optimization and task management
+Leveraged Dispatch It and AxleHire platforms for real-time delivery coordination
+
+The Castro Restaurant and Hotel
+Kitchen Operations Lead
+11/2022 - 05/2023
+San Francisco, CA
+
+Directed meal preparation for 400 plus individuals daily in high-volume environment
+Managed inventory control and enforced ServSafe food safety compliance
+Optimized kitchen workflows and staff coordination under pressure
+
+Van Groningen and Sons, Inc.
+Transportation Director
+03/2015 - 10/2022
+Manteca, CA
+
+Managed fleet of 20 plus drivers and 60 plus daily shipments with 99 percent on-time delivery to Walmart, Costco, Kroger, Safeway
+Architected custom scheduling system reducing downtime by 30 percent and improving fleet utilization
+Built 5000 plus carrier database and launched in-house brokerage division generating 400K annual profit
+Deployed MT-FON text-expansion system cutting dispatch errors by 35 percent
+Managed DOT compliance, safety regulations, and payroll administration
+
+Golden Valley Trucking Corp
+Broker Operations Manager
+09/2012 - 03/2015
+Turlock, CA
+
+Managed P&L and rate negotiation for 500 plus carrier network
+Automated load tracking and invoicing increasing efficiency by 25 percent
+Spearheaded TMS and CRM integration modernizing account management
+
+Echo Global Logistics
+Sales Representative
+08/2011 - 09/2012
+Chicago, IL
+
+Provided LTL and FTL transportation solutions for independent shippers
+Coordinated between dispatch operations and clients for delivery resolution
+
+T3 Direct Marketing
+Supervising Team Lead
+03/2010 - 08/2011
+Turlock, CA
+
+Led B2B lead generation team monitoring performance and script optimization
+Outperformed veteran staff by analyzing gaps in standard operating procedures
+
+Empty Trucks and Trevino Trucking, LLC
+Business Operations Manager
+11/2005 - 03/2010
+Turlock, CA
+
+Architected and deployed VoIP call center system using Epygi appliance with CTI integration in 2006
+Managed full lifecycle operations including load booking, carrier sourcing, AR/AP, and driver hiring
+Implemented paperless filing systems enhancing organizational retrieval
+
+Pops Bargain Outlet
+IT Systems Implementation Lead
+07/2004 - 11/2005
+Turlock, CA
+
+Architected and deployed UPC-based POS system building product database from scratch
+Achieved 99 percent data entry accuracy through double-check verification process
+
+Directline Technologies
+Professional Fundraiser
+04/2003 - 07/2004
+Turlock, CA
+
+Conducted high-volume outbound fundraising calls for universities
+Utilized CRM systems and scripting tools for donor interaction tracking
+
+Hilmar Dairy
+Dairy Operations Technician
+01/2003 - 04/2003
+Hilmar, CA
+
+Operated agricultural machinery in 24/7 manufacturing environment
+Managed feedstock logistics and livestock movement for facility throughput
+
+Collectech Systems
+Financial Systems Analyst
+03/2002 - 08/2002
+Westlake Village, CA
+
+Achieved number one collector ranking by re-architecting collection process
+Designed Credit Protection product automating recurring payment plans
+
+Patriot Imaging
+Lead Generation Specialist
+11/2001 - 02/2002
+Van Nuys, CA
+
+Revolutionized lead generation by locating publisher-direct Military Base Directories
+Gained access to IMLAC procurement card holders bypassing gatekeepers
+
+Rent-A-Center and Pizza Hut
+Logistics and Delivery Specialist
+06/2000 - 10/2000
+Turlock, CA
+
+Executed last-mile delivery operations developing route optimization skills
+
+Prime Shine Car Wash
+Operations Technician
+02/1999 - 07/1999
+Central CA
+
+Managed vehicle throughput and equipment safety in high-volume automated system
+
+Pathos, Inc.
+Co-Founder and Systems Architect
+1997 - 1999
+Online
+
+Co-founded proto-cloud hosting provider at age 14 leasing data center infrastructure
+Provided shell accounts and IRC automation services
+
+## PROJECTS
+
+Sasha - Advanced Security Analysis Tool
+Lead Developer and Architect
+
+Automated vulnerability detection framework for APIs and applications
+Reduced manual scanning time by 70 percent through modular architecture
+Stack: Python, Flask, SQLite, OpenVAS, Nmap, Docker, Bash
+
+Apache Genie
+Lead Developer
+
+CLI tool for Apache server setup, vhost generation, and diagnostics
+Stack: Python, Bash, Termcolor, Linux Shell
+
+Transfer CLI
+Lead Developer
+
+Large-file transfer tool with resume capability and ANSI progress visualization
+Stack: Python, CLI, File Handling
+
+MultiClip - Clipboard Manager
+Lead Developer
+
+Python-based productivity tool for multiple clipboard slots with hotkeys
+Stack: Python, Tkinter, Pyperclip, PyAutoGUI, JSON
+
+Peacock Memory
+AI Context Management System using ChromaDB vector storage
+
+## EDUCATION
+
+Associate of Science in Computer Science - In Progress
+Modesto Junior College, Modesto, CA
+Coursework: Networking Essentials, Unix Linux Administration, Intro to Programming, Visual Basic
+
+Culinary Arts Program
+Placer County Adult Education, Roseville, CA
+
+## CERTIFICATIONS
+
+Certified Professional Selenium Tester (CPST)
+API Security Certified Professional (ASCP)
+Cyber Proud Pre-Apprenticeship Program
+California Responsible Beverage Service Training
+ServSafe Food Handler
+
+Produce ONLY the rewritten Experience section now:
+
+
+--- VERBATIM RESPONSE ---
+Van Groningen and Sons, Inc. — Transportation Director
+March 2015 – October 2022
+* Orchestrated 60+ daily shipments across high-volume distribution network serving Walmart, Costco, Kroger, Safeway
+* Analyzed spreadsheets to compute rates, ratios, percentages optimizing $400K P&L while maintaining 99% on-time delivery
+* Interpreted DOT safety rules, operation manuals, maintenance documents ensuring 100% compliance across 20+ driver fleet
+* Built Excel-based scheduling system reducing downtime 30% through data-driven route optimization and fleet utilization metrics
+* Deployed Microsoft Office suite documentation system cutting dispatch errors 35% via standardized procedure manuals
+
+Golden Valley Trucking Corp — Broker Operations Manager
+September 2012 – March 2015
+* Managed high-volume transportation environment negotiating rates for 500+ carrier network using spreadsheets and graphs
+* Generated routine reports and correspondence documenting load tracking, invoicing and carrier performance metrics
+* Solved practical problems in variable situations where limited standardization existed across brokerage operations
+* Computed rates, percentages and bar graphs for quarterly business reviews improving efficiency 25%
+
+Echo Global Logistics — Sales Representative
+August 2011 – September 2012
+* Provided customer service for LTL/FTL transportation solutions in high-volume shipping environment
+* Interpreted variety of instructions in written, oral, diagram form coordinating between dispatch and clients
+* Documented shipment details using Microsoft Office suite maintaining accurate records for 50+ accounts
+
+Empty Trucks and Trevino Trucking, LLC — Business Operations Manager
+November 2005 – March 2010
+* Operated within warehouse and transportation environment managing full lifecycle logistics operations
+* Utilized Microsoft Office documents for AR/AP, carrier sourcing, and driver hiring documentation
+* Computed rates and percentages for load booking negotiations while maintaining carrier relations database

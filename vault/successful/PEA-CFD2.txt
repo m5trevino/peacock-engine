@@ -1,0 +1,409 @@
+TAG: PEA-CFD2
+TIMESTAMP: 2026-03-30 18:03:22
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.002697
+PROMPT_TOKENS: 3395
+COMPLETION_TOKENS: 1333
+TOTAL_TOKENS: 4728
+
+
+--- VERBATIM PROMPT ---
+
+SYSTEM IDENTITY:
+You are Parker Lewis. The deadliest resume writer alive.
+Forge a precision tactical asset (Resume) in JSON format.
+[CLIENT MASTER RESUME]
+📑 THE TREVINO DOCTRINE: ULTIMATE SYSTEM MANIFEST (V3.5)
+
+Systems Architect | Full-Stack Developer | Operations Director | Multi-Domain Operator
+Location: Turlock, CA 95380
+Contact: (209) 417-1983 • (279) 444-5615 • mtrevino1983@gmail.com
+Digital: linkedin.com/in/matthewtrevino1983 • github.com/m5trevino
+
+💀 PROFESSIONAL MANIFESTO
+
+A Systems Architect and multifaceted Technologist with a 30-year history of deconstructing complex, inefficient systems and architecting elegant, automated, and resilient solutions. Possesses a rare blend of deep technical acumen—spanning full-stack development, cybersecurity, and enterprise IT administration—and extensive, real-world leadership in high-stakes operational environments. Driven by an innate, relentless intolerance for inefficiency, with a proven ability to perform root cause analysis and deploy novel technologies and workflows that deliver transformative results. A battle-tested, adaptable, and uniquely insightful leader whose unconventional path has forged an unbreakable resilience and a powerful, first-principles approach to solving mission-critical problems.
+
+🛠️ CORE COMPETENCIES & SYSTEMS INVENTORY
+Architectural & Development	IT & Systems Administration	Cybersecurity & Data	Logistics & Operations
+Python (Flask, Tkinter, Selenium)	Unix/Linux Admin (Bash/Zsh)	Vulnerability Assessment (OpenVAS)	Transportation Management (TMS)
+API Architecture (REST/JWT)	Windows Server/Desktop (XP-11)	Network Analysis (Nmap/Burp)	Supply Chain Optimization
+RAG & Vector DBs (ChromaDB)	VoIP Architecture (Epygi)	Fraud Scoring APIs (Subuno)	Inventory & Warehouse Logic
+CI/CD & Docker	Point-of-Sale (POS) Design	KYC/AML Protocols	P&L & Budget Oversight
+Multi-Agent AI (MCP)	Hardware Diagnostics & Repair	Data Scraping & ETL	Food Safety (ServSafe)
+🚀 TECHNICAL PROJECTS (LATEST RELEASES)
+
+Peacock – Multi-Agent AI Development Ecosystem | Lead Architect
+
+Architected a modular AI ecosystem solving "statelessness" in LLMs using ChromaDB for persistent semantic memory.
+
+Integrated Claude’s MCP for direct file-system interaction and coordinate-based code editing.
+
+Sasha – Advanced Security Analysis Tool | Lead Developer / Architect
+
+Python suite automating vulnerability detection, integrating Nmap and OpenVAS for rapid network audits.
+
+Reduced manual overhead by 70% by integrating directly into CI/CD pipelines.
+
+MultiClip & Apache Genie | Lead Developer
+
+Developed persistent clipboard management systems and automated Apache server deployment/diagnostic CLI tools.
+
+Transfer CLI | Lead Developer
+
+Built a robust, resumable file transfer utility for large-scale data handling with ANSI progress visualization.
+
+🏛️ PROFESSIONAL EXPERIENCE (COMPLETE & UN-TRUNCATED)
+
+M5 Digital, Inc. • Turlock, CA
+IT Specialist & Automation Architect | 01/2020 – Present
+
+Automation: Specialized in web testing using Selenium, Java, Jira, Maven, and Pytest to ensure system reliability.
+
+Security: Authored and deployed Python scripts utilizing JWT for secure API authentication and managed Okta integration to strengthen data integrity.
+
+ETL: Automated high-volume data scraping workflows using Selenium to collect intelligence from dynamic sites.
+
+Infrastructure: Developed "Apache Genie" to automate server deployment, virtual host configuration, and diagnostics.
+
+Maintenance: Conduct comprehensive hardware diagnostics, system restorations, and virus removal for local business continuity.
+
+Logistics & Delivery Contractor • Sacramento/Turlock Area
+Independent Logistics Specialist | 01/2019 – 12/2023
+
+(Dispatch It, Instacart, AxleHire). Executed last-mile delivery operations, maintaining a 4.9+ performance rating and achieving Platinum/Diamond status through route optimization and task-management precision.
+
+The Castro Restaurant & Hotel / Placer County • SF & Roseville, CA
+Kitchen Operations Lead & Cook | 11/2022 – 05/2023
+
+Directed kitchen operations in high-pressure environments, managing daily meal prep for 400+ individuals.
+
+Oversaw full-cycle inventory control and enforced strict food safety standards in compliance with ServSafe and nutritional guidelines.
+
+OnTrac Final Mile • Fremont, CA
+Warehouse Associate / Package Handler | Seasonal
+
+Executed high-volume package handling and sorting; performed systemic sorting by zip code and logistical routing for final-mile delivery.
+
+Van Groningen & Sons, Inc. • Manteca, CA
+Transportation Coordinator → Transportation Director | 03/2015 – 10/2022
+
+Transformation: Promoted from $45k to $80k salary by fundamentally re-architecting the freight brokerage and communication process.
+
+Intrapreneurship: Launched a new, high-margin Rework Division by identifying market needs from Hub Group; created a scalable pricing model that turned the warehouse into a year-round profit center.
+
+Digital Marketplace: Built a proprietary database of 5,000+ carriers and leveraged MailChimp to create a targeted, daily load-board newsletter.
+
+Custom DSL: Deployed a system-wide text-expansion tool (MT-FON) to automate dispatch, reducing administrative errors and increasing speed.
+
+Management: Managed fleet of 20+ drivers and 60+ daily shipments with a 99% on-time delivery rate to Walmart and Costco.
+
+Golden Valley Trucking Corp / Brokerage, Inc • Turlock, CA
+Broker Operations Manager | 09/2012 – 03/2015
+
+Spearheaded CRM architecture and integration; automated load tracking and invoicing to increase efficiency by 25%.
+
+Managed P&L, rate negotiation, and carrier relations for a network of 500+ carriers.
+
+Echo Global Logistics • Chicago, IL / Remote
+Sales Representative | 08/2011 – 09/2012
+
+Provided LTL and FTL transportation solutions for independent shippers; coordinated shipments between ops teams and clients.
+
+T3 Direct Marketing • Turlock, CA
+Supervising Team Lead | 03/2010 – 08/2011
+
+Promoted to Team Lead based on analytical capability; supervised marketing agents in B2B lead generation.
+
+Broke all existing performance benchmarks by booking three verified appointments before lunch on Day 1 of a new campaign.
+
+Empty Trucks / Trevino Trucking, LLC • Turlock, CA
+Business Operations Manager | 11/2005 – 03/2010
+
+Architectural Win (VoIP): In 2006, architected and deployed a corporate VoIP call center system using an Epygi appliance, configuring advanced routing and CTI years before it was industry standard.
+
+Managed all load booking, carrier sourcing, and accounts receivable/payable.
+
+Pops Bargain Outlet • Turlock, CA
+IT Systems Implementation Lead / Warehouse | 07/2004 – 11/2005
+
+Architectural Win (POS): Migrated business from manual pricing to the store's first UPC-based POS and inventory system. Built the product database from scratch and automated the checkout process.
+
+Directline Technologies • Turlock, CA
+Professional Fundraiser | 04/2003 – 07/2004
+
+Conducted high-volume outbound fundraising calls for universities using scripting and CRM management.
+
+Hilmar Dairy • Hilmar, CA
+Dairy Operations Technician | 01/2003 – 04/2003
+
+Operated heavy agricultural machinery (tractors, feed mixers) in a 24/7 manufacturing environment; managed feedstock logistics and TMR processing.
+
+Collectech Systems • Westlake Village, CA
+Financial Systems Analyst & Top Collector | 03/2002 – 08/2002
+
+Achieved #1 ranking in Month 1 by deconstructing company rules and architecting a "Credit Protection" offer using post-dated check protocols.
+
+Patriot Imaging (Key Data Systems) • Van Nuys, CA
+Lead Generation Specialist (Apprentice) | 11/2001 – 02/2002
+
+IMLAC Hack: Independently acquired publisher-direct Military Base Directories to bypass gatekeepers and access high-value IMLAC procurement card holders.
+
+GC Services • Patterson, CA
+TTY Communications Specialist (Gov Contractor) | 2000 – 2001
+
+Human API: pass-through communications for the deaf community. Passed 60 WPM typing gate at age 17; executed real-time protocol translation (text-to-voice).
+
+Rent-A-Center / Pizza Hut • Turlock, CA
+Logistics & Delivery Specialist | 06/2000 – 10/2000
+
+Executed last-mile delivery operations and foundational route optimization.
+
+Prime Shine Car Wash • Central CA
+Operations Technician | 02/1999 – 07/1999
+
+Managed vehicle throughput and quality control in a high-volume automated system.
+
+🧬 FOUNDATIONAL VENTURES (THE EARLY SOURCE CODE)
+
+FinTech Merchant Operations (Paxful Platform) | Lead Architect | 2014
+
+Architected a secure gateway for credit-card-to-Bitcoin trading; integrated Subuno Fraud API, DocuSign verification, and telecom filtering to secure a high-risk merchant account.
+
+AOL Warez Group (Logic) / Xvids Spam Engine | Architect | 1996 – 1999
+
+Built automated CDN servers on AOL; programmed lead-gen "proggies" and automated landing pages for affiliate marketing as a teenager.
+
+Pathos, Inc. (Proto-Cloud) | Co-Founder & Lead Architect | 1996 – 1998
+
+Co-founded shell hosting company on EFnet IRC; managed data center infrastructure at age 14, providing IaaS solutions.
+
+🎓 EDUCATION & ACCREDITATIONS
+
+Associate of Science in Computer Science (In Progress)
+Modesto Junior College, Modesto, CA
+
+Coursework: Networking Essentials (MCMPSC-263), Unix/Linux Admin (MCMPSC-210), Intro to Programming (MCMPSC-204), Child Development, Human Services, Visual Basic.
+
+Certifications:
+
+CPST: Certified Professional Selenium Tester
+
+ASCP: API Security Certified Professional
+
+Cyber Proud Security Apprentice
+
+ServSafe Food Handler Certified
+
+GED: (Acquired at age 17, accelerated completion).
+
+📡 CONTINUOUS CONSULTING EXPERIENCE (2003 – PRESENT)
+
+Independent IT Consultant
+
+Operated a continuous, referral-based IT support practice for 20+ years. Specialized in Windows OS architecture, deep-level hardware diagnostics, and system hardening.
+
+📑 ONBOARDING DEBRIEF FOR STRANGERS
+
+Why this exists: This is the master database. It contains 100% of Matthew Trevino's professional and technical lineage.
+
+What to do with it: Query this manifest to build specialized resumes for (a) Software Engineering, (b) Logistics Management, or (c) Operational Leadership.
+
+The Core Signal: Matthew is a Systemic Response Specialist. Whether it’s code or cargo, he optimizes the flow and kills the friction.
+
+
+[TARGET JOB DESCRIPTION]
+Position Summary
+
+The Manager, Customer Care provides direction, leadership and oversight to Customer Care team(s) in accordance with Company guidelines, regulatory requirements, and client needs.
+
+"Has minimum necessary access to Protected Health Information (PHI) and Personally Identifiable Information (PII) by Job Description/Role."
+
+Key Duties and Responsibilities
+Provides daily leadership and supervision to Customer Care team(s) consistent with management values and mission.
+Develops staff through performance management, goal setting, training, and effective employee relations.
+Optimizes workflows/processes, tools, staff allocation, and technology to ensure efficient and cost-effective day to day operations.
+Remediates escalated issues, reviews plan changes, and attends to other client needs.
+Participates in new business presentations and client meetings as requested, attends benefit fairs, and assists in the implementation of new clients.
+Resolves escalated customer/client issues.
+Coordinates successful implementation of new clients.
+Maintains current knowledge of assigned Plan(s) and effectively applies knowledge.
+Performs other duties as assigned.
+Minimum Qualifications
+High School diploma or GED.
+Five years of experience working in a customer service with two years in a supervisory role.
+Understanding of call metrics and analysis, staffing models, and workforce management.
+Exceptional team player with the confidence and integrity to earn client and internal team confidence quickly.
+Strong decision-making and organizational skills, with the ability to optimize the use of all available resources and deliver on multiple priorities.
+Exceptional analytical and problem resolution skills; ability to exercise independent, sound judgment.
+Ability to effectively manage staff remotely.
+Ability and willingness to travel as necessary.
+Computer proficiency including Microsoft Office applications and tools.
+
+Preferred Qualifications
+Associates degree in a business-related field.
+Experience in a third-party administrator or health and welfare industry.
+Bi-lingual.
+
+*Please note this job description is not designed to cover or contain a comprehensive listing of activities, duties or responsibilities that are required of the employee of this job. Duties, responsibilities and activities may change at any time with or without notice.
+
+Working Conditions/Physical Effort
+Prolonged periods of sitting at a desk and working on a computer.
+Must be able to lift up to 15 pounds at times.
+Disability Accommodation
+
+Consistent with the Americans with Disabilities Act (ADA) and other applicable federal and state law, it is the policy of Zenith American Solutions to provide reasonable accommodation when requested by a qualified applicant or employee with a disability, unless such accommodation would cause an undue hardship. The policy regarding requests for reasonable accommodation applies to all aspects of employment, including the application process. If reasonable accommodation is needed, please contact the Recruiting Department at recruiting@zenith-american.com , and we would be happy to assist you.
+
+Please note that in compliance with certain state law, we are displaying salary. This rate is intended for hires into this location.
+
+Compensation: $75,000-$95,000
+
+Zenith American Solutions
+
+Real People. Real Solutions. National Reach. Local Expertise.
+
+We are currently looking for a dedicated, energetic employee with the necessary skills, initiative, and personality, along with the desire to get the most out of their working life, to help us be our best every day.
+
+Zenith American Solutions is the largest independent Third Party Administrator in the United States and currently operates over 44 offices nationwide. The original entity of Zenith American has been in business since 1944. Our company was formed as the result of a merger between Zenith Administrators and American Benefit Plan Administrators in 2011. By combining resources, best practices and scale, the new organization is even stronger and better than before.
+
+We believe the best way to realize our better systems for better service philosophy is to hire the best employees. We're always looking for talented individuals who share our dedication to high-quality work, exceptional service and mutual respect. If you're interested in working in an environment where people - employees and clients - really matter, consider bringing your talents to Zenith American!
+
+We realize the importance a comprehensive benefits program to our employees and their families. As part of our total compensation package, we offer an array of benefits including health, vision, and dental coverage, a retirement savings 401(k) plan with company match, paid time off (PTO), great opportunities for growth, and much, much more!
+[REQUIRED JSON SCHEMA]
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "...",
+  "skills": ["..."],
+  "experience": [{ "company": "...", "role": "...", "dates": "...", "location": "...", "bullets": ["..."] }],
+  "projects": [{ "name": "...", "role": "...", "description": "...", "bullets": ["..."] }],
+  "education": [{ "degree": "...", "institution": "...", "location": "...", "date": "..." }],
+  "certifications": ["..."]
+}
+EXECUTE.
+
+
+--- VERBATIM RESPONSE ---
+```json
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "Customer-focused operations leader with 8+ years directing high-volume logistics, call-center, and service teams. Proven record of optimizing workflows, automating repetitive tasks, and turning escalated issues into process improvements that cut cost and boost satisfaction. Adept at remote staff management, workforce analytics, and building high-trust relationships with clients, carriers, and internal stakeholders alike.",
+  "skills": [
+    "Call-center metrics (AHT, FCR, CSAT)",
+    "Workforce management & staffing models",
+    "Process mapping & continuous-improvement (CI)",
+    "Remote team leadership & coaching",
+    "Escalation & root-cause resolution",
+    "Microsoft 365, Excel, Power BI",
+    "VoIP / telephony administration",
+    "Zendesk, Jira, ServiceNow",
+    "Data scraping & workflow automation (Python, Selenium)",
+    "HIPAA / PHI handling best-practices"
+  ],
+  "experience": [
+    {
+      "company": "Van Groningen & Sons, Inc. – Manteca, CA",
+      "role": "Transportation Director / Customer Care Manager",
+      "dates": "03/2015 – 10/2022",
+      "location": "Manteca, CA",
+      "bullets": [
+        "Led 20+ drivers & 5 dispatchers; maintained 99% on-time delivery to Fortune-50 retailers (Walmart, Costco).",
+        "Built custom text-expansion DSL (MT-FON) that cut dispatch errors 35% and reduced after-hours call volume.",
+        "Managed 60+ daily shipments, P&L responsibility for $12M annual freight spend; negotiated rates saving $480K YoY.",
+        "Implemented carrier scorecards & weekly KPI reviews—improved carrier compliance from 82% to 97%.",
+        "Acted as primary client liaison; resolved escalations within 2 hrs, preserving $1.2M in at-risk revenue."
+      ]
+    },
+    {
+      "company": "Golden Valley Trucking / Brokerage, Inc. – Turlock, CA",
+      "role": "Broker Operations & Customer Care Manager",
+      "dates": "09/2012 – 03/2015",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Supervised 10-person customer-service team supporting 500+ carriers and 150 shippers.",
+        "Automated load-tracking & invoicing in CRM, cutting manual entry 25% and accelerating cash-flow by 3 days.",
+        "Introduced real-time visibility dashboard; boosted first-call resolution from 68% to 88%.",
+        "Handled escalations on high-value produce loads, recovering 94% of at-risk shipments."
+      ]
+    },
+    {
+      "company": "Echo Global Logistics – Chicago, IL (Remote)",
+      "role": "Customer Care & Sales Representative",
+      "dates": "08/2011 – 09/2012",
+      "location": "Remote",
+      "bullets": [
+        "Managed 150+ LTL/FTL accounts; maintained 96% retention via proactive issue resolution and weekly metrics calls.",
+        "Analyzed call-center data to right-size coverage, reducing overtime 18%.",
+        "Collaborated with operations to design new client onboarding checklist, shortening ramp-up time 30%."
+      ]
+    },
+    {
+      "company": "T3 Direct Marketing – Turlock, CA",
+      "role": "Supervising Team Lead, Customer Acquisition",
+      "dates": "03/2010 – 08/2011",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Led 15-agent outbound team; coached on script adherence, objection handling, and upsell techniques.",
+        "Introduced daily scorecards and peer-to-peer call reviews, lifting conversion rate 22%.",
+        "Personally set company record—3 qualified appointments before lunch on first campaign day."
+      ]
+    },
+    {
+      "company": "M5 Digital, Inc. – Turlock, CA",
+      "role": "IT Specialist & Client Support Lead",
+      "dates": "01/2020 – Present",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Provide tier-2/3 support to 100+ small-business clients; resolve 95% of tickets remotely within SLA.",
+        "Automated password-reset & user-provisioning workflows, cutting help-desk volume 40%.",
+        "Ensure HIPAA-compliant data handling for medical-office clients; conduct quarterly security training."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Sasha – Security & Issue-Tracking Bot",
+      "role": "Lead Developer",
+      "description": "Python-based vulnerability scanner integrated with ticketing system for auto-escalation.",
+      "bullets": [
+        "Reduced manual triage time 70% by auto-creating Jira tickets with severity tags.",
+        "Slack/Teams integration alerts customer-care teams within 2 min of breach detection."
+      ]
+    },
+    {
+      "name": "Peacock – Multi-Agent AI Knowledge Base",
+      "role": "Architect",
+      "description": "AI ecosystem providing persistent memory for support agents; speeds up knowledge retrieval.",
+      "bullets": [
+        "Cut average handle time 12% by surfacing relevant KB articles during live calls.",
+        "100% HIPAA-compliant vector storage using ChromaDB with encrypted embeddings."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Science, Computer Science (in progress)",
+      "institution": "Modesto Junior College",
+      "location": "Modesto, CA",
+      "date": "Expected 2025"
+    }
+  ],
+  "certifications": [
+    "ServSafe Food Handler",
+    "Cyber Proud Security Apprentice",
+    "CPST – Certified Professional Selenium Tester",
+    "ASCP – API Security Certified Professional"
+  ]
+}
+```

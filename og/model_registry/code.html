@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peacock Engine | Model Registry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#00458e",
+                        "background": "#101418",
+                        "surface-container-high": "#262a2f",
+                        "surface-container-low": "#181c20",
+                        "on-secondary-container": "#725f00",
+                        "secondary-fixed": "#ffe16d",
+                        "primary-fixed": "#d7e3ff",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#001b3e",
+                        "secondary": "#fff9ef",
+                        "surface-variant": "#31353a",
+                        "on-surface-variant": "#c1c6d5",
+                        "secondary-container": "#ffdb3c",
+                        "inverse-on-surface": "#2d3135",
+                        "tertiary-container": "#007097",
+                        "on-tertiary-fixed": "#001e2c",
+                        "primary-fixed-dim": "#aac7ff",
+                        "on-tertiary-fixed-variant": "#004c69",
+                        "outline": "#8b919e",
+                        "surface-bright": "#353a3e",
+                        "surface-container-highest": "#31353a",
+                        "surface": "#101418",
+                        "on-background": "#e0e3e8",
+                        "tertiary-fixed": "#c3e8ff",
+                        "on-tertiary": "#003549",
+                        "on-secondary": "#3a3000",
+                        "inverse-primary": "#005cba",
+                        "surface-container": "#1c2024",
+                        "on-primary-container": "#dfe8ff",
+                        "on-tertiary-container": "#d0ecff",
+                        "on-secondary-fixed": "#221b00",
+                        "outline-variant": "#414753",
+                        "primary-container": "#0066cc",
+                        "surface-tint": "#aac7ff",
+                        "surface-container-lowest": "#0a0f13",
+                        "tertiary-fixed-dim": "#7ad0ff",
+                        "primary": "#aac7ff",
+                        "inverse-surface": "#e0e3e8",
+                        "secondary-fixed-dim": "#e9c400",
+                        "on-secondary-fixed-variant": "#544600",
+                        "error-container": "#93000a",
+                        "tertiary": "#7ad0ff",
+                        "surface-dim": "#101418",
+                        "on-primary": "#002f65",
+                        "on-error": "#690005",
+                        "on-surface": "#e0e3e8",
+                        "error": "#ffb4ab",
+                        "status-active": "#00C851",
+                        "status-frozen": "#00BFFF"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"],
+                        "mono": ["JetBrains Mono"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #101418;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #31353a;
+        }
+        .hud-glow {
+            box-shadow: 0 0 15px -3px rgba(170, 199, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 h-screen overflow-hidden flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-[#181c20] dark:bg-[#181c20] text-[#aac7ff] font-['Space_Grotesk'] tracking-tight flex justify-between items-center h-16 w-full px-6 border-b border-white/10 docked full-width top-0 z-50 flat no shadows">
+<div class="text-xl font-bold tracking-tighter text-[#aac7ff]">Peacock Engine</div>
+<nav class="hidden md:flex items-center space-x-8 h-full">
+<a class="h-full flex items-center px-1 text-[#aac7ff] border-b-2 border-[#aac7ff] transition-colors" href="#">Models</a>
+<a class="h-full flex items-center px-1 text-slate-400 hover:bg-[#262a2f] hover:text-white transition-colors" href="#">Analytics</a>
+<a class="h-full flex items-center px-1 text-slate-400 hover:bg-[#262a2f] hover:text-white transition-colors" href="#">Deploy</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="p-2 text-slate-400 hover:bg-[#262a2f] hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="p-2 text-slate-400 hover:bg-[#262a2f] hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar -->
+<aside class="bg-[#101418] dark:bg-[#101418] text-[#aac7ff] font-['Inter'] text-sm uppercase tracking-widest flex flex-col h-full overflow-y-auto border-r border-white/5 docked left-0 h-full w-64">
+<div class="p-6">
+<div class="flex flex-col mb-8">
+<span class="text-xs text-slate-500 mb-1">AI Orchestration</span>
+<h2 class="text-lg font-headline font-bold tracking-normal normal-case text-white">Conversations</h2>
+</div>
+<div class="space-y-1">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-[#262a2f] transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span>History</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-[#262a2f] transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="folder">folder</span>
+<span>Folders</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#aac7ff] border-l-4 border-[#aac7ff] bg-[#181c20] transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="add_box">add_box</span>
+<span>New Chat</span>
+</a>
+</div>
+<button class="w-full mt-10 bg-gradient-to-br from-primary to-primary-container text-on-primary py-3 font-headline font-bold text-xs tracking-widest hover:brightness-110 transition-all duration-150 ease-in-out">
+                    LAUNCH NEW INSTANCE
+                </button>
+</div>
+<div class="mt-auto p-6 space-y-1">
+<a class="flex items-center space-x-3 px-4 py-2 text-slate-500 hover:text-[#ffd700] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Help</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-2 text-slate-500 hover:text-[#ffd700] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span>Logs</span>
+</a>
+</div>
+</aside>
+<!-- Main Content (Model Registry) -->
+<main class="flex-1 flex overflow-hidden bg-surface">
+<!-- Data Grid -->
+<section class="flex-1 overflow-y-auto custom-scrollbar p-8">
+<div class="flex justify-between items-end mb-10">
+<div>
+<h1 class="text-4xl font-headline font-bold tracking-tight text-white mb-2 uppercase">Model Registry</h1>
+<p class="text-slate-400 font-mono text-xs uppercase tracking-widest">System::Status: [Active_Nodes_Ready]</p>
+</div>
+<div class="flex space-x-2">
+<div class="bg-surface-container-low px-4 py-2 border-l-2 border-primary">
+<span class="text-[10px] text-slate-500 block uppercase font-mono">Registry Latency</span>
+<span class="font-mono text-primary">12ms</span>
+</div>
+<div class="bg-surface-container-low px-4 py-2 border-l-2 border-secondary-container">
+<span class="text-[10px] text-slate-500 block uppercase font-mono">Active Nodes</span>
+<span class="font-mono text-secondary-container">14</span>
+</div>
+</div>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="text-left bg-surface-container-low">
+<th class="px-6 py-4 font-label text-xs uppercase tracking-widest text-slate-500">Model Name</th>
+<th class="px-6 py-4 font-label text-xs uppercase tracking-widest text-slate-500">Status</th>
+<th class="px-6 py-4 font-label text-xs uppercase tracking-widest text-slate-500">Context</th>
+<th class="px-6 py-4 font-label text-xs uppercase tracking-widest text-slate-500">RPM/TPM</th>
+<th class="px-6 py-4 font-label text-xs uppercase tracking-widest text-slate-500">Gateway</th>
+<th class="px-6 py-4 font-label text-xs uppercase tracking-widest text-slate-500">Pricing</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5">
+<!-- Model Row 1 -->
+<tr class="group hover:bg-surface-container-high transition-colors cursor-pointer">
+<td class="px-6 py-5">
+<div class="flex items-center space-x-3">
+<div class="w-1 h-8 bg-primary"></div>
+<div>
+<div class="text-white font-headline font-bold tracking-tight">PEACOCK-PREMIER-4</div>
+<div class="text-[10px] font-mono text-slate-500">v4.2.1-stable</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-bold bg-status-active/10 text-status-active border border-status-active/20 uppercase">
+<span class="w-1.5 h-1.5 bg-status-active rounded-full mr-1.5 animate-pulse"></span>
+                                        Active
+                                    </span>
+</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-300">128k</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-300">5k / 1.5M</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-300">US-EAST-1</td>
+<td class="px-6 py-5">
+<div class="text-[10px] font-mono text-slate-400">IN: $0.002 / 1k</div>
+<div class="text-[10px] font-mono text-slate-400">OUT: $0.008 / 1k</div>
+</td>
+</tr>
+<!-- Model Row 2 (Frozen) -->
+<tr class="group hover:bg-surface-container-high transition-colors cursor-pointer">
+<td class="px-6 py-5">
+<div class="flex items-center space-x-3 opacity-60">
+<div class="w-1 h-8 bg-status-frozen"></div>
+<div>
+<div class="text-white font-headline font-bold tracking-tight">VOID-STITCH-LITE</div>
+<div class="text-[10px] font-mono text-slate-500">v1.0.5-legacy</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-bold bg-status-frozen/10 text-status-frozen border border-status-frozen/20 uppercase">
+                                        Frozen
+                                    </span>
+</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-500">8k</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-500">--</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-500">OFFLINE</td>
+<td class="px-6 py-5">
+<div class="text-[10px] font-mono text-slate-500">IN: $0.000 / 1k</div>
+<div class="text-[10px] font-mono text-slate-500">OUT: $0.000 / 1k</div>
+</td>
+</tr>
+<!-- Model Row 3 -->
+<tr class="group bg-surface-container-high border-l-2 border-secondary-container transition-colors cursor-pointer">
+<td class="px-6 py-5">
+<div class="flex items-center space-x-3">
+<div class="w-1 h-8 bg-secondary-container drop-shadow-[0_0_8px_#ffd70044]"></div>
+<div>
+<div class="text-white font-headline font-bold tracking-tight flex items-center">
+                                                TITAN-PROTOCOL-X
+                                                <span class="ml-2 text-[10px] bg-secondary-container text-black px-1">DEFAULT</span>
+</div>
+<div class="text-[10px] font-mono text-slate-500">v9.0.0-omega</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-bold bg-status-active/10 text-status-active border border-status-active/20 uppercase">
+<span class="w-1.5 h-1.5 bg-status-active rounded-full mr-1.5"></span>
+                                        Active
+                                    </span>
+</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-300">1M</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-300">10k / 5M</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-300">GLOBAL-EDGE</td>
+<td class="px-6 py-5">
+<div class="text-[10px] font-mono text-slate-400 font-bold text-secondary-container">IN: $0.015 / 1k</div>
+<div class="text-[10px] font-mono text-slate-400 font-bold text-secondary-container">OUT: $0.060 / 1k</div>
+</td>
+</tr>
+<!-- Model Row 4 -->
+<tr class="group hover:bg-surface-container-high transition-colors cursor-pointer">
+<td class="px-6 py-5">
+<div class="flex items-center space-x-3">
+<div class="w-1 h-8 bg-error"></div>
+<div>
+<div class="text-white font-headline font-bold tracking-tight">KINETIC-FAST-BETA</div>
+<div class="text-[10px] font-mono text-slate-500">v0.9.2-dev</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-bold bg-error/10 text-error border border-error/20 uppercase">
+                                        Deprecated
+                                    </span>
+</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-300">32k</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-300">1k / 200k</td>
+<td class="px-6 py-5 font-mono text-sm text-slate-300">LOCAL-NODE</td>
+<td class="px-6 py-5">
+<div class="text-[10px] font-mono text-slate-400">IN: $0.001 / 1k</div>
+<div class="text-[10px] font-mono text-slate-400">OUT: $0.002 / 1k</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Details Panel -->
+<aside class="w-[450px] bg-surface-container-low border-l border-white/5 flex flex-col p-8 custom-scrollbar overflow-y-auto">
+<div class="mb-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="text-[10px] font-mono text-secondary-container uppercase tracking-widest mb-1 block">Selected Entity</span>
+<h2 class="text-2xl font-headline font-bold text-white tracking-tighter">TITAN-PROTOCOL-X</h2>
+</div>
+<button class="text-slate-500 hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<img class="w-full h-48 object-cover mb-6 grayscale border border-white/10" data-alt="High-tech visualization of neural network architecture with glowing nodes and data streams in obsidian and blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSkWRbaOshyJFlYniCdFvs1_1FtntUZXUlxvCw3jJVUcLDJEfM_bQhN_jR4fCo72BZBV9XiNf1oDqeqhbbxIogrpcx6qLXH6MJeb7LgNV-p5EChHDtcVg60YZslflCMp0-HaAQtQmqm1tgp2_fkYV65jxOWlrTdDPBdQa7B3uPQjYO1mi7Ccg2UoMrtTj7iJ7YvUpi29tmUf2A54SkyHmKBh3ZKxAxooufB_aDpld9a4CEK_nfWENkwAR9rfQnf75KxDL8R9s1nFGX"/>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-surface px-4 py-4 border-t border-primary/20">
+<span class="text-[10px] font-mono text-slate-500 uppercase block mb-1">Inference Engine</span>
+<span class="text-sm font-bold text-on-surface">Neural-Q v8</span>
+</div>
+<div class="bg-surface px-4 py-4 border-t border-primary/20">
+<span class="text-[10px] font-mono text-slate-500 uppercase block mb-1">Architecture</span>
+<span class="text-sm font-bold text-on-surface">Sparse MoE</span>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4 border-b border-white/5 pb-2">Capabilities</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-mono text-primary uppercase border border-primary/10">Multimodal-Vision</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-mono text-primary uppercase border border-primary/10">Code-Refactoring</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-mono text-primary uppercase border border-primary/10">JSON-Structured</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-mono text-primary uppercase border border-primary/10">Zero-Shot-Logic</span>
+</div>
+</div>
+<div class="space-y-3">
+<button class="w-full bg-secondary-container text-on-secondary-fixed py-4 font-headline font-bold text-xs tracking-widest flex items-center justify-center space-x-2 hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="play_arrow">play_arrow</span>
+<span>TEST MODEL INSTANCE</span>
+</button>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-surface-container-highest text-white py-3 border border-white/10 font-headline font-bold text-[10px] tracking-widest hover:bg-white hover:text-black transition-all">
+                                FREEZE NODE
+                            </button>
+<button class="bg-surface-container-highest text-white py-3 border border-white/10 font-headline font-bold text-[10px] tracking-widest hover:bg-primary hover:text-black transition-all">
+                                SET AS DEFAULT
+                            </button>
+</div>
+</div>
+</div>
+<div class="mt-auto border-t border-white/5 pt-6">
+<div class="flex items-center space-x-2 mb-4">
+<span class="material-symbols-outlined text-status-active text-sm" data-icon="analytics">analytics</span>
+<span class="text-[10px] font-mono uppercase text-slate-500">Live Traffic Logs</span>
+</div>
+<div class="bg-surface-container-lowest p-4 font-mono text-[10px] text-slate-500 leading-relaxed">
+<div class="flex justify-between"><span>[14:22:01] REQ_RECEIVED</span><span class="text-primary">200ms</span></div>
+<div class="flex justify-between"><span>[14:22:04] TOKEN_GEN_INIT</span><span class="text-primary">12ms</span></div>
+<div class="flex justify-between"><span>[14:22:10] STREAM_COMPLETE</span><span class="text-primary">1.2s</span></div>
+</div>
+</div>
+</aside>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-[#101418] dark:bg-[#101418] text-[#ffd700] font-['JetBrains_Mono'] text-[10px] uppercase fixed bottom-0 w-full h-8 flex justify-between items-center px-4 border-t border-white/5 flat">
+<div class="text-[#ffd700] drop-shadow-[0_0_8px_#ffd70044]">v2.4.0-stable</div>
+<div class="flex items-center space-x-6">
+<a class="text-white hover:text-[#ffd700] transition-colors" href="#">Gateway: Active</a>
+<a class="text-slate-500 hover:text-[#ffd700] transition-colors" href="#">Cost: $0.12</a>
+<a class="text-slate-500 hover:text-[#ffd700] transition-colors" href="#">Tokens: 1.2k</a>
+</div>
+</footer>
+</body></html>

@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from typing import Optional
 from app.core.striker import execute_strike
 from app.config import MODEL_REGISTRY
+from app.utils.formatter import CLIFormatter
 
 router = APIRouter()
 
@@ -15,11 +16,12 @@ class StrikeRequest(BaseModel):
 
 @router.post("")
 async def strike(request: StrikeRequest):
-    print(f"[DEBUG] STRIKE REQUEST RECEIVED: {request.modelId} (FMT: {request.format_mode})")
     try:
         model_config = next((m for m in MODEL_REGISTRY if m.id == request.modelId), None)
         if not model_config:
             raise HTTPException(status_code=400, detail="Unknown Model ID")
+        
+        CLIFormatter.debug_request(request.modelId, model_config.gateway, "/v1/strike")
     
         result = await execute_strike(
             gateway=model_config.gateway,

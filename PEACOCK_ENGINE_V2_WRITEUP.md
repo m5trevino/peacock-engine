@@ -27,7 +27,7 @@ This is a **headless AI orchestration server** built with Python and FastAPI. It
 
 ### 2. AI Operations
 - **`POST /v1/strike`**: Executes a prompt against a specific model.
-- **`GET /v1/models`**: Returns the list of all configured models and their gateways.
+- **`GET /v1/models`**: Returns the list of all configured models, gateways, and tactical specs (RPM, TPM, RPD).
 
 ### 3. Filesystem Bridge
 - **`GET /v1/fs/ammo`**: Lists context files in `/home/flintx/ammo`.

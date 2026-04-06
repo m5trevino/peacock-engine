@@ -1,0 +1,16 @@
+TAG: PEA-F36C
+TIMESTAMP: 2026-04-01 03:00:05
+GATEWAY: GOOGLE
+MODEL: nano-banana-2
+STATUS: FAILED
+COST: $0.000000
+PROMPT_TOKENS: 0
+COMPLETION_TOKENS: 0
+TOTAL_TOKENS: 0
+ERROR: status_code: 404, model_name: nano-banana-2, body: {'error': {'code': 404, 'message': 'models/nano-banana-2 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+--- VERBATIM PROMPT ---
+respond with 'OK'
+
+--- VERBATIM RESPONSE ---
+

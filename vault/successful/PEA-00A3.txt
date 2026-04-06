@@ -1,0 +1,125 @@
+TAG: PEA-00A3
+TIMESTAMP: 2026-04-01 19:13:19
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.000535
+PROMPT_TOKENS: 874
+COMPLETION_TOKENS: 131
+TOTAL_TOKENS: 1005
+
+
+--- VERBATIM PROMPT ---
+
+Analyze the following Job Description and extract the critical keywords for ATS optimization.
+You MUST output ONLY a valid JSON object matching this schema exactly:
+{
+  "hard_skills": ["Kw1", "Kw2", ...],
+  "soft_skills": ["Kw1", "Kw2", ...],
+  "domain_keywords": ["Kw1", "Kw2", ...]
+}
+
+Definitions:
+- hard_skills: specific tools (e.g., Python, Salesforce), methodologies (e.g., Agile), or technical skills.
+- soft_skills: interpersonal attributes, behavior styles (e.g., Ownership, Clarity, Customer Empathy).
+- domain_keywords: industry terms, vertical names, relevant jargon (e.g., Clean Energy, B2B SaaS).
+
+Target 5-10 keywords per category.
+
+Job Description:
+Description
+
+Job Description:
+
+Title: Account Associate - Commercial Lines
+
+Hybrid: 2 days in office | Location: Pleasanton, CA | Book Focus: General, Professional Liability
+Required: Active Property & Casualty (P&C) license
+
+Please note: If this position is posted as either fully remote and/or hybrid, in accordance with company policy, individuals residing within a 50-mile radius of a branch location may be required to work onsite in a hybrid capacity as there may be occasions when on-site presence is necessary to meet specific business needs. Additionally, our remote work policy includes having a dedicated, distraction-free workspace. Remote work is not a substitute for childcare, elder care, or other personal responsibilities during working hours. To view our branch locations, please visit: ioausa.com/locations
+
+About the Role: Assist the account team in completing day-to-day administrative tasks, recurring customer service tasks, and meeting performance requirements regarding production and quality. Ensure no liability associated with errors or omissions occurs. Responsibilities include resolving basic and routine administrative and customer service issues.
+
+Key Responsibilities:
+
+Team Support: Assist in directing day-to-day activities of Team Support/Receptionist and Account Assistant.
+
+Office Support: Assist with general office tasks and administration.
+
+Policy Processing: Handle endorsements, audits, cancellations, reinstatements, policy releases, check requests, invoices, finance agreements, summaries, loss runs, MVRs, ID cards, certificates, and binders.
+
+Task Management: Identify and reconcile billing inaccuracies, review policy forms, prepare submissions, online rating, proposals, AOR letters, and support new/renewal business workflows.
+
+Data Management: Maintain accurate and up-to-date data in agency systems.
+
+Activity Monitoring: Ensure timely completion of tasks and activities.
+
+Communication: Keep the account team informed of workload status and any issues.
+
+Service Excellence: Provide proactive and responsive service.
+
+Performance Monitoring: Ensure productivity and quality standards are met.
+
+Promote Culture: Participate in team building and promote a positive work environment.
+
+Continuous Improvement: Seek and adopt best practices.
+
+Compliance: Stay updated on company policies and procedures.
+
+Professional Development: Enhance technical skills and industry knowledge.
+
+Relationship Building: Foster positive relationships with colleagues and leadership.
+
+Champion IOA Values: Demonstrate integrity and leadership.
+
+Ideal Candidate Qualifications:
+
+2+ years of industry experience, OR 5+ years of related experience in customer service
+
+Thorough knowledge of insurance brokerage and client needs
+
+Required active property & casualty licensing
+
+Strong analytical, problem-solving, and decision-making skills
+
+Exceptional customer service, communications. multitasking, and organizational skills
+
+Proficiency in MS Office (Outlook, Word, Excel)
+
+High School Diploma (or equivalent)
+
+What We Offer:
+
+Competitive salaries and bonus potential
+
+Company-paid health insurance
+
+Paid holidays, vacations, and sick time
+
+401K with employer match
+
+Professional growth and career progression opportunities
+
+Respectful culture and work/family life balance
+
+Community service commitment
+
+Supportive teammates and a rewarding work environment
+
+What to Expect (Application Process):
+
+30-Minute Phone Screen, Online Assessments, and Interview(s)
+
+Salary Range
+
+The expected pay range for this position is $45,000.00 - $60,000.00 annually depending on experience, relevant skills, and geographic location.
+
+Insurance Office of America is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees.
+
+
+--- VERBATIM RESPONSE ---
+{
+  "hard_skills": ["Property & Casualty license", "MS Office", "Outlook", "Word", "Excel", "policy processing", "endorsements", "audits", "certificates", "billing reconciliation"],
+  "soft_skills": ["customer service", "multitasking", "organizational skills", "communication", "problem-solving", "decision-making", "team collaboration", "proactive service"],
+  "domain_keywords": ["Commercial Lines", "General Liability", "Professional Liability", "insurance brokerage", "AOR letters", "loss runs", "MVRs", "binders"]
+}

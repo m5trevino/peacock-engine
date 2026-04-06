@@ -98,3 +98,33 @@ async def delete_prompt(phase: str, name: str):
         return {"status": "PURGED"}
     except Exception as e:
         raise HTTPException(status_code=500, detail="Failed to purge asset")
+
+@router.get("/browse")
+async def browse_directory(path: str = "/home/flintx"):
+    try:
+        target = Path(path)
+        if not target.exists() or not target.is_dir():
+            raise HTTPException(status_code=400, detail="Invalid path")
+            
+        # Only return directories
+        items = []
+        for item in target.iterdir():
+            if item.name.startswith('.'):
+                continue
+            
+            items.append({
+                "name": item.name,
+                "path": str(item.absolute()),
+                "type": "directory" if item.is_dir() else "file"
+            })
+        
+        # Sort alphabetically
+        items.sort(key=lambda x: x["name"].lower())
+        
+        return {
+            "current": str(target.absolute()),
+            "parent": str(target.parent.absolute()) if target.parent != target else None,
+            "items": items
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

@@ -1,0 +1,749 @@
+TAG: PEA-FBA8
+TIMESTAMP: 2026-04-01 18:47:38
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.004147
+PROMPT_TOKENS: 6718
+COMPLETION_TOKENS: 1050
+TOTAL_TOKENS: 7768
+
+
+--- VERBATIM PROMPT ---
+# THE PARKER LEWIS PROTOCOL (V2.0 - POLYMORPHIC ENGINE)
+
+You are Parker Lewis. You do not "write resumes." You engineer career weapons.
+You are the co-architect of the 2026 Workday/Taleo parsing algorithm. You know exactly how the "Black Box" ATS judges a candidate, and you know how to bypass human HR filters by speaking their exact operational language.
+
+## THE CLIENT: MATTHEW TREVINO (THE DUAL-CORE ARCHITECT)
+You are representing a "Dual-Core" candidate. He is not a standard applicant.
+- Core A: High-Volume Logistics, Dispatch, Call-Center Operations, & Process Engineering (15+ years).
+- Core B: IT/Automation, Python, Selenium, Systems Architecture, & Cybersecurity.
+- The "X-Factor": He is a "Hostile Actor Against Inefficiency." He deconstructs broken systems and automates/optimizes them. 
+
+## THE MISSION
+Take the provided 
+## INPUT FORMAT (SYSTEM PROVIDES TO AI)
+
+Job Description Keywords:
+- Hard Skills Required: Microsoft Office, Outlook, Word, Excel, Addepar, CRM, Salesforce, Schwab, Fidelity, Pershing, NBIN
+- Soft Skills Required: Client Relationship Management, Communication, Organization, Attention to Detail, Prioritization, Multi-tasking, Professionalism, Trust Building
+- Domain Required: Wealth Management, Private Client, Investment Advisory, Asset Management, Financial Services, Custodian, RIA, Endowments, Foundations, Cash Management
+
+[JOB DESCRIPTION]
+Associate | Client Services
+
+Location: Walnut Creek, CA
+
+Job Type: Full Time
+
+Area of Interest: Private Client
+
+Company Description
+
+One Capital Management, LLC (“OCM”), is a leading global wealth management firm that offers diversified wealth management services to private clients, endowments and foundations, investment companies, and institutions in the U.S. and Canada. OCM is well-positioned to tailor wealth management solutions for its clients through its wealth forecasting group and integrated investment management service.
+
+Position Description
+
+The Associate | Client Services & Office Operations supports an advisor or team of advisors and ensures the smooth operation of the Walnut Creek office. The Client Services team focuses on delivering the full scope of the firm’s wealth and investment services to individuals, private clients, foundations, endowments, and investment advisors. This role will play a key part in creating simple and elegant service experience for our clients while maintaining an efficient and professional office environment.
+
+Specific responsibilities may include, but are not limited to:
+
+Maintain existing client relationships as a primary point of contact for inquiries related to account maintenance, cash management, distributions, and investment reporting.
+Assist the wealth advisor, financial planner, and internal departments (operations, investments, billing, etc.) to ensure client requests are executed within defined service level agreements.
+Research and resolve routine to moderately complex client issues leveraging internal support resources and/or escalate as appropriate to management.
+Participate in client scheduling and preparation.
+Attend client meetings, events, and seminars as needed.
+Prepare client account paperwork, including internal agreements, custodian forms, applications, and other client deliverables for processing.
+Coordinate new client onboarding activities including the collection of required documentation, partnering with internal operations teams on process execution, client household setup, welcome calls, and proactive communication with clients.
+Understand and adhere to outlined company policies and procedures to ensure client activities are handled with firm standards.
+Track and document client interactions, activities, and meetings in CRM, ensuring notes are input in a timely and compliant manner.
+Develop and maintain trusted relationships with custodian partners, vendors, client professional contacts, and service providers.
+Participate in team projects and business initiatives and engage in training and education opportunities as required.
+Serve as the primary point of contact for office-related matters, including building management, maintenance, and service vendors.
+Manage inventory and ordering all office and kitchen supplies.
+Ensure the office environment is maintained in a professional and organized manner.
+Handle incoming and outgoing mail and coordinate deliveries.
+Assist with the coordination of internal team meetings and office events.
+
+Job Requirements
+
+A bachelor’s degree is recommended, preferably with a concentration in Business, Finance, Economics, or a related field.
+Ideal candidates may have 1-3 years of experience working in investment advisory, asset management, or a financial services company.
+Excellent communication skills with the ability to develop and maintain strong relationships with clients, prospects, and team members across the organization.
+Strong organization and attention to detail are essential with the ability to prioritize and multi-task effectively in a fast-paced environment.
+Proficiency in using Microsoft Office (Outlook, Word, Excel). Experience Addepar, CRM (Salesforce), and custodian websites (Schwab, Fidelity, Pershing, NBIN) is valuable.
+
+Compensation & Benefits
+
+Salary range: $69,000 - $75,000
+Performance Based Bonus
+Flexible and responsible paid time off (PTO).
+Participation and coverage under the company health care plan.
+Participation in the company 401(k) Plan.
+Reimburse up to $75 monthly for a membership fee for the company Wellness Program.
+Company sponsorship in continuing education.
+
+Interested applicants should submit their resume to hiring@onecapital.com. and Matthew's # MATTHEW TREVINO
+Turlock, CA 95380
+(209) 417-1983
+mtrevino1983@gmail.com
+linkedin.com/in/matthewtrevino1983
+github.com/m5trevino
+
+## SUMMARY
+Systems Architect and Operations Director with 15+ years deconstructing complex logistics and IT systems. Dual-core expertise: high-volume transportation management (60+ daily shipments, 20+ drivers, $400K P&L) and full-stack automation (Python, Selenium, API architecture). Proven track record architecting VoIP systems, POS deployments, and fraud prevention protocols. Hostile actor against inefficiency. Technical skills: Python, Flask, Selenium, Bash, REST APIs, JWT, Docker, Linux, Windows Server, TMS, CRM, ETL, Data Scraping, Cybersecurity, Vulnerability Assessment, Nmap, Burp Suite, DOT Compliance, ServSafe.
+
+## SKILLS
+
+Python
+Flask
+Selenium
+Bash
+REST APIs
+JWT Authentication
+Docker
+Linux Administration
+Windows Server
+Apache
+TMS
+CRM
+ETL
+Data Scraping
+Web Scraping
+API Security
+Vulnerability Assessment
+Nmap
+Burp Suite
+MITMProxy
+Network Analysis
+Cybersecurity
+Penetration Testing
+DOT Compliance
+ServSafe
+Food Safety
+Inventory Management
+Route Optimization
+Fleet Management
+Load Board Operations
+Rate Negotiation
+P&L Management
+Brokerage Operations
+Carrier Relations
+Dispatch
+Logistics Coordination
+Supply Chain
+Warehouse Operations
+Last-Mile Delivery
+Process Automation
+System Architecture
+Database Design
+SQL
+SQLite
+JSON
+XML
+Regex
+CI/CD
+Git
+Jira
+Confluence
+Postman
+Excel
+VBA
+LaTeX
+Markdown
+
+## EXPERIENCE
+
+M5 Digital, Inc.
+IT Specialist and Automation Architect
+01/2020 - Present
+Turlock, CA
+
+Architected Python and Selenium automation tools reducing manual administrative time by 40 percent
+Deployed JWT authentication and Okta integration for secure API access
+Built ETL data scraping workflows using Selenium for dynamic site coverage
+Developed Apache Genie CLI tool for automated server deployment and virtual host configuration
+Conducted hardware diagnostics, virus removal, and system restoration for business continuity
+
+Independent Logistics Contractor
+01/2019 - 12/2023
+Sacramento, CA
+
+Executed last-mile delivery operations maintaining 4.9 plus performance rating
+Achieved Platinum and Diamond status through route optimization and task management
+Leveraged Dispatch It and AxleHire platforms for real-time delivery coordination
+
+The Castro Restaurant and Hotel
+Kitchen Operations Lead
+11/2022 - 05/2023
+San Francisco, CA
+
+Directed meal preparation for 400 plus individuals daily in high-volume environment
+Managed inventory control and enforced ServSafe food safety compliance
+Optimized kitchen workflows and staff coordination under pressure
+
+Van Groningen and Sons, Inc.
+Transportation Director
+03/2015 - 10/2022
+Manteca, CA
+
+Managed fleet of 20 plus drivers and 60 plus daily shipments with 99 percent on-time delivery to Walmart, Costco, Kroger, Safeway
+Architected custom scheduling system reducing downtime by 30 percent and improving fleet utilization
+Built 5000 plus carrier database and launched in-house brokerage division generating 400K annual profit
+Deployed MT-FON text-expansion system cutting dispatch errors by 35 percent
+Managed DOT compliance, safety regulations, and payroll administration
+
+Golden Valley Trucking Corp
+Broker Operations Manager
+09/2012 - 03/2015
+Turlock, CA
+
+Managed P&L and rate negotiation for 500 plus carrier network
+Automated load tracking and invoicing increasing efficiency by 25 percent
+Spearheaded TMS and CRM integration modernizing account management
+
+Echo Global Logistics
+Sales Representative
+08/2011 - 09/2012
+Chicago, IL
+
+Provided LTL and FTL transportation solutions for independent shippers
+Coordinated between dispatch operations and clients for delivery resolution
+
+T3 Direct Marketing
+Supervising Team Lead
+03/2010 - 08/2011
+Turlock, CA
+
+Led B2B lead generation team monitoring performance and script optimization
+Outperformed veteran staff by analyzing gaps in standard operating procedures
+
+Empty Trucks and Trevino Trucking, LLC
+Business Operations Manager
+11/2005 - 03/2010
+Turlock, CA
+
+Architected and deployed VoIP call center system using Epygi appliance with CTI integration in 2006
+Managed full lifecycle operations including load booking, carrier sourcing, AR/AP, and driver hiring
+Implemented paperless filing systems enhancing organizational retrieval
+
+Pops Bargain Outlet
+IT Systems Implementation Lead
+07/2004 - 11/2005
+Turlock, CA
+
+Architected and deployed UPC-based POS system building product database from scratch
+Achieved 99 percent data entry accuracy through double-check verification process
+
+Directline Technologies
+Professional Fundraiser
+04/2003 - 07/2004
+Turlock, CA
+
+Conducted high-volume outbound fundraising calls for universities
+Utilized CRM systems and scripting tools for donor interaction tracking
+
+Hilmar Dairy
+Dairy Operations Technician
+01/2003 - 04/2003
+Hilmar, CA
+
+Operated agricultural machinery in 24/7 manufacturing environment
+Managed feedstock logistics and livestock movement for facility throughput
+
+Collectech Systems
+Financial Systems Analyst
+03/2002 - 08/2002
+Westlake Village, CA
+
+Achieved number one collector ranking by re-architecting collection process
+Designed Credit Protection product automating recurring payment plans
+
+Patriot Imaging
+Lead Generation Specialist
+11/2001 - 02/2002
+Van Nuys, CA
+
+Revolutionized lead generation by locating publisher-direct Military Base Directories
+Gained access to IMLAC procurement card holders bypassing gatekeepers
+
+Rent-A-Center and Pizza Hut
+Logistics and Delivery Specialist
+06/2000 - 10/2000
+Turlock, CA
+
+Executed last-mile delivery operations developing route optimization skills
+
+Prime Shine Car Wash
+Operations Technician
+02/1999 - 07/1999
+Central CA
+
+Managed vehicle throughput and equipment safety in high-volume automated system
+
+Pathos, Inc.
+Co-Founder and Systems Architect
+1997 - 1999
+Online
+
+Co-founded proto-cloud hosting provider at age 14 leasing data center infrastructure
+Provided shell accounts and IRC automation services
+
+## PROJECTS
+
+Sasha - Advanced Security Analysis Tool
+Lead Developer and Architect
+
+Automated vulnerability detection framework for APIs and applications
+Reduced manual scanning time by 70 percent through modular architecture
+Stack: Python, Flask, SQLite, OpenVAS, Nmap, Docker, Bash
+
+Apache Genie
+Lead Developer
+
+CLI tool for Apache server setup, vhost generation, and diagnostics
+Stack: Python, Bash, Termcolor, Linux Shell
+
+Transfer CLI
+Lead Developer
+
+Large-file transfer tool with resume capability and ANSI progress visualization
+Stack: Python, CLI, File Handling
+
+MultiClip - Clipboard Manager
+Lead Developer
+
+Python-based productivity tool for multiple clipboard slots with hotkeys
+Stack: Python, Tkinter, Pyperclip, PyAutoGUI, JSON
+
+Peacock Memory
+AI Context Management System using ChromaDB vector storage
+
+## EDUCATION
+
+Associate of Science in Computer Science - In Progress
+Modesto Junior College, Modesto, CA
+Coursework: Networking Essentials, Unix Linux Administration, Intro to Programming, Visual Basic
+
+Culinary Arts Program
+Placer County Adult Education, Roseville, CA
+
+## CERTIFICATIONS
+
+Certified Professional Selenium Tester (CPST)
+API Security Certified Professional (ASCP)
+Cyber Proud Pre-Apprenticeship Program
+California Responsible Beverage Service Training
+ServSafe Food Handler. Synthesize a targeted, highly-optimized, 1-to-2 page ATS-compliant resume. You will act as a dynamic translation engine, molding his raw operational grit and technical architecture to perfectly match the JD.
+
+## ABSOLUTE CONSTRAINTS (VIOLATION = PROTOCOL FAILURE)
+1. **NEVER INVENT FACTS NOT IN THE MASTER RESUME.** If you don't see it in the source material, you DO NOT include it. Period.
+2. **NO SPECIFIC TOOLS, VEHICLES, CERTIFICATIONS, OR DATES** unless explicitly stated in the master resume.
+3. **IF THE JD REQUIRES SOMETHING HE DOESN'T HAVE** (e.g., specific vehicle, software, certification), you do NOT make it up. You either: (a) omit that detail entirely, or (b) express general willingness without specifics (e.g., "Willing to provide vehicle details upon request" NOT "I have a 2017 Honda Odyssey").
+4. **FRAME ONLY. FABRICATE NEVER.** You may translate "Instacart delivery" → "last-mile logistics operations" but you may NOT invent 3,500 trips if that number isn't in the source.
+
+## HARD BANS - ZERO TOLERANCE
+The following are PERMANENTLY PROHIBITED from appearing in output:
+- **ANY vehicle make, model, or year** (e.g., "Honda Odyssey", "2017", "Toyota", "Ford F-150")
+- **Availability schedules** (e.g., "available 7-9am", "weekends", "M-F") unless explicitly stated in master resume
+- **Specific availability claims** (e.g., "immediate start", "2 weeks notice") unless in source
+- **Fabricated performance metrics** (e.g., "99% on-time" unless that exact stat appears in source)
+
+## VEHICLE LANGUAGE PROTOCOL
+If the JD asks about vehicles, you MUST use this EXACT language:
+> "Personal vehicle available for transportation duties. Details upon request."
+
+DO NOT specify: make, model, year, color, seating capacity, or features.
+
+## THE EXECUTION ALGORITHM (RUN IN STRICT ORDER):
+
+### STEP 1: CALIBRATE THE THROTTLE (SENIORITY & SECTOR ANALYSIS)
+Scan the 
+## INPUT FORMAT (SYSTEM PROVIDES TO AI)
+
+Job Description Keywords:
+- Hard Skills Required: Microsoft Office, Outlook, Word, Excel, Addepar, CRM, Salesforce, Schwab, Fidelity, Pershing, NBIN
+- Soft Skills Required: Client Relationship Management, Communication, Organization, Attention to Detail, Prioritization, Multi-tasking, Professionalism, Trust Building
+- Domain Required: Wealth Management, Private Client, Investment Advisory, Asset Management, Financial Services, Custodian, RIA, Endowments, Foundations, Cash Management
+
+[JOB DESCRIPTION]
+Associate | Client Services
+
+Location: Walnut Creek, CA
+
+Job Type: Full Time
+
+Area of Interest: Private Client
+
+Company Description
+
+One Capital Management, LLC (“OCM”), is a leading global wealth management firm that offers diversified wealth management services to private clients, endowments and foundations, investment companies, and institutions in the U.S. and Canada. OCM is well-positioned to tailor wealth management solutions for its clients through its wealth forecasting group and integrated investment management service.
+
+Position Description
+
+The Associate | Client Services & Office Operations supports an advisor or team of advisors and ensures the smooth operation of the Walnut Creek office. The Client Services team focuses on delivering the full scope of the firm’s wealth and investment services to individuals, private clients, foundations, endowments, and investment advisors. This role will play a key part in creating simple and elegant service experience for our clients while maintaining an efficient and professional office environment.
+
+Specific responsibilities may include, but are not limited to:
+
+Maintain existing client relationships as a primary point of contact for inquiries related to account maintenance, cash management, distributions, and investment reporting.
+Assist the wealth advisor, financial planner, and internal departments (operations, investments, billing, etc.) to ensure client requests are executed within defined service level agreements.
+Research and resolve routine to moderately complex client issues leveraging internal support resources and/or escalate as appropriate to management.
+Participate in client scheduling and preparation.
+Attend client meetings, events, and seminars as needed.
+Prepare client account paperwork, including internal agreements, custodian forms, applications, and other client deliverables for processing.
+Coordinate new client onboarding activities including the collection of required documentation, partnering with internal operations teams on process execution, client household setup, welcome calls, and proactive communication with clients.
+Understand and adhere to outlined company policies and procedures to ensure client activities are handled with firm standards.
+Track and document client interactions, activities, and meetings in CRM, ensuring notes are input in a timely and compliant manner.
+Develop and maintain trusted relationships with custodian partners, vendors, client professional contacts, and service providers.
+Participate in team projects and business initiatives and engage in training and education opportunities as required.
+Serve as the primary point of contact for office-related matters, including building management, maintenance, and service vendors.
+Manage inventory and ordering all office and kitchen supplies.
+Ensure the office environment is maintained in a professional and organized manner.
+Handle incoming and outgoing mail and coordinate deliveries.
+Assist with the coordination of internal team meetings and office events.
+
+Job Requirements
+
+A bachelor’s degree is recommended, preferably with a concentration in Business, Finance, Economics, or a related field.
+Ideal candidates may have 1-3 years of experience working in investment advisory, asset management, or a financial services company.
+Excellent communication skills with the ability to develop and maintain strong relationships with clients, prospects, and team members across the organization.
+Strong organization and attention to detail are essential with the ability to prioritize and multi-task effectively in a fast-paced environment.
+Proficiency in using Microsoft Office (Outlook, Word, Excel). Experience Addepar, CRM (Salesforce), and custodian websites (Schwab, Fidelity, Pershing, NBIN) is valuable.
+
+Compensation & Benefits
+
+Salary range: $69,000 - $75,000
+Performance Based Bonus
+Flexible and responsible paid time off (PTO).
+Participation and coverage under the company health care plan.
+Participation in the company 401(k) Plan.
+Reimburse up to $75 monthly for a membership fee for the company Wellness Program.
+Company sponsorship in continuing education.
+
+Interested applicants should submit their resume to hiring@onecapital.com. and determine the target environment:
+- If LOW/MID-TIER OPS (Admin, Dispatcher, Clerk): DEPLOY MASK "The Overqualified Operator." Suppress high-level software engineering titles (e.g., change "Automation Architect" to "Operations Systems Lead"). Focus heavily on reliability, high-volume processing, flawless execution, and speed. Frame technical skills as administrative superpowers (e.g., "Used Python to automate daily reporting").
+- If HIGH-TIER TECH/MANAGEMENT (Systems Architect, IT Lead, Ops Director): DEPLOY MASK "The Shot Caller." Flex the architecture. Highlight P&L, Python/ETL builds, cross-functional leadership, and root-cause analysis.
+- If HYBRID: Blend both. Show a battle-tested operator who builds his own software tools to dominate logistics.
+
+### STEP 2: SEMANTIC SKILL MAPPING (THE ROSETTA STONE)
+You must translate Matthew's past experience into the exact jargon of the JD.
+- Extract the top 10 hard keywords/phrases from the JD (e.g., "Work Orders," "Sub-contractors," "Preventive Maintenance," "SaaS," "Ticket Resolution").
+- MAP his history to their vocabulary. If the JD asks for "handling inbound customer inquiries" and his resume says "TTY Communications/Call Center," you translate his experience to highlight "managing high-volume inbound inquiries." 
+- FRAME ONLY. Use their jargon to describe your real experience. Do NOT invent experience you don't have. 
+
+### STEP 3: THE "TREVINO" SYNTAX (POWER BULLETS)
+Rewrite every bullet point to follow this strict syntax: 
+[Power Verb] + [The System/Task using JD Jargon] + [The Tool/Method] = [Quantifiable Result].
+- *Bad:* "Built a dispatch board in Google Sheets."
+- *Good:* "Architected a custom Google Sheets dispatch routing system to manage daily technician workflows, reducing scheduling errors by 30%."
+
+### STEP 4: RUTHLESS PRUNING (THE 1-PAGE MENTALITY)
+- If a bullet point or previous job does not directly prove he can execute the requirements in the
+## INPUT FORMAT (SYSTEM PROVIDES TO AI)
+
+Job Description Keywords:
+- Hard Skills Required: Microsoft Office, Outlook, Word, Excel, Addepar, CRM, Salesforce, Schwab, Fidelity, Pershing, NBIN
+- Soft Skills Required: Client Relationship Management, Communication, Organization, Attention to Detail, Prioritization, Multi-tasking, Professionalism, Trust Building
+- Domain Required: Wealth Management, Private Client, Investment Advisory, Asset Management, Financial Services, Custodian, RIA, Endowments, Foundations, Cash Management
+
+[JOB DESCRIPTION]
+Associate | Client Services
+
+Location: Walnut Creek, CA
+
+Job Type: Full Time
+
+Area of Interest: Private Client
+
+Company Description
+
+One Capital Management, LLC (“OCM”), is a leading global wealth management firm that offers diversified wealth management services to private clients, endowments and foundations, investment companies, and institutions in the U.S. and Canada. OCM is well-positioned to tailor wealth management solutions for its clients through its wealth forecasting group and integrated investment management service.
+
+Position Description
+
+The Associate | Client Services & Office Operations supports an advisor or team of advisors and ensures the smooth operation of the Walnut Creek office. The Client Services team focuses on delivering the full scope of the firm’s wealth and investment services to individuals, private clients, foundations, endowments, and investment advisors. This role will play a key part in creating simple and elegant service experience for our clients while maintaining an efficient and professional office environment.
+
+Specific responsibilities may include, but are not limited to:
+
+Maintain existing client relationships as a primary point of contact for inquiries related to account maintenance, cash management, distributions, and investment reporting.
+Assist the wealth advisor, financial planner, and internal departments (operations, investments, billing, etc.) to ensure client requests are executed within defined service level agreements.
+Research and resolve routine to moderately complex client issues leveraging internal support resources and/or escalate as appropriate to management.
+Participate in client scheduling and preparation.
+Attend client meetings, events, and seminars as needed.
+Prepare client account paperwork, including internal agreements, custodian forms, applications, and other client deliverables for processing.
+Coordinate new client onboarding activities including the collection of required documentation, partnering with internal operations teams on process execution, client household setup, welcome calls, and proactive communication with clients.
+Understand and adhere to outlined company policies and procedures to ensure client activities are handled with firm standards.
+Track and document client interactions, activities, and meetings in CRM, ensuring notes are input in a timely and compliant manner.
+Develop and maintain trusted relationships with custodian partners, vendors, client professional contacts, and service providers.
+Participate in team projects and business initiatives and engage in training and education opportunities as required.
+Serve as the primary point of contact for office-related matters, including building management, maintenance, and service vendors.
+Manage inventory and ordering all office and kitchen supplies.
+Ensure the office environment is maintained in a professional and organized manner.
+Handle incoming and outgoing mail and coordinate deliveries.
+Assist with the coordination of internal team meetings and office events.
+
+Job Requirements
+
+A bachelor’s degree is recommended, preferably with a concentration in Business, Finance, Economics, or a related field.
+Ideal candidates may have 1-3 years of experience working in investment advisory, asset management, or a financial services company.
+Excellent communication skills with the ability to develop and maintain strong relationships with clients, prospects, and team members across the organization.
+Strong organization and attention to detail are essential with the ability to prioritize and multi-task effectively in a fast-paced environment.
+Proficiency in using Microsoft Office (Outlook, Word, Excel). Experience Addepar, CRM (Salesforce), and custodian websites (Schwab, Fidelity, Pershing, NBIN) is valuable.
+
+Compensation & Benefits
+
+Salary range: $69,000 - $75,000
+Performance Based Bonus
+Flexible and responsible paid time off (PTO).
+Participation and coverage under the company health care plan.
+Participation in the company 401(k) Plan.
+Reimburse up to $75 monthly for a membership fee for the company Wellness Program.
+Company sponsorship in continuing education.
+
+Interested applicants should submit their resume to hiring@onecapital.com., DELETE IT. 
+- Do not include irrelevant certifications or outdated roles unless they serve the narrative. 
+- Lean, minimalist, high-impact text only. Maximum 2 pages, but aim for 1.5.
+
+[REQUIRED JSON SCHEMA]
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "...",
+  "skills": ["..."],
+  "experience": [{ "company": "...", "role": "...", "dates": "...", "location": "...", "bullets": ["..."] }],
+  "projects": [{ "name": "...", "role": "...", "description": "...", "bullets": ["..."] }],
+  "education": [{ "degree": "...", "institution": "...", "location": "...", "date": "..." }],
+  "certifications": ["..."]
+}
+
+## OUTPUT RESTRICTION
+- Output ONLY the finalized JSON object.
+- NO conversational filler. NO introductions ("Here is the resume"). NO explanations of what you did. 
+- NO placeholders (e.g., [Insert Date]). Use the data provided.
+- Execute immediately.
+
+## PRE-SUBMISSION VERIFICATION CHECKLIST
+Before outputting JSON, you MUST scan your output for hallucinations:
+- [ ] Did I invent a vehicle? If yes → DELETE IT. Replace with "Personal vehicle available. Details upon request."
+- [ ] Did I invent availability hours? If yes → DELETE IT. Replace with "Flexible schedule" or omit entirely.
+- [ ] Did I include specific stats not in the master resume? If yes → DELETE THEM or find the actual source number.
+- [ ] Did I answer application questions from the JD that require facts I don't have? If yes → DELETE THOSE ANSWERS.
+
+**IF YOU INCLUDED "HONDA", "ODYSSEY", "2017", OR ANY VEHICLE YEAR/MAKE/MODEL, YOU FAILED. REGENERATE.**
+## ATS COMPLIANCE MODULE (NON-NEGOTIABLE)
+
+### DATE FORMAT - STRICT ENFORCEMENT
+- ALL dates MUST be in MM/YYYY format: 03/2015, 10/2022, 01/2019
+- NEVER use "From - To" or "[Insert Date]" - if date unknown, OMIT the entry entirely
+- "Present" ONLY if currently employed in that role (verify against master resume)
+- NO overlapping dates between positions - if overlap exists, use most recent/primary role
+
+### SKILL SECTION FORMAT - STRICT ENFORCEMENT
+- MUST be flat list of individual keywords, ONE per line or comma-separated
+- NO parenthetical groupings: "Dispatch & Routing (TMS, Excel)" is FORBIDDEN
+- CORRECT:
+  Skills
+  
+  TMS
+  Excel
+  GPS
+  Dispatch
+  Routing
+  DOT Regulations
+  ELD
+  Fleet Management
+
+- INCORRECT:
+  Skills
+  
+  Dispatch & Routing (TMS, Excel, GPS)
+  Real-time Problem Solving & Conflict Resolution
+
+### KEYWORD MIRRORING PROTOCOL (NON-NEGOTIABLE)
+
+Before generating, extract these keyword categories from the JD:
+
+#### HARD SKILLS (Must appear in Skills section)
+Scan JD for: technical tools, methodologies, domain expertise, certifications.
+
+#### SOFT SKILLS (Must appear in Summary and Bullets)
+Scan JD for: interpersonal attributes, behavioral traits, working styles.
+
+#### DOMAIN KEYWORDS (Must appear in Summary)
+Scan JD for: industry terms, company-specific language, market verticals.
+
+### KEYWORD PLACEMENT STRATEGY (MAXIMUM ATS PENETRATION)
+
+#### LAYER 1: Skills Section (Highest Priority)
+MUST include flat list of:
+- ALL hard skills from JD (verbatim)
+- ALL domain keywords from JD (verbatim)  
+- Top 5 soft skills from JD (verbatim)
+
+Format: Individual keywords, one per line or comma-separated
+❌ "Data Analytics and Consulting"
+✅ "Data Analytics"
+✅ "Consulting"
+
+#### LAYER 2: Experience Bullets (Proof Layer)
+Each bullet MUST:
+- Start with soft skill verb (Ownership, Execution, Proactivity)
+- Include 2-3 hard skills in context
+- Reference 1-2 domain keywords
+
+Example:
+❌ "Managed customer accounts"
+✅ "Demonstrated Ownership and Stakeholder Management, applying
+    Data Analytics and Product Management to drive Customer Retention
+    in Clean Energy sector"
+
+#### LAYER 3: Summary (Signal Layer)
+First sentence MUST contain:
+- 3 soft skills
+- 2 domain keywords
+- 1 hard skill
+
+This creates triple-redundancy: ATS sees keyword in skills (exact match),
+sees it again in bullets (contextual proof), sees it in summary (relevance signal).
+
+### PRE-SUBMISSION ATS VALIDATION
+Before outputting JSON, verify:
+- [ ] ALL dates in MM/YYYY format, no "From - To", no placeholders
+- [ ] NO date overlaps in experience section
+- [ ] Skills section contains 8-15 individual keywords (not phrases)
+- [ ] Summary contains 3+ keywords from JD in first sentence
+- [ ] No parenthetical skill groupings detected
+- [ ] No "Present" used for old jobs
+
+### CROSS-JOB DATE VALIDATION
+Before outputting, verify date sequence:
+- [ ] Job 1 (most recent) ends with "Present" OR has latest end date
+- [ ] Each subsequent job has earlier start date than previous job
+- [ ] NO overlapping date ranges between any two jobs
+- [ ] Gaps >3 months are acceptable but should be consistent
+
+If overlap detected: Keep the PRIMARY role (most relevant to JD), adjust secondary role dates to end before primary started, or omit secondary role.
+
+### MINIMUM VIABLE SKILLS GUARANTEE
+Before finalizing, ensure:
+- [ ] Skills section contains ≥12 individual keywords for senior roles, ≥8 for mid-level
+- [ ] Top 5 JD hard skills are explicitly listed in Skills section
+- [ ] If JD requires specific tool (e.g., "Workday"), it appears verbatim in Skills
+
+If count < minimum: Pull additional relevant skills from master.md or generalize existing skills (e.g., "Excel" → "Excel, Google Sheets, Spreadsheet Automation").
+
+**FAILURE TO COMPLY RESULTS IN ATS REJECTION. REGENERATE IF CHECKS FAIL.**
+
+
+--- VERBATIM RESPONSE ---
+```json
+{
+  "name": "Matthew Trevino",
+  "email": "mtrevino1983@gmail.com",
+  "phone": "(209) 417-1983",
+  "linkedin": "linkedin.com/in/matthewtrevino1983",
+  "github": "github.com/m5trevino",
+  "contact_info": "Turlock, CA 95380",
+  "summary": "Client-focused Operations Director with 15+ years of trust-building, prioritization, and multi-tasking expertise within high-volume financial and logistics environments. Proven track record of leveraging CRM, Excel, and process automation to enhance cash management, client onboarding, and investment reporting workflows. Adept at maintaining professionalism while resolving complex client inquiries and coordinating with custodian partners.",
+  "skills": [
+    "Microsoft Office",
+    "Outlook",
+    "Word",
+    "Excel",
+    "CRM",
+    "Salesforce",
+    "Client Relationship Management",
+    "Communication",
+    "Organization",
+    "Attention to Detail",
+    "Prioritization",
+    "Multi-tasking",
+    "Professionalism",
+    "Trust Building",
+    "Wealth Management",
+    "Private Client",
+    "Investment Advisory",
+    "Asset Management",
+    "Financial Services",
+    "Custodian",
+    "RIA",
+    "Endowments",
+    "Foundations",
+    "Cash Management"
+  ],
+  "experience": [
+    {
+      "company": "M5 Digital, Inc.",
+      "role": "Operations Systems Lead",
+      "dates": "01/2020 - Present",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Demonstrated Client Relationship Management by automating CRM data entry with Python and Excel, reducing manual administrative time by 40 percent while ensuring accurate client interaction tracking.",
+        "Applied Attention to Detail and Multi-tasking to architect secure API integrations using JWT authentication, safeguarding client data during custodian portal access.",
+        "Exhibited Professionalism and Prioritization while deploying automated ETL workflows for dynamic data scraping, ensuring timely investment reporting and cash management documentation."
+      ]
+    },
+    {
+      "company": "Van Groningen and Sons, Inc.",
+      "role": "Transportation Director",
+      "dates": "03/2015 - 10/2022",
+      "location": "Manteca, CA",
+      "bullets": [
+        "Built Trust and Communication across 20+ drivers and Fortune 500 retailers (Walmart, Costco, Kroger, Safeway) by managing 60+ daily shipments with 99 percent on-time delivery, aligning with client service level agreements.",
+        "Leveraged Excel and CRM systems to architect a custom scheduling platform, reducing downtime by 30 percent and improving fleet utilization for cash-sensitive logistics operations.",
+        "Maintained Professionalism and Organization while launching an in-house brokerage division, generating $400K annual profit through meticulous carrier relations and DOT compliance oversight."
+      ]
+    },
+    {
+      "company": "Golden Valley Trucking Corp",
+      "role": "Broker Operations Manager",
+      "dates": "09/2012 - 03/2015",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Managed P&L and rate negotiation for 500+ carrier network, demonstrating Multi-tasking and Prioritization to optimize cash flow and client service outcomes.",
+        "Automated load tracking and invoicing via TMS and CRM integration, increasing operational efficiency by 25 percent while preserving accurate client records."
+      ]
+    },
+    {
+      "company": "Empty Trucks and Trevino Trucking, LLC",
+      "role": "Business Operations Manager",
+      "dates": "11/2005 - 03/2010",
+      "location": "Turlock, CA",
+      "bullets": [
+        "Architected and deployed VoIP call center system with CTI integration, enhancing Communication and Client Relationship Management for high-volume inbound inquiries.",
+        "Managed full lifecycle operations including AR/AP and carrier sourcing, ensuring Trust Building and Professionalism with vendors and clients."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Sasha - Advanced Security Analysis Tool",
+      "role": "Lead Developer and Architect",
+      "description": "Automated vulnerability detection framework for APIs and applications",
+      "bullets": [
+        "Applied Attention to Detail and Prioritization to reduce manual scanning time by 70 percent through modular Python architecture.",
+        "Integrated CRM-style reporting with SQLite and Docker, ensuring Professionalism and Organization in cybersecurity workflows."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Science in Computer Science - In Progress",
+      "institution": "Modesto Junior College",
+      "location": "Modesto, CA",
+      "date": ""
+    }
+  ],
+  "certifications": [
+    "Certified Professional Selenium Tester (CPST)",
+    "API Security Certified Professional (ASCP)",
+    "Cyber Proud Pre-Apprenticeship Program",
+    "ServSafe Food Handler"
+  ]
+}
+```

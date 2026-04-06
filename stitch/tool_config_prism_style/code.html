@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peacock Engine | Tool Configuration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#11131d",
+                        "background": "#0c0e17",
+                        "surface-dim": "#0c0e17",
+                        "error-dim": "#d73357",
+                        "tertiary-fixed-dim": "#edc600",
+                        "on-tertiary-fixed-variant": "#645300",
+                        "surface-container": "#171924",
+                        "on-primary": "#340090",
+                        "on-background": "#f0f0fd",
+                        "primary-fixed": "#a98fff",
+                        "primary-fixed-dim": "#9c7eff",
+                        "on-surface-variant": "#aaaab7",
+                        "surface-container-high": "#1c1f2b",
+                        "on-tertiary-fixed": "#433700",
+                        "outline-variant": "#464752",
+                        "on-primary-fixed-variant": "#32008a",
+                        "secondary-container": "#006875",
+                        "on-error": "#490013",
+                        "inverse-surface": "#faf8ff",
+                        "surface-variant": "#222532",
+                        "primary": "#b6a0ff",
+                        "secondary": "#00e3fd",
+                        "on-primary-container": "#280072",
+                        "secondary-fixed-dim": "#00d7f0",
+                        "surface": "#0c0e17",
+                        "primary-container": "#a98fff",
+                        "tertiary-container": "#fdd400",
+                        "secondary-dim": "#00d4ec",
+                        "error-container": "#a70138",
+                        "tertiary-fixed": "#fdd400",
+                        "outline": "#737580",
+                        "surface-container-highest": "#222532",
+                        "inverse-primary": "#6834eb",
+                        "tertiary": "#ffe483",
+                        "on-error-container": "#ffb2b9",
+                        "on-secondary": "#004d57",
+                        "on-primary-fixed": "#000000",
+                        "surface-bright": "#282b3a",
+                        "on-tertiary-container": "#594a00",
+                        "surface-tint": "#b6a0ff",
+                        "on-tertiary": "#635200",
+                        "secondary-fixed": "#26e6ff",
+                        "surface-container-lowest": "#000000",
+                        "on-secondary-container": "#e8fbff",
+                        "on-secondary-fixed-variant": "#005964",
+                        "tertiary-dim": "#edc600",
+                        "inverse-on-surface": "#53545f",
+                        "error": "#ff6e84",
+                        "primary-dim": "#7e51ff",
+                        "on-surface": "#f0f0fd",
+                        "on-secondary-fixed": "#003a42"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(34, 37, 50, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .kinetic-glow {
+            box-shadow: 0px 0px 20px rgba(182, 160, 255, 0.15);
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c0e17;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #464752;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body overflow-hidden">
+<!-- TopNavBar Implementation -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 w-full bg-[#222532]/60 backdrop-blur-xl shadow-[0px_10px_40px_rgba(182,160,255,0.06)]">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-[#f0f0fd] font-headline">Peacock Engine</span>
+<div class="hidden md:flex items-center gap-6 font-['Space_Grotesk'] text-sm tracking-tight">
+<a class="text-[#aaaab7] hover:text-[#f0f0fd] transition-colors duration-300" href="#">Dashboard</a>
+<a class="text-[#b6a0ff] border-b-2 border-[#b6a0ff] pb-1" href="#">Models</a>
+<a class="text-[#aaaab7] hover:text-[#f0f0fd] transition-colors duration-300" href="#">Analytics</a>
+<a class="text-[#aaaab7] hover:text-[#f0f0fd] transition-colors duration-300" href="#">Deploy</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#aaaab7] hover:text-[#f0f0fd] scale-105 active:scale-95 transition-all">notifications</button>
+<button class="material-symbols-outlined text-[#aaaab7] hover:text-[#f0f0fd] scale-105 active:scale-95 transition-all">settings</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/20">
+<img alt="User profile avatar" data-alt="close-up of a sleek futuristic digital avatar silhouette in high-contrast neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZYXJtI1gltOQrbs76SI0w3lx0WhRSGfIvPmvE-BKLHxu1xVGbUKyMz_3Kb7kwETK5AbFi2EPsRw7fDgY0j1ohulFQlU1seRae_f-C5wGsRxAvn17148tqNA1oVIN4iZuSZd7NAZmfavKiQJk7M8RusAI06p1ORPC6iAbz7rghOQjt0M1wVHHi_U3hV-x5XUrK_N4M4KdGo0H8F3grF34ShBqt0oV8CYOzZpo5zcy-VVkovp1xuSVta32L1N--Fc_EF19gii43c5Ty"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar Implementation -->
+<aside class="h-screen w-64 fixed left-0 top-0 z-40 bg-[#11131d] flex flex-col py-6 space-y-4 pt-20">
+<div class="px-6 mb-4">
+<h2 class="text-lg font-bold text-[#f0f0fd] font-headline">Observatory</h2>
+<p class="text-[10px] uppercase tracking-widest text-[#00e3fd]">Kinetic Lens</p>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex items-center gap-3 py-2 px-4 text-[#aaaab7] hover:bg-[#171924] rounded-lg mx-2 transition-all hover:translate-x-1 cursor-pointer">
+<span class="material-symbols-outlined text-sm">chat</span>
+<span class="font-['Inter'] text-[13px] font-medium">Conversations</span>
+</div>
+<div class="flex items-center gap-3 py-2 px-4 text-[#aaaab7] hover:bg-[#171924] rounded-lg mx-2 transition-all hover:translate-x-1 cursor-pointer">
+<span class="material-symbols-outlined text-sm">history</span>
+<span class="font-['Inter'] text-[13px] font-medium">History</span>
+</div>
+<div class="flex items-center gap-3 py-2 px-4 text-[#aaaab7] hover:bg-[#171924] rounded-lg mx-2 transition-all hover:translate-x-1 cursor-pointer">
+<span class="material-symbols-outlined text-sm">folder</span>
+<span class="font-['Inter'] text-[13px] font-medium">Folders</span>
+</div>
+<div class="flex items-center gap-3 py-2 px-4 bg-[#282b3a] text-[#00e3fd] rounded-lg mx-2 transition-all hover:translate-x-1 cursor-pointer">
+<span class="material-symbols-outlined text-sm">add</span>
+<span class="font-['Inter'] text-[13px] font-medium">New Chat</span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/10 space-y-1">
+<div class="flex items-center gap-3 py-2 px-4 text-[#aaaab7] hover:bg-[#282b3a] rounded-lg mx-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">help</span>
+<span class="font-['Inter'] text-[13px] font-medium">Help</span>
+</div>
+<div class="flex items-center gap-3 py-2 px-4 text-[#aaaab7] hover:bg-[#282b3a] rounded-lg mx-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">terminal</span>
+<span class="font-['Inter'] text-[13px] font-medium">Logs</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pl-64 pr-96 pt-20 pb-12 min-h-screen overflow-y-auto">
+<div class="max-w-5xl mx-auto px-8">
+<header class="mb-10">
+<span class="text-secondary font-label text-[10px] tracking-[0.2em] uppercase">Engine Module</span>
+<h1 class="text-4xl font-headline font-bold text-on-surface mt-2">Tool Configuration</h1>
+<p class="text-on-surface-variant mt-2 max-w-2xl">Integrate and manage external processing modules. Active tools are injected into the model's kinetic reasoning cycle.</p>
+</header>
+<!-- Bento Grid of Tools -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Tool Card: Google Search -->
+<div class="bg-surface-container rounded-xl p-5 group hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-primary/10 transition-all"></div>
+<div class="flex justify-between items-start relative z-10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">search</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg">Google Search</h3>
+<p class="text-xs text-on-surface-variant">Real-time web indexing</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary kinetic-glow"></div>
+</label>
+</div>
+<div class="mt-6 flex justify-between items-center relative z-10">
+<span class="text-[10px] font-label text-outline uppercase tracking-wider">v4.2.0 Stable</span>
+<button class="px-4 py-1.5 rounded-lg bg-surface-container-highest text-on-surface text-xs font-medium hover:bg-surface-bright transition-colors">CONFIG</button>
+</div>
+</div>
+<!-- Tool Card: Maps -->
+<div class="bg-surface-container rounded-xl p-5 group hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden">
+<div class="flex justify-between items-start relative z-10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">map</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg">Geospatial API</h3>
+<p class="text-xs text-on-surface-variant">Global mapping &amp; routing</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="mt-6 flex justify-between items-center relative z-10">
+<span class="text-[10px] font-label text-outline uppercase tracking-wider">v1.1.2 Legacy</span>
+<button class="px-4 py-1.5 rounded-lg bg-surface-container-highest text-on-surface text-xs font-medium hover:bg-surface-bright transition-colors">CONFIG</button>
+</div>
+</div>
+<!-- Tool Card: Code Execution -->
+<div class="bg-surface-container rounded-xl p-5 group hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden md:col-span-2">
+<div class="flex justify-between items-start relative z-10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg">Sandboxed Code Execution</h3>
+<p class="text-xs text-on-surface-variant">Python, JS, and Rust runtime environment</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary kinetic-glow"></div>
+</label>
+</div>
+<div class="mt-6 flex justify-between items-center relative z-10">
+<div class="flex gap-4">
+<span class="text-[10px] font-label text-on-surface bg-surface-container-highest px-2 py-0.5 rounded">Python 3.11</span>
+<span class="text-[10px] font-label text-on-surface bg-surface-container-highest px-2 py-0.5 rounded">Node v20</span>
+</div>
+<button class="px-4 py-1.5 rounded-lg bg-surface-container-highest text-on-surface text-xs font-medium hover:bg-surface-bright transition-colors">CONFIG</button>
+</div>
+</div>
+<!-- Tool Card: Calculator -->
+<div class="bg-surface-container rounded-xl p-5 group hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden">
+<div class="flex justify-between items-start relative z-10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-3xl">calculate</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg">Math Solver</h3>
+<p class="text-xs text-on-surface-variant">Symbolic computation</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-fixed kinetic-glow"></div>
+</label>
+</div>
+<div class="mt-6 flex justify-between items-center relative z-10">
+<span class="text-[10px] font-label text-outline uppercase tracking-wider">Internal</span>
+<button class="px-4 py-1.5 rounded-lg bg-surface-container-highest text-on-surface text-xs font-medium hover:bg-surface-bright transition-colors">CONFIG</button>
+</div>
+</div>
+<!-- Tool Card: Vision -->
+<div class="bg-surface-container rounded-xl p-5 group hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden">
+<div class="flex justify-between items-start relative z-10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-3xl">visibility</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg">Visual OCR</h3>
+<p class="text-xs text-on-surface-variant">Document analysis</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary-fixed"></div>
+</label>
+</div>
+<div class="mt-6 flex justify-between items-center relative z-10">
+<span class="text-[10px] font-label text-outline uppercase tracking-wider">BETA</span>
+<button class="px-4 py-1.5 rounded-lg bg-surface-container-highest text-on-surface text-xs font-medium hover:bg-surface-bright transition-colors">CONFIG</button>
+</div>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="mt-12 flex justify-center">
+<button class="group relative px-8 py-4 bg-primary text-on-primary font-headline font-bold rounded-xl overflow-hidden transition-all hover:scale-[1.02] active:scale-95 shadow-[0px_0px_40px_rgba(182,160,255,0.3)]">
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-primary-dim opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="relative flex items-center gap-2">
+<span class="material-symbols-outlined">play_arrow</span>
+                        TEST TOOL CHAIN
+                    </span>
+</button>
+</div>
+</div>
+</main>
+<!-- Right Sidebar: Parameters & Logs -->
+<aside class="fixed right-0 top-0 h-screen w-96 bg-surface-container-low pt-20 flex flex-col border-l border-outline-variant/10">
+<!-- Parameters Panel -->
+<div class="flex-1 overflow-y-auto px-6 py-4">
+<div class="glass-panel rounded-2xl p-6 border border-outline-variant/10 mb-6">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-sm">settings_input_component</span>
+<h2 class="text-sm font-headline font-bold uppercase tracking-widest text-on-surface">Parameters</h2>
+</div>
+<div class="space-y-8">
+<!-- Slider Control -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<label class="text-xs font-medium text-on-surface-variant">Execution Depth</label>
+<span class="text-[10px] font-mono text-primary bg-primary/10 px-2 py-0.5 rounded">0.85</span>
+</div>
+<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+</div>
+<!-- Toggle Control -->
+<div class="flex justify-between items-center">
+<span class="text-xs font-medium text-on-surface-variant">Parallel Processing</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-4 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Input Control -->
+<div class="space-y-2">
+<label class="text-xs font-medium text-on-surface-variant">API Endpoint Override</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-lg text-xs py-2 px-3 focus:ring-1 focus:ring-primary placeholder:text-outline/50 transition-all" placeholder="https://..." type="text"/>
+<span class="absolute right-3 top-2 text-outline material-symbols-outlined text-xs">link</span>
+</div>
+</div>
+<!-- Dropdown Control -->
+<div class="space-y-2">
+<label class="text-xs font-medium text-on-surface-variant">Model Fallback</label>
+<div class="bg-surface-container-highest rounded-lg px-3 py-2 flex justify-between items-center cursor-pointer hover:bg-surface-bright transition-colors">
+<span class="text-xs">Peacock-G8-Turbo</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Logs Console -->
+<div class="h-1/3 bg-surface-container-lowest border-t border-outline-variant/20 p-4 font-mono text-[10px] relative">
+<div class="flex justify-between items-center mb-3">
+<span class="text-outline uppercase tracking-tighter flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(0,227,253,0.6)]"></span>
+                    Live Execution Logs
+                </span>
+<span class="material-symbols-outlined text-outline text-xs cursor-pointer hover:text-on-surface">content_copy</span>
+</div>
+<div class="space-y-1 h-32 overflow-y-auto text-on-surface-variant">
+<div class="flex gap-2">
+<span class="text-outline">[14:02:01]</span>
+<span class="text-secondary">INIT</span>
+<span>Broadcasting tool manifest...</span>
+</div>
+<div class="flex gap-2">
+<span class="text-outline">[14:02:02]</span>
+<span class="text-primary">EXEC</span>
+<span>Google Search: Query="Quantum Neural Kernels"</span>
+</div>
+<div class="flex gap-2">
+<span class="text-outline">[14:02:03]</span>
+<span class="text-tertiary">LOGS</span>
+<span>Fetched 12 documents from index 0x92f</span>
+</div>
+<div class="flex gap-2 opacity-50">
+<span class="text-outline">[14:02:03]</span>
+<span class="text-outline-variant">WARN</span>
+<span>Rate limit threshold approaching (82%)</span>
+</div>
+<div class="flex gap-2">
+<span class="text-outline">[14:02:04]</span>
+<span class="text-secondary">DONE</span>
+<span class="text-[#00ff9d]">Processing cycle complete. Result returned.</span>
+</div>
+</div>
+<!-- Overlay Gradient for console depth -->
+<div class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-background to-transparent pointer-events-none"></div>
+</div>
+</aside>
+<!-- Footer Implementation -->
+<footer class="fixed bottom-0 w-full h-8 z-50 bg-[#0c0e17] border-t border-[#464752]/20 flex justify-between items-center px-4 w-full font-['Inter'] text-[10px] uppercase tracking-widest">
+<div class="flex items-center gap-4">
+<span class="font-bold text-[#00e3fd]">SYSTEM READY</span>
+<div class="h-3 w-[1px] bg-outline-variant/30"></div>
+<span class="text-[#aaaab7]">v2.4.0-stable</span>
+</div>
+<div class="flex items-center gap-6">
+<span class="text-[#ffe483]">Gateway: Active</span>
+<span class="text-[#aaaab7]">Cost: $0.12</span>
+<span class="text-[#aaaab7]">Tokens: 1.2k</span>
+</div>
+</footer>
+</body></html>

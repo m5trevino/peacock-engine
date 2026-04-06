@@ -19,3 +19,28 @@ manual.txt
 .venv/
 venv/
 __pycache__/
+
+# === CLEANUP: Test scripts with keys ===
+check_*.py
+test_*.py
+verify_*.py
+probe_*.py
+inspect_*.py
+syndicate_key_*.py
+groq-test.py
+
+# === CLEANUP: Temp/merged files ===
+merged_*.txt
+merged.*.files.txt
+manual.txt
+*.log
+
+# === CLEANUP: Deployment artifacts ===
+deploy.zip
+
+# === CLEANUP: Backup files ===
+*.1.py
+*.2.py
+*.3.py
+*.4.py
+old/

@@ -1,0 +1,108 @@
+TAG: PEA-E0AD
+TIMESTAMP: 2026-04-01 18:16:04
+GATEWAY: GROQ
+MODEL: moonshotai/kimi-k2-instruct-0905
+STATUS: SUCCESS
+COST: $0.000507
+PROMPT_TOKENS: 783
+COMPLETION_TOKENS: 154
+TOTAL_TOKENS: 937
+
+
+--- VERBATIM PROMPT ---
+
+Analyze the following Job Description and extract the critical keywords for ATS optimization.
+You MUST output ONLY a valid JSON object matching this schema exactly:
+{
+  "hard_skills": ["Kw1", "Kw2", ...],
+  "soft_skills": ["Kw1", "Kw2", ...],
+  "domain_keywords": ["Kw1", "Kw2", ...]
+}
+
+Definitions:
+- hard_skills: specific tools (e.g., Python, Salesforce), methodologies (e.g., Agile), or technical skills.
+- soft_skills: interpersonal attributes, behavior styles (e.g., Ownership, Clarity, Customer Empathy).
+- domain_keywords: industry terms, vertical names, relevant jargon (e.g., Clean Energy, B2B SaaS).
+
+Target 5-10 keywords per category.
+
+Job Description:
+GENERAL SUMMARY.
+
+The Customer Service Manager oversees the Customer Service Department with a focus on delivering exemplary service, driving sales, developing employees, and increasing customer engagement. They ensure the team performs in alignment with company objectives by setting expectations, modeling best practices, delegating responsibilities, coaching, and evaluating direct reports.
+
+The Customer Service Manager leverages data and technology to monitor performance, identify trends, and drive continuous improvement, while serving as the department's ultimate escalation point and a collaborative partner across the organization.
+
+ESSENTIAL DUTIES & RESPONSIBILITIES
+
+Customer Service
+
+Oversee all customer service channels (phone, email, chat) and order issue resolution.
+Model professional, customer-first interactions and support high-touch service scenarios.
+Analyze customer data and feedback to identify trends, resolve root causes, and improve service.
+Monitor performance metrics (volume, response times, resolution rates) and enforce SLAs.
+Manage escalations and communicate key issues and risks to leadership.
+Partner with internal teams to optimize processes and enhance the customer experience.
+
+Team Management
+
+Communicate priorities and foster a customer-focused team culture.
+Develop schedules and allocate resources based on volume and business needs.
+Maintain knowledge of internal processes and oversee system tools and improvements.
+Train staff on best practices, compliance, and service standards.
+
+Performance Management
+
+Set and track KPIs; provide regular coaching, feedback, and performance evaluations.
+Hire, onboard, and develop team members; address performance issues as needed.
+Prepare performance reports highlighting trends and opportunities.
+
+Administration
+
+Oversee shipping, logistics, compliance, and transaction-related issues.
+Manage payment disputes and collaborate with Finance and other departments.
+Maintain documentation, knowledge base, and support company initiatives.
+Handle scheduling, payroll certification, and other administrative duties.
+
+MINIMUM QUALIFICATIONS
+
+2+ years of team management in a customer-facing environment.
+High school diploma required; Bachelor’s degree preferred.
+Experience with CRM/helpdesk platforms and reporting tools.
+Strong leadership, communication, problem-solving, and organizational skills.
+Proficiency in Microsoft Office and relevant systems.
+Flexible schedule, including at least one weekend day.
+
+PHYSICAL REQUIREMENTS
+
+Prolonged sitting and computer use.
+Ability to communicate effectively in an office environment.
+Occasional lifting (up to 40 lbs) and basic physical movement as needed.
+
+CORE & LEADERSHIP COMPETENCIES
+
+Customer focus, accountability, professionalism, and adaptability.
+Strong communication, teamwork, and problem-solving skills.
+Effective leadership, coaching, and decision-making abilities.
+
+Compensation Range:
+$70,000 - $80,000.00
+
+BENEFITS
+• Competitive salary and comprehensive benefits package
+• Medical, dental, and vision insurance (100% of individual premium covered)
+• Company-sponsored 401(k)
+• Generous paid time off (3 weeks annually)
+• Employee product discount
+• Opportunities for growth and professional development
+• Collaborative and supportive work environment
+
+Results-driven with a focus on continuous improvement and team development.
+
+
+--- VERBATIM RESPONSE ---
+{
+  "hard_skills": ["CRM platforms", "Help Desk software", "Microsoft Office", "KPI tracking", "SLA enforcement", "Data analysis", "Performance reporting", "Knowledge base management", "Payroll certification", "Order management systems"],
+  "soft_skills": ["Leadership", "Coaching", "Customer focus", "Problem-solving", "Communication", "Teamwork", "Accountability", "Adaptability", "Professionalism", "Decision-making"],
+  "domain_keywords": ["Customer service channels", "Escalation management", "Customer engagement", "Continuous improvement", "B2C support", "Service level agreements", "Customer-first culture", "High-touch service", "Volume forecasting", "Customer experience optimization"]
+}

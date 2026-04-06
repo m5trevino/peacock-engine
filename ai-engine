@@ -1,0 +1,10 @@
+#!/bin/bash
+# 🦚 AI-ENGINE CLI WRAPPER
+# Automatically uses the project's VENV to ensure all dependencies are met.
+
+PROJECT_DIR="/home/flintx/ai-handler"
+PYTHON_BIN="$PROJECT_DIR/.venv/bin/python3"
+SCRIPT_PATH="$PROJECT_DIR/ai-engine.py"
+
+# Run the script with all passed arguments
+$PYTHON_BIN $SCRIPT_PATH "$@"
