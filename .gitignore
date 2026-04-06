@@ -92,3 +92,11 @@ screen*.png
 deploy.zip
 make_db.py
 update-repo.sh
+
+# === CLEANUP: Deployment scripts ===
+deploy.sh
+purge-vps.sh
+push-to-github.sh
+setup-openclaw.sh
+MissionMiner.py
+deploy/
