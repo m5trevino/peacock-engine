@@ -2,15 +2,22 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 import os
 import re
+from pathlib import Path
 
 router = APIRouter()
 
 class ProxySettings(BaseModel):
     enable_dataimpulse: bool
 
+def get_env_path():
+    """Find .env file relative to project root"""
+    # This file is at app/routes/proxy_control.py, so project root is 3 levels up
+    project_root = Path(__file__).parent.parent.parent.resolve()
+    return project_root / ".env"
+
 @router.post("/v1/proxy/toggle")
 async def toggle_dataimpulse_proxy(settings: ProxySettings):
-    env_path = os.path.expanduser("~/ai-handler/.env")
+    env_path = get_env_path()
 
     try:
         with open(env_path, "r") as f:

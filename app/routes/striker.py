@@ -17,11 +17,13 @@ from app.config import MODEL_REGISTRY
 router = APIRouter()
 
 # --- CONFIG ---
-BASE_DIR = Path("/home/flintx/chat_logs")
+# Dynamically find project root (3 levels up from this file)
+PROJECT_ROOT = Path(__file__).parent.parent.parent.resolve()
+BASE_DIR = PROJECT_ROOT / "chat_logs"
 WASHED_DIR = BASE_DIR / "washed"
-MISSION_VAULT_DIR = Path("/home/flintx/MissionVault")
+MISSION_VAULT_DIR = PROJECT_ROOT / "MissionVault"
 MISFIRE_DIR = BASE_DIR / "misfires"
-STATUS_FILE = Path("/home/flintx/ai-handler/striker_status.json")
+STATUS_FILE = PROJECT_ROOT / "striker_status.json"
 
 # Ensure dirs exist
 MISSION_VAULT_DIR.mkdir(parents=True, exist_ok=True)

@@ -10,8 +10,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional, Dict, Any
 
-# Paths
-BASE_DIR = Path("/home/flintx/ai-handler")
+# Paths - dynamically find project root
+BASE_DIR = Path(__file__).parent.parent.parent.resolve()
 VAULT_DIR = BASE_DIR / "vault"
 SUCCESS_LOG = BASE_DIR / "success_strikes.log"
 FAILED_LOG = BASE_DIR / "failed_strikes.log"

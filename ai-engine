@@ -2,7 +2,9 @@
 # 🦚 AI-ENGINE CLI WRAPPER
 # Automatically uses the project's VENV to ensure all dependencies are met.
 
-PROJECT_DIR="/home/flintx/ai-handler"
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$SCRIPT_DIR"
 PYTHON_BIN="$PROJECT_DIR/.venv/bin/python3"
 SCRIPT_PATH="$PROJECT_DIR/ai-engine.py"
 

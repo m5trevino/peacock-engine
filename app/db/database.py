@@ -10,8 +10,8 @@ from pathlib import Path
 from typing import Optional, List, Dict, Any
 from contextlib import contextmanager
 
-# Database location
-DB_PATH = Path("/home/flintx/ai-handler/peacock.db")
+# Database location - dynamically find project root
+DB_PATH = Path(__file__).parent.parent.parent.resolve() / "peacock.db"
 
 
 def init_db():
