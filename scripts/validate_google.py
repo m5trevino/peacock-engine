@@ -83,7 +83,10 @@ class GoogleValidator:
         
         try:
             from google import genai
-            client = genai.Client(api_key=key)
+            import httpx
+            # Use a client that doesn't pick up system proxies
+            http_client = httpx.Client(trust_env=False)
+            client = genai.Client(api_key=key, http_client=http_client)
             
             # Try to list models (lightweight auth check)
             models = client.models.list()
@@ -120,7 +123,10 @@ class GoogleValidator:
         
         try:
             from google import genai
-            client = genai.Client(api_key=key)
+            import httpx
+            # Use a client that doesn't pick up system proxies
+            http_client = httpx.Client(trust_env=False)
+            client = genai.Client(api_key=key, http_client=http_client)
             
             # Clean model ID
             clean_model = model.replace("models/", "")

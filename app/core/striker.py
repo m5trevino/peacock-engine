@@ -318,8 +318,8 @@ async def execute_strike(gateway: str, model_id: str, prompt: str, temp: float,
             # Resolve Usage
             usage_obj = result.usage()
             usage = {
-                "prompt_tokens": usage_obj.request_tokens or 0,
-                "completion_tokens": usage_obj.response_tokens or 0,
+                "prompt_tokens": usage_obj.input_tokens or 0,
+                "completion_tokens": usage_obj.output_tokens or 0,
                 "total_tokens": usage_obj.total_tokens or 0
             }
             

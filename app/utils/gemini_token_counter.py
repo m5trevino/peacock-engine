@@ -229,41 +229,17 @@ class GeminiTokenCounter:
         except Exception:
             return 0
     
-    def count_chat_request(
-        self,
-        model: str,
-        messages: Optional[List[Dict]] = None,
-        prompt: Optional[str] = None,
-        system_instruction: Optional[str] = None
-    ) -> int:
-        """
-        Count tokens for a chat/completion request.
-        
-        Args:
-            model: Model ID
-            messages: List of chat messages (role, content)
-            prompt: Simple text prompt (alternative to messages)
-            system_instruction: System instruction text
-            
-        Returns:
-            Estimated token count
-        """
-        total = 0
-        
-        # System instruction
-        if system_instruction:
-            total += self.estimate_tokens(system_instruction)
-        
-        # Messages or prompt
-        if messages:
-            for msg in messages:
-                content = msg.get('content', '')
-                role = msg.get('role', 'user')
-                # Content + role overhead
-                total += self.estimate_tokens(content) + 4
-        elif prompt:
-            total += self.estimate_tokens(prompt)
-        
+    def count_tokens_offline(self, text: str, model: Optional[str] = None) -> int:
+        """Alias for estimate_tokens for backward compatibility."""
+        return self.estimate_tokens(text)
+
+    @staticmethod
+    def count_tokens(model: str, text: str, files: List[str] = []) -> int:
+        """Static method for PeacockTokenCounter compatibility."""
+        counter = GeminiTokenCounter()
+        total = counter.estimate_tokens(text)
+        for f in files:
+            total += counter.count_file(f)
         return total
 
 

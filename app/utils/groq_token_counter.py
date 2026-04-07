@@ -244,45 +244,17 @@ class GroqTokenCounter:
             return max_tokens
         return default
     
-    def count_total_request_response(
-        self,
-        model: str,
-        messages: Optional[List[Dict]] = None,
-        prompt: Optional[str] = None,
-        tools: Optional[List[Dict]] = None,
-        system: Optional[str] = None,
-        max_tokens: Optional[int] = None
-    ) -> Dict[str, int]:
-        """
-        Count tokens for both request and estimated response.
-        
-        Args:
-            model: Model ID
-            messages: Chat messages
-            prompt: Simple text prompt
-            tools: Tool definitions
-            system: System message
-            max_tokens: Max tokens for response
-            
-        Returns:
-            Dict with prompt_tokens, completion_tokens, total_tokens
-        """
-        request = self.count_request_tokens(
-            model=model,
-            messages=messages,
-            prompt=prompt,
-            tools=tools,
-            system=system
-        )
-        
-        completion = self.estimate_completion_tokens(max_tokens)
-        
-        return {
-            "prompt_tokens": request["prompt_tokens"],
-            "tool_tokens": request["tool_tokens"],
-            "completion_tokens": completion,
-            "total_tokens": request["total_tokens"] + completion
-        }
+    def count_tokens_in_prompt(self, text: str, model: str) -> int:
+        """Alias for count_tokens for backward compatibility."""
+        return self.count_tokens(text, model)
+
+    @staticmethod
+    def count_messages(messages: List[Dict], model: str) -> int:
+        """Static method for PeacockTokenCounter compatibility."""
+        counter = GroqTokenCounter()
+        if not counter._check_tiktoken():
+            return len(str(messages)) // 4
+        return counter.count_messages_tokens(messages, model)
 
 
 # Convenience functions

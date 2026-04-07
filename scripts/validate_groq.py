@@ -88,7 +88,7 @@ class GroqValidator:
         start = datetime.now()
         
         try:
-            async with httpx.AsyncClient(timeout=self.TEST_TIMEOUT) as client:
+            async with httpx.AsyncClient(timeout=self.TEST_TIMEOUT, trust_env=False) as client:
                 response = await client.get(
                     "https://api.groq.com/openai/v1/models",
                     headers={"Authorization": f"Bearer {key}"}
@@ -140,7 +140,7 @@ class GroqValidator:
         start = datetime.now()
         
         try:
-            async with httpx.AsyncClient(timeout=self.TEST_TIMEOUT) as client:
+            async with httpx.AsyncClient(timeout=self.TEST_TIMEOUT, trust_env=False) as client:
                 response = await client.post(
                     "https://api.groq.com/openai/v1/chat/completions",
                     headers={"Authorization": f"Bearer {key}"},

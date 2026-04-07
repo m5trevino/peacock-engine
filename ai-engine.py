@@ -508,13 +508,13 @@ async def run_audit(args):
     if failed_models:
         console.print(f"\n[bold yellow]⚠ ATTENTION:[/bold yellow] {len(failed_models)} models are currently failing health checks.")
         
-        do_freeze = questionary.confirm("Would you like to decommission (freeze) any of these models?").ask()
+        do_freeze = await questionary.confirm("Would you like to decommission (freeze) any of these models?").ask_async()
         if do_freeze:
             choices = [f"{f['id']} (Error: {f['error'][:50]})" for f in failed_models]
-            selected_raw = questionary.checkbox(
+            selected_raw = await questionary.checkbox(
                 "Select models to FREEZE (decommission):",
                 choices=choices
-            ).ask()
+            ).ask_async()
             
             if selected_raw:
                 # Extract IDs back from choices string

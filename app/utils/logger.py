@@ -51,7 +51,9 @@ class HighSignalLogger:
         
         # 1. Determine Vault Destination
         vault_subdir = "successful" if is_success else "failed"
-        vault_file = VAULT_DIR / vault_subdir / f"{tag}.txt"
+        target_dir = VAULT_DIR / vault_subdir
+        target_dir.mkdir(parents=True, exist_ok=True)
+        vault_file = target_dir / f"{tag}.txt"
         
         # 2. Prepare Verbatim Content
         verbatim_content = f"""TAG: {tag}
