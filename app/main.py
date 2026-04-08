@@ -24,6 +24,8 @@ from app.routes.profile import router as profile_router
 from app.routes.chat import router as chat_router
 from app.routes.docs import router as docs_router
 from app.routes.chat_ui import router as chat_ui_router
+from app.routes.audit import router as audit_router
+from app.routes.telemetry import router as telemetry_router
 
 # Import key pools for health check
 from app.core.key_manager import GroqPool, GooglePool, DeepSeekPool, MistralPool
@@ -56,6 +58,11 @@ if os.path.exists(static_dir):
 else:
     CLIFormatter.warning(f"Static directory not found: {static_dir}")
 
+# Mount PEACOCK ENGINE WebUI (Vite Build)
+if os.path.exists("peacock-ui/dist"):
+    app.mount("/ui", StaticFiles(directory="peacock-ui/dist", html=True), name="ui")
+    app.mount("/", StaticFiles(directory="peacock-ui/dist", html=True), name="root_ui")
+
 from app.routes.onboarding import router as onboarding_router
 from app.routes.dashboard import router as dashboard_router
 
@@ -78,6 +85,8 @@ app.include_router(payload_strike_router, prefix="/v1/payload-strike", tags=["PA
 app.include_router(proxy_control_router, prefix="/v1/proxy", tags=["PROXY_CONTROL"])
 app.include_router(profile_router, prefix="/v1/profile", tags=["PROFILE"])
 app.include_router(docs_router, prefix="/v1/docs", tags=["DOCS"])
+app.include_router(audit_router, prefix="/v1/audit", tags=["AUDIT"])
+app.include_router(telemetry_router, prefix="/v1/telemetry", tags=["TELEMETRY"])
 
 # Include WebUI API routes
 app.include_router(models_api_router, prefix="/v1/webui/models", tags=["WEBUI_MODELS"])

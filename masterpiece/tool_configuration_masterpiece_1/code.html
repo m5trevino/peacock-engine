@@ -6,7 +6,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script type="module" src="/src/ui_shared.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -101,9 +101,9 @@
 <span class="text-xl font-bold text-[#aac7ff] tracking-tighter font-headline uppercase">PEACOCK ENGINE</span>
 <nav class="hidden md:flex h-16 items-center">
 <a class="text-[#aac7ff] border-b-2 border-[#aac7ff] h-full flex items-center px-4 font-headline font-medium tracking-tighter uppercase" href="#">DASHBOARD</a>
-<a class="text-gray-400 hover:text-[#aac7ff] transition-colors duration-200 px-4 font-headline font-medium tracking-tighter uppercase" href="#">GAUGE</a>
-<a class="text-gray-400 hover:text-[#aac7ff] transition-colors duration-200 px-4 font-headline font-medium tracking-tighter uppercase" href="#">LIVE WIRE</a>
-<a class="text-gray-400 hover:text-[#aac7ff] transition-colors duration-200 px-4 font-headline font-medium tracking-tighter uppercase" href="#">SHIP IT</a>
+<a class="text-gray-400 hover:text-[#aac7ff] transition-colors duration-200 px-4 font-headline font-medium tracking-tighter uppercase" href="#">ANALYTICS</a>
+<a class="text-gray-400 hover:text-[#aac7ff] transition-colors duration-200 px-4 font-headline font-medium tracking-tighter uppercase" href="#">LOGS</a>
+<a class="text-gray-400 hover:text-[#aac7ff] transition-colors duration-200 px-4 font-headline font-medium tracking-tighter uppercase" href="#">DEPLOYMENT</a>
 </nav>
 </div>
 <div class="flex items-center gap-4">
@@ -127,39 +127,39 @@
 <div class="p-6">
 <div class="flex items-center gap-3 mb-1">
 <div class="w-2 h-2 bg-[#ffdb3c] rounded-full animate-pulse shadow-[0_0_8px_rgba(255,219,60,0.6)]"></div>
-<span class="font-headline text-lg font-bold text-[#ffdb3c] uppercase">KEY HOLDER</span>
+<span class="font-headline text-lg font-bold text-[#ffdb3c] uppercase">OPERATOR-01</span>
 </div>
-<span class="font-label text-[10px] text-gray-500 tracking-[0.2em] uppercase">4 STRIPES</span>
+<span class="font-label text-[10px] text-gray-500 tracking-[0.2em] uppercase">PRECISION-LEVEL-4</span>
 </div>
 <nav class="flex-grow py-4 overflow-y-auto space-y-1">
 <a class="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-[#363a3e] hover:text-white transition-all duration-150 group" href="#">
 <span class="material-symbols-outlined text-xl">memory</span>
-<span class="font-label text-sm font-medium uppercase tracking-tight">ENGINE TEMP</span>
+<span class="font-label text-sm font-medium uppercase tracking-tight">Engine Status</span>
 </a>
 <a class="flex items-center gap-3 px-6 py-3 bg-[#1c2024] text-[#aac7ff] border-l-4 border-[#aac7ff] font-label text-sm font-medium uppercase tracking-tight" href="#">
 <span class="material-symbols-outlined text-xl">extension</span>
-<span class="font-label text-sm font-medium uppercase tracking-tight">ARSENAL</span>
+<span class="font-label text-sm font-medium uppercase tracking-tight">Core Modules</span>
 </a>
 <a class="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-[#363a3e] hover:text-white transition-all duration-150 group" href="#">
 <span class="material-symbols-outlined text-xl">hub</span>
-<span class="font-label text-sm font-medium uppercase tracking-tight">MYCELIUM</span>
+<span class="font-label text-sm font-medium uppercase tracking-tight">Network Mesh</span>
 </a>
 <a class="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-[#363a3e] hover:text-white transition-all duration-150 group" href="#">
 <span class="material-symbols-outlined text-xl">database</span>
-<span class="font-label text-sm font-medium uppercase tracking-tight">BUCKET</span>
+<span class="font-label text-sm font-medium uppercase tracking-tight">Storage Nodes</span>
 </a>
 <a class="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-[#363a3e] hover:text-white transition-all duration-150 group" href="#">
 <span class="material-symbols-outlined text-xl">shield</span>
-<span class="font-label text-sm font-medium uppercase tracking-tight">PATROL</span>
+<span class="font-label text-sm font-medium uppercase tracking-tight">Security Protocol</span>
 </a>
 <a class="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-[#363a3e] hover:text-white transition-all duration-150 group" href="#">
 <span class="material-symbols-outlined text-xl">admin_panel_settings</span>
-<span class="font-label text-sm font-medium uppercase tracking-tight">ROOT</span>
+<span class="font-label text-sm font-medium uppercase tracking-tight">System Admin</span>
 </a>
 </nav>
 <div class="p-6 mt-auto space-y-4">
 <button class="w-full py-3 bg-gradient-to-br from-[#aac7ff] to-[#0066cc] text-[#0c305f] font-headline font-bold text-xs tracking-widest uppercase hover:opacity-90 transition-all">
-                FIRE IT UP
+                INITIALIZE SEQUENCE
             </button>
 <div class="flex flex-col gap-2 pt-4 border-t border-outline-variant/10">
 <a class="flex items-center gap-2 text-[10px] text-gray-600 hover:text-[#ffdb3c] font-label uppercase tracking-widest" href="#">
@@ -174,27 +174,27 @@
 <!-- Main Content Canvas -->
 <main class="md:pl-64 pt-16 pb-8 min-h-screen">
 <div class="flex flex-col lg:flex-row h-[calc(100vh-64px)] overflow-hidden">
-<!-- TOOL SETUP Grid -->
+<!-- Tool Configuration Grid -->
 <section class="flex-grow overflow-y-auto p-8 space-y-8">
 <div class="flex justify-between items-end">
 <div>
-<h1 class="text-4xl font-headline font-medium tracking-tighter text-[#aac7ff] uppercase">TOOL SETUP</h1>
+<h1 class="text-4xl font-headline font-medium tracking-tighter text-[#aac7ff] uppercase">Tool Configuration</h1>
 <p class="text-gray-500 font-label text-xs tracking-[0.2em] mt-2">ACTIVE MODULE: CORE_EXPANSION_V4</p>
 </div>
 <div class="flex gap-4">
 <div class="flex items-center gap-2 px-4 py-2 bg-surface-container-low">
 <span class="w-1.5 h-1.5 bg-[#00C851] rounded-full"></span>
-<span class="text-[10px] font-label text-gray-400 tracking-widest uppercase">TOOLS ONLINE: 14/14</span>
+<span class="text-[10px] font-label text-gray-400 tracking-widest uppercase">Nodes: 14/14</span>
 </div>
 <div class="flex items-center gap-2 px-4 py-2 bg-surface-container-low">
 <span class="w-1.5 h-1.5 bg-[#ffdb3c] rounded-full"></span>
-<span class="text-[10px] font-label text-gray-400 tracking-widest uppercase">PING: 12ms</span>
+<span class="text-[10px] font-label text-gray-400 tracking-widest uppercase">Latency: 12ms</span>
 </div>
 </div>
 </div>
 <!-- Bento Grid of Tools -->
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-<!-- Tool Card 1: WEB SEARCH -->
+<!-- Tool Card 1: Google Search -->
 <div class="bg-[#181c20] p-6 group hover:bg-[#1c2024] transition-all cursor-pointer relative overflow-hidden">
 <div class="absolute top-0 right-0 p-2">
 <span class="material-symbols-outlined text-gray-700 group-hover:text-[#aac7ff] transition-colors">open_in_new</span>
@@ -204,7 +204,7 @@
 <span class="material-symbols-outlined text-3xl">search</span>
 </div>
 <div>
-<h3 class="font-headline text-lg font-bold text-on-surface uppercase tracking-tight">WEB SEARCH</h3>
+<h3 class="font-headline text-lg font-bold text-on-surface uppercase tracking-tight">Google Search</h3>
 <p class="text-[10px] font-label text-gray-500 tracking-widest">MODULE: WEB_INDEX_API</p>
 </div>
 </div>
@@ -220,7 +220,7 @@
 </label>
 </div>
 </div>
-<!-- Tool Card 2: MAPS -->
+<!-- Tool Card 2: Maps Engine -->
 <div class="bg-[#181c20] p-6 group hover:bg-[#1c2024] transition-all cursor-pointer relative overflow-hidden">
 <div class="absolute top-0 right-0 p-2">
 <span class="material-symbols-outlined text-gray-700 group-hover:text-[#aac7ff] transition-colors">open_in_new</span>
@@ -230,7 +230,7 @@
 <span class="material-symbols-outlined text-3xl">map</span>
 </div>
 <div>
-<h3 class="font-headline text-lg font-bold text-on-surface uppercase tracking-tight">MAPS</h3>
+<h3 class="font-headline text-lg font-bold text-on-surface uppercase tracking-tight">Maps Engine</h3>
 <p class="text-[10px] font-label text-gray-500 tracking-widest">MODULE: GEOSPATIAL_V2</p>
 </div>
 </div>
@@ -282,7 +282,7 @@
 <span class="material-symbols-outlined text-3xl">code_blocks</span>
 </div>
 <div>
-<h3 class="font-headline text-lg font-bold text-on-surface uppercase tracking-tight">SCRIPTING ENGINE</h3>
+<h3 class="font-headline text-lg font-bold text-on-surface uppercase tracking-tight">Logic Script</h3>
 <p class="text-[10px] font-label text-gray-500 tracking-widest">MODULE: PYTHON_ENV_311</p>
 </div>
 </div>
@@ -308,7 +308,7 @@
 <span class="material-symbols-outlined text-3xl">schema</span>
 </div>
 <div>
-<h3 class="font-headline text-lg font-bold text-on-surface uppercase tracking-tight">DENDRITIC</h3>
+<h3 class="font-headline text-lg font-bold text-on-surface uppercase tracking-tight">Semantics</h3>
 <p class="text-[10px] font-label text-gray-500 tracking-widest">MODULE: RELATIONAL_GRAPH</p>
 </div>
 </div>
@@ -327,7 +327,7 @@
 <!-- Add Tool -->
 <div class="border-2 border-dashed border-surface-container-high flex flex-col items-center justify-center p-6 hover:bg-surface-container-low/50 transition-all cursor-pointer group">
 <span class="material-symbols-outlined text-4xl text-gray-700 group-hover:text-[#aac7ff] mb-2">add_box</span>
-<span class="font-headline text-xs font-bold text-gray-600 group-hover:text-[#aac7ff] uppercase tracking-widest">INSTALL TOOL</span>
+<span class="font-headline text-xs font-bold text-gray-600 group-hover:text-[#aac7ff] uppercase tracking-widest">Install New Tool</span>
 </div>
 </div>
 <!-- System Summary Cards -->
@@ -350,12 +350,12 @@
 </div>
 </div>
 </section>
-<!-- Right Panel: Parameters & LIVE WIRE -->
+<!-- Right Panel: Parameters & Logs -->
 <aside class="w-full lg:w-96 bg-[#181c20] flex flex-col h-full border-none">
 <!-- Header -->
 <div class="p-6 border-b border-outline-variant/10">
-<h2 class="font-headline text-lg font-bold text-on-surface uppercase tracking-tight">TOOL SETTINGS</h2>
-<p class="text-[10px] font-label text-gray-500 tracking-widest mt-1">SELECTED: WEB SEARCH V2</p>
+<h2 class="font-headline text-lg font-bold text-on-surface uppercase tracking-tight">Tool Parameters</h2>
+<p class="text-[10px] font-label text-gray-500 tracking-widest mt-1">SELECTED: GOOGLE SEARCH V2</p>
 </div>
 <!-- Parameters Form -->
 <div class="p-6 space-y-8 overflow-y-auto">
@@ -394,13 +394,13 @@
 </div>
 </div>
 <button class="w-full py-4 bg-[#ffdb3c] text-on-secondary font-headline font-bold text-xs tracking-[0.2em] uppercase gold-glow hover:opacity-90 active:scale-[0.98] transition-all">
-                        TEST TOOL
+                        Test tool sequence
                     </button>
 </div>
-<!-- Technical LIVE WIRE -->
+<!-- Technical Logs -->
 <div class="mt-auto bg-[#0b0f12] p-4 h-64 flex flex-col">
 <div class="flex items-center justify-between mb-3">
-<span class="font-headline text-[10px] font-bold text-gray-500 uppercase tracking-widest">Execution LIVE WIRE</span>
+<span class="font-headline text-[10px] font-bold text-gray-500 uppercase tracking-widest">Execution logs</span>
 <span class="material-symbols-outlined text-sm text-gray-700">terminal</span>
 </div>
 <div class="flex-grow overflow-y-auto font-label text-[10px] space-y-1.5 text-gray-500 selection:bg-surface-bright">
@@ -418,7 +418,7 @@
 </div>
 <div class="flex gap-3">
 <span class="text-[#ffdb3c] flex-shrink-0">[14:02:15]</span>
-<span class="font-['JetBrains_Mono']">WARN: PING SPIKE DETECTED (124ms)</span>
+<span class="font-['JetBrains_Mono']">WARN: LATENCY SPIKE DETECTED (124ms)</span>
 </div>
 <div class="flex gap-3">
 <span class="text-[#00C851] flex-shrink-0">[14:02:16]</span>
@@ -439,13 +439,13 @@
 <span class="font-['JetBrains_Mono'] text-[10px] text-gray-600 uppercase tracking-widest">PEACOCK ENGINE v4.2.0-STABLE</span>
 <div class="flex items-center gap-2">
 <span class="w-1.5 h-1.5 bg-[#00C851] rounded-full"></span>
-<span class="font-['JetBrains_Mono'] text-[10px] text-[#00C851] uppercase tracking-widest">TOOLS: READY</span>
+<span class="font-['JetBrains_Mono'] text-[10px] text-[#00C851] uppercase tracking-widest">SYSTEM_OPTIMAL</span>
 </div>
 </div>
 <div class="flex gap-6">
 <a class="font-['JetBrains_Mono'] text-[10px] text-gray-600 hover:text-[#ffdb3c] uppercase tracking-widest transition-colors" href="#">SYS_LOG</a>
 <a class="font-['JetBrains_Mono'] text-[10px] text-gray-600 hover:text-[#ffdb3c] uppercase tracking-widest transition-colors" href="#">ERR_MONITOR</a>
-<a class="font-['JetBrains_Mono'] text-[10px] text-[#ffdb3c] font-bold uppercase tracking-widest" href="#">API INTEL</a>
+<a class="font-['JetBrains_Mono'] text-[10px] text-[#ffdb3c] font-bold uppercase tracking-widest" href="#">API_DOCS</a>
 </div>
 </footer>
 </body></html>

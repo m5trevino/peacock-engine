@@ -18,18 +18,13 @@ from pydantic_ai.models.google import GoogleModel
 from pydantic_ai.providers.groq import GroqProvider
 from pydantic_ai.providers.openai import OpenAIProvider
 from pydantic_ai.providers.google import GoogleProvider
-from app.core.key_manager import GroqPool, GooglePool, DeepSeekPool, MistralPool, KeyPool
+from app.core.key_manager import KeyAsset, KeyPool, GroqPool, GooglePool, DeepSeekPool, MistralPool
 from app.utils.formatter import CLIFormatter, Colors
 from app.utils.logger import HighSignalLogger
 from app.config import MODEL_REGISTRY
 
-# Import token counters
-from app.utils.gemini_token_counter import GeminiTokenCounter
-from app.utils.groq_token_counter import GroqTokenCounter
-
-# Initialize token counters
-gemini_counter = GeminiTokenCounter()
-groq_counter = GroqTokenCounter()
+# Import unified token counter
+from app.utils.token_counter import count_tokens
 
 # Proxy / Tunnel Setup
 tunnel_enabled = os.getenv("PEACOCK_TUNNEL", "false").lower() == "true"
@@ -101,22 +96,16 @@ class ThrottleController:
 
 def count_tokens_for_strike(gateway: str, model_id: str, prompt: str) -> int:
     """
-    Count tokens for a strike before sending to provider.
+    Count tokens for a strike using the unified counter.
     Returns estimated token count.
     """
     try:
-        if gateway == "google":
-            return gemini_counter.count_tokens_offline(prompt, model_id)
-        elif gateway == "groq":
-            return groq_counter.count_tokens_in_prompt(prompt, model_id)
-        elif gateway in ["deepseek", "mistral"]:
-            # Use cl100k_base as approximation
-            return groq_counter.count_tokens_in_prompt(prompt, "llama-3.3-70b-versatile")
-        else:
-            # Default approximation
-            return len(prompt.split()) * 1.3
-    except Exception:
+        provider = "gemini" if gateway == "google" else "groq"
+        return count_tokens(prompt, provider=provider, model=model_id)
+    except Exception as e:
         # Fallback: rough approximation
+        if os.getenv("PEACOCK_VERBOSE") == "true":
+            print(f"[!] Token counting error: {e}")
         return len(prompt.split()) * 1.3
 
 
@@ -198,8 +187,16 @@ def _build_dynamic_schema(schema_def: dict) -> type[BaseModel]:
         fields[field_name] = (field_type, ...)
     
     return create_model(schema_def.get('name', 'DynamicModel'), **fields)
-
-
+def _calculate_cost(model_id: str, usage: dict) -> float:
+    """Calculate the cost of a strike based on model rates."""
+    from app.config import MODEL_REGISTRY
+    model_cfg = next((m for m in MODEL_REGISTRY if m.id == model_id), None)
+    if not model_cfg:
+        return 0.0
+    
+    in_tokens = usage.get("prompt_tokens", 0)
+    out_tokens = usage.get("completion_tokens", 0)
+    
     cost = (in_tokens / 1_000_000 * model_cfg.input_price_1m) + \
            (out_tokens / 1_000_000 * model_cfg.output_price_1m)
     return round(cost, 6)
@@ -228,10 +225,11 @@ def _inject_file_context(prompt: str, files: List[str]) -> str:
     return context + prompt
 
 
-async def execute_strike(gateway: str, model_id: str, prompt: str, temp: float, 
+async def execute_strike(gateway: str, model_id: str, prompt: str, 
                          format_mode: Optional[str] = None, response_format: Optional[dict] = None,
                          dynamic_schema: Optional[dict] = None, is_manual: bool = False,
-                         timeout: Optional[int] = None, files: Optional[List[str]] = None):
+                         timeout: Optional[int] = None, files: Optional[List[str]] = None,
+                         key_override: Optional[str] = None, **gen_params):
     """
     Execute a strike against an AI model with built-in Rev Limiter.
     """
@@ -245,6 +243,21 @@ async def execute_strike(gateway: str, model_id: str, prompt: str, temp: float,
     if os.getenv("PEACOCK_VERBOSE") == "true":
         print(f"[Tokens] Pre-count estimate: {estimated_tokens}")
     
+    # Construct ModelSettings
+    # Map gen_params to pydantic-ai ModelSettings keys
+    model_settings = {
+        "temperature": gen_params.get("temperature", 0.7),
+        "top_p": gen_params.get("top_p"),
+        "top_k": gen_params.get("top_k"),
+        "max_tokens": gen_params.get("max_tokens"),
+        "seed": gen_params.get("seed"),
+        "presence_penalty": gen_params.get("presence_penalty"),
+        "frequency_penalty": gen_params.get("frequency_penalty"),
+        "stop_sequences": gen_params.get("stop_sequences"),
+    }
+    # Remove None values to avoid overriding provider defaults if not requested
+    model_settings = {k: v for k, v in model_settings.items() if v is not None}
+
     result_type = str
     if format_mode == "eagle_scaffold":
         result_type = EagleScaffold
@@ -286,24 +299,31 @@ async def execute_strike(gateway: str, model_id: str, prompt: str, temp: float,
 
         try:
             # Resolve Provider & Key
+            if key_override:
+                asset = KeyAsset(label="AUDIT_OVERRIDE", account="AUDIT_OVERRIDE", key=key_override)
+            
             if gateway == "groq":
                 pool = GroqPool
-                asset = pool.get_next()
+                if not key_override:
+                    asset = pool.get_next()
                 provider = GroqProvider(api_key=asset.key, http_client=active_client)
                 model = GroqModel(model_id, provider=provider)
             elif gateway == "deepseek":
                 pool = DeepSeekPool
-                asset = pool.get_next()
+                if not key_override:
+                    asset = pool.get_next()
                 provider = OpenAIProvider(base_url="https://api.deepseek.com", api_key=asset.key, http_client=active_client)
                 model = OpenAIModel(model_id, provider=provider)
             elif gateway == "mistral":
                 pool = MistralPool
-                asset = pool.get_next()
+                if not key_override:
+                    asset = pool.get_next()
                 provider = OpenAIProvider(base_url="https://api.mistral.ai/v1", api_key=asset.key, http_client=active_client)
                 model = OpenAIModel(model_id, provider=provider)
             elif gateway == "google":
                 pool = GooglePool
-                asset = pool.get_next()
+                if not key_override:
+                    asset = pool.get_next()
                 clean_model_id = model_id.replace("models/", "")
                 provider = GoogleProvider(api_key=asset.key, http_client=active_client)
                 model = GoogleModel(clean_model_id, provider=provider)
@@ -312,7 +332,7 @@ async def execute_strike(gateway: str, model_id: str, prompt: str, temp: float,
 
             # Execute
             agent = Agent(model, output_type=result_type)
-            result = await agent.run(prompt, model_settings={'temperature': temp})
+            result = await agent.run(prompt, model_settings=model_settings)
             content = result.output.model_dump() if hasattr(result.output, "model_dump") else result.output
             
             # Resolve Usage
@@ -344,13 +364,12 @@ async def execute_strike(gateway: str, model_id: str, prompt: str, temp: float,
             KeyPool.record_usage(gateway, asset.account, usage)
             RateLimitMeter.update(gateway, usage['total_tokens'])
             
-            tag = HighSignalLogger.log_strike(gateway, model_id, prompt, str(content), usage, temp, cost, is_success=True, is_manual=is_manual)
+            # Use requested temperature for logging
+            active_temp = model_settings.get("temperature", 0.7)
+            tag = HighSignalLogger.log_strike(gateway, model_id, prompt, str(content), usage, active_temp, cost, is_success=True, is_manual=is_manual)
             duration = time.time() - start_time
             meter = RateLimitMeter.get_meter(gateway, model_id)
-            if was_throttled:
-                meter += f" {Colors.YELLOW}[REV LIMITED]{Colors.RESET}"
-                
-            CLIFormatter.strike_success(gateway, asset.account, model_id, usage['prompt_tokens'], usage['completion_tokens'], duration, format_mode, temp=temp, tag=tag, cost=cost, meter=meter)
+            CLIFormatter.strike_success(gateway, asset.account, model_id, usage['prompt_tokens'], usage['completion_tokens'], duration, format_mode, temp=active_temp, tag=tag, cost=cost, meter=meter)
             
             return {
                 "content": content, 
@@ -380,14 +399,15 @@ async def execute_strike(gateway: str, model_id: str, prompt: str, temp: float,
 
     # If we got here, all attempts failed
     usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
-    tag = HighSignalLogger.log_strike(gateway, model_id, prompt, "", usage, temp, 0.0, is_success=False, is_manual=is_manual, error=str(last_error))
-    CLIFormatter.strike_error(gateway, "RETRY_EXHAUSTED", str(last_error), model_id, temp=temp, tag=tag)
+    active_err_temp = model_settings.get("temperature", 0.7)
+    tag = HighSignalLogger.log_strike(gateway, model_id, prompt, "", usage, active_err_temp, 0.0, is_success=False, is_manual=is_manual, error=str(last_error))
+    CLIFormatter.strike_error(gateway, "RETRY_EXHAUSTED", str(last_error), model_id, temp=active_err_temp, tag=tag)
     raise last_error
 
 
-async def execute_streaming_strike(gateway: str, model_id: str, prompt: str, temp: float, 
+async def execute_streaming_strike(gateway: str, model_id: str, prompt: str,
                                    is_manual: bool = True, timeout: Optional[int] = None, 
-                                   files: Optional[List[str]] = None):
+                                   files: Optional[List[str]] = None, **gen_params):
     """
     Execute a streaming strike using Server-Sent Events (SSE).
     """
@@ -401,6 +421,18 @@ async def execute_streaming_strike(gateway: str, model_id: str, prompt: str, tem
 
     # Throttling
     await ThrottleController.wait_if_needed(gateway, model_id)
+
+    model_settings = {
+        "temperature": gen_params.get("temperature", 0.7),
+        "top_p": gen_params.get("top_p"),
+        "top_k": gen_params.get("top_k"),
+        "max_tokens": gen_params.get("max_tokens"),
+        "seed": gen_params.get("seed"),
+        "presence_penalty": gen_params.get("presence_penalty"),
+        "frequency_penalty": gen_params.get("frequency_penalty"),
+        "stop_sequences": gen_params.get("stop_sequences"),
+    }
+    model_settings = {k: v for k, v in model_settings.items() if v is not None}
 
     # odluce which HTTP client to use
     active_client = http_client
@@ -439,7 +471,7 @@ async def execute_streaming_strike(gateway: str, model_id: str, prompt: str, tem
 
         agent = Agent(model)
         
-        async with agent.run_stream(prompt, model_settings={'temperature': temp}) as result:
+        async with agent.run_stream(prompt, model_settings=model_settings) as result:
             async for chunk in result.stream_text():
                 yield {"type": "content", "content": chunk}
             
@@ -460,7 +492,8 @@ async def execute_streaming_strike(gateway: str, model_id: str, prompt: str, tem
             KeyPool.record_usage(gateway, asset.account, usage)
             RateLimitMeter.update(gateway, usage['total_tokens'])
             
-            tag = HighSignalLogger.log_strike(gateway, model_id, prompt, "STREAMS_COMPLETE", usage, temp, cost, is_success=True, is_manual=is_manual)
+            active_temp = model_settings.get("temperature", 0.7)
+            tag = HighSignalLogger.log_strike(gateway, model_id, prompt, "STREAMS_COMPLETE", usage, active_temp, cost, is_success=True, is_manual=is_manual)
             duration = time.time() - start_time
             
             yield {
@@ -482,7 +515,7 @@ async def execute_streaming_strike(gateway: str, model_id: str, prompt: str, tem
             await temp_client.aclose()
 
 
-async def execute_precision_strike(gateway: str, model_id: str, prompt: str, target_account: str, temp: float, is_manual: bool = True, timeout: Optional[int] = None):
+async def execute_precision_strike(gateway: str, model_id: str, prompt: str, target_account: str, is_manual: bool = True, timeout: Optional[int] = None, **gen_params):
     """
     PERFORM A PRECISION STRIKE.
     """
@@ -531,9 +564,21 @@ async def execute_precision_strike(gateway: str, model_id: str, prompt: str, tar
         provider = OpenAIProvider(base_url="https://api.mistral.ai/v1", api_key=asset.key, http_client=active_client)
         model = OpenAIModel(model_id, provider=provider)
 
+    model_settings = {
+        "temperature": gen_params.get("temperature", 0.7),
+        "top_p": gen_params.get("top_p"),
+        "top_k": gen_params.get("top_k"),
+        "max_tokens": gen_params.get("max_tokens"),
+        "seed": gen_params.get("seed"),
+        "presence_penalty": gen_params.get("presence_penalty"),
+        "frequency_penalty": gen_params.get("frequency_penalty"),
+        "stop_sequences": gen_params.get("stop_sequences"),
+    }
+    model_settings = {k: v for k, v in model_settings.items() if v is not None}
+
     agent = Agent(model, output_type=str)
     try:
-        result = await agent.run(prompt, model_settings={'temperature': temp})
+        result = await agent.run(prompt, model_settings=model_settings)
         usage_obj = result.usage()
         usage = {
             "prompt_tokens": usage_obj.request_tokens or 0,
@@ -551,9 +596,10 @@ async def execute_precision_strike(gateway: str, model_id: str, prompt: str, tar
         cost = _calculate_cost(model_id, usage)
         KeyPool.record_usage(gateway, asset.account, usage)
         
-        tag = HighSignalLogger.log_strike(gateway, model_id, prompt, result.output, usage, temp, cost, is_success=True, is_manual=is_manual)
+        active_temp = model_settings.get("temperature", 0.7)
+        tag = HighSignalLogger.log_strike(gateway, model_id, prompt, result.output, usage, active_temp, cost, is_success=True, is_manual=is_manual)
         duration = time.time() - start_time
-        CLIFormatter.strike_success(gateway, asset.account, model_id, usage['prompt_tokens'], usage['completion_tokens'], duration, temp=temp, tag=tag, cost=cost)
+        CLIFormatter.strike_success(gateway, asset.account, model_id, usage['prompt_tokens'], usage['completion_tokens'], duration, temp=active_temp, tag=tag, cost=cost)
 
         return {
             "content": result.output,
@@ -563,8 +609,9 @@ async def execute_precision_strike(gateway: str, model_id: str, prompt: str, tar
             "cost": cost
         }
     except Exception as e:
-        tag = HighSignalLogger.log_strike(gateway, model_id, prompt, "", {"prompt_tokens":0, "completion_tokens":0, "total_tokens":0}, temp, 0.0, is_success=False, is_manual=is_manual, error=str(e))
-        CLIFormatter.strike_error(gateway, asset.account, str(e), model_id, temp=temp, tag=tag)
+        active_err_temp = model_settings.get("temperature", 0.7)
+        tag = HighSignalLogger.log_strike(gateway, model_id, prompt, "", {"prompt_tokens":0, "completion_tokens":0, "total_tokens":0}, active_err_temp, 0.0, is_success=False, is_manual=is_manual, error=str(e))
+        CLIFormatter.strike_error(gateway, asset.account, str(e), model_id, temp=active_err_temp, tag=tag)
         raise e
     finally:
         if temp_client:

@@ -6,7 +6,13 @@ Fancy output formatting with gateway-specific borders and colors.
 import os
 import random
 import time
-from typing import Optional, Dict, Tuple
+from typing import Optional, Dict, Tuple, List
+from rich.console import Console
+from rich.text import Text
+from rich.panel import Panel
+
+# Initialize Rich Console
+console = Console()
 
 # ANSI Color Codes
 class Colors:
@@ -74,6 +80,46 @@ GATEWAY_BORDERS = {
     }
 }
 
+# ARSENAL ASCII ART BLOCKS
+ARSENAL_BLOCKS = {
+    "groq": [
+        "  ███████ ████████   ██████   ████████",
+        " ███░░███░░███░░███ ███░░███ ███░░███ ",
+        "░███ ░███ ░███ ░░░ ░███ ░███░███ ░███ ",
+        "░███ ░███ ░███     ░███ ░███░███ ░███ ",
+        "░░███████ █████    ░░██████ ░░███████ ",
+        " ░░░░░███░░░░░      ░░░░░░   ░░░░░███ ",
+        " ███ ░███                        ░███ ",
+        "░░██████                         █████"
+    ],
+    "google": [
+        "  #####   #####   #####   ##### ####     ######  ",
+        " ###  ## ###  ## ###  ## ###  ## ###     ###  ## ",
+        " ###     ###  ## ###  ## ###     ###     ###     ",
+        " ### ### ###  ## ###  ## ### ### ###     #####   ",
+        " ###  ## ###  ## ###  ## ###  ## ###     ###     ",
+        " ###  ## ###  ## ###  ## ###  ## ###   # ###  ## ",
+        "  #####   #####   #####   #####  ####### ######  "
+    ],
+    "deepseek": [
+        " ######  ####### ####### ######   #####  ####### ####### #   # ",
+        " #     # #       #       #     # #     # #       #       #  #  ",
+        " #     # #       #       #     # #       #       #       # #   ",
+        " #     # #####   #####   ######   #####  #####   #####   ##    ",
+        " #     # #       #       #             # #       #       # #   ",
+        " #     # #       #       #       #     # #       #       #  #  ",
+        " ######  ####### ####### #        #####  ####### ####### #   # "
+    ],
+    "mistral": [
+        " #     # ###  #####  ####### ######     #    #      ",
+        " ##   ##  #  #     #    #    #     #   # #   #      ",
+        " # # # #  #  #          #    #     #  #   #  #      ",
+        " #  #  #  #   #####     #    ######  #     # #      ",
+        " #     #  #        #    #    #   #   ####### #      ",
+        " #     #  #  #     #    #    #    #  #     # #      ",
+        " #     # ###  #####     #    #     # #     # #######"
+    ]
+}
 
 class CLIFormatter:
     """Format CLI output with fancy borders and colors."""
@@ -89,71 +135,95 @@ class CLIFormatter:
                        duration: Optional[float] = None, format_mode: Optional[str] = None,
                        temp: Optional[float] = None, tag: Optional[str] = None, cost: float = 0.0,
                        rescue_note: Optional[str] = None, meter: Optional[str] = None):
-        """Print a successful strike with fancy formatting."""
+        """Print a successful strike with the NEBULA-SUCCESS industrial frame."""
         style = CLIFormatter.get_gateway_style(gateway)
-        top, bottom = style["success"]
-        color = style["color"]
+        gw_color = style["color"].replace("\033[", "").replace("m", "") # Strip to basic for rich if needed
+        # Mapping ANSI to Rich colors roughly
+        color_map = {"96": "cyan", "94": "blue", "92": "green", "95": "magenta", "97": "white"}
+        base_color = color_map.get(gw_color, "white")
         
         total_tokens = prompt_tokens + completion_tokens
         duration_str = f"{duration:.2f}s" if duration else "N/A"
         format_str = format_mode or "text"
+        tag_str = tag if tag else "PEA-XXXX"
         
-        # Build the output
-        now_str = time.strftime("%Y-%m-%d %H:%M:%S")
-        lines = [
-            f"{color}{top}{Colors.RESET}",
-            f"{color}│{Colors.BRIGHT_GREEN} ✦ STRIKE SUCCESS {color}│{Colors.RESET} {f'{Colors.DIM}[{tag}]{Colors.RESET}' if tag else ''}",
-            f"{color}├{'─' * (len(top) - 2)}┤{Colors.RESET}",
-            f"{color}│{Colors.RESET} Time:       {Colors.DIM}{now_str}{Colors.RESET}",
-            f"{color}│{Colors.RESET} Gateway:    {Colors.BOLD}{gateway.upper()}{Colors.RESET}",
-            f"{color}│{Colors.RESET} Model:      {model[:35]}{Colors.RESET}",
-            f"{color}│{Colors.RESET} Account:    {Colors.YELLOW}{account}{Colors.RESET}",
-            f"{color}│{Colors.RESET} Temp:       {Colors.BOLD}{temp}{Colors.RESET}",
-            f"{color}│{Colors.RESET} Format:     {format_str}{Colors.RESET}",
-            f"{color}│{Colors.RESET} Tokens:     {Colors.CYAN}{prompt_tokens:,}{Colors.RESET} in / {Colors.CYAN}{completion_tokens:,}{Colors.RESET} out ({total_tokens:,} total){Colors.RESET}",
-            f"{color}│{Colors.RESET} Cost:       {Colors.GREEN}${cost:.6f}{Colors.RESET}",
-            f"{color}│{Colors.RESET} Duration:   {Colors.CYAN}{duration_str}{Colors.RESET}",
+        # NEBULA-SUCCESS Frame with Gradient Logic
+        # 1. ░█▀▀░▀█▀░█▀▄░▀█▀░█░█░█▀▀
+        # 2. ░▀▀█░░█░░█▀▄░░█░░█▀▄░█▀▀
+        # 3. ░▀▀▀░░▀░░▀░▀░▀▀▀░▀░▀░▀▀▀
+        
+        success_block = [
+            f"  ░█▀▀░▀█▀░█▀▄░▀█▀░█░█░█▀▀     ___ _   _  ___ ___ ___  ___ ___ ",
+            f"  ░▀▀█░░█░░█▀▄░░█░░█▀▄░█▀▀    / __| | | |/ __/ __/ _ \\/ __/ __|",
+            f"  ░▀▀▀░░▀░░▀░▀░▀▀▀░▀░▀░▀▀▀    \\__ \\ |_| | (_| (_|  __/\\__ \\__ \\",
+            f"                                      |___/\\__,_|\\___\\___\\___||___/___/"
         ]
+
+        # Build Frame
+        console.print()
+        console.print(Text(".:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.", style=f"dim {base_color}"))
+        console.print(Text(f":: [ SUCCESS ] :::::::::::::::::::::::::::::::::::::::::::::::: [{tag_str}] ::", style=f"bold {base_color}"))
+        console.print(Text(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::", style=f"dim {base_color}"))
+        
+        # Success Alpha Block (Greenish Gradient)
+        colors = ["green3", "spring_green3", "spring_green2", "spring_green1"]
+        for i, line in enumerate(success_block):
+            console.print(Text(line, style=colors[i % len(colors)]))
+            
+        console.print(Text(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::", style=f"dim {base_color}"))
+        console.print(Text(f"  ::  GATEWAY : {gateway.upper():<58} ::", style=f"bold {base_color}"))
+        console.print(Text(f"  ::  MODEL   : {model[:59]:<58} ::", style=f"bold {base_color}"))
+        
+        stats_line = f"TOKENS  : {prompt_tokens} in / {completion_tokens} out ({total_tokens} total) | DURATION: {duration_str}"
+        console.print(Text(f"  ::  {stats_line:<70} ::", style=f"{base_color}"))
         
         if meter:
-            lines.append(f"{color}│{Colors.RESET} {meter}")
-            
+             console.print(Text(f"  ::  METER   : {meter:<58} ::", style="dim cyan"))
         if rescue_note:
-            lines.append(f"{color}│{Colors.RESET} {Colors.BRIGHT_YELLOW}RESCUE:     {rescue_note}{Colors.RESET}")
-            
-        lines.append(f"{color}{bottom}{Colors.RESET}")
-        
-        print("\n" + "\n".join(lines) + "\n")
+             console.print(Text(f"  ::  RESCUE  : {rescue_note:<58} ::", style="bold yellow"))
+             
+        console.print(Text("':::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'", style=f"dim {base_color}"))
+        console.print()
 
     @staticmethod
     def strike_error(gateway: str, account: str, error: str, model: Optional[str] = None, temp: Optional[float] = None, tag: Optional[str] = None):
-        """Print a failed strike with red error formatting."""
-        style = CLIFormatter.get_gateway_style(gateway)
-        top, bottom = style["error"]
+        """Print a failed strike with the VAULT-FAILURE industrial frame."""
+        tag_str = tag if tag else "PEA-XXXX"
         
-        now_str = time.strftime("%Y-%m-%d %H:%M:%S")
-        # All red for errors
-        lines = [
-            f"{Colors.BRIGHT_RED}{top}{Colors.RESET}",
-            f"{Colors.BRIGHT_RED}│ ✗ STRIKE FAILED {Colors.RESET} {f'{Colors.DIM}[{tag}]{Colors.RESET}' if tag else ''}",
-            f"{Colors.BRIGHT_RED}├{'─' * (len(top) - 2)}┤{Colors.RESET}",
-            f"{Colors.BRIGHT_RED}│{Colors.RESET} Time:    {Colors.DIM}{now_str}{Colors.RESET}",
-            f"{Colors.BRIGHT_RED}│{Colors.RESET} Gateway: {gateway.upper()}",
+        # VAULT-FAILURE Frame with Gradient Logic
+        error_block = [
+            f"  ░█▀▀░▀█▀░█▀▄░▀█▀░█░█░█▀▀      ░█▀▀░█▀█░▀█▀░█░░░█▀▀░█▀▄",
+            f"  ░▀▀█░░█░░█▀▄░░█░░█▀▄░█▀▀      ░█▀▀░█▀█░░█░░█░░░█▀▀░█░█",
+            f"  ░▀▀▀░░▀░░▀░▀░▀▀▀░▀░▀░▀▀▀      ░▀░░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀░"
         ]
+
+        console.print()
+        console.print(Text("/#############################################################################\\", style="bold red"))
+        console.print(Text(f"|# [!] CRITICAL STRIKE FAILURE                                   [{tag_str}]  #|", style="bold white on red"))
+        console.print(Text("|#############################################################################|", style="bold red"))
+        console.print(Text("|                                                                             |", style="red"))
         
+        # Error Block (Reddish Gradient)
+        colors = ["red", "bright_red", "orange_red1"]
+        for i, line in enumerate(error_block):
+            console.print(Text("|" + line.ljust(77) + "|", style=colors[i % len(colors)]))
+            
+        console.print(Text("|                                                                             |", style="red"))
+        console.print(Text("|#############################################################################|", style="bold red"))
+        console.print(Text(f"|  GATEWAY :: {gateway.upper():<64} |", style="bold white"))
+        console.print(Text(f"|  ERROR   :: {account:<66} |", style="yellow"))
+        
+        # Handle multi-line error details
+        detail = error
+        if len(detail) > 63:
+            detail = detail[:60] + "..."
+        console.print(Text(f"|  DETAIL  :: {detail:<64} |", style="dim white"))
         
         if model:
-            lines.append(f"{Colors.BRIGHT_RED}│{Colors.RESET} Model:   {model}")
-        if temp is not None:
-            lines.append(f"{Colors.BRIGHT_RED}│{Colors.RESET} Temp:    {Colors.DIM}{temp}{Colors.RESET}")
-        
-        lines.extend([
-            f"{Colors.BRIGHT_RED}│{Colors.RESET} Account: {account}",
-            f"{Colors.BRIGHT_RED}│{Colors.RESET} Error:   {Colors.BRIGHT_RED}{error}{Colors.RESET}",
-            f"{Colors.BRIGHT_RED}{bottom}{Colors.RESET}"
-        ])
-        
-        print("\n" + "\n".join(lines) + "\n")
+            console.print(Text(f"|  MODEL   :: {model:<64} |", style="dim cyan"))
+            
+        console.print(Text("\\#############################################################################/", style="bold red"))
+        console.print()
     
     @staticmethod
     def debug_request(model: str, gateway: str, endpoint: str = "/v1/strike"):
@@ -161,6 +231,48 @@ class CLIFormatter:
         # The user requested this to be removed. We'll make it completely silent.
         pass
     
+    @staticmethod
+    def display_key_arsenal(gateway: str, keys: List[any]):
+        """Render a high-fidelity 'Arsenal' key display for a gateway."""
+        style = CLIFormatter.get_gateway_style(gateway)
+        gw_color = style["color"].replace("\033[", "").replace("m", "") 
+        color_map = {"96": "cyan", "94": "blue", "92": "green", "95": "magenta", "97": "white"}
+        base_color = color_map.get(gw_color, "white")
+        
+        # 1. Header ASCII (Arsenal Block)
+        block = ARSENAL_BLOCKS.get(gateway.lower(), [])
+        if block:
+            console.print()
+            # Success Alpha Block Gradient (Matching gateway)
+            step = max(1, len(block) // 3)
+            # Use gateway color for most, but keep it punchy
+            for i, line in enumerate(block):
+                console.print(Text(line, style=f"bold {base_color}"))
+        
+        # 2. Key Table (Hardened Box Drawing)
+        if not keys:
+            console.print(Text(f"    [!] NO {gateway.upper()} KEYS ENROLLED.", style="bold red"))
+            return
+
+        console.print(Text("    ╔═══╦══════════════╦═════════════╗", style=f"dim {base_color}"))
+        
+        for i, asset in enumerate(keys):
+            idx = str(i + 1).zfill(1)
+            account = asset.account[:12]
+            masked = f"{asset.key[:8]}..."
+            
+            console.print(Text(f"    ║ {idx:>1} ║ {account:<12} ║ {masked:<11} ║", style=f"bold {base_color}"))
+            
+            if i < len(keys) - 1:
+                # Spacer
+                if (i + 1) % 3 == 0:
+                     console.print(Text("    ║═══╣══════════════╣═════════════║", style=f"dim {base_color}"))
+                else:
+                     console.print(Text("    ╠═══╬══════════════╬═════════════╣", style=f"dim {base_color}"))
+        
+        console.print(Text("    ╚═══╩══════════════╩═════════════╝", style=f"dim {base_color}"))
+        console.print()
+
     @staticmethod
     def key_usage_header(gateway: str):
         """Print header for key usage display."""

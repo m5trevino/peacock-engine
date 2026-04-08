@@ -28,7 +28,15 @@ class ChatRequest(BaseModel):
     files: Optional[List[str]] = Field(default=None, description="Optional list of file paths to include as context")
     format: Literal["text", "json", "pydantic"] = Field(default="text", description="Output format")
     schema: Optional[Dict[str, Any]] = Field(default=None, description="Schema definition for 'pydantic' format")
-    temp: float = Field(default=0.7, ge=0.0, le=2.0, description="Temperature for generation")
+    temp: float = Field(default=0.7, ge=0.0, le=2.0, description="Temperature for generation (Compatibility shorthand)")
+    temperature: Optional[float] = Field(default=None, ge=0.0, le=2.0, description="Temperature for generation")
+    top_p: Optional[float] = Field(default=None, ge=0.0, le=1.0, description="Nucleus sampling threshold")
+    top_k: Optional[int] = Field(default=None, ge=0, description="Top-K sampling")
+    max_tokens: Optional[int] = Field(default=None, ge=1, description="Maximum tokens to generate")
+    seed: Optional[int] = Field(default=None, description="Deterministic seed")
+    presence_penalty: Optional[float] = Field(default=None, ge=-2.0, le=2.0, description="Presence penalty")
+    frequency_penalty: Optional[float] = Field(default=None, ge=-2.0, le=2.0, description="Frequency penalty")
+    stop: Optional[List[str]] = Field(default=None, description="Stop sequences")
     key: Optional[str] = Field(default=None, description="Optional: specific key account to use")
 
 
@@ -128,6 +136,18 @@ async def chat(request: ChatRequest):
         format_mode = "json"
     
     try:
+        # Collect advanced generation parameters
+        gen_params = {
+            "temperature": request.temperature if request.temperature is not None else request.temp,
+            "top_p": request.top_p,
+            "top_k": request.top_k,
+            "max_tokens": request.max_tokens,
+            "seed": request.seed,
+            "presence_penalty": request.presence_penalty,
+            "frequency_penalty": request.frequency_penalty,
+            "stop_sequences": request.stop,
+        }
+
         # If specific key requested, use precision strike
         if request.key:
             from app.core.striker import execute_precision_strike
@@ -136,9 +156,9 @@ async def chat(request: ChatRequest):
                 model_id=request.model,
                 prompt=final_prompt,
                 target_account=request.key,
-                temp=request.temp,
                 is_manual=False,
-                timeout=request.timeout
+                timeout=request.timeout,
+                **gen_params
             )
         else:
             # Regular strike
@@ -146,11 +166,11 @@ async def chat(request: ChatRequest):
                 gateway=model_config.gateway,
                 model_id=request.model,
                 prompt=final_prompt,
-                temp=request.temp,
                 format_mode=format_mode,
                 dynamic_schema=request.schema if request.format == "pydantic" else None,
                 is_manual=False,
-                timeout=request.timeout
+                timeout=request.timeout,
+                **gen_params
             )
         
         duration_ms = int((time.time() - start_time) * 1000)
@@ -238,9 +258,16 @@ async def chat_stream(request: ChatRequest):
                 gateway=model_config.gateway,
                 model_id=request.model,
                 prompt=request.prompt,
-                temp=request.temp,
                 timeout=request.timeout,
-                files=request.files
+                files=request.files,
+                temperature=request.temperature if request.temperature is not None else request.temp,
+                top_p=request.top_p,
+                top_k=request.top_k,
+                max_tokens=request.max_tokens,
+                seed=request.seed,
+                presence_penalty=request.presence_penalty,
+                frequency_penalty=request.frequency_penalty,
+                stop_sequences=request.stop
             ):
                 yield f"data: {json.dumps(chunk)}\n\n"
         except Exception as e:

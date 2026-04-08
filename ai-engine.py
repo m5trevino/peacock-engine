@@ -8,6 +8,7 @@ import sys
 import asyncio
 import argparse
 import json
+import time
 from typing import List, Optional
 from pathlib import Path
 from dotenv import load_dotenv
@@ -50,7 +51,10 @@ def show_models():
     console.print(table)
 
 def show_keys():
-    """List all loaded API keys."""
+    """List all loaded API keys with Arsenal UI."""
+    from app.core.key_manager import GroqPool, GooglePool, DeepSeekPool, MistralPool
+    from app.utils.formatter import CLIFormatter
+
     pools = [
         ("GROQ", GroqPool),
         ("GOOGLE", GooglePool),
@@ -59,18 +63,8 @@ def show_keys():
     ]
     
     for name, pool in pools:
-        if not pool.deck: continue
-        table = Table(title=f"🔑 {name} KEY POOL")
-        table.add_column("#", style="dim")
-        table.add_column("Account / Label", style="yellow")
-        table.add_column("Key (Masked)", style="cyan")
-        
-        for i, asset in enumerate(pool.deck):
-            masked = f"{asset.key[:8]}..."
-            table.add_row(str(i+1).zfill(2), asset.account, masked)
-        
-        console.print(table)
-        print()
+        if pool.deck:
+            CLIFormatter.display_key_arsenal(name.lower(), pool.deck)
 
 async def run_manual_strike(args):
     """Execute a strike from the CLI."""
@@ -113,12 +107,24 @@ async def run_manual_strike(args):
 
         console.print(f"[bold blue]⚡ INITIATING MANUAL STRIKE...[/bold blue]")
         
+        # Collect advanced generation parameters from CLI
+        gen_params = {
+            "temperature": args.temp,
+            "top_p": args.top_p,
+            "top_k": args.top_k,
+            "max_tokens": args.max_tokens,
+            "seed": args.seed,
+            "presence_penalty": args.presence_penalty,
+            "frequency_penalty": args.frequency_penalty,
+            "stop_sequences": args.stop,
+        }
+
         result = await execute_strike(
             gateway=model_cfg.gateway,
             model_id=args.model,
             prompt=prompt,
-            temp=args.temp,
-            is_manual=True
+            is_manual=True,
+            **gen_params
         )
         
         # 4. Display Content (if not cli-off)
@@ -462,50 +468,86 @@ Use `POST /v1/chat` for all new apps.
     console.print(Panel(dossier, title="📂 AGENT-READY MISSION DOSSIER", border_style="bold green"))
 
 async def run_audit(args):
-    """Test the health of one or more models and offer to freeze failures."""
-    targets = []
-    if args.id:
-        targets = [m for m in MODEL_REGISTRY if m.id == args.id]
-    elif args.gateway:
-        targets = [m for m in MODEL_REGISTRY if m.gateway == args.gateway]
+    """Test the health of one or more models or keys with interactive selection."""
+    
+    # 1. Choose Audit Type
+    audit_type = questionary.select(
+        "What system component would you like to audit?",
+        choices=[
+            {"name": "🤖 Models (Fleet Health)", "value": "models"},
+            {"name": "🔑 API Keys (Pool integrity)", "value": "keys"},
+            {"name": "🔙 Cancel", "value": "cancel"}
+        ]
+    ).ask()
+
+    if audit_type == "cancel" or not audit_type:
+        return
+
+    if audit_type == "models":
+        await _run_model_audit(args)
     else:
-        # Defaults to active models
+        await _run_key_audit(args)
+
+async def _run_model_audit(args):
+    """Granular model health check."""
+    scope = questionary.select(
+        "Select audit scope:",
+        choices=[
+            {"name": "🌐 Full Fleet (All Active Models)", "value": "all"},
+            {"name": "🚪 Gateway (Google / Groq / etc.)", "value": "gateway"},
+            {"name": "🎯 Granular (Select specific models)", "value": "granular"},
+            {"name": "🔙 Back", "value": "back"}
+        ]
+    ).ask()
+
+    if scope == "back" or not scope: return
+
+    targets = []
+    if scope == "all":
         targets = [m for m in MODEL_REGISTRY if m.status == "active"]
+    elif scope == "gateway":
+        gw = questionary.select("Which gateway?", choices=["google", "groq", "deepseek", "mistral"]).ask()
+        targets = [m for m in MODEL_REGISTRY if m.gateway == gw and m.status == "active"]
+    elif scope == "granular":
+        choices = [questionary.Choice(title=f"{m.id} ({m.gateway})", value=m) for m in MODEL_REGISTRY if m.status == "active"]
+        targets = questionary.checkbox("Select models to strike:", choices=choices).ask()
 
     if not targets:
-        console.print("[red]No matching active models found to audit.[/red]")
+        console.print("[yellow]No models selected.[/yellow]")
         return
 
     console.print(Panel.fit(f"🔍 AUDITING {len(targets)} MODELS", style="bold cyan"))
     
     failed_models = []
-    
     for m in targets:
-        # Skip embedding/whisper models for basic text audit for now
-        if "embedding" in m.id or "whisper" in m.id:
+        # Skip non-text models
+        if any(x in m.id for x in ["embedding", "whisper", "lyria", "veo"]):
             console.print(f"[dim]Skipping specialized model: {m.id}[/dim]")
             continue
 
         with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}")) as progress:
             task = progress.add_task(description=f"Striking {m.id}...", total=None)
             try:
-                # Use a very short, cheap prompt for audit
+                # Use audit endpoint via internal logic
+                start = time.time()
                 result = await execute_strike(
                     gateway=m.gateway,
                     model_id=m.id,
-                    prompt="respond with 'OK'",
+                    prompt="ping",
                     temp=0.0,
-                    is_manual=True
+                    is_manual=True,
+                    timeout=30
                 )
-                progress.update(task, description=f"[green]✅ {m.id} is ONLINE[/green] ({result['tag']})")
+                duration = round((time.time() - start) * 1000, 2)
+                progress.update(task, description=f"[green]✅ {m.id.ljust(35)} ONLINE[/green] | {duration}ms | TAG: {result['tag']}")
             except Exception as e:
-                error_msg = str(e)
-                progress.update(task, description=f"[red]❌ {m.id} is DOWN[/red]")
-                console.print(f"   [dim]Error: {error_msg[:120]}[/dim]")
-                failed_models.append({"id": m.id, "error": error_msg})
+                progress.update(task, description=f"[red]❌ {m.id.ljust(35)} DOWN[/red]")
+                console.print(f"   [dim]Error: {str(e)[:120]}[/dim]")
+                failed_models.append({"id": m.id, "error": str(e)})
 
-    # Interactive Decommissioning
+    # Post-audit actions
     if failed_models:
+<<<<<<< HEAD
         console.print(f"\n[bold yellow]⚠ ATTENTION:[/bold yellow] {len(failed_models)} models are currently failing health checks.")
         
         do_freeze = await questionary.confirm("Would you like to decommission (freeze) any of these models?").ask_async()
@@ -520,6 +562,75 @@ async def run_audit(args):
                 # Extract IDs back from choices string
                 to_freeze = [s.split(" (")[0] for s in selected_raw]
                 run_freeze_bulk(to_freeze)
+=======
+        do_freeze = questionary.confirm("\nModels failed. decommission (freeze) them?").ask()
+        if do_freeze:
+            run_freeze_bulk([f['id'] for f in failed_models])
+
+async def _run_key_audit(args):
+    """Granular API key health check."""
+    from app.core.key_manager import GroqPool, GooglePool, DeepSeekPool, MistralPool
+    
+    gw = questionary.select(
+        "Which key pool would you like to audit?",
+        choices=["google", "groq", "deepseek", "mistral", "all"]
+    ).ask()
+
+    if not gw: return
+
+    pools = {
+        "google": GooglePool,
+        "groq": GroqPool,
+        "deepseek": DeepSeekPool,
+        "mistral": MistralPool
+    }
+    
+    # Probe models (cheapest/fastest)
+    probes = {
+        "groq": "llama-3.1-8b-instant",
+        "google": "gemini-2.0-flash",
+        "deepseek": "deepseek-chat",
+        "mistral": "mistral-large-latest"
+    }
+
+    target_keys = []
+    selected_gws = [gw] if gw != "all" else pools.keys()
+
+    for g in selected_gws:
+        pool = pools[g]
+        for asset in pool.deck:
+            target_keys.append({"gw": g, "asset": asset})
+
+    if not target_keys:
+        console.print("[yellow]No keys found in selected pools.[/yellow]")
+        return
+
+    console.print(Panel.fit(f"🔑 AUDITING {len(target_keys)} API KEYS", style="bold yellow"))
+
+    for item in target_keys:
+        gw = item['gw']
+        asset = item['asset']
+        probe_model = probes.get(gw)
+
+        with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}")) as progress:
+            task = progress.add_task(description=f"Testing {asset.label} ({gw})...", total=None)
+            try:
+                start = time.time()
+                res = await execute_strike(
+                    gateway=gw,
+                    model_id=probe_model,
+                    prompt="audit ping",
+                    temp=0.0,
+                    is_manual=True,
+                    timeout=20,
+                    key_override=asset.key
+                )
+                duration = round((time.time() - start) * 1000, 2)
+                progress.update(task, description=f"[green]✅ {asset.label.ljust(25)} VALID[/green] | {duration}ms")
+            except Exception as e:
+                progress.update(task, description=f"[red]❌ {asset.label.ljust(25)} INVALID[/red]")
+                console.print(f"   [dim]Error: {str(e)[:100]}[/dim]")
+>>>>>>> d81e057 (PEACOCK ENGINE V3 - TRANSITION TO UNIFIED WEBUI & ARCHITECTURAL HARDENING)
 
 def run_freeze_bulk(model_ids: List[str]):
     """Freeze multiple models at once."""
@@ -592,7 +703,14 @@ def main():
     strike_p.add_argument("prompt", nargs="?", help="Direct prompt text")
     strike_p.add_argument("--file", "-f", help="Path to payload file")
     strike_p.add_argument("--model", "-m", default="gemini-3.1-flash-lite", help="Model ID")
-    strike_p.add_argument("--temp", "-t", type=float, default=0.7, help="Temperature")
+    strike_p.add_argument("--temp", "-t", type=float, default=0.7, help="Temperature (0.0-2.0)")
+    strike_p.add_argument("--top-p", type=float, help="Top-P (0.0-1.0)")
+    strike_p.add_argument("--top-k", type=int, help="Top-K")
+    strike_p.add_argument("--max-tokens", type=int, help="Max tokens to generate")
+    strike_p.add_argument("--seed", type=int, help="Deterministic seed")
+    strike_p.add_argument("--presence-penalty", type=float, help="Presence penalty (-2.0 to 2.0)")
+    strike_p.add_argument("--frequency-penalty", type=float, help="Frequency penalty (-2.0 to 2.0)")
+    strike_p.add_argument("--stop", nargs="+", help="Stop sequences")
     strike_p.add_argument("--no-print", action="store_true", help="Don't print output to CLI")
     strike_p.add_argument("--quiet", "-q", action="store_true", help="Silence debug info")
     strike_p.add_argument("--tunnel", action="store_true", help="Use MetroPCS TUN0 SOCKS5 Proxy")

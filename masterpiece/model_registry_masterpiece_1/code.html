@@ -3,12 +3,11 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PEACOCK ENGINE | MODEL GARDEN</title>
+<title>PEACOCK ENGINE | Model Registry</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script type="module" src="/src/ui_shared.js"></script>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -92,9 +91,9 @@
 <span class="text-xl font-bold text-[#aac7ff] tracking-tighter font-headline uppercase">PEACOCK ENGINE</span>
 <div class="flex gap-2 h-16">
 <a class="text-gray-400 hover:text-[#aac7ff] transition-colors duration-200 px-4 font-headline font-medium tracking-tighter uppercase flex items-center" href="#">DASHBOARD</a>
-<a class="text-[#aac7ff] border-b-2 border-[#aac7ff] h-full flex items-center px-4 font-headline font-medium tracking-tighter uppercase" href="#">GAUGE</a>
-<a class="text-gray-400 hover:text-[#aac7ff] transition-colors duration-200 px-4 font-headline font-medium tracking-tighter uppercase flex items-center" href="#">LIVE WIRE</a>
-<a class="text-gray-400 hover:text-[#aac7ff] transition-colors duration-200 px-4 font-headline font-medium tracking-tighter uppercase flex items-center" href="#">SHIP IT</a>
+<a class="text-[#aac7ff] border-b-2 border-[#aac7ff] h-full flex items-center px-4 font-headline font-medium tracking-tighter uppercase" href="#">ANALYTICS</a>
+<a class="text-gray-400 hover:text-[#aac7ff] transition-colors duration-200 px-4 font-headline font-medium tracking-tighter uppercase flex items-center" href="#">LOGS</a>
+<a class="text-gray-400 hover:text-[#aac7ff] transition-colors duration-200 px-4 font-headline font-medium tracking-tighter uppercase flex items-center" href="#">DEPLOYMENT</a>
 </div>
 </div>
 <div class="flex items-center gap-4">
@@ -110,38 +109,38 @@
 <!-- SideNavBar -->
 <aside class="w-64 h-full fixed left-0 top-16 bg-[#181c20] flex flex-col py-4 border-none">
 <div class="px-6 mb-8">
-<div class="font-headline text-lg font-bold text-[#ffdb3c] tracking-tight">KEY HOLDER</div>
-<div class="font-label text-[10px] text-primary-fixed-dim tracking-widest opacity-70">4 STRIPES</div>
+<div class="font-headline text-lg font-bold text-[#ffdb3c] tracking-tight">OPERATOR-01</div>
+<div class="font-label text-[10px] text-primary-fixed-dim tracking-widest opacity-70">PRECISION-LEVEL-4</div>
 </div>
 <div class="flex-1 space-y-1">
 <div class="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-[#363a3e] hover:text-white transition-colors cursor-pointer text-sm font-medium">
 <span class="material-symbols-outlined text-lg">memory</span>
-<span>ENGINE TEMP</span>
+<span>Engine Status</span>
 </div>
 <div class="flex items-center gap-3 px-6 py-3 bg-[#1c2024] text-[#aac7ff] border-l-4 border-[#aac7ff] text-sm font-medium cursor-pointer">
 <span class="material-symbols-outlined text-lg">extension</span>
-<span>ARSENAL</span>
+<span>Core Modules</span>
 </div>
 <div class="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-[#363a3e] hover:text-white transition-colors cursor-pointer text-sm font-medium">
 <span class="material-symbols-outlined text-lg">hub</span>
-<span>MYCELIUM</span>
+<span>Network Mesh</span>
 </div>
 <div class="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-[#363a3e] hover:text-white transition-colors cursor-pointer text-sm font-medium">
 <span class="material-symbols-outlined text-lg">database</span>
-<span>BUCKET</span>
+<span>Storage Nodes</span>
 </div>
 <div class="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-[#363a3e] hover:text-white transition-colors cursor-pointer text-sm font-medium">
 <span class="material-symbols-outlined text-lg">shield</span>
-<span>PATROL</span>
+<span>Security Protocol</span>
 </div>
 <div class="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-[#363a3e] hover:text-white transition-colors cursor-pointer text-sm font-medium">
 <span class="material-symbols-outlined text-lg">admin_panel_settings</span>
-<span>ROOT</span>
+<span>System Admin</span>
 </div>
 </div>
 <div class="px-4 mt-auto mb-8">
 <button class="w-full py-3 bg-gradient-to-br from-[#aac7ff] to-[#0066cc] text-on-primary font-headline font-bold text-xs tracking-widest uppercase active:opacity-80">
-                FIRE IT UP
+                INITIALIZE SEQUENCE
             </button>
 </div>
 <div class="px-6 space-y-4 border-t border-outline-variant/10 pt-6">
@@ -157,15 +156,15 @@
 </aside>
 <!-- Main Content Area -->
 <main class="ml-64 mt-16 mr-80 min-h-screen bg-[#101418] p-0 flex flex-col">
-<!-- DASHBOARD Header -->
+<!-- Dashboard Header -->
 <div class="px-8 py-10">
-<h1 class="text-4xl font-headline font-medium tracking-tighter uppercase mb-2">MODEL GARDEN</h1>
+<h1 class="text-4xl font-headline font-medium tracking-tighter uppercase mb-2">Model Registry</h1>
 <p class="text-on-surface-variant text-sm font-body max-w-2xl">High-precision neural assets currently deployed to the mesh. Precision tuning required for Level 4 operations.</p>
 </div>
 <!-- Table Header -->
 <div class="grid grid-cols-12 bg-[#1c2024] px-8 py-3 text-[10px] font-label text-outline tracking-widest uppercase">
-<div class="col-span-5">MODEL TAG</div>
-<div class="col-span-2">SHIP IT Status</div>
+<div class="col-span-5">Model Identity</div>
+<div class="col-span-2">Deployment Status</div>
 <div class="col-span-2 text-right">Context Window</div>
 <div class="col-span-3 text-right">Pricing / 1K Tokens</div>
 </div>
@@ -184,7 +183,7 @@
 </div>
 </div>
 <div class="col-span-2 flex items-center">
-<span class="bg-[#00C851]/10 text-[#00C851] text-[10px] px-2.5 py-1 font-label uppercase">ACTIVE MODELS</span>
+<span class="bg-[#00C851]/10 text-[#00C851] text-[10px] px-2.5 py-1 font-label uppercase">ACTIVE_NODE</span>
 </div>
 <div class="col-span-2 flex items-center justify-end text-sm font-label text-on-surface">128K</div>
 <div class="col-span-3 flex items-center justify-end gap-6">
@@ -207,7 +206,7 @@
 </div>
 </div>
 <div class="col-span-2 flex items-center">
-<span class="bg-[#00BFFF]/10 text-[#00BFFF] text-[10px] px-2.5 py-1 font-label uppercase">FROZEN MODELS</span>
+<span class="bg-[#00BFFF]/10 text-[#00BFFF] text-[10px] px-2.5 py-1 font-label uppercase">FROZEN_STATE</span>
 </div>
 <div class="col-span-2 flex items-center justify-end text-sm font-label text-on-surface">32K</div>
 <div class="col-span-3 flex items-center justify-end gap-6">
@@ -230,7 +229,7 @@
 </div>
 </div>
 <div class="col-span-2 flex items-center">
-<span class="bg-[#00C851]/10 text-[#00C851] text-[10px] px-2.5 py-1 font-label uppercase">ACTIVE MODELS</span>
+<span class="bg-[#00C851]/10 text-[#00C851] text-[10px] px-2.5 py-1 font-label uppercase">ACTIVE_NODE</span>
 </div>
 <div class="col-span-2 flex items-center justify-end text-sm font-label text-on-surface">1M</div>
 <div class="col-span-3 flex items-center justify-end gap-6">
@@ -280,7 +279,7 @@
 </div>
 <div class="grid grid-cols-2 gap-4">
 <div class="bg-[#1c2024] p-3">
-<div class="text-[9px] font-label text-outline uppercase tracking-wider mb-1">PING</div>
+<div class="text-[9px] font-label text-outline uppercase tracking-wider mb-1">Latency</div>
 <div class="text-lg font-label text-[#00C851]">42ms</div>
 </div>
 <div class="bg-[#1c2024] p-3">
@@ -294,7 +293,7 @@
 <div class="h-full bg-[#ffdb3c] w-[88%]"></div>
 </div>
 <div class="flex justify-between text-[9px] font-label text-outline uppercase">
-<span>MODEL RELIABILITY</span>
+<span>Reliability Index</span>
 <span>99.8%</span>
 </div>
 </div>
@@ -321,11 +320,11 @@
 </div>
 <div class="pt-4">
 <button class="w-full py-4 bg-[#ffdb3c] text-[#221b00] font-headline font-bold text-sm tracking-widest uppercase gold-glow">
-                        MODEL ACTIONS
+                        PRIMARY ENGINE ACTIONS
                     </button>
 <div class="grid grid-cols-2 gap-2 mt-2">
 <button class="py-2 border border-outline-variant/30 text-on-surface font-headline font-bold text-[10px] uppercase hover:bg-surface-bright">Config JSON</button>
-<button class="py-2 border border-outline-variant/30 text-on-surface font-headline font-bold text-[10px] uppercase hover:bg-surface-bright">LIVE WIRE Stream</button>
+<button class="py-2 border border-outline-variant/30 text-on-surface font-headline font-bold text-[10px] uppercase hover:bg-surface-bright">Logs Stream</button>
 </div>
 </div>
 </div>
@@ -336,7 +335,7 @@
 <div class="flex items-center gap-6">
 <div class="flex items-center gap-2">
 <span class="w-1.5 h-1.5 bg-[#00C851] gold-glow"></span>
-<span class="text-[10px] font-label text-[#ffdb3c] tracking-widest uppercase">GATEWAY STATUS</span>
+<span class="text-[10px] font-label text-[#ffdb3c] tracking-widest uppercase">ENGINE_STATUS: ONLINE</span>
 </div>
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-[12px] text-outline">payments</span>
@@ -352,7 +351,7 @@
 <div class="flex gap-4">
 <a class="text-gray-600 hover:text-[#ffdb3c] text-[10px] font-label uppercase tracking-widest" href="#">SYS_LOG</a>
 <a class="text-gray-600 hover:text-[#ffdb3c] text-[10px] font-label uppercase tracking-widest" href="#">ERR_MONITOR</a>
-<a class="text-gray-600 hover:text-[#ffdb3c] text-[10px] font-label uppercase tracking-widest" href="#">API INTEL</a>
+<a class="text-gray-600 hover:text-[#ffdb3c] text-[10px] font-label uppercase tracking-widest" href="#">API_DOCS</a>
 </div>
 </div>
 </footer>

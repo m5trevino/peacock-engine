@@ -1,10 +1,11 @@
-.DS_Store
+# === PEACOCK ENGINE | BONE-DRY IGNORE ===
+
+# Production Exclusions
 .env
-.env.local
 .env.*
-*.log
-*.sqlite3
 *.db
+*.sqlite3
+*.log
 secrets.json
 keys.json
 credentials.json
@@ -12,22 +13,49 @@ node_modules/
 dist/
 build/
 .vscode/
-npm-debug.log
-merged_payload_*.txt
-merged.*.files.txt
-manual.txt
 .venv/
 venv/
 __pycache__/
 
-# === CLEANUP: Test scripts with keys ===
-check_*.py
+# Forensic Logs & State
+vault/
+success_strikes.log
+failed_strikes.log
+manual_strikes.log
+
+# Legacy Design Research & Scraps
+website-ui/
+webui/
+DESIGN_CHANGES.md
+DESIGN.md
+nanobanana-output/
+finals/
+api_key_management/
+ecover/
+stitch/
+og-patched/
+masterpiece/
+og/
+recon/
+openclaw/
+deploy.zip
+*.png
+*.zip
+
+# Manifest Scraps
+*_MANIFEST.md
+!MISSION_MANIFEST.md
+!AGENTS.md
+
+# Developer Scratchpads
 test_*.py
+check_*.py
 verify_*.py
 probe_*.py
 inspect_*.py
 syndicate_key_*.py
 groq-test.py
+<<<<<<< HEAD
 
 # === CLEANUP: Temp/merged files ===
 merged_*.txt
@@ -102,3 +130,35 @@ push-to-github.sh
 setup-openclaw.sh
 MissionMiner.py
 deploy/
+=======
+audit_*.py
+make_db.py
+setup-openclaw.sh
+purge-vps.sh
+update-repo.sh
+push-to-github.sh
+PROJECT_HANDOFF.md
+PEACOCK_SYSTEM_HANDOFF.md
+MISSION_SUMMARY.md
+MISSION_DOSSIER.html
+TASK_DELEGATION.md
+WEBUI_FEATURE_SPEC.md
+SYNDICATE_MANIFEST.md
+PEACOCK_MEMORY_MASTER_MANIFEST.md
+PEACOCK_MASTER_OPERATOR_MANUAL_*.md
+PEACOCK_ENGINE_V2_WRITEUP.md
+PEACOCK_ENGINE_REFERENCE.md
+FIX-DEPLOY.md
+DEPLOY.md
+deploy.sh
+MissionMiner.py
+owl_probe_results.json
+all_skills_metadata.json
+striker_status.json
+ai_engine.log
+server.log
+mission_miner.log
+ai-engine
+engine-manual.md
+AI_INTEGRATION_GUIDE.md
+>>>>>>> d81e057 (PEACOCK ENGINE V3 - TRANSITION TO UNIFIED WEBUI & ARCHITECTURAL HARDENING)
