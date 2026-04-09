@@ -918,7 +918,18 @@ function MetricCard({ label, value, color, dot }: { label: string, value: string
   );
 }
 
-function ApiKeyCard({ name, id, keyStr, usage, latency, status, icon }: { name: string, id: string, keyStr: string, usage: number, latency: string, status: 'healthy' | 'warning' | 'error', icon?: React.ReactNode }) {
+interface ApiKeyCardProps {
+  key?: React.Key;
+  name: string;
+  id: string;
+  keyStr: string;
+  usage: number;
+  latency: string;
+  status: 'healthy' | 'warning' | 'error';
+  icon?: React.ReactNode;
+}
+
+function ApiKeyCard({ name, id, keyStr, usage, latency, status, icon }: ApiKeyCardProps) {
   const statusColor = status === 'healthy' ? 'bg-[#00C851]' : status === 'warning' ? 'bg-secondary' : 'bg-error';
   const hoverBorder = status === 'healthy' ? 'hover:border-primary' : status === 'warning' ? 'hover:border-secondary' : 'hover:border-error';
   
@@ -1084,7 +1095,19 @@ function LogsScreen({ models, selectedModel, setSelectedModel, onOpenModal }: { 
   );
 }
 
-function ModelRow({ name, uuid, status, context, price, color, isDefault, onClick }: { name: string, uuid: string, status: string, context: string, price: string, color: string, isDefault?: boolean, onClick: () => void }) {
+interface ModelRowProps {
+  key?: React.Key;
+  name: string;
+  uuid: string;
+  status: string;
+  context: string;
+  price: string;
+  color: string;
+  isDefault?: boolean;
+  onClick: () => void;
+}
+
+function ModelRow({ name, uuid, status, context, price, color, isDefault, onClick }: ModelRowProps) {
   return (
     <div 
       onClick={onClick}

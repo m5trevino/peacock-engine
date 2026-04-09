@@ -94,6 +94,17 @@ TOTAL_TOKENS: {usage.get('total_tokens', 0)}
         return tag
 
     @staticmethod
+    def error(message: str):
+        """Log a system error to the failure log."""
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        tag = HighSignalLogger.generate_tag()
+        log_entry = f"[{timestamp}] {tag} | ERROR    | {message}\n"
+        with open(FAILED_LOG, "a") as f:
+            f.write(log_entry)
+        # Console output for visibility during development
+        print(f"\033[1;31m[✗] {log_entry.strip()}\033[0m")
+
+    @staticmethod
     def get_log_status() -> Dict[str, bool]:
         """Return the current ON/OFF status of logs."""
         return {
